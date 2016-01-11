@@ -7,29 +7,29 @@ $keywords = 'x y z';
 $description = 'page description';
 ?>
 
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/theme/htmlheader.php'; echo "\n"; ?>
+<?php require '../_includes/htmlheader.php'; echo "\n"; ?>
 
 
 
 <body>
-    <div id="rahmen">
+    
 	
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/theme/header.php'; echo "\n"; ?>
+<?php require '../_includes/header.php'; echo "\n"; ?>
 
 
-		<div id="main">
+	<section id="main">
 		
 		
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/theme/navigation.php'; echo "\n"; ?>
+<?php require'../_includes/navigation.php'; echo "\n"; ?>
 <?php include 'content.php'; echo "\n"; ?>
 
 
-		</div>
+	</section>
 
 		
-<?php require $_SERVER['DOCUMENT_ROOT'] . '/theme/footer.php'; echo "\n"; ?>
+<?php require '../_includes/footer.php'; echo "\n"; ?>
 
 
-    </div>
+   
 </body>
 </html>

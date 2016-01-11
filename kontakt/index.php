@@ -2,7 +2,7 @@
 <html>
 
 <?php
-$title = 'AluMPI | Startseite';
+$title = 'AluMPI | Kontakt';
 $keywords = 'x y z';
 $description = 'page description';
 ?>

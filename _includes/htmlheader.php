@@ -6,7 +6,7 @@
 	<meta name="keywords" content="<?php if(isset($keywords)) { echo $keywords; } else { echo "This is the, default set of, keywords"; } ?>" />
     <meta name="description" content="<?php if(isset($description)) { echo $description; } else { echo "This is the default page description."; } ?>" />
     
-	<link href="../css/new.css" rel="stylesheet"/>
+	<link href="../_css/new.css" rel="stylesheet"/>
 
 
 <?php 
