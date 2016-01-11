@@ -1,0 +1,77 @@
+@charset "utf-8";
+ 
+* {
+    margin:0;
+    padding:0;
+    border:none;
+    font-size:12px;
+    font-family:Arial, Helvetica, Verdana, sans-serif;
+    font-weight:normal;
+    color:#000;
+    outline:none;
+}
+ 
+body, html {
+    width:100%;
+    height:100%;
+}
+ 
+body {
+	background:#bbb; /* Fallback */
+	background:-ms-linear-gradient(bottom, #bbb, #666); /* IE10 Consumer Preview */
+	background:-moz-linear-gradient(bottom, #bbb, #666); /* Mozilla Firefox */
+	background:-o-linear-gradient(bottom, #bbb, #666); /* Opera */
+	background:-webkit-gradient(linear, left bottom, left top, color-stop(0, #bbb), color-stop(1, #666)); /* Webkit (Safari/Chrome 10) */
+	background:-webkit-linear-gradient(bottom, #bbb, #666); /* Webkit (Chrome 11+) */
+	background:linear-gradient(to top, #bbb, #666); /* W3C Markup, IE10 Release Preview */
+    text-align:center;
+}
+
+#main {
+    width:900px;
+    margin:10px auto;
+}
+ 
+nav {
+    height:50px;
+    margin:10px auto;
+    background:#333;
+    color:#fff;
+    box-shadow:0px 5px 10px -2px #666;
+}
+ 
+#content {
+    min-height:700px;
+    margin:0 auto 10px auto;
+    background:#fff;
+    box-shadow:0px 5px 15px -5px #666;
+}
+
+nav, #content {
+    width:900px;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+}
+
+#footer {
+    width:900px;
+    height:50px;
+    margin:10px auto;
+}
+ 
+#leftfoot {
+    float:left;
+    position:relative;
+    left:5px;
+}
+ 
+#rightfoot {
+    float:right;
+    position:relative;
+    right:5px;
+}
+ 
+#footer p {
+    color:#333;
+}

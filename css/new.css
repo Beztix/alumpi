@@ -1,0 +1,48 @@
+
+
+
+
+body {
+	width: 1100px;
+	font-family: sans-serif;
+	font-size: 1em;
+	line-height: 1.4;
+	margin: 0 auto;
+}
+
+
+header, footer, #main {
+	float: left;
+	width: 1100px;
+}
+
+
+header {
+	margin-top: 33 px;
+
+}
+
+
+#main {
+
+}
+
+
+footer {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border-top: 1px solid #B4B4B4;
+	padding: .4em 0 0 0;
+}
+
+#navigation {
+	float: left;
+	width: 196px;
+	padding-bottom: 20px;
+}
+
+#content {
+	float: right;
+	width: 740px;
+	min-height: 600px;
+}
