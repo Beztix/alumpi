@@ -2,6 +2,7 @@
 <html>
 
 <?php
+$thisPage = 'testseite';
 $title = 'AluMPI | Testseite';
 $keywords = 'x y z';
 $description = 'page description';
