@@ -2,6 +2,7 @@
 <html>
 
 <?php
+$thisPage = 'mitgliederbereich';
 $title = 'AluMPI | Mitgliederbereich';
 $keywords = 'x y z';
 $description = 'page description';

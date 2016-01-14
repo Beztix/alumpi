@@ -2,6 +2,7 @@
 <html>
 
 <?php
+$thisPage = 'absolventenfeier';
 $title = 'AluMPI | Absolventenfeier';
 $keywords = 'x y z';
 $description = 'page description';
