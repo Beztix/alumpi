@@ -15,6 +15,12 @@
 					else {
 						echo "test - formular ausgefüllt abgeschickt <br>";
 						
+						echo "<br>";
+						echo "Eingegebener Username: " . $_POST['email'] . "<br>";
+						echo "Eingegebenes Passwort: " . $_POST['pwd'] . "<br>";
+						echo "<br>";
+						
+						
 						//Zur Datenbank verbinden
 						$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 						
@@ -31,6 +37,7 @@
 							echo "Datenbankverbindung erfolgreich!<br>";
 							
 							//Username und (gehashtes) Passwort aus der Datenbank holen
+							//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 							$stmt = $mysqli->prepare('SELECT username, password FROM users WHERE username = ?');
 							$stmt->bind_param('s', $_POST['email']);
 							$stmt->execute();
@@ -43,15 +50,27 @@
 								//Username gefunden
 								if ($recordObj = $result->fetch_assoc()) {
 									echo "Username gefunden!<br>";
-									echo "DB-Username:" . $recordObj['username'] . "<br>";
-									echo "DB-Passwort:" . $recordObj['password'] . "<br>";
+									echo "DB-Username: " . $recordObj['username'] . "<br>";
+									echo "DB-Passwort: " . $recordObj['password'] . "<br>";
 									
 									//Überprüfen des eingegebenen Passwortes (mit eingebautem Hashing)
-									
 									//Passwort korrekt
 									if(password_verify($_POST['pwd'], $recordObj['password'])) {
 									
 										echo "Passwort korrekt!<br>";
+										
+										//Session starten, Nutzer als eingelogged speichern
+										session_start();
+										/*
+										$_SESSION = array(
+												'login' => true,
+												'user'  => array('username'  => $row['username'])
+										);
+										*/
+										//Ausgabe
+										echo "<br>";
+										echo "Login erfolgreich!<br>";
+										echo "<br>";
 									}
 									
 									//Passwort falsch
@@ -62,8 +81,6 @@
 										echo password_hash($_POST['pwd'], PASSWORD_DEFAULT) . "<br>";
 										
 									}
-									
-									
 								}
 								
 								//Kein entsprechender User gefunden
@@ -81,15 +98,11 @@
 							}
 							
 							
-						}
+						}// eof DB-Verbindung erfolgreich
 						
-						
-						echo "<br>";
-						echo "Eingegebener Username: " . $_POST['email'] . "<br>";
-						echo "Eingegebenes Passwort: " . $_POST['pwd'] . "<br>";
-					}
+					} //eof Alle Felder ausgefüllt
 
-				}
+				}//eof Formulardaten angekommen
 
 
 
