@@ -1,4 +1,10 @@
-<?php
+<?php 
+
+//======================================================================
+// Diese PHP-Datei dient der Auswertung des Formulars zur Anmeldung zum Absolventenverein. 
+// Sie muss auf der Seite eingebunden werden, auf der sich das Anmeldeformular befindet.
+//======================================================================
+
 
 				echo "SESSION:<br>";
 				print_r($_SESSION);
@@ -6,20 +12,22 @@
 				echo "<br>";
 
 				include '../_includes/db_config.php';
+				include '../_includes/form_validation.php';
 
 				//Formulardaten angekommen
 				if(!empty($_POST)) {
 					
 					echo "test - formular abgeschickt <br>";
 					
-					//Nicht alle Felder ausgefÃ¼llt
-					if(empty($_POST['email']) || empty($_POST['pwd'])) {
-						echo "Es wurden nicht alle Felder ausgefÃ¼llt.";
+					//Nicht alle Felder korrekt ausgefüllt
+					$error = check_required_fields_register();
+					if(!empty($error)) {
+						echo $error;
 					}
 					
-					//Alle Felder ausgefÃ¼llt
+					//Alle Felder korrekt ausgefüllt
 					else {
-						echo "test - formular ausgefÃ¼llt abgeschickt <br>";
+						echo "test - formular korrekt ausgefüllt abgeschickt <br>";
 						
 						echo "<br>";
 						echo "Eingegebener Username: " . $_POST['email'] . "<br>";
@@ -32,7 +40,7 @@
 						
 						//Fehler bei der DB-Verbindung		
 						if ($mysqli->connect_errno) {
-							echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank mÃ¶glich!<br>";
+							echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
 							echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 							echo "<br>";
 							echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
@@ -59,7 +67,7 @@
 									echo "DB-Username: " . $recordObj['username'] . "<br>";
 									echo "DB-Passwort: " . $recordObj['password'] . "<br>";
 									
-									//ÃœberprÃ¼fen des eingegebenen Passwortes (mit eingebautem Hashing)
+									//Überprüfen des eingegebenen Passwortes (mit eingebautem Hashing)
 									//Passwort korrekt
 									if(password_verify($_POST['pwd'], $recordObj['password'])) {
 									
@@ -96,7 +104,7 @@
 							
 							//Fehler bei der DB-Abfrage
 							else {
-								echo "Leider ist kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgefÃ¼hrt werden!<br>";
+								echo "Leider ist kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
 								echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 								echo "<br>";
 								 echo $mysqli->error;
@@ -105,7 +113,7 @@
 							
 						}// eof DB-Verbindung erfolgreich
 						
-					} //eof Alle Felder ausgefÃ¼llt
+					} //eof Alle Felder ausgefüllt
 
 				}//eof Formulardaten angekommen
 
@@ -117,4 +125,6 @@
 				}
 				
 
-?> 
+
+
+?>

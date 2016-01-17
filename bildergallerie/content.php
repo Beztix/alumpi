@@ -1,7 +1,10 @@
 		<section id="content">
 		
 		
-			<?php require '../_includes/auth.php'; echo "\n"; ?>
+			<?php 
+			//Einbinden von auth.php, um diese Seite nur eingeloggten Mitgliedern zur Verfügung zu stellen
+			require '../_includes/auth.php'; echo "\n"; 
+			?>
 		
 		
 			<section class="top_image">

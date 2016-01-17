@@ -46,7 +46,10 @@
 						
 						
 						
-				<?php include '../_includes/login.php'; ?>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include '../_includes/login.php'; 
+				?>
 				
 			
 			</section>

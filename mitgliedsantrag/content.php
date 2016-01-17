@@ -94,7 +94,8 @@
 					Ich werde hiermit Mitglied und ermächtige hiermit den Absolventen- und Förderverein MPI Uni Bayreuth e.V. jederzeit widerruflich, den
 					Mitgliedsbeitrag in Höhe von 10 Euro / Jahr von oben angegebenen Konto abzubuchen. Dies beinhaltet, dass ich die Satzung und
 					Beitragsordnung in der derzeit gültigen Form anerkenne. <br>
-					Ich bin außerdem damit einverstanden, dass meine Daten an die Universität Bayreuth zum Zwecke der Ehemaligenbetreuung weiter gegeben werden dürfen.
+					Ich bin außerdem damit einverstanden, dass meine Daten an die Universität Bayreuth zum Zwecke der Ehemaligenbetreuung weiter gegeben werden dürfen.<br>
+					<br>
 					</p>
 
 
@@ -129,7 +130,8 @@
 					<input type="checkbox" name="student">
 					Ich bin Student oder aktueller Absolvent. Diese sind vom Beitrag befreit, die Kontodaten sind jedoch in jedem Fall anzugeben. 
 					Für die Befreiung ist zusätzlich ein Studiennachweis eines Semesters des zu befreienden Jahres bereitzustellen. 
-					Die Kontaktdaten finden Sie im Menu links unter dem Punkt Kontakt.
+					Die Kontaktdaten finden Sie im Menu links unter dem Punkt Kontakt.<br>
+					<br>
 					</p>
 
 
@@ -178,6 +180,13 @@
 				</form>
 
 
+				
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include '../_includes/register.php'; 
+				?>				
+				
+				
 			
 			</section>
 			
