@@ -9,6 +9,7 @@
 			<section class="text">
 		
 				<br>
+				Um den Mitgliederbereich zu nutzen, melden Sie sich bitte mit Ihren Zugangsdaten an.<br>
 				<br>
 				<br>
 

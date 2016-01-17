@@ -1,4 +1,10 @@
 <?php
+
+				echo "SESSION:<br>";
+				print_r($_SESSION);
+				echo "<br>";
+				echo "<br>";
+
 				include '../_includes/db_config.php';
 
 				//Formulardaten angekommen
@@ -59,18 +65,17 @@
 									
 										echo "Passwort korrekt!<br>";
 										
-										//Session starten, Nutzer als eingelogged speichern
+										//Session starten
 										session_start();
-										/*
+										
+										//Nutzer auf Server als eingelogged speichern
 										$_SESSION = array(
 												'login' => true,
-												'user'  => array('username'  => $row['username'])
+												'user'  => array('username'  => $recordObj['username'])
 										);
-										*/
-										//Ausgabe
-										echo "<br>";
-										echo "Login erfolgreich!<br>";
-										echo "<br>";
+										
+										//Seite neu laden
+										header('Location: ./index.php');
 									}
 									
 									//Passwort falsch

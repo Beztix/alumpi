@@ -2,6 +2,7 @@
 <html>
 
 <?php
+session_start();
 $thisPage = 'mitgliedsantrag';
 $title = 'AluMPI | Mitgliedsantrag';
 $keywords = 'x y z';

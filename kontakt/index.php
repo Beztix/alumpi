@@ -2,6 +2,7 @@
 <html>
 
 <?php
+session_start();
 $thisPage= 'kontakt';
 $title = 'AluMPI | Kontakt';
 $keywords = 'x y z';

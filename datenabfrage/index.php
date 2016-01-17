@@ -3,8 +3,8 @@
 
 <?php
 session_start();
-$thisPage = 'mitgliederbereich';
-$title = 'AluMPI | Mitgliederbereich';
+$thisPage = 'datenabfrage';
+$title = 'AluMPI | Datenabfrage';
 $keywords = 'x y z';
 $description = 'page description';
 ?>
