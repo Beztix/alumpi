@@ -189,7 +189,7 @@
 									}
 									else {
 										echo "<p class=\"error\">";
-										echo "Leider ist kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
+										echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
 										echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 										echo "<br>";
 										echo $mysqli->error;

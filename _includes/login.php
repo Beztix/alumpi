@@ -14,7 +14,9 @@
 					
 					//Nicht alle Felder ausgefüllt
 					if(empty($_POST['email']) || empty($_POST['pwd'])) {
-						echo "Es wurden nicht alle Felder ausgefüllt.";
+						echo "<p class=\"error\">\n";
+						echo "Es wurden nicht alle Felder ausgefüllt.<br>\n";
+						echo "</p>\n";
 					}
 					
 					//Alle Felder ausgefüllt
@@ -33,10 +35,12 @@
 						
 						//Fehler bei der DB-Verbindung		
 						if ($mysqli->connect_errno) {
-							echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
-							echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-							echo "<br>";
-							echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+							echo "<p class=\"error\">\n";
+							echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>\n";
+							echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
+							echo "<br>\n";
+							echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "<br>\n";
+							echo "</p>\n";
 						}
 						
 						//DB-Verbindung erfolgreich
@@ -81,7 +85,9 @@
 									
 									//Passwort falsch
 									else {
+										echo "<p class=\"error\">\n";
 										echo "Passwort falsch!<br>";
+										echo "</p>\n";
 										
 										
 										echo password_hash($_POST['pwd'], PASSWORD_DEFAULT) . "<br>";
@@ -91,16 +97,20 @@
 								
 								//Kein entsprechender User gefunden
 								else {
+									echo "<p class=\"error\">\n";
 									echo "Username nicht gefunden!<br>";
+									echo "</p>\n";
 								}
 							}
 							
 							//Fehler bei der DB-Abfrage
 							else {
-								echo "Leider ist kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
+								echo "<p class=\"error\">\n";
+								echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
 								echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 								echo "<br>";
-								 echo $mysqli->error;
+								echo $mysqli->error;
+								echo "</p>\n";
 							}
 							
 							
