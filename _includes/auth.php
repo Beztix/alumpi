@@ -7,12 +7,8 @@
 
 
 
-
 	//Session ID erneuern um Angriff über Session Fixation zu verhindern
 	session_regenerate_id();
- 
-	echo "this is auth.php <br>";
-	print_r($_SESSION);
  
 	//Wenn die Session-Variable "login" für den aktuellen User nicht gesetzt wurde, ist dieser nicht eingeloggt: Weiterleiten auf die Login-Seite
 	if (empty($_SESSION['login'])) {

@@ -1,9 +1,14 @@
 <?php 
 
 //======================================================================
-// Diese PHP-Datei dient der Auswertung des Formulars zur Anmeldung zum Absolventenverein. 
-// Sie muss auf der Seite eingebunden werden, auf der sich das Anmeldeformular befindet.
+// Diese PHP-Datei enthält den PHP-Code zur Auswertung des Formulars zur Anmeldung zum Absolventenverein.
+// Sie wird von der entsprechenden Seite der Homepage "Mitgliedsantrag" eingebunden. 
+// Die Formulareingaben werden validiert und anschließend in der Datenbank gespeichert. Der Nutzer erhält
+// eine Email mit einem Link, um seine Email-Adresse zu bestätigen.
+// Nach erfolgter Bestätigung kann er sich auf der Homepage einloggen.
 //======================================================================
+
+
 
 				/*
 				echo "SESSION:<br>";

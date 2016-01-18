@@ -1,4 +1,13 @@
-		
+<?php
+
+//======================================================================
+// Diese PHP-Datei enthält den Seitenheader, der sich auf jeder Seite der Homepage oben befindet. 
+// Sie wird von der jeweiligen index.php eingebunden.
+//======================================================================
+
+?>		
+
+
 	<header>	
 	
 		<a href="http://www.uni-bayreuth.de/de/index.html" id="logo_left" title="Universität Bayreuth Startseite">
@@ -10,11 +19,7 @@
 		</div>
 		
 		<h2>
-			Absolventen- und Förderverein MPI Uni Bayreuth e.V.      +++ noch im Aufbau +++ noch im Aufbau +++ noch im Aufbau +++
+			Absolventen- und Förderverein MPI Uni Bayreuth e.V. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +++ noch im Aufbau +++ noch im Aufbau +++ noch im Aufbau +++
 		</h2>
-
-		
-
-		
 	
 	</header>

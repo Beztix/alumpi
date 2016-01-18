@@ -8,7 +8,7 @@
 			<section class="text">
 		
 				<h1>Absolventenfeier</h1>
-				<br /> 
+
 				<p>
 				Eine Reihe von nervösen Studenten steht am Eingang des Hörsaals. Man hört leise Musik spielen, das Foyer ist festlich dekoriert. 
 				Man kann das Tippen von fein herausgeputzten Schuhen hören, hochgesteckte Frisuren im Abendlicht schimmern sehen und erkennen, wie den Krawattenknoten der letzten Schliff gegeben wird. 
@@ -24,7 +24,6 @@
 				Absolventen in einer Präsentation vorgestellt. Das Programm der Feier gibt es ######.
 				</p>
 
-				<br />
 
 				<h2>WICHTIG: Organisationsteam</h2>
 				<p>
@@ -41,7 +40,6 @@
 				</p>
 
 
-				<br />
 
 				<h2>Allgemeine Informationen zur Absolventenfeier</h2>
 
@@ -66,7 +64,6 @@
 				</p>
 
 
-				<br />
 
 				<h2>Der offizielle Teil</h2>
 
@@ -95,8 +92,7 @@
 				<h3>Kann man sich als Absolvent zur Zeremonie mit Urkundenverleih anmelden ohne am Buffet teilzunehmen?</h3>
 				<p>Nein, das ist derzeit nicht möglich.</p>
 
-
-				<br />
+				
 
 				<h2>Das Buffet - der gemütliche Teil</h2>
 

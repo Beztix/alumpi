@@ -1,10 +1,7 @@
 
-
-
 html {
 	overflow-y: scroll; 
 }
-
 
 body {
 	width: 1100px;
@@ -30,12 +27,14 @@ header {
 
 #logo_left {
 	float: left;
-	margin-top: 15px;
+	height: 68px;
 }
 
 #logo_right {
 	float: right;
-	height: 100px;
+	height: 75px;
+	margin-top: -3px;
+	margin-bottom: -20px;
 }
 
 #logo_right img {
@@ -133,7 +132,7 @@ header h2 {
 
 .top_image {
 	width: 880px;
-	height: 250px;
+	height: 200px;
 	margin: 0 0 20px 0;
 }
 
@@ -189,6 +188,21 @@ header h2 {
 .error {
 	color: #ee0000;
 }
+
+#submenu_in_content ul {
+	list-style: none;
+}
+
+#submenu_in_content ul li {
+	padding: 3px;
+}
+
+
+
+
+
+
+
 
 .sidebar {
 	width: 250px;

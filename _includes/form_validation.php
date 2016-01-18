@@ -1,8 +1,17 @@
 <?php
 
+//======================================================================
+// Diese PHP-Datei enthält alle Funktionen, um die Formulareingaben auf der Homepage zu validieren.
+// Die einzelnen Funktionen werden verwendet um zu überprüfen ob das Formular vollständig ausgefüllt wurde
+// und ob die Eingaben dem gewünschten Format entsprechen (Email-Adresse, Datum o.ä.).
+//======================================================================
+
+
+
 
 // Überprüft, ob alle im Registrierungs-Formular benötigten Felder ausgefüllt wurden
 // Gibt einen leeren String zurück falls ja oder gibt die Fehlermeldungen zurück falls nein
+
 function check_required_fields_register() {
 	$error = "";
 	
@@ -56,8 +65,9 @@ function check_required_fields_register() {
 
 
 
-// Überprüft, ob der inhalt aller im Registrierungs-Formular benötigten Felder korrekt formatiert ist
+// Überprüft, ob der Inhalt aller im Registrierungs-Formular benötigten Felder korrekt formatiert ist
 // Gibt einen leeren String zurück falls ja oder gibt die Fehlermeldungen zurück falls nein
+
 function check_fields_format_register() {
 	$error = "";
 	
@@ -124,6 +134,7 @@ function check_fields_format_register() {
 
 // Überprüft, ob der übergebene String eine korrekte IBAN ist (Format und Checksumme stimmen).
 // Gibt true zurück falls ja oder gibt false zurück falls nein
+
 function checkIBAN($iban) {
  
   // Normalize input (remove spaces and make upcase)
