@@ -9,7 +9,6 @@
 			<section class="text">
 		
 				<h1>Mitglied bei aluMPI werden</h1>
-				<br>
 
 				<p>
 				Um die Vorzüge des Vereins genießen zu können, müssen Sie Mitglied des Vereins werden. 

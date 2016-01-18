@@ -27,12 +27,16 @@
 
 0. TO DO
 
+- Feld für Passwort ist in DB zu kurz!!
 - Keywords für alle Seiten in der jeweiligen index.php eintragen
 - Descriptions für alle Seiten in der jeweiligen index.php eintragen
 - Login-Bereich testen
 - DB-Config außerhalb des www-Verzeichnis lagern
-- Registrierung in DB programmieren
+- Registrierung in DB testen
+- Bestätigungsmail bei Registrierung programmieren
 - Datenabfrage programmieren
+- Registrierung von Fördermitgliedern?
+- Was ist die Usergruppe in der DB?
 
 
 

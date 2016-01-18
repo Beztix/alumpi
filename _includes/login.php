@@ -22,7 +22,7 @@
 						echo "test - formular ausgefüllt abgeschickt <br>";
 						
 						echo "<br>";
-						echo "Eingegebener Username: " . $_POST['email'] . "<br>";
+						echo "Eingegebene Email-Adresse: " . $_POST['email'] . "<br>";
 						echo "Eingegebenes Passwort: " . $_POST['pwd'] . "<br>";
 						echo "<br>";
 						
@@ -45,7 +45,7 @@
 							
 							//Username und (gehashtes) Passwort aus der Datenbank holen
 							//Verwendung von prepared statements zur Vermeidung von SQL-Injection
-							$stmt = $mysqli->prepare('SELECT username, password FROM users WHERE username = ?');
+							$stmt = $mysqli->prepare('SELECT email, pw FROM vereinsmitglieder WHERE email = ?');
 							$stmt->bind_param('s', $_POST['email']);
 							$stmt->execute();
 							$result = $stmt->get_result();
@@ -56,13 +56,13 @@
 							
 								//Username gefunden
 								if ($recordObj = $result->fetch_assoc()) {
-									echo "Username gefunden!<br>";
-									echo "DB-Username: " . $recordObj['username'] . "<br>";
-									echo "DB-Passwort: " . $recordObj['password'] . "<br>";
+									echo "Email gefunden!<br>";
+									echo "DB-Email: " . $recordObj['email'] . "<br>";
+									echo "DB-Passwort: " . $recordObj['pw'] . "<br>";
 									
 									//Überprüfen des eingegebenen Passwortes (mit eingebautem Hashing)
 									//Passwort korrekt
-									if(password_verify($_POST['pwd'], $recordObj['password'])) {
+									if(password_verify($_POST['pwd'], $recordObj['pw'])) {
 									
 										echo "Passwort korrekt!<br>";
 										
@@ -72,7 +72,7 @@
 										//Nutzer auf Server als eingelogged speichern
 										$_SESSION = array(
 												'login' => true,
-												'user'  => array('username'  => $recordObj['username'])
+												'user'  => array('email'  => $recordObj['email'])
 										);
 										
 										//Seite neu laden
