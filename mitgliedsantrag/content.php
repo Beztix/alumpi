@@ -42,23 +42,23 @@
 							</td>
 							<td>
 								<select name="geschlecht">
-									<option value="Herr">Herr</option>
-									<option value="Frau">Frau</option>
+									<option value="Herr" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] == "Herr") echo "selected";}?>>Herr</option>
+									<option value="Frau" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] == "Frau") echo "selected";}?>>Frau</option>
 								</select>
 								<select name="titel">
-									<option value="" selected="selected"></option>
-									<option value="B.Sc.">B.Sc.</option>
-									<option value="M.Sc.">M.Sc.</option>
-									<option value="M.Ed.">M.Ed.</option>
-									<option value="Dr. rer. nat.">Dr. rer. nat.</option>
-									<option value="Dr.-Ing.">Dr.-Ing.</option>
-									<option value="Dr. mult.">Dr. mult.</option>
-									<option value="Dr. h. c.">Dr. h. c.</option>
-									<option value="Dr. habil.">Dr. habil.</option>
-									<option value="Dipl.-Inf.">Dipl.-Inf.</option>
-									<option value="Dipl.-Ing.">Dipl.-Ing.</option>
-									<option value="Dipl.-Math.">Dipl.-Math.</option>
-									<option value="Dipl.-Phys.">Dipl.-Phys.</option>
+									<option value="" <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "") echo "selected";}?>></option>
+									<option value="B.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "B.Sc.") echo "selected";}?>>B.Sc.</option>
+									<option value="M.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "M.Sc.") echo "selected";}?>>M.Sc.</option>
+									<option value="M.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "M.Ed.") echo "selected";}?>>M.Ed.</option>
+									<option value="Dr. rer. nat." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. rer. nat.") echo "selected";}?>>Dr. rer. nat.</option>
+									<option value="Dr.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr.-Ing.") echo "selected";}?>>Dr.-Ing.</option>
+									<option value="Dr. mult." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. mult.") echo "selected";}?>>Dr. mult.</option>
+									<option value="Dr. h. c." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. h. c.") echo "selected";}?>>Dr. h. c.</option>
+									<option value="Dr. habil." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. habil.") echo "selected";}?>>Dr. habil.</option>
+									<option value="Dipl.-Inf." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Inf.") echo "selected";}?>>Dipl.-Inf.</option>
+									<option value="Dipl.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Ing.") echo "selected";}?>>Dipl.-Ing.</option>
+									<option value="Dipl.-Math." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Math.") echo "selected";}?>>Dipl.-Math.</option>
+									<option value="Dipl.-Phys." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Phys.") echo "selected";}?>>Dipl.-Phys.</option>
 								</select>
 							</td>
 						</tr>
@@ -67,8 +67,8 @@
 								Name
 							</td>
 							<td>
-								<input type="text" name="vorname" placeholder="Vorname" size="25">
-								<input type="text" name="nachname" placeholder="Nachname" size="25">
+								<input type="text" name="vorname" placeholder="Vorname" size="25" <?php if(isset($_POST['vorname'])) echo "value=\"" . $_POST['vorname'] . "\"";?>>
+								<input type="text" name="nachname" placeholder="Nachname" size="25" <?php if(isset($_POST['nachname'])) echo "value=\"" . $_POST['nachname'] . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -76,7 +76,7 @@
 								Geburtsdatum
 							</td>
 							<td>
-								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="10">
+								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="10" <?php if(isset($_POST['geburtstag'])) echo "value=\"" . $_POST['geburtstag'] . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -84,8 +84,8 @@
 								Kontakt
 							</td>
 							<td>
-								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35">
-								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25">
+								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . $_POST['email'] . "\"";?>>
+								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25" <?php if(isset($_POST['telefon'])) echo "value=\"" . $_POST['telefon'] . "\"";?>>
 							</td>
 						</tr>
 					</table>
@@ -111,7 +111,7 @@
 								Kontoinhaber
 							</td>
 							<td>
-								<input type="text" name="kontoinhaber" placeholder="Vorname Nachname" size="40">
+								<input type="text" name="kontoinhaber" placeholder="Vorname Nachname" size="40" <?php if(isset($_POST['kontoinhaber'])) echo "value=\"" . $_POST['kontoinhaber'] . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -119,15 +119,15 @@
 								Kontodaten
 							</td>
 							<td>
-								<input type="text" name="iban" placeholder="IBAN" size="34">
-								<input type="text" name="bic" placeholder="BIC" size="11">
+								<input type="text" name="iban" placeholder="IBAN" size="34" <?php if(isset($_POST['iban'])) echo "value=\"" . $_POST['iban'] . "\"";?>>
+								<input type="text" name="bic" placeholder="BIC" size="15" <?php if(isset($_POST['bic'])) echo "value=\"" . $_POST['bic'] . "\"";?>>
 							</td>
 						</tr>
 					</table>
 
 
 					<p>
-					<input type="checkbox" name="student">
+					<input type="checkbox" name="student" <?php if(isset($_POST['student'])) echo "checked";?>>
 					Ich bin Student oder aktueller Absolvent. Diese sind vom Beitrag befreit, die Kontodaten sind jedoch in jedem Fall anzugeben. 
 					Für die Befreiung ist zusätzlich ein Studiennachweis eines Semesters des zu befreienden Jahres bereitzustellen. 
 					Die Kontaktdaten finden Sie im Menu links unter dem Punkt Kontakt.<br>
@@ -138,7 +138,7 @@
 					<h3>Postalische Adresse</h3>
 
 					<p>
-					<input type="checkbox" name="newsletter">
+					<input type="checkbox" name="newsletter" <?php if(isset($_POST['newsletter'])) echo "checked";?>>
 					Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth nicht beziehen. 
 					Der Newsletter wird per Post versendet, falls er gewünscht wird, müssen Angaben zur Anschrift erfolgen.
 					</p>
@@ -153,7 +153,7 @@
 								Straße, Hausnummer
 							</td>
 							<td>
-								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30">
+								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30" <?php if(isset($_POST['strasse'])) echo "value=\"" . $_POST['strasse'] . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -161,8 +161,8 @@
 								Postleitzahl, Ort
 							</td>
 							<td>
-								<input type="text" name="plz" placeholder="PLZ" size="10">
-								<input type="text" name="ort" placeholder="Ort" size="25">
+								<input type="text" name="plz" placeholder="PLZ" size="10" <?php if(isset($_POST['plz'])) echo "value=\"" . $_POST['plz'] . "\"";?>>
+								<input type="text" name="ort" placeholder="Ort" size="25" <?php if(isset($_POST['ort'])) echo "value=\"" . $_POST['ort'] . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -170,7 +170,7 @@
 								Land
 							</td>
 							<td>
-								<input type="text" name="land" placeholder="Land" size="25">
+								<input type="text" name="land" placeholder="Land" size="25" <?php if(isset($_POST['land'])) echo "value=\"" . $_POST['land'] . "\"";?>>
 							</td>
 						</tr>
 					</table>

@@ -1,4 +1,4 @@
-###########################################################
+﻿###########################################################
 #######												#######
 #######		   README zur AluMPI-Homepage			#######
 #######												#######
@@ -17,6 +17,8 @@
 2. Struktur der Homepage
 3. Arbeitsschritte
 
+4. Details
+4.1 Form Validation
 
 
 
@@ -45,3 +47,9 @@
 
 
 2. Struktur der Homepage
+
+
+
+
+4.1
+Regexes zur Überprüfung der Eingabefelder, wichtig die Modifier i für case-insensitive und u für UTF-8, um Umlaute etc. korrekt zu verarbeiten.

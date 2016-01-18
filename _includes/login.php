@@ -29,6 +29,7 @@
 						
 						//Zur Datenbank verbinden
 						$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+						$mysqli->set_charset("utf8");
 						
 						//Fehler bei der DB-Verbindung		
 						if ($mysqli->connect_errno) {

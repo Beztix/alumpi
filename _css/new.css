@@ -186,6 +186,9 @@ header h2 {
 	color: #009260;
 }
 
+.error {
+	color: #ee0000;
+}
 
 .sidebar {
 	width: 250px;
