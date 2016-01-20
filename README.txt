@@ -30,16 +30,15 @@
 - Feld für Passwort ist in DB zu kurz!!
 - Keywords für alle Seiten in der jeweiligen index.php eintragen
 - Descriptions für alle Seiten in der jeweiligen index.php eintragen
-- Login-Bereich testen
 - DB-Config außerhalb des www-Verzeichnis lagern
-- Registrierung in DB testen
-- Bestätigungsmail bei Registrierung programmieren
+- Bestätigungsmail bei Registrierung zum laufen bringen
 - Datenabfrage programmieren
 - Registrierung von Fördermitgliedern?
 - Was ist die Usergruppe in der DB?
 
 
-
+- Login-Bereich testen
+- Registrierung in DB testen
 
 
 

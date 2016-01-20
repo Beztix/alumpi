@@ -33,3 +33,8 @@
 					<button class="absenden" type="submit">Login</button>
 
 				</form>	
+				
+				<?php
+					//Einbinden der PHP-Datei zur Auswertung des Login-Formulars
+					include '../_includes_functionality/login.php'; 
+				?>

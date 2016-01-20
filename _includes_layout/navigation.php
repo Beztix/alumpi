@@ -32,7 +32,7 @@
 					<?php
 					//Submenü des Mitgliederbereichs wird nur angezeigt wenn der Nutzer eingelogged ist
 					if (!empty($_SESSION['login'])) {				
-						include '../_includes/submenu_mitgliederbereich.php';
+						include 'submenu_mitgliederbereich.php';
 					} 
 					?>
 				</li>

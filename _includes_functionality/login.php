@@ -12,7 +12,7 @@
 
 
 				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-				include '../_includes/db_config.php';
+				include 'db_config.php';
 
 				
 				//Formulardaten angekommen
@@ -95,7 +95,7 @@
 										//Nutzer auf Server als eingelogged speichern (session wurde bereits durch index.php gestartet)
 										$_SESSION = array(
 												'login' => true,
-												'user'  => array('email'  => $recordObj['email'])
+												'userEmail'  => $recordObj['email']
 										);
 										
 										//Seite neu laden (nun eingelogged)

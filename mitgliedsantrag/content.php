@@ -182,7 +182,7 @@
 				
 				<?php
 				//Einbinden der PHP-Datei zur Formularauswertung
-				include '../_includes/register.php'; 
+				include '../_includes_functionality/register.php'; 
 				?>				
 				
 				

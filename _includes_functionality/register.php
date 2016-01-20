@@ -17,8 +17,9 @@
 				echo "<br>";
 				*/
 				
-				include '../_includes/db_config.php';
-				include '../_includes/form_validation.php';
+				include 'db_config.php';
+				include 'form_validation.php';
+				include 'send_email.php';
 
 				//Formulardaten angekommen
 				if(!empty($_POST)) {
@@ -126,7 +127,7 @@
 								$telefon = $_POST['telefon'];
 								$studentennachweis_vorhanden = "n";		//immer n bei Registrierung
 								$iststudent = "n"; if(isset($_POST['student'])) { $iststudent = "j";}		//j falls student angewählt, n sonst
-								$code = md5($email);					//Bestätigungscode zum Überprüfen der Email
+								$code = md5($email . $eintrittsdatum);	//Bestätigungscode zum Überprüfen der Email-Adresse
 								$bestaetigt = "n";						//immer n bei Registrierung
 								$rechtegruppe = 1;						//immer 1 (normales Mitglied) bei Registrierung
 								$beitrag = 10;							//??? ggf. Fördermitglied ???
@@ -174,14 +175,41 @@
 							
 								//DB-Abfrage erfolgreich
 								if($stmt->execute()) {
-									echo "<h3 class=\"green\">Registrierung erfolgreich!</h3>";
-									echo "<p class=\"green\">";
-									echo "Sie erhalten in kürze eine Email, diese enthält einen Bestätigungslink. Sobald sie ihre Email-Adresse bestätigt haben, können Sie sich im Mitgliederbreich einloggen.";
-									echo "</p>";
-								
-								}
-								
-								
+									
+									$titleAndName = $titel . " " . $geschlecht . " " . $vorname . " " . $nachname;
+									
+									//Email an neues Mitglied schicken
+									if (send_verification_email($email, $titleAndName, $code, $iststudent)) {
+										
+										//Email an den Verein schicken
+										if(send_notification_email($email, $titleAndName, $iststudent)) {
+											echo "<h3 class=\"green\">Registrierung erfolgreich!</h3>";
+											echo "<p class=\"green\">";
+											echo "Sie erhalten in Kürze eine Email, diese enthält einen Bestätigungslink. Sobald sie ihre Email-Adresse bestätigt haben, können Sie sich im Mitgliederbreich einloggen.";
+											echo "</p>";
+										}
+										
+										//Fehler beim Schicken der Email an den Verein
+										else {
+											echo "<p class=\"error\">";
+											echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an den Verein aufgetreten.<br>";
+											echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+											echo "</p>";
+										}
+										
+									}
+									
+									//Fehler beim Schicken der Email an das neue Mitglied
+									else {
+										echo "<p class=\"error\">";
+										echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an Sie aufgetreten.<br>";
+										echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+										echo "</p>";
+									}
+					
+									
+								}								
+																	
 								
 								//Fehler bei der DB-Abfrage
 								else {
@@ -189,7 +217,7 @@
 									if ($mysqli->errno == 1062) {
 										echo "<p class=\"error\">";
 										echo "Es existiert bereits ein Nutzer mit der eingegebenen Email-Adresse.<br>";
-										echo "Falls die Registrierung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+										echo "Falls die vorherige Registrierung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>";
 										echo "</p>";
 									}
 									else {

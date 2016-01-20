@@ -3,7 +3,7 @@
 		
 			<?php 
 			//Einbinden von auth.php, um diese Seite nur eingeloggten Mitgliedern zur Verfügung zu stellen
-			require '../_includes/auth.php'; echo "\n"; 
+			require '../_includes_functionality/auth.php'; echo "\n"; 
 			?>
 		
 		

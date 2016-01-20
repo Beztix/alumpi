@@ -15,10 +15,8 @@
 				if (empty($_SESSION['login'])) {#
 				
 					//Anzeigen des Login-Formulars
-					include 'login_form.php';
+					include 'not_loggedin_content.php';
 					
-					//Einbinden der PHP-Datei zur Auswertung des Login-Formulars
-					include '../_includes/login.php'; 
 				}
 				
 				//Der User ist bereits eingelogged

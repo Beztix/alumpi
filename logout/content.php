@@ -3,7 +3,7 @@
 		
 			<?php 
 			//Einbinden von auth.php, um diese Seite nur eingeloggten Mitgliedern zur Verfügung zu stellen
-			require '../_includes/auth.php'; echo "\n"; 
+			require '../_includes_functionality/auth.php'; echo "\n"; 
 			?>
 		
 		
@@ -19,7 +19,7 @@
 				
 				<br>
 				Zum Abmelden bitte hier klicken:<br>
-				<a href="../_includes/logout.php">Logout</a><br>
+				<a href="../_includes_functionality/logout.php">Logout</a><br>
 				<br>
 				
 			</section>

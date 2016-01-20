@@ -2,6 +2,6 @@
 				<br>
 				<div id="submenu_in_content">
 				<?php 
-				include '../_includes/submenu_mitgliederbereich.php';
+				include '../_includes_layout/submenu_mitgliederbereich.php';
 				?>
 				</div>
