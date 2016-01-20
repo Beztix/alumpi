@@ -2,9 +2,98 @@
 
 //======================================================================
 // Diese PHP-Datei enthält alle Funktionen, um die Formulareingaben auf der Homepage zu validieren.
-// Die einzelnen Funktionen werden verwendet um zu überprüfen ob das Formular vollständig ausgefüllt wurde
-// und ob die Eingaben dem gewünschten Format entsprechen (Email-Adresse, Datum o.ä.).
+// Die einzelnen Funktionen werden verwendet um zu überprüfen ob das jeweilige Formular vollständig 
+// ausgefüllt wurde und ob die Eingaben dem gewünschten Format entsprechen (Email-Adresse, Datum o.ä.).
 //======================================================================
+
+
+
+// Überprüft, ob alle im Datenabfrage-Formular ausgefüllten Felder korrekt formatiert sind
+// Gibt einen leeren String zurück falls ja oder gibt die Fehlermeldungen zurück falls nein
+
+function check_fields_update() {
+	$error = "";
+	
+	
+	
+	if(!empty($_POST['vorname'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['vorname'])) {
+			$error = $error . "Als Vorname sind nur Buchstaben erlaubt.<br>\n";
+		}
+	}
+	if(!empty($_POST['nachname'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['nachname'])) {
+			$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
+		}
+	}
+	if(!empty($_POST['email'])) {
+		if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+			$error = $error . "Die eingegebene Email-Adresse ist ungültig.<br>\n";
+		}
+	}
+	
+	
+	//wenn der Newsletter neu abonniert wurde, muss die Adresse angegeben werden oder bereits vorhanden sein
+	
+	//newsletter jetzt abonniert
+	if($_POST['newsletter'] == 'Ja') {
+		//Eigabefelder leer UND Datenbankeintrag leer
+		if((empty($_POST['strasse'])) && ($strasse == '')) {
+			$error = $error . "Es wurde keine Straße eingegeben, obwohl der Newsletter abonniert wurde.<br>\n";
+		}
+		if((empty($_POST['plz'])) && ($plz == '')) {
+			$error = $error . "Es wurde keine PLZ eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
+		}	
+		if((empty($_POST['ort'])) && ($ort == '')) {
+			$error = $error . "Es wurde kein Ort eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
+		}
+		if((empty($_POST['land'])) && (land == '')) {
+			$error = $error . "Es wurde kein Land eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
+		}		
+	}
+
+	
+	if(!empty($_POST['strasse'])) {
+		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$_POST['strasse'])) {
+			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
+		}
+	}
+	if(!empty($_POST['plz'])) {
+		if (!preg_match("/^[0-9]*$/",$_POST['plz'])) {
+			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
+		}
+	}	
+	if(!empty($_POST['ort'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['ort'])) {
+			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
+		}
+	}
+	if(!empty($_POST['land'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['land'])) {
+			$error = $error . "Als Land sind nur Buchstaben erlaubt.<br>\n";
+		}	
+	}			
+	if(!empty($_POST['kontoinhaber'])) {
+		if (!preg_match("/^[a-zäöüß]*[ ]{1}[a-zäöüß]*$/iu",$_POST['kontoinhaber'])) {
+			$error = $error . "Das Feld \"Kontoinhaber\" wurde nicht korrekt ausgefüllt, bitte Vor- und Nachname durch ein Leerzeichen getrennt eingeben.<br>\n";
+		}
+	}
+	if(!empty($_POST['iban'])) {
+		if (!checkIBAN($_POST['iban'])) {
+			$error = $error . "Die eingegebene IBAN ist ungültig.<br>\n";
+		}
+	}
+	if(!empty($_POST['bic'])) {
+		if (!preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?/",$_POST['bic'])) {
+			$error = $error . "Die eingegebene BIC ist ungültig.<br>\n";
+		}
+	}
+	
+	
+	// Gib die Fehlermeldungen zurück, leer falls alles ok.
+	return $error;
+	
+}
 
 
 
@@ -110,7 +199,7 @@ function check_fields_format_register() {
 		
 		//Überprüfe Straße und Hausnummer auf korrektes Format (Straße ggf. mit Punkt abgekürzt, Hausnummer ggf. mit Buchstabe am Ende)
 		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$_POST['strasse'])) {
-		$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
+			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
 		}
 		
 		if (!preg_match("/^[0-9]*$/",$_POST['plz'])) {

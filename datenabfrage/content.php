@@ -22,11 +22,16 @@
 
 				<h1>Datenabfrage</h1>
 				
+				Hier können Sie ihre Mitgliedsdaten abfragen und ändern.<br>
+				Falls sie Daten ändern möchten, tragen Sie die neuen Daten in die Eingabefelder ein. Wenn sie Felder leer lassen, findet für diese Daten keine Änderung statt.<br>
+				
+				<br>
+				<br>
 				
 				<form action="index.php" method="POST" name="datenabfrage">
 				
 				
-					<table style="width:100%">
+					<table class="striped" style="width:100%">
 						
 						<colgroup>
 							<col style="width:26%;">
@@ -51,7 +56,7 @@
 								Mitglieds-ID
 							</td>
 							<td>
-								<?php echo $mid; ?>
+								<?php echo $data_output['mid']; ?>
 							</td>
 							<td>
 								
@@ -63,7 +68,7 @@
 								Titel
 							</td>
 							<td>
-								<?php echo $titel; ?>
+								<?php echo $data_output['titel']; ?>
 							</td>
 							<td>
 								<select name="titel">
@@ -89,7 +94,7 @@
 								Vorname
 							</td>
 							<td>
-								<?php echo $vorname; ?>
+								<?php echo $data_output['vorname'];?>
 							</td>
 							<td>
 								<input type="text" name="vorname" placeholder="Vorname" size="25">
@@ -101,7 +106,7 @@
 								Nachname
 							</td>
 							<td>
-								<?php echo $nachname; ?>
+								<?php echo $data_output['nachname']; ?>
 							</td>
 							<td>
 								<input type="text" name="nachname" placeholder="Nachname" size="25">
@@ -113,7 +118,7 @@
 								Email-Adresse
 							</td>
 							<td>
-								<?php echo $email; ?>
+								<?php echo $data_output['email']; ?>
 							</td>
 							<td>
 								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35">
@@ -125,7 +130,7 @@
 								Telefonnummer
 							</td>
 							<td>
-								<?php echo $telefon; ?>
+								<?php echo $data_output['telefon']; ?>
 							</td>
 							<td>
 								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25">
@@ -134,10 +139,27 @@
 						
 						<tr>
 							<td>
+								Newsletter abonniert
+							</td>
+							<td>
+								<?php echo $data_output['newsletter']; ?>
+							</td>
+							<td>
+								<select name="newsletter">
+									<option value="" selected></option>
+									<option value="j">Ja</option>
+									<option value="n">Nein</option>
+								</select>
+							</td>
+						</tr>
+						
+						
+						<tr>
+							<td>
 								Straße, Hausnummer
 							</td>
 							<td>
-								<?php echo $strasse; ?>
+								<?php echo $data_output['strasse']; ?>
 							</td>
 							<td>
 								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30">		
@@ -149,7 +171,7 @@
 								PLZ
 							</td>
 							<td>
-								<?php echo $plz; ?>
+								<?php echo $data_output['plz']; ?>
 							</td>
 							<td>
 								<input type="text" name="plz" placeholder="PLZ" size="10">
@@ -161,10 +183,38 @@
 								Ort
 							</td>
 							<td>
-								<?php echo $ort; ?>
+								<?php echo $data_output['ort']; ?>
 							</td>
 							<td>
 								<input type="text" name="ort" placeholder="Ort" size="25">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								Land
+							</td>
+							<td>
+								<?php echo $data_output['land']; ?>
+							</td>
+							<td>
+								<input type="text" name="land" placeholder="Land" size="25">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								Student
+							</td>
+							<td>
+								<?php echo $data_output['iststudent']; ?>
+							</td>
+							<td>
+								<select name="student">
+									<option value="" selected></option>
+									<option value="j">Ja</option>
+									<option value="n">Nein</option>
+								</select>
 							</td>
 						</tr>
 												
@@ -173,7 +223,7 @@
 								Kontoinhaber
 							</td>
 							<td>
-								<?php echo $kontoinhaber; ?>
+								<?php echo $data_output['kontoinhaber']; ?>
 							</td>
 							<td>
 								<input type="text" name="kontoinhaber" placeholder="Vorname Nachname" size="40">
@@ -185,7 +235,7 @@
 								IBAN
 							</td>
 							<td>
-								<?php echo $konto; ?>
+								<?php echo $data_output['konto']; ?>
 							</td>
 							<td>
 								<input type="text" name="iban" placeholder="IBAN" size="34">
@@ -197,7 +247,7 @@
 								BIC
 							</td>
 							<td>
-								<?php echo $blz; ?>
+								<?php echo $data_output['blz']; ?>
 							</td>
 							<td>
 								<input type="text" name="bic" placeholder="BIC" size="15">
@@ -224,23 +274,29 @@
 								
 							</td>
 							<td>
-								<input type="text" name="passwort" placeholder="Passwort wiederholen" size="25">
+								<input type="text" name="passwort2" placeholder="Passwort wiederholen" size="25">
 							</td>
 						</tr>
 						
 					</table>
 				
-				
+					<br>
+					<button class="absenden" type="submit">Absenden</button>
+
+				</form>
 				
 				</form>
 		
+		
+		
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include '../_includes_functionality/update_memberdata.php'; 
+				?>	
 				
 			</section>
 			
-			
-			
-			
-			
+
 			
         </section>
 		

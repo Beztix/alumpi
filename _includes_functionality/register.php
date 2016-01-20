@@ -17,8 +17,13 @@
 				echo "<br>";
 				*/
 				
+				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
 				include 'db_config.php';
+				
+				//Einbinden der PHP-Datei zur Validierung der Eingaben
 				include 'form_validation.php';
+
+				//Einbinden der PHP-Datei zum Verschicken der Bestätigungs-Emails
 				include 'send_email.php';
 
 				//Formulardaten angekommen
@@ -165,7 +170,7 @@
 
 								
 								
-								//Username und (gehashtes) Passwort aus der Datenbank holen
+								//Mitgliederdaten in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 								$stmt = $mysqli->prepare("INSERT INTO vereinsmitglieder   
 								(eintrittsdatum, geschlecht, titel, nachname, vorname, email, strasse, plz, ort, land, geburtstag, kontoinhaber, konto, blz, bezahlt, newsletter, pw, usergruppe, telefon, studentennachweis_vorhanden, iststudent, code, bestaetigt, rechtegruppe, beitrag) 
