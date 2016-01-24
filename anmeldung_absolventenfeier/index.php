@@ -3,6 +3,9 @@
 
 <?php
 session_start();
+require '../_includes_functionality/global_constants.php';
+
+
 $thisPage = 'anmeldung_absolventenfeier';
 $title = 'AluMPI | Anmeldung zur Absolventenfeier';
 $keywords = 'x y z';
