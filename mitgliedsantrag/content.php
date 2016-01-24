@@ -23,6 +23,13 @@
 				</p>
 
 				<br>
+				
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include '../_includes_functionality/register.php'; 
+				?>	
+
+				<br>				
 
 				<h2>Beitrittserklärung</h2>
 
@@ -178,13 +185,6 @@
 
 				</form>
 
-
-				
-				<?php
-				//Einbinden der PHP-Datei zur Formularauswertung
-				include '../_includes_functionality/register.php'; 
-				?>				
-				
 				
 			
 			</section>

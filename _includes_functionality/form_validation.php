@@ -11,23 +11,23 @@
 // Überprüft, ob alle im Datenabfrage-Formular ausgefüllten Felder korrekt formatiert sind
 // Gibt einen leeren String zurück falls ja oder gibt die Fehlermeldungen zurück falls nein
 
-function check_fields_update() {
+function check_fields_update($data_form, $data_db) {
 	$error = "";
 	
 	
 	
-	if(!empty($_POST['vorname'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['vorname'])) {
+	if(!empty($data_form['vorname'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['vorname'])) {
 			$error = $error . "Als Vorname sind nur Buchstaben erlaubt.<br>\n";
 		}
 	}
-	if(!empty($_POST['nachname'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['nachname'])) {
+	if(!empty($data_form['nachname'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['nachname'])) {
 			$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
 		}
 	}
-	if(!empty($_POST['email'])) {
-		if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+	if(!empty($data_form['email'])) {
+		if (!filter_var($data_form['email'], FILTER_VALIDATE_EMAIL)) {
 			$error = $error . "Die eingegebene Email-Adresse ist ungültig.<br>\n";
 		}
 	}
@@ -36,55 +36,55 @@ function check_fields_update() {
 	//wenn der Newsletter neu abonniert wurde, muss die Adresse angegeben werden oder bereits vorhanden sein
 	
 	//newsletter jetzt abonniert
-	if($_POST['newsletter'] == 'Ja') {
+	if($data_form['newsletter'] == 'j') {
 		//Eigabefelder leer UND Datenbankeintrag leer
-		if((empty($_POST['strasse'])) && ($strasse == '')) {
+		if((empty($data_form['strasse'])) && ($data_db['strasse'] == '')) {
 			$error = $error . "Es wurde keine Straße eingegeben, obwohl der Newsletter abonniert wurde.<br>\n";
 		}
-		if((empty($_POST['plz'])) && ($plz == '')) {
+		if((empty($data_form['plz'])) && ($data_db['plz'] == '')) {
 			$error = $error . "Es wurde keine PLZ eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
 		}	
-		if((empty($_POST['ort'])) && ($ort == '')) {
+		if((empty($data_form['ort'])) && ($data_db['ort'] == '')) {
 			$error = $error . "Es wurde kein Ort eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
 		}
-		if((empty($_POST['land'])) && (land == '')) {
+		if((empty($data_form['land'])) && ($data_db['land'] == '')) {
 			$error = $error . "Es wurde kein Land eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
 		}		
 	}
 
 	
-	if(!empty($_POST['strasse'])) {
-		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$_POST['strasse'])) {
+	if(!empty($data_form['strasse'])) {
+		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
 			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
 		}
 	}
-	if(!empty($_POST['plz'])) {
-		if (!preg_match("/^[0-9]*$/",$_POST['plz'])) {
+	if(!empty($data_form['plz'])) {
+		if (!preg_match("/^[0-9]*$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
 		}
 	}	
-	if(!empty($_POST['ort'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['ort'])) {
+	if(!empty($data_form['ort'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['ort'])) {
 			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
 		}
 	}
-	if(!empty($_POST['land'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['land'])) {
+	if(!empty($data_form['land'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['land'])) {
 			$error = $error . "Als Land sind nur Buchstaben erlaubt.<br>\n";
 		}	
 	}			
-	if(!empty($_POST['kontoinhaber'])) {
-		if (!preg_match("/^[a-zäöüß]*[ ]{1}[a-zäöüß]*$/iu",$_POST['kontoinhaber'])) {
+	if(!empty($data_form['kontoinhaber'])) {
+		if (!preg_match("/^[a-zäöüß]*[ ]{1}[a-zäöüß]*$/iu",$data_form['kontoinhaber'])) {
 			$error = $error . "Das Feld \"Kontoinhaber\" wurde nicht korrekt ausgefüllt, bitte Vor- und Nachname durch ein Leerzeichen getrennt eingeben.<br>\n";
 		}
 	}
-	if(!empty($_POST['iban'])) {
-		if (!checkIBAN($_POST['iban'])) {
+	if(!empty($data_form['iban'])) {
+		if (!checkIBAN($data_form['iban'])) {
 			$error = $error . "Die eingegebene IBAN ist ungültig.<br>\n";
 		}
 	}
-	if(!empty($_POST['bic'])) {
-		if (!preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?/",$_POST['bic'])) {
+	if(!empty($data_form['bic'])) {
+		if (!preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?/",$data_form['bic'])) {
 			$error = $error . "Die eingegebene BIC ist ungültig.<br>\n";
 		}
 	}
@@ -101,47 +101,47 @@ function check_fields_update() {
 // Überprüft, ob alle im Registrierungs-Formular benötigten Felder ausgefüllt wurden
 // Gibt einen leeren String zurück falls ja oder gibt die Fehlermeldungen zurück falls nein
 
-function check_required_fields_register() {
+function check_required_fields_register($data_form) {
 	$error = "";
 	
 	// überprüfe alle zwingend notwendigen Textfelder
 	
-	if(empty($_POST['vorname'])) {
+	if(empty($data_form['vorname'])) {
 		$error = $error . "Es wurde kein Vorname eingegeben.<br>\n";
 	}
-	if(empty($_POST['nachname'])) {
+	if(empty($data_form['nachname'])) {
 		$error = $error . "Es wurde kein Nachname eingegeben.<br>\n";
 	}
-	if(empty($_POST['geburtstag'])) {
+	if(empty($data_form['geburtstag'])) {
 		$error = $error . "Es wurde kein Geburtsdatum eingegeben.<br>\n";
 	}
-	if(empty($_POST['email'])) {
+	if(empty($data_form['email'])) {
 		$error = $error . "Es wurde keine Email-Adresse eingegeben.<br>\n";
 	}
-	if(empty($_POST['kontoinhaber'])) {
+	if(empty($data_form['kontoinhaber'])) {
 		$error = $error . "Es wurde kein Kontoinhaber eingegeben.<br>\n";
 	}
-	if(empty($_POST['iban'])) {
+	if(empty($data_form['iban'])) {
 		$error = $error . "Es wurde keine IBAN eingegeben.<br>\n";
 	}
-	if(empty($_POST['bic'])) {
+	if(empty($data_form['bic'])) {
 		$error = $error . "Es wurde keine BIC eingegeben.<br>\n";
 	}
 	
 	
 	// falls die Checkbox "newsletter" nicht(!) ausgewählt wurde, muss eine Adresse eingegeben werden
-	if(!isset($_POST['newsletter'])) {
+	if(!isset($data_form['newsletter'])) {
 		
-		if(empty($_POST['strasse'])) {
+		if(empty($data_form['strasse'])) {
 			$error = $error . "Es wurde keine Straße eingegeben.<br>\n";
 		}
-		if(empty($_POST['plz'])) {
+		if(empty($data_form['plz'])) {
 			$error = $error . "Es wurde keine PLZ eingegeben.<br>\n";
 		}	
-		if(empty($_POST['ort'])) {
+		if(empty($data_form['ort'])) {
 			$error = $error . "Es wurde kein Ort eingegeben.<br>\n";
 		}
-		if(empty($_POST['land'])) {
+		if(empty($data_form['land'])) {
 			$error = $error . "Es wurde kein Land eingegeben.<br>\n";
 		}		
 	}
@@ -157,58 +157,58 @@ function check_required_fields_register() {
 // Überprüft, ob der Inhalt aller im Registrierungs-Formular benötigten Felder korrekt formatiert ist
 // Gibt einen leeren String zurück falls ja oder gibt die Fehlermeldungen zurück falls nein
 
-function check_fields_format_register() {
+function check_fields_format_register($data_form) {
 	$error = "";
 	
 	// Überprüfe ob die Namensfelder nur Buchstaben enthalten
-	if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['vorname'])) {
+	if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['vorname'])) {
 		$error = $error . "Als Vorname sind nur Buchstaben erlaubt.<br>\n";
 	}
-	if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['nachname'])) {
+	if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['nachname'])) {
 		$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
 	}
 	
 	// Überprüfe das Geburtsdatum auf korrektes Format
-	if (!preg_match("/^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4}$/",$_POST['geburtstag'])) {
+	if (!preg_match("/^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4}$/",$data_form['geburtstag'])) {
 		$error = $error . "Das eingegebene Geburtsdatum muss das Format TT.MM.JJJJ haben.<br>\n";
 	}
 
 	// Überprüfe die Email-Adresse auf korrektes Format
-	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+	if (!filter_var($data_form['email'], FILTER_VALIDATE_EMAIL)) {
 		$error = $error . "Die eingegebene Email-Adresse ist ungültig.<br>\n";
 	}
 
 	// Überprüfe den Kontoinhaber
-	if (!preg_match("/^[a-zäöüß]*[ ]{1}[a-zäöüß]*$/iu",$_POST['kontoinhaber'])) {
+	if (!preg_match("/^[a-zäöüß]*[ ]{1}[a-zäöüß]*$/iu",$data_form['kontoinhaber'])) {
 		$error = $error . "Das Feld \"Kontoinhaber\" wurde nicht korrekt ausgefüllt, bitte Vor- und Nachname durch ein Leerzeichen getrennt eingeben.<br>\n";
 	}
 	
 	// Überprüfe die IBAN
-	if (!checkIBAN($_POST['iban'])) {
+	if (!checkIBAN($data_form['iban'])) {
 		$error = $error . "Die eingegebene IBAN ist ungültig.<br>\n";
 	}
 	
 	// Überprüfe die BIC
-	if (!preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?/",$_POST['bic'])) {
+	if (!preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?/",$data_form['bic'])) {
 		$error = $error . "Die eingegebene BIC ist ungültig.<br>\n";
 	}
 	
 	
 	// falls die Checkbox "newsletter" nicht(!) ausgewählt wurde, muss eine Adresse eingegeben werden
-	if(!isset($_POST['newsletter'])) {
+	if(!isset($data_form['newsletter'])) {
 		
 		//Überprüfe Straße und Hausnummer auf korrektes Format (Straße ggf. mit Punkt abgekürzt, Hausnummer ggf. mit Buchstabe am Ende)
-		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$_POST['strasse'])) {
+		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
 			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
 		}
 		
-		if (!preg_match("/^[0-9]*$/",$_POST['plz'])) {
+		if (!preg_match("/^[0-9]*$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
 		}
-		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['ort'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['ort'])) {
 			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
 		}
-		if (!preg_match("/^[a-zäöüß]*$/iu",$_POST['land'])) {
+		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['land'])) {
 			$error = $error . "Als Land sind nur Buchstaben erlaubt.<br>\n";
 		}	
 	}

@@ -34,8 +34,9 @@
 					*/
 					
 					//Nicht alle Felder ausgefüllt
-					$error = check_required_fields_register();
+					$error = check_required_fields_register($_POST);
 					if(!empty($error)) {
+						echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 						echo "<p class=\"error\">";
 						echo $error;
 						echo "</p>";
@@ -45,11 +46,12 @@
 					else {
 						
 						//Fehler in der Formatierung der Eingabe
-						$error = check_fields_format_register();
+						$error = check_fields_format_register($_POST);
 						if(!empty($error)) {
-						echo "<p class=\"error\">";
-						echo $error;
-						echo "</p>";
+							echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
+							echo "<p class=\"error\">";
+							echo $error;
+							echo "</p>";
 						}
 					
 						//Alle Felder korrekt formatiert
@@ -69,10 +71,13 @@
 							
 							//Fehler bei der DB-Verbindung		
 							if ($mysqli->connect_errno) {
+								echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
+								echo "<p class=\"error\">";
 								echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
 								echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 								echo "<br>";
 								echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+								echo "</p>";
 							}
 							
 							//DB-Verbindung erfolgreich
@@ -196,6 +201,7 @@
 										
 										//Fehler beim Schicken der Email an den Verein
 										else {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 											echo "<p class=\"error\">";
 											echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an den Verein aufgetreten.<br>";
 											echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
@@ -206,6 +212,7 @@
 									
 									//Fehler beim Schicken der Email an das neue Mitglied
 									else {
+										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 										echo "<p class=\"error\">";
 										echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an Sie aufgetreten.<br>";
 										echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
@@ -220,12 +227,14 @@
 								else {
 									
 									if ($mysqli->errno == 1062) {
+										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 										echo "<p class=\"error\">";
 										echo "Es existiert bereits ein Nutzer mit der eingegebenen Email-Adresse.<br>";
 										echo "Falls die vorherige Registrierung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>";
 										echo "</p>";
 									}
 									else {
+										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 										echo "<p class=\"error\">";
 										echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
 										echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";

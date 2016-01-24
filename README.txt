@@ -2,8 +2,8 @@
 #######												#######
 #######		   README zur AluMPI-Homepage			#######
 #######												#######
-#######				  Version 0.1					#######
-#######				  11.01.2016					#######
+#######				  Version 0.2					#######
+#######				  21.01.2016					#######
 #######												#######
 ###########################################################
 
@@ -13,46 +13,102 @@
 =======================
 
 0. TO DO
+	0.1 Notwendig
+	0.2 Optional
+	
 1. Allgemeines
+
 2. Struktur der Homepage
-3. Arbeitsschritte
+	2.1 Ordnerstruktur
+	2.2 Aufbau einer Seite
 
-4. Details
-4.1 Form Validation
-
-
+3. Übliche Arbeitsschritte
+	3.1 Seiteninhalt verändern
+	3.2 Eine neue Seite anlegen
+	3.3 Eine Seite löschen
+	3.4 Eine Seite in den Mitgliederbereich aufnehmen
+	3.5 ?
+	
+4. Hinweise zu Implementierungsdetails
+	4.1 Form Validation
+	4.2 ?
 
 =======================
 
 
-0. TO DO
 
-- Feld für Passwort ist in DB zu kurz!!
+
+
+	0. TO DO
+################################################
+
+
+	0.1 Notwendig
+------------------------------------------------
+
+
+- Feld für Passwort ist in original-DB zu kurz!!
 - Keywords für alle Seiten in der jeweiligen index.php eintragen
 - Descriptions für alle Seiten in der jeweiligen index.php eintragen
-- DB-Config außerhalb des www-Verzeichnis lagern
+- DB-Config auf Server dann außerhalb des www-Verzeichnis lagern
 - Bestätigungsmail bei Registrierung zum laufen bringen
-- Datenabfrage programmieren
-- Registrierung von Fördermitgliedern?
 - Was ist die Usergruppe in der DB?
-
+- Anmeldung Absolventenfeier programmieren
+- Bilder einpflegen
+- Footer befüllen
 
 - Login-Bereich testen
 - Registrierung in DB testen
+- Datenabfrage testen
+
+
+
+	0.2 Optional
+------------------------------------------------
+
+- Registrierung von Fördermitgliedern?
+- Mitgliedsbestätigung generieren
 
 
 
 
-1. Allgemeines
+
+
+	1. Allgemeines
+################################################
 
 
 
 
 
-2. Struktur der Homepage
+
+
+
+	2. Struktur der Homepage
+################################################
 
 
 
 
-4.1
+
+
+
+
+	3. Übliche Arbeitsschritte
+################################################
+
+
+
+
+
+
+
+	4. Hinweise zu Implementierungsdetails
+################################################
+
+
+
+	4.1 Form Validation
+------------------------------------------------
+
 Regexes zur Überprüfung der Eingabefelder, wichtig die Modifier i für case-insensitive und u für UTF-8, um Umlaute etc. korrekt zu verarbeiten.

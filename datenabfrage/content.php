@@ -12,20 +12,40 @@
 			</section>
 		
 		
-			<?php
-			//Einbinden der PHP-Datei um die Mitgliedsdaten abzurufen
-			include '../_includes_functionality/get_memberdata_from_db.php'; 
-			?>		
-		
+	
 		
             <section class="text">
-
+	
+			
+			
 				<h1>Datenabfrage</h1>
 				
 				Hier können Sie ihre Mitgliedsdaten abfragen und ändern.<br>
 				Falls sie Daten ändern möchten, tragen Sie die neuen Daten in die Eingabefelder ein. Wenn sie Felder leer lassen, findet für diese Daten keine Änderung statt.<br>
 				
 				<br>
+				
+				<?php
+				//Einbinden der PHP-Datei um die Mitgliedsdaten abzurufen
+				include '../_includes_functionality/get_memberdata_from_db.php'; 
+				
+				
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include '../_includes_functionality/update_memberdata.php'; 
+				
+
+				//Abfrage einer GET-Variable, um festzustellen ob die Seite neu geladen wurde, nachdem ein DB-Update erfolgreich ausgeführt wurde
+				if(isset($_GET['status'])){
+						if($_GET['status'] == 'success') {
+							
+							echo "<h3 class=\"green\">Änderung erfolgreich!</h3>\n";
+							echo "<p class=\"green\">\n";
+							echo "Die geänderten Daten wurden erfolgreich in die Datenbank eingetragen, kontrollieren Sie die Änderungen bitte noch einmal in der unten stehenden Tabelle.<br>\n";
+							echo "</p>\n";
+						}
+				}
+				?>
+				
 				<br>
 				
 				<form action="index.php" method="POST" name="datenabfrage">
@@ -284,15 +304,8 @@
 					<button class="absenden" type="submit">Absenden</button>
 
 				</form>
-				
-				</form>
 		
 		
-		
-				<?php
-				//Einbinden der PHP-Datei zur Formularauswertung
-				include '../_includes_functionality/update_memberdata.php'; 
-				?>	
 				
 			</section>
 			
