@@ -21,6 +21,11 @@
 				
 				<li>
 					<a <?php if ($thisPage=="absolventenfeier") {echo " class=\"currentpage\"";} ?> href="../absolventenfeier/index.php">Absolventenfeier</a>
+					<?php
+					if($thisPage=="absolventenfeier" || $thisPage=="anmeldung_absolventenfeier" || $thisPage=="anmeldung_feier_gast") {
+						include 'submenu_absolventenfeier.php';
+					}
+					?>
 				</li>
 				
 				<li>

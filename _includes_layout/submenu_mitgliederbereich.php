@@ -11,6 +11,9 @@
 
 <ul>
 	<li>
+		<a <?php if ($thisPage=="anmeldung_feier_absolvent") {echo " class=\"currentpage\"";} ?> href="../anmeldung_feier_absolvent/index.php">Anmeldung zur Absolventenfeier</a>
+	</li>
+	<li>
 		<a <?php if ($thisPage=="bildergallerie") {echo " class=\"currentpage\"";} ?> href="../bildergallerie/index.php">Bildergallerie</a>
 	</li>
 	<li>
