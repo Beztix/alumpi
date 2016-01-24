@@ -133,7 +133,7 @@
 
 
 					<p>
-					<input type="checkbox" name="student" <?php if(isset($_POST['student'])) echo "checked";?>>
+					<input type="checkbox" name="iststudent" <?php if(isset($_POST['iststudent'])) echo "checked";?>>
 					Ich bin Student oder aktueller Absolvent. Diese sind vom Beitrag befreit, die Kontodaten sind jedoch in jedem Fall anzugeben. 
 					Für die Befreiung ist zusätzlich ein Studiennachweis eines Semesters des zu befreienden Jahres bereitzustellen. 
 					Die Kontaktdaten finden Sie im Menu links unter dem Punkt Kontakt.<br>

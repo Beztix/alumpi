@@ -76,11 +76,11 @@
 							$plz_neu = $data_db['plz'];						if(!empty($_POST['plz'])) {$plz_neu = $_POST['plz'];}
 							$ort_neu = $data_db['ort'];						if(!empty($_POST['ort'])) {$ort_neu = $_POST['ort'];}
 							$land_neu = $data_db['land'];					if(!empty($_POST['land'])) {$land_neu = $_POST['land'];}
-							$iststudent_neu = $data_db['iststudent'];		if(!empty($_POST['iststudent'])) {$iststudent_neu = $_POST['student'];}
+							$iststudent_neu = $data_db['iststudent'];		if(!empty($_POST['iststudent'])) {$iststudent_neu = $_POST['iststudent'];}
 							$kontoinhaber_neu = $data_db['kontoinhaber'];	if(!empty($_POST['kontoinhaber'])) {$kontoinhaber_neu = $_POST['kontoinhaber'];}
-							$konto_neu = $data_db['konto'];					if(!empty($_POST['konto'])) {$konto_neu = $_POST['konto'];}
-							$blz_neu = $data_db['blz'];						if(!empty($_POST['blz'])) {$blz_neu = $_POST['blz'];}
-							$pw_neu = $data_db['pw'];						if(!empty($_POST['pw'])) {$pw_neu = password_hash($_POST['pw'], PASSWORD_DEFAULT);}
+							$iban_neu = $data_db['iban'];					if(!empty($_POST['iban'])) {$iban_neu = $_POST['iban'];}
+							$bic_neu = $data_db['bic'];						if(!empty($_POST['bic'])) {$bic_neu = $_POST['bic'];}
+							$pw_neu = $data_db['passwort'];					if(!empty($_POST['passwort'])) {$pw_neu = password_hash($_POST['passwort'], PASSWORD_DEFAULT);}
 							
 							
 							
@@ -102,11 +102,11 @@
 							land = ?, 
 							iststudent = ?, 
 							kontoinhaber = ?, 
-							konto = ?, 
-							blz = ?, 
+							iban = ?, 
+							bic = ?, 
 							pw = ?
 							WHERE mid = ?");
-							$stmt->bind_param("ssssssssssssssss", $titel_neu, $vorname_neu, $nachname_neu, $email_neu, $telefon_neu, $newsletter_neu, $strasse_neu, $plz_neu, $ort_neu, $land_neu, $iststudent_neu, $kontoinhaber_neu, $konto_neu, $blz_neu, $pw_neu, $data_db['mid']);
+							$stmt->bind_param("ssssssssssssssss", $titel_neu, $vorname_neu, $nachname_neu, $email_neu, $telefon_neu, $newsletter_neu, $strasse_neu, $plz_neu, $ort_neu, $land_neu, $iststudent_neu, $kontoinhaber_neu, $iban_neu, $bic_neu, $pw_neu, $data_db['mid']);
 						
 						
 							//DB-Abfrage erfolgreich

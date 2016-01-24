@@ -1,10 +1,10 @@
 ﻿###########################################################
-#######												#######
-#######		   README zur AluMPI-Homepage			#######
-#######												#######
-#######				  Version 0.2					#######
-#######				  21.01.2016					#######
-#######												#######
+#######                                             #######
+#######          README zur AluMPI-Homepage         #######
+#######                                             #######
+#######                 Version 0.2                 #######
+#######                 21.01.2016                  #######
+#######                                             #######
 ###########################################################
 
 
@@ -48,6 +48,8 @@
 
 
 - Feld für Passwort ist in original-DB zu kurz!!
+- In DB auf IBAN/BIC umstellen
+
 - Keywords für alle Seiten in der jeweiligen index.php eintragen
 - Descriptions für alle Seiten in der jeweiligen index.php eintragen
 - DB-Config auf Server dann außerhalb des www-Verzeichnis lagern

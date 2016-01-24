@@ -41,6 +41,7 @@
 							echo "<h3 class=\"green\">Änderung erfolgreich!</h3>\n";
 							echo "<p class=\"green\">\n";
 							echo "Die geänderten Daten wurden erfolgreich in die Datenbank eingetragen, kontrollieren Sie die Änderungen bitte noch einmal in der unten stehenden Tabelle.<br>\n";
+							echo "Falls sie ihr Passwort geändert haben überprüfen Sie die erfolgreiche Änderung bitte, indem Sie sich aus- und wieder einloggen.<br>\n";
 							echo "</p>\n";
 						}
 				}
@@ -230,7 +231,7 @@
 								<?php echo $data_output['iststudent']; ?>
 							</td>
 							<td>
-								<select name="student">
+								<select name="iststudent">
 									<option value="" selected></option>
 									<option value="j">Ja</option>
 									<option value="n">Nein</option>
@@ -255,7 +256,7 @@
 								IBAN
 							</td>
 							<td>
-								<?php echo $data_output['konto']; ?>
+								<?php echo $data_output['iban']; ?>
 							</td>
 							<td>
 								<input type="text" name="iban" placeholder="IBAN" size="34">
@@ -267,7 +268,7 @@
 								BIC
 							</td>
 							<td>
-								<?php echo $data_output['blz']; ?>
+								<?php echo $data_output['bic']; ?>
 							</td>
 							<td>
 								<input type="text" name="bic" placeholder="BIC" size="15">
@@ -282,7 +283,7 @@
 								
 							</td>
 							<td>
-								<input type="text" name="passwort" placeholder="Passwort" size="25">
+								<input type="text" name="passwort" placeholder="Neues Passwort" size="25">
 							</td>
 						</tr>
 												
@@ -294,7 +295,7 @@
 								
 							</td>
 							<td>
-								<input type="text" name="passwort2" placeholder="Passwort wiederholen" size="25">
+								<input type="text" name="passwort2" placeholder="Neues Passwort wiederholen" size="25">
 							</td>
 						</tr>
 						

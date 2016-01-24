@@ -12,7 +12,7 @@ include 'db_config.php';
 //Array für die abgerufenen Daten in DB-Originalform
 $data_db;
 
-//Array für die (ggf. umgewandelten) abgerufenen Daten in Ausgabeform
+//Array für die abgerufenen Daten in (ggf. von DB-Originalform abweichender) Ausgabeform
 $data_output;
 
 
@@ -39,7 +39,7 @@ else {
 	//Mitgliederdaten zur Email-Adresse des aktuellen Users aus der Datenbank holen
 	//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 	$stmt = $mysqli->prepare('SELECT 
-	mid, titel, vorname, nachname, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, konto, blz, pw
+	mid, titel, vorname, nachname, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, iban, bic, pw
 	FROM vereinsmitglieder WHERE email = ?');
 	$stmt->bind_param('s', $_SESSION['userEmail']);
 	$stmt->execute();
@@ -71,8 +71,8 @@ else {
 			$data_output['land'] = $data_db['land'];
 			$data_output['iststudent'] = 'Ja'; if($data_db['iststudent'] == 'n') {$data_output['iststudent'] = 'Nein';}
 			$data_output['kontoinhaber'] = $data_db['kontoinhaber'];
-			$data_output['konto'] = $data_db['konto'];
-			$data_output['blz'] = $data_db['blz'];
+			$data_output['iban'] = $data_db['iban'];
+			$data_output['bic'] = $data_db['bic'];
 			
 		}
 		

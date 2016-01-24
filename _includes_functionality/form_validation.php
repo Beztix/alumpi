@@ -17,12 +17,12 @@ function check_fields_update($data_form, $data_db) {
 	
 	
 	if(!empty($data_form['vorname'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['vorname'])) {
+		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['vorname'])) {
 			$error = $error . "Als Vorname sind nur Buchstaben erlaubt.<br>\n";
 		}
 	}
 	if(!empty($data_form['nachname'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['nachname'])) {
+		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['nachname'])) {
 			$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
 		}
 	}
@@ -54,27 +54,27 @@ function check_fields_update($data_form, $data_db) {
 
 	
 	if(!empty($data_form['strasse'])) {
-		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
+		if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
 			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
 		}
 	}
 	if(!empty($data_form['plz'])) {
-		if (!preg_match("/^[0-9]*$/",$data_form['plz'])) {
+		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
 		}
 	}	
 	if(!empty($data_form['ort'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['ort'])) {
+		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
 			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
 		}
 	}
 	if(!empty($data_form['land'])) {
-		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['land'])) {
+		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['land'])) {
 			$error = $error . "Als Land sind nur Buchstaben erlaubt.<br>\n";
 		}	
 	}			
 	if(!empty($data_form['kontoinhaber'])) {
-		if (!preg_match("/^[a-zäöüß]*[ ]{1}[a-zäöüß]*$/iu",$data_form['kontoinhaber'])) {
+		if (!preg_match("/^[a-zäöüß]+[ ]{1}[a-zäöüß]+$/iu",$data_form['kontoinhaber'])) {
 			$error = $error . "Das Feld \"Kontoinhaber\" wurde nicht korrekt ausgefüllt, bitte Vor- und Nachname durch ein Leerzeichen getrennt eingeben.<br>\n";
 		}
 	}
@@ -88,6 +88,19 @@ function check_fields_update($data_form, $data_db) {
 			$error = $error . "Die eingegebene BIC ist ungültig.<br>\n";
 		}
 	}
+	
+	//Wenn das Passwort-Feld nicht leer ist, muss das zweite Passwort-Feld identisch sein
+	if(!empty($data_form['passwort'])) {
+		if(!($data_form['passwort'] == $data_form['passwort2'])) {
+			$error = $error . "Das eingegebene neue Passwort stimmt nicht mit der Passworteingabe im Kontrollfeld überein. Bitte geben Sie das Passwort in beide Felder ein, um fehlerhafte Änderungen zu vermeiden.<br>\n";
+		}
+		else {
+			if(strlen($data_form['passwort']) < 6) {
+				$error = $error . "Das neue Passwort muss mindestens 6 Zeichen lang sein.<br>\n";
+			}
+		}
+	}
+	
 	
 	
 	// Gib die Fehlermeldungen zurück, leer falls alles ok.
@@ -161,10 +174,10 @@ function check_fields_format_register($data_form) {
 	$error = "";
 	
 	// Überprüfe ob die Namensfelder nur Buchstaben enthalten
-	if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['vorname'])) {
+	if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['vorname'])) {
 		$error = $error . "Als Vorname sind nur Buchstaben erlaubt.<br>\n";
 	}
-	if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['nachname'])) {
+	if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['nachname'])) {
 		$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
 	}
 	
@@ -179,7 +192,7 @@ function check_fields_format_register($data_form) {
 	}
 
 	// Überprüfe den Kontoinhaber
-	if (!preg_match("/^[a-zäöüß]*[ ]{1}[a-zäöüß]*$/iu",$data_form['kontoinhaber'])) {
+	if (!preg_match("/^[a-zäöüß]+[ ]{1}[a-zäöüß]+$/iu",$data_form['kontoinhaber'])) {
 		$error = $error . "Das Feld \"Kontoinhaber\" wurde nicht korrekt ausgefüllt, bitte Vor- und Nachname durch ein Leerzeichen getrennt eingeben.<br>\n";
 	}
 	
@@ -198,17 +211,17 @@ function check_fields_format_register($data_form) {
 	if(!isset($data_form['newsletter'])) {
 		
 		//Überprüfe Straße und Hausnummer auf korrektes Format (Straße ggf. mit Punkt abgekürzt, Hausnummer ggf. mit Buchstabe am Ende)
-		if (!preg_match("/^[a-zäöüß]*[.]?[ ]{1}[0-9]*([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
+		if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
 			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
 		}
 		
-		if (!preg_match("/^[0-9]*$/",$data_form['plz'])) {
+		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
 		}
-		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['ort'])) {
+		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
 			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
 		}
-		if (!preg_match("/^[a-zäöüß]*$/iu",$data_form['land'])) {
+		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['land'])) {
 			$error = $error . "Als Land sind nur Buchstaben erlaubt.<br>\n";
 		}	
 	}

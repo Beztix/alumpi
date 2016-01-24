@@ -99,7 +99,7 @@
 								echo $_POST['kontoinhaber'] . "<br>";
 								echo $_POST['iban'] . "<br>";
 								echo $_POST['bic'] . "<br>";
-								echo $_POST['student'] . "<br>";
+								echo $_POST['iststudent'] . "<br>";
 								echo $_POST['newsletter'] . "<br>";
 								echo $_POST['strasse'] . "<br>";
 								echo $_POST['plz'] . "<br>";
@@ -128,15 +128,15 @@
 								$land = $_POST['land'];
 								$geburtstag = date('Y-m-d', strtotime($_POST['geburtstag'])); 				//Datum in Format YYYY-MM-DD für DB
 								$kontoinhaber = $_POST['kontoinhaber'];
-								$konto = $_POST['iban'];
-								$blz = $_POST['bic'];
+								$iban = $_POST['iban'];
+								$bic = $_POST['bic'];
 								$bezahlt = "n";							//immer n bei Registrierung
 								$newsletter = "j"; if(isset($_POST['newsletter'])) { $newsletter = "n";}	//n falls newsletter angewählt, j sonst
 								$pw = password_hash($_POST['geburtstag'], PASSWORD_DEFAULT);				//Standardpasswort ist der Geburtstag, speichere gehasht in DB
 								$usergruppe = null;						//????
 								$telefon = $_POST['telefon'];
 								$studentennachweis_vorhanden = "n";		//immer n bei Registrierung
-								$iststudent = "n"; if(isset($_POST['student'])) { $iststudent = "j";}		//j falls student angewählt, n sonst
+								$iststudent = "n"; if(isset($_POST['iststudent'])) { $iststudent = "j";}		//j falls student angewählt, n sonst
 								$code = md5($email . $eintrittsdatum);	//Bestätigungscode zum Überprüfen der Email-Adresse
 								$bestaetigt = "n";						//immer n bei Registrierung
 								$rechtegruppe = 1;						//immer 1 (normales Mitglied) bei Registrierung
@@ -158,8 +158,8 @@
 								echo $land . "<br>";
 								echo $geburtstag . "<br>";
 								echo $kontoinhaber . "<br>";
-								echo $konto . "<br>";
-								echo $blz . "<br>";
+								echo $iban . "<br>";
+								echo $bic . "<br>";
 								echo $bezahlt . "<br>";
 								echo $newsletter . "<br>";
 								echo $pw . "<br>";
@@ -178,9 +178,9 @@
 								//Mitgliederdaten in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 								$stmt = $mysqli->prepare("INSERT INTO vereinsmitglieder   
-								(eintrittsdatum, geschlecht, titel, nachname, vorname, email, strasse, plz, ort, land, geburtstag, kontoinhaber, konto, blz, bezahlt, newsletter, pw, usergruppe, telefon, studentennachweis_vorhanden, iststudent, code, bestaetigt, rechtegruppe, beitrag) 
+								(eintrittsdatum, geschlecht, titel, nachname, vorname, email, strasse, plz, ort, land, geburtstag, kontoinhaber, iban, bic, bezahlt, newsletter, pw, usergruppe, telefon, studentennachweis_vorhanden, iststudent, code, bestaetigt, rechtegruppe, beitrag) 
 								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-								$stmt->bind_param("sssssssssssssssssisssssid", $eintrittsdatum, $geschlecht, $titel, $nachname, $vorname, $email, $strasse, $plz, $ort, $land, $geburtstag, $kontoinhaber, $konto, $blz, $bezahlt, $newsletter, $pw, $usergruppe, $telefon, $studentennachweis_vorhanden, $iststudent, $code, $bestaetigt, $rechtegruppe, $beitrag);
+								$stmt->bind_param("sssssssssssssssssisssssid", $eintrittsdatum, $geschlecht, $titel, $nachname, $vorname, $email, $strasse, $plz, $ort, $land, $geburtstag, $kontoinhaber, $iban, $bic, $bezahlt, $newsletter, $pw, $usergruppe, $telefon, $studentennachweis_vorhanden, $iststudent, $code, $bestaetigt, $rechtegruppe, $beitrag);
 							
 							
 								//DB-Abfrage erfolgreich
