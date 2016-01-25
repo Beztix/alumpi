@@ -47,7 +47,7 @@
 				<br>
 
 
-				<h2>Zuständigkeitsbereiche:</h2>
+				<h2>Ansprechpartner:</h2>
 
 				<table class="striped" style="width:100%;">
 					<colgroup>
@@ -56,38 +56,15 @@
 						<col style="width:40%;">
 					</colgroup>
 					<tr>
-						<td>Alumni-Forum</td>
-						<td> </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>Finanzen</td>
-						<td>Dorian Rohner B.Sc.</td>
-						<td>dorian.rohner (at) gmail.com</td>
-					</tr>
-					<tr>
-						<td>Post und Newsgruppen</td>
-						<td> </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>Organisation Absolventenfeier</td>
-						<td> </td>
-						<td> </td>
-					</tr>
-					<tr>
-						<td>Homepage</td>
+						<td>IT-Beauftragter</td>
 						<td>Sebastian Lützow B.Sc.</td>
 						<td>sebastian.luetzow (at) gmail.com</td>
 					</tr>
-					<tr>
-						<td>Newsletter und Fan-Artikel</td>
-						<td> </td>
-						<td> </td>
-					</tr>
 				</table>
 
-			
+				<br>
+				<br>
+				<br>
 			
 			</section>
 			

@@ -6,8 +6,8 @@ session_start();
 require '../_includes_functionality/global_constants.php';
 
 
-$thisPage = 'anmeldung_feier_gast';
-$title = 'AluMPI | Anmeldung als Gast zur Absolventenfeier';
+$thisPage = 'Aktuelles';
+$title = 'AluMPI | Aktuelles';
 $keywords = 'x y z';
 $description = 'page description';
 ?>

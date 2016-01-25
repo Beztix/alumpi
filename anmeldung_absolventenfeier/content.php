@@ -11,17 +11,31 @@
 
 				<h1>Anmeldung zur Absolventenfeier</h1>
 				
+				<?php
+				if(ABSOLVENTENFEIER_AKTIV) {
+					echo "<p>\n";
+					echo "<strong>Die nächste Absolventenfeier findet am " . ABSOLVENTENFEIER_DATUM . " statt.</strong>\n";
+					echo "</p>\n";
+				}
+				
+				else {
+					echo "<p>\n";
+					echo "Aktuell ist keine Anmeldung zur Absolventenfeier möglich.\n";
+					echo "</p>\n";
+				}
+				?>
+				
 				<p>
-				Auf dieser Seite finden Sie alle Informationen zur Anmeldung zur nächsten Absolventenfeier am <?php echo ABSOLVENTENFEIER_DATUM; ?> anmelden.<br>
-				Die Absolventenfeier ist als Fakultätsfeier zur Ehrung der Absolventen konzipiert, es sind neben den Absolventen selbst und ihren Gästen explizit alle Fakultätsangehörigen eingeladen!<br>
+				Auf dieser Seite finden Sie alle Informationen zur Anmeldung zur Absolventenfeier.
+				Die Absolventenfeier ist als Fakultätsfeier zur Ehrung der Absolventen konzipiert, es sind neben den Absolventen selbst und ihren Gästen explizit alle Fakultätsangehörigen herzlich eingeladen!<br>
 				<br>
 				Die Anmeldung gestaltet sich unterschiedlich, je nachdem ob Sie selbst aktueller Absolvent oder Gast sind und ob Sie am Buffet teilnehmen möchten oder nicht:
-				<p>
+				</p>
 				<br>
 				
 				
 				<a name="absolvent"></a>
-				<h2 class="green">Sie sind aktueller Absolvent oder Gast eines aktuellen Absolventen?</h3>
+				<h2>Sie sind aktueller Absolvent oder Gast eines aktuellen Absolventen?</h2>
 				
 				<p>
 				Um als aktueller Absolvent an der Absolventenfeier teilzunehmen, ist die Mitgliedschaft im Absolventenverein erforderlich.
@@ -47,7 +61,7 @@
 				
 				
 				<a name="gast"></a>
-				<h2 class="green">Sie möchten als Fakultätsangehöriger oder eigenständiger Gast an der Absolventenfeier teilnehmen?</h3>
+				<h2>Sie sind Fakultätsangehöriger oder eigenständiger Gast?</h2>
 				
 				
 				<p>
@@ -55,7 +69,7 @@
 				Die Feier beginnt um <?php echo ABSOLVENTENFEIER_UHRZEIT; ?> im <?php echo ABSOLVENTENFEIER_ORT; ?>, wir freuen uns darauf Sie dort Begrüßen zu dürfen.<br>
 				</p>
 				
-				<h4>Buffetteilnahme</h4>
+				<h3>Buffetteilnahme</h3>
 				
 				<p>
 				Falls Sie zusätzlich am Buffet teilnehmen möchten, so benötigen wir eine vorherige verbindliche Anmeldung, um das Catering entsprechend planen zu können.<br>

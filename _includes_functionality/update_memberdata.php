@@ -13,7 +13,7 @@
 
 
 				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-				include_once 'db_config.php';
+				include_once '../../../config-files/db_config.php';
 				
 				//Einbinden der PHP-Datei zur Validierung der Eingaben
 				include_once 'form_validation.php';

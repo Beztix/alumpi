@@ -3,6 +3,9 @@
 
 <?php
 session_start();
+require '../_includes_functionality/global_constants.php';
+
+
 $thisPage= 'kontakt';
 $title = 'AluMPI | Kontakt';
 $keywords = 'x y z';

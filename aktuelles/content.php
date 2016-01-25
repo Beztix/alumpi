@@ -7,11 +7,12 @@
 			
 			
 			<section class="text">
-		
-				<p>TESTSEITE</p>
-				
-				<?php phpinfo() ?>
 			
+				<h1>Aktuelles</h1>
+		
+				<br>
+				## INHALT ##<br>
+				
 			</section>
 			
 			

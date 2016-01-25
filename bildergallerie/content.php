@@ -16,6 +16,9 @@
             <section class="text">
 
 				<h1>Bildergallerie</h1>
+				
+				<br>
+				## BILDER ##<br>
 		
 				
 			</section>

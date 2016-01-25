@@ -15,7 +15,7 @@
 				if (empty($_SESSION['login'])) {#
 				
 					//Anzeigen des Login-Formulars
-					include 'not_loggedin_content.php';
+					include 'content_not_loggedin.php';
 					
 				}
 				
@@ -23,7 +23,7 @@
 				else {
 					
 					//Anzeigen des Content für eingeloggte User
-					include 'loggedin_content.php';
+					include 'content_loggedin.php';
 				}
 				?>
 				

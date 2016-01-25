@@ -20,9 +20,17 @@
 				</li>
 				
 				<li>
+					<a <?php if ($thisPage=="aktuelles") {echo " class=\"currentpage\"";} ?>  href="../aktuelles/index.php">Aktuelles</a>
+				</li>
+				
+				<li>
 					<a <?php if ($thisPage=="absolventenfeier") {echo " class=\"currentpage\"";} ?> href="../absolventenfeier/index.php">Absolventenfeier</a>
 					<?php
-					if($thisPage=="absolventenfeier" || $thisPage=="anmeldung_absolventenfeier" || $thisPage=="anmeldung_feier_gast") {
+					//Submenü wird nur angezeigt wenn sich der Nutzer auf dieser Seite oder einer Unterseite befindet
+					if($thisPage=="absolventenfeier" || 
+						$thisPage=="anmeldung_absolventenfeier" || 
+						$thisPage=="anmeldung_feier_gast" || 
+						$thisPage=="absolventengallerie") {
 						include 'submenu_absolventenfeier.php';
 					}
 					?>

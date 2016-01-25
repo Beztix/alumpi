@@ -18,7 +18,7 @@
 				*/
 				
 				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-				include 'db_config.php';
+				include '../../../config-files/db_config.php';
 				
 				//Einbinden der PHP-Datei zur Validierung der Eingaben
 				include 'form_validation.php';

@@ -12,7 +12,7 @@
 
 
 				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-				include 'db_config.php';
+				include '../../../config-files/db_config.php';
 
 				
 				//Formulardaten angekommen
@@ -56,6 +56,7 @@
 						
 						//DB-Verbindung erfolgreich
 						else {
+							
 							/*
 							echo "Datenbankverbindung erfolgreich!<br>";
 							*/
@@ -71,14 +72,14 @@
 							if($result) {
 								
 								/*
-								echo "Abfrage erfolgreich!<br>";
+								echo "test - Abfrage erfolgreich!<br>";
 								*/
 							
 								//Username gefunden
 								if ($recordObj = $result->fetch_assoc()) {
 									
 									/*
-									echo "Email gefunden!<br>";
+									echo "test - Email gefunden!<br>";
 									echo "DB-Email: " . $recordObj['email'] . "<br>";
 									echo "DB-Passwort: " . $recordObj['pw'] . "<br>";
 									*/
@@ -88,7 +89,7 @@
 									if(password_verify($_POST['pwd'], $recordObj['pw'])) {
 									
 										/*
-										echo "Passwort korrekt!<br>";
+										echo "test - Passwort korrekt!<br>";
 										*/
 										
 										
@@ -100,6 +101,7 @@
 										
 										//Seite neu laden (nun eingelogged)
 										header('Location: ./index.php');
+										
 									}
 									
 									//Passwort falsch

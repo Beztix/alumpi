@@ -7,7 +7,7 @@
 
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-include 'db_config.php';
+include '../../../config-files/db_config.php';
 
 //Array für die abgerufenen Daten in DB-Originalform
 $data_db;

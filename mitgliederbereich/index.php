@@ -3,6 +3,9 @@
 
 <?php
 session_start();
+require '../_includes_functionality/global_constants.php';
+
+
 $thisPage = 'mitgliederbereich';
 $title = 'AluMPI | Mitgliederbereich';
 $keywords = 'x y z';

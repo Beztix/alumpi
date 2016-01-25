@@ -3,6 +3,9 @@
 
 <?php
 session_start();
+require '../_includes_functionality/global_constants.php';
+
+
 $thisPage = 'testseite';
 $title = 'AluMPI | Testseite';
 $keywords = 'x y z';

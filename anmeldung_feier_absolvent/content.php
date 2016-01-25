@@ -20,11 +20,15 @@
 			
 				<h1>Anmeldeformular zur Absolventenfeier als aktueller Absolvent</h1>
 				
-				Hier können Sie ihre Mitgliedsdaten abfragen und ändern.<br>
-				Falls sie Daten ändern möchten, tragen Sie die neuen Daten in die Eingabefelder ein. Wenn sie Felder leer lassen, findet für diese Daten keine Änderung statt.<br>
+				<p>
+				Auf dieser Seite können Sie sich zur Absolventenfeier als aktueller Absolvent anmelden.<br>
+				Sie nehmen damit an der Feier teil und erhalten während des Festakts eine Abschlussurkunde der Fakultät. Außerdem können Sie ihre mitgebrachten Gäste mit anmelden.<br>
+				</p>
 				
 				<br>
+				## FORMULAR ##<br>
 				
+				<!--
 				<?php
 				//Einbinden der PHP-Datei um die Mitgliedsdaten abzurufen
 				include '../_includes_functionality/get_memberdata_from_db.php'; 
@@ -305,6 +309,8 @@
 					<button class="absenden" type="submit">Absenden</button>
 
 				</form>
+				
+				-->
 		
 		
 				
