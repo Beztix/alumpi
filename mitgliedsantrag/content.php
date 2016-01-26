@@ -98,8 +98,8 @@
 
 					<p>
 					Ich werde hiermit Mitglied und ermächtige hiermit den Absolventen- und Förderverein MPI Uni Bayreuth e.V. jederzeit widerruflich, den
-					Mitgliedsbeitrag in Höhe von 10 Euro / Jahr von oben angegebenen Konto abzubuchen. Dies beinhaltet, dass ich die Satzung und
-					Beitragsordnung in der derzeit gültigen Form anerkenne. <br>
+					Mitgliedsbeitrag in Höhe von 10 Euro / Jahr von unten angegebenem Konto abzubuchen.
+					Dies beinhaltet, dass ich die Satzung und Beitragsordnung in der derzeit gültigen Form anerkenne. <br>
 					Ich bin außerdem damit einverstanden, dass meine Daten an die Universität Bayreuth zum Zwecke der Ehemaligenbetreuung weiter gegeben werden dürfen.<br>
 					<br>
 					</p>
@@ -145,7 +145,7 @@
 
 					<p>
 					<input type="checkbox" name="newsletter" <?php if(isset($_POST['newsletter'])) echo "checked";?>>
-					Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth nicht beziehen. 
+					Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth <strong>nicht</strong> beziehen. 
 					Der Newsletter wird per Post versendet, falls er gewünscht wird, müssen Angaben zur Anschrift erfolgen.
 					</p>
 
