@@ -55,6 +55,7 @@ else {
 		//Username gefunden
 		if ($recordObj = $result->fetch_assoc()) {
 			
+			//gefundene Mitgliedsdaten in Originalform in separatem Array abspeichern
 			$data_db = $recordObj;
 			
 			//gefundene Mitgliedsdaten in Ausgabeform für die Webseite umwandeln
