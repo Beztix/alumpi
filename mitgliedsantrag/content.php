@@ -54,6 +54,7 @@
 								<select name="titel">
 									<option value="" <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "") echo "selected";}?>></option>
 									<option value="B.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "B.Sc.") echo "selected";}?>>B.Sc.</option>
+									<option value="B.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "B.Ed.") echo "selected";}?>>B.Ed.</option>
 									<option value="M.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "M.Sc.") echo "selected";}?>>M.Sc.</option>
 									<option value="M.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "M.Ed.") echo "selected";}?>>M.Ed.</option>
 									<option value="Dr. rer. nat." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. rer. nat.") echo "selected";}?>>Dr. rer. nat.</option>

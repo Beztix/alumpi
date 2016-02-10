@@ -21,10 +21,13 @@
 				<li>Bestätigungsmail bei Registrierung zum Laufen bringen</li>
 				<li>Keywords und Description im HTML fehlen noch</li>
 				<li>Anmeldeformulare für die Absolventenfeier implementieren</li>
+				<li>Lehrstühle im Absolventenfeier-Anmeldeformular überprüfen/vervollständigen</li>
+				<li>Titel wird in Absolventenfeier-Anmeldeformular explizit abgefragt aber nicht abgespeichert</li>
+				<li>Foto-Upload in Absolventenfeier-Anmeldeformular ferigstellen</li>
 				<li>Fußzeile befüllen</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
 				<li>"Passwort-Vergessen"-Funktionalität einbauen</li>
-				<li>Geburtsdatum änderbar machen (absichtliche oder versehentliche Falschangabe selbst korrigierbar)</li>
+				<li><s>Geburtsdatum änderbar machen (absichtliche oder versehentliche Falschangabe selbst korrigierbar)</s></li>
 				</ul>			
 				
 				

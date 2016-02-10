@@ -1,10 +1,9 @@
 <?php
 
 //======================================================================
-// Diese PHP-Datei enthält den PHP-Code um die Daten eines Miglieds aus der Datenbank auszulesen.
+// Diese PHP-Datei enthält den PHP-Code um die Anmeldedaten zur Absolventenfeier eines Mitglieds aus der Datenbank auszulesen.
 //
 //======================================================================
-
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
 include '../../../config-files/db_config.php';
@@ -14,6 +13,9 @@ $data_db;
 
 //Array für die abgerufenen Daten in (ggf. von DB-Originalform abweichender) Ausgabeform
 $data_output;
+
+//Ist der aktuelle User bereits zur Feier angemeldet
+$userIsRegistered;
 
 
 //Zur Datenbank verbinden
@@ -36,11 +38,11 @@ else {
 	echo "Datenbankverbindung erfolgreich!<br>";
 	*/
 	
-	//Mitgliederdaten zur MID des aktuellen Users aus der Datenbank holen
+	//Mitgliederdaten zur Email-Adresse des aktuellen Users aus der Datenbank holen
 	//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 	$stmt = $mysqli->prepare('SELECT 
-	mid, titel, vorname, nachname, geburtstag, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, iban, bic, pw
-	FROM vereinsmitglieder WHERE mid = ?');
+	mid, datum_der_feier, anzahl_gaeste, will_kontoeinzug, mitbringsel, abschlussarbeitsthema, lehrstuhl, studiengang, studienbeginn, studienabschluss
+	FROM absolventenfeier WHERE mid = ?');
 	$stmt->bind_param('s', $_SESSION['userMID']);
 	$stmt->execute();
 	$result = $stmt->get_result();
@@ -54,36 +56,30 @@ else {
 	
 		//Username gefunden
 		if ($recordObj = $result->fetch_assoc()) {
+			//aktueller User ist zur Feier angemeldet
+			$userIsRegistered = True;
 			
 			//gefundene Mitgliedsdaten in Originalform in separatem Array abspeichern
 			$data_db = $recordObj;
 			
 			//gefundene Mitgliedsdaten in Ausgabeform für die Webseite umwandeln
 			$data_output['mid'] = $data_db['mid'];
-			$data_output['titel'] = $data_db['titel'];
-			$data_output['vorname'] = $data_db['vorname'];
-			$data_output['nachname'] = $data_db['nachname'];
-			$data_output['geburtstag'] = date("d.m.Y", strtotime($data_db['geburtstag']));
-			$data_output['email'] = $data_db['email'];
-			$data_output['telefon'] = $data_db['telefon'];
-			$data_output['newsletter'] = 'Ja'; if($data_db['newsletter'] == 'n') {$data_output['newsletter'] = 'Nein';}
-			$data_output['strasse'] = $data_db['strasse'];
-			$data_output['plz'] = $data_db['plz'];
-			$data_output['ort'] = $data_db['ort'];
-			$data_output['land'] = $data_db['land'];
-			$data_output['iststudent'] = 'Ja'; if($data_db['iststudent'] == 'n') {$data_output['iststudent'] = 'Nein';}
-			$data_output['kontoinhaber'] = $data_db['kontoinhaber'];
-			$data_output['iban'] = $data_db['iban'];
-			$data_output['bic'] = $data_db['bic'];
+			$data_output['datum_der_feier'] = date("d.m.Y", strtotime($data_db['datum_der_feier']));
+			$data_output['anzahl_gaeste'] = $data_db['anzahl_gaeste'];
+			$data_output['will_kontoeinzug'] = 'Ja'; if($data_db['will_kontoeinzug'] == 'n') {$data_output['will_kontoeinzug'] = 'Nein';}
+			$data_output['mitbringsel'] = $data_db['mitbringsel'];
+			$data_output['abschlussarbeitsthema'] = $data_db['abschlussarbeitsthema'];
+			$data_output['lehrstuhl'] = $data_db['lehrstuhl'];
+			$data_output['studiengang'] = $data_db['studiengang'];
+			$data_output['studienbeginn'] = date("d.m.Y", strtotime($data_db['studienbeginn']));
+			$data_output['studienabschluss'] = date("d.m.Y", strtotime($data_db['studienabschluss']));
 			
 		}
 		
 		//Kein entsprechender User gefunden
 		else {
-			echo "<p class=\"error\">\n";
-			echo "Die Mitglieds-ID wurde nicht in der Datenbank gefunden!<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-			echo "</p>\n";
+			//aktueller User ist nicht zur Feier angemeldet
+			$userIsRegistered = False;
 		}
 	}
 	

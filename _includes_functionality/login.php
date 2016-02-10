@@ -63,7 +63,7 @@
 							
 							//Email-Adresse und zugehöriges (gehashtes) Passwort aus der Datenbank holen
 							//Verwendung von prepared statements zur Vermeidung von SQL-Injection
-							$stmt = $mysqli->prepare('SELECT email, pw FROM vereinsmitglieder WHERE email = ?');
+							$stmt = $mysqli->prepare('SELECT mid, email, pw FROM vereinsmitglieder WHERE email = ?');
 							$stmt->bind_param('s', $_POST['email']);
 							$stmt->execute();
 							$result = $stmt->get_result();
@@ -96,7 +96,8 @@
 										//Nutzer auf Server als eingelogged speichern (session wurde bereits durch index.php gestartet)
 										$_SESSION = array(
 												'login' => true,
-												'userEmail'  => $recordObj['email']
+												'userEmail' => $recordObj['email'],
+												'userMID' => $recordObj['mid']
 										);
 										
 										//Seite neu laden (nun eingelogged)

@@ -7,7 +7,8 @@
 // Diese Datei wird von jeder index.php eingebunden.
 //======================================================================
 
-	const ABSOLVENTENFEIER_AKTIV = True;
+	const ABSOLVENTENFEIER_INFO_AKTIV = True;
+	const ABSOLVENTENFEIER_ANMELDUNG_AKTIV = True;
 	const ABSOLVENTENFEIER_ORT = 'Foyer des NWII-Gebäudes';
 	const ABSOLVENTENFEIER_DATUM = '18.06.2016';
 	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '04.06.2016';

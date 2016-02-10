@@ -20,7 +20,7 @@
 				
 				else {
 					echo "<p>\n";
-					echo "Aktuell ist keine Anmeldung zur Absolventenfeier möglich.\n";
+					echo "<strong>Aktuell ist keine Anmeldung zur Absolventenfeier möglich.</strong>\n";
 					echo "</p>\n";
 				}
 				?>
