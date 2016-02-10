@@ -69,6 +69,7 @@
 							$titel_neu = $data_db['titel'];					if(!empty($_POST['titel'])) {$titel_neu = $_POST['titel'];}
 							$vorname_neu = $data_db['vorname'];				if(!empty($_POST['vorname'])) {$vorname_neu = $_POST['vorname'];}
 							$nachname_neu = $data_db['nachname'];			if(!empty($_POST['nachname'])) {$nachname_neu = $_POST['nachname'];}
+							$geburtstag_neu = $data_db['geburtstag'];		if(!empty($_POST['geburtstag'])) {$geburtstag_neu = date('Y-m-d', strtotime($_POST['geburtstag']));}
 							$email_neu = $data_db['email'];					if(!empty($_POST['email'])) {$email_neu = $_POST['email'];}
 							$telefon_neu = $data_db['telefon'];				if(!empty($_POST['telefon'])) {$telefon_neu = $_POST['telefon'];}
 							$newsletter_neu = $data_db['newsletter'];		if(!empty($_POST['newsletter'])) {$newsletter_neu = $_POST['newsletter'];}
@@ -93,6 +94,7 @@
 							titel = ?, 
 							vorname = ?,
 							nachname = ?,
+							geburtstag = ?,
 							email = ?, 
 							telefon = ?, 
 							newsletter = ?, 
@@ -106,7 +108,7 @@
 							bic = ?, 
 							pw = ?
 							WHERE mid = ?");
-							$stmt->bind_param("ssssssssssssssss", $titel_neu, $vorname_neu, $nachname_neu, $email_neu, $telefon_neu, $newsletter_neu, $strasse_neu, $plz_neu, $ort_neu, $land_neu, $iststudent_neu, $kontoinhaber_neu, $iban_neu, $bic_neu, $pw_neu, $data_db['mid']);
+							$stmt->bind_param("sssssssssssssssss", $titel_neu, $vorname_neu, $nachname_neu, $geburtstag_neu, $email_neu, $telefon_neu, $newsletter_neu, $strasse_neu, $plz_neu, $ort_neu, $land_neu, $iststudent_neu, $kontoinhaber_neu, $iban_neu, $bic_neu, $pw_neu, $data_db['mid']);
 						
 						
 							//DB-Abfrage erfolgreich

@@ -26,6 +26,11 @@ function check_fields_update($data_form, $data_db) {
 			$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
 		}
 	}
+	if(!empty($data_form['geburtstag'])) {
+		if (!preg_match("/^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4}$/",$data_form['geburtstag'])) {
+			$error = $error . "Das eingegebene Geburtsdatum muss das Format TT.MM.JJJJ haben.<br>\n";
+		}
+	}
 	if(!empty($data_form['email'])) {
 		if (!filter_var($data_form['email'], FILTER_VALIDATE_EMAIL)) {
 			$error = $error . "Die eingegebene Email-Adresse ist ungültig.<br>\n";

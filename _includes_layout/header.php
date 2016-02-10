@@ -19,7 +19,7 @@
 		</div>
 		
 		<h2>
-			Absolventen- und Förderverein MPI Uni Bayreuth e.V. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; +++ noch im Aufbau +++ noch im Aufbau +++ noch im Aufbau +++
+			Absolventen- und Förderverein MPI Uni Bayreuth e.V. &nbsp; &nbsp; &nbsp; +++ noch im Aufbau +++ noch im Aufbau +++ noch im Aufbau +++
 		</h2>
 	
 	</header>

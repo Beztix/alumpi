@@ -41,7 +41,7 @@
 							echo "<h3 class=\"green\">Änderung erfolgreich!</h3>\n";
 							echo "<p class=\"green\">\n";
 							echo "Die geänderten Daten wurden erfolgreich in die Datenbank eingetragen, kontrollieren Sie die Änderungen bitte noch einmal in der unten stehenden Tabelle.<br>\n";
-							echo "Falls sie ihr Passwort geändert haben überprüfen Sie die erfolgreiche Änderung bitte, indem Sie sich aus- und wieder einloggen.<br>\n";
+							echo "Falls Sie ihr Passwort geändert haben überprüfen Sie die erfolgreiche Änderung bitte, indem Sie sich aus- und wieder einloggen.<br>\n";
 							echo "</p>\n";
 						}
 				}
@@ -131,6 +131,18 @@
 							</td>
 							<td>
 								<input type="text" name="nachname" placeholder="Nachname" size="25">
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								Geburtsdatum
+							</td>
+							<td>
+								<?php echo $data_output['geburtstag']; ?>
+							</td>
+							<td>
+								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="25">
 							</td>
 						</tr>
 						

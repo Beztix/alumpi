@@ -39,7 +39,7 @@ else {
 	//Mitgliederdaten zur Email-Adresse des aktuellen Users aus der Datenbank holen
 	//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 	$stmt = $mysqli->prepare('SELECT 
-	mid, titel, vorname, nachname, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, iban, bic, pw
+	mid, titel, vorname, nachname, geburtstag, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, iban, bic, pw
 	FROM vereinsmitglieder WHERE email = ?');
 	$stmt->bind_param('s', $_SESSION['userEmail']);
 	$stmt->execute();
@@ -63,6 +63,7 @@ else {
 			$data_output['titel'] = $data_db['titel'];
 			$data_output['vorname'] = $data_db['vorname'];
 			$data_output['nachname'] = $data_db['nachname'];
+			$data_output['geburtstag'] = date("d.m.Y", strtotime($data_db['geburtstag']));
 			$data_output['email'] = $data_db['email'];
 			$data_output['telefon'] = $data_db['telefon'];
 			$data_output['newsletter'] = 'Ja'; if($data_db['newsletter'] == 'n') {$data_output['newsletter'] = 'Nein';}

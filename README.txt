@@ -2,8 +2,8 @@
 #######                                             #######
 #######          README zur AluMPI-Homepage         #######
 #######                                             #######
-#######                 Version 0.3                 #######
-#######                 25.01.2016                  #######
+#######                 Version 0.2                 #######
+#######                 21.01.2016                  #######
 #######                                             #######
 ###########################################################
 
@@ -48,11 +48,11 @@
 
 
 - Feld für Passwort ist in original-DB zu kurz!!
-- In original-DB auf IBAN/BIC umstellen
-- Zugriff auf original-DB des RZ umstellen
+- In DB auf IBAN/BIC umstellen
 
 - Keywords für alle Seiten in der jeweiligen index.php eintragen
 - Descriptions für alle Seiten in der jeweiligen index.php eintragen
+- DB-Config auf Server dann außerhalb des www-Verzeichnis lagern
 - Bestätigungsmail bei Registrierung zum laufen bringen
 - Was ist die Usergruppe in der DB?
 - Anmeldung Absolventenfeier programmieren
