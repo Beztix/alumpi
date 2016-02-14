@@ -26,20 +26,19 @@
 				Außerdem haben Sie die Möglichkeit, Ihre mitgebrachten Gäste mit anzumelden.<br>
 				</p>
 				
-				<br>
 				
 		
 				<?php
 				//Einbinden der PHP-Datei um die Anmeldedaten des Mitglieds abzurufen
-				include './get_registrationData_from_DB.php'; 
+				include './get_partyRegistrationData_from_DB.php'; 
 				
 				//Einbinden der PHP-Datei zur Formularauswertung
-				include './process_registrationForm.php';
+				include './process_partyRegistrationForm.php';
 
 				
 				//User ist bereits zur Feier angemeldet (durch die DB-Abfrage ermittelt)
 				if($userIsRegistered) {
-					include './content_registered.php';
+					include './content_alreadyRegistered.php';
 				}
 				
 				
@@ -49,7 +48,7 @@
 					//Anmeldung aktuell möglich
 					if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
 						//Zeige Anmeldeformular an
-						include './content_registrationForm.php';
+						include './content_partyRegistrationForm.php';
 					}
 					
 					

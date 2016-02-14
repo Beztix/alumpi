@@ -6,7 +6,7 @@
 //======================================================================
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-include '../../../config-files/db_config.php';
+include_once '../../../config-files/db_config.php';
 
 //Array für die abgerufenen Daten in DB-Originalform
 $data_db;
@@ -41,7 +41,7 @@ else {
 	//Mitgliederdaten zur Email-Adresse des aktuellen Users aus der Datenbank holen
 	//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 	$stmt = $mysqli->prepare('SELECT 
-	mid, datum_der_feier, anzahl_gaeste, will_kontoeinzug, mitbringsel, abschlussarbeitsthema, lehrstuhl, studiengang, studienbeginn, studienabschluss
+	mid, datum_der_feier, anzahl_gaeste, will_kontoeinzug, mitbringsel, abschlussarbeitsthema, lehrstuhl, studiengang, titel, studienbeginn, studienabschluss
 	FROM absolventenfeier WHERE mid = ?');
 	$stmt->bind_param('s', $_SESSION['userMID']);
 	$stmt->execute();
@@ -71,7 +71,8 @@ else {
 			$data_output['abschlussarbeitsthema'] = $data_db['abschlussarbeitsthema'];
 			$data_output['lehrstuhl'] = $data_db['lehrstuhl'];
 			$data_output['studiengang'] = $data_db['studiengang'];
-			$data_output['studienbeginn'] = date("d.m.Y", strtotime($data_db['studienbeginn']));
+			$data_output['titel'] = $data_db['titel'];
+			$data_output['studienbeginn'] = $data_db['studienbeginn'];
 			$data_output['studienabschluss'] = date("d.m.Y", strtotime($data_db['studienabschluss']));
 			
 		}

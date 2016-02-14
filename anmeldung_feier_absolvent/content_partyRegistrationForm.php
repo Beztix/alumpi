@@ -1,4 +1,10 @@
 
+				<br>
+				<p>
+				Sie sind bisher <strong>nicht</strong> für die diesjährige Absolventenfeier als Absolvent angemeldet. <br>
+				</p>
+				<br>
+				
 				<h2>Anmeldeformular</h2>
 				
 				
@@ -7,8 +13,6 @@
 				<form action="index.php" method="POST" enctype="multipart/form-data">
 				
 					<p>
-					Sie sind bisher <strong>nicht</strong> für die diesjährige Absolventenfeier als Absolvent angemeldet. <br>
-					<br>
 					Möchten Sie sich zur diesjährigen Absolventenfeier am <?php echo ABSOLVENTENFEIER_DATUM; ?> <strong>als aktueller Absolvent</strong> anmelden, 
 					so füllen Sie bitte dieses Formular aus.<br>
 					Falls Sie als Gast und nicht als aktueller Absolvent an der diesjährigen Absolventenfeier teilnehmen möchten, 
@@ -24,7 +28,7 @@
 						<tr>
 							<td>
 								Anzahl Gäste, die ich zur Feier mitbringe und hiermit mit anmelden möchte <br>
-								(kommen Sie alleine so sind dies 0)
+								(kommen Sie alleine, so sind dies 0)
 							</td>
 							<td>
 								<input type="text" name="anzahl_gaeste" placeholder="" size="3" <?php if(isset($_POST['anzahl_gaeste'])) echo "value=\"" . $_POST['anzahl_gaeste'] . "\"";?>>
