@@ -6,6 +6,9 @@
 // ausgefüllt wurde und ob die Eingaben dem gewünschten Format entsprechen (Email-Adresse, Datum o.ä.).
 //======================================================================
 
+// Einbinden der PHP-Datei mit allgemeinen Validierungs-Funktionen
+include_once '../_includes_functionality/global_formValidation.php';
+
 
 
 function check_requiredFields_partyRegistrationAsGraduate($data_form) {
@@ -58,8 +61,8 @@ function check_fieldsFormatting_partyRegistrationAsGraduate($data_form) {
 	}
 	
 	// Überprüfe das Abschlussdatum auf korrektes Format
-	if (!preg_match("/^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4}$/",$data_form['studienabschluss'])) {
-		$error = $error . "Das eingegebene Abschlussdatum muss das Format TT.MM.JJJJ haben.<br>\n";
+	if (!isValidDate($data_form['studienabschluss'])) {
+		$error = $error . "Das eingegebene Abschlussdatum ist kein korrektes Datum. Die Eingabe muss die Form TT.MM.JJJJ haben.<br>\n";
 	}
 	
 	return $error;

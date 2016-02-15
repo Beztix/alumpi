@@ -82,8 +82,8 @@ function check_fields_format_register($data_form) {
 	}
 	
 	// Überprüfe das Geburtsdatum auf korrektes Format
-	if (!preg_match("/^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4}$/",$data_form['geburtstag'])) {
-		$error = $error . "Das eingegebene Geburtsdatum muss das Format TT.MM.JJJJ haben.<br>\n";
+	if (!isValidDate($data_form['geburtstag'])) {
+		$error = $error . "Das eingegebene Geburtsdatum ist kein korrektes Datum. Die Eingabe muss die Form TT.MM.JJJJ haben.<br>\n";
 	}
 
 	// Überprüfe die Email-Adresse auf korrektes Format
@@ -118,6 +118,12 @@ function check_fields_format_register($data_form) {
 		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
 		}
+		if($data_form['land'] == 'Deutschland') {
+			if (!preg_match("/^[0-9]{5}$/",$data_form['plz'])) {
+				$error = $error . "Keine korrekte deutsche PLZ.<br>\n";
+			}
+		}
+		
 		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
 			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
 		}

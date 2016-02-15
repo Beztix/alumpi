@@ -20,15 +20,15 @@
 				<li>Seiteninhalte vervollständigen</li>
 				<li>Bestätigungsmail bei Registrierung zum Laufen bringen</li>
 				<li>Keywords und Description im HTML fehlen noch</li>
-				<li>Anmeldeformulare für die Absolventenfeier implementieren</li>
 				<li>Lehrstühle im Absolventenfeier-Anmeldeformular überprüfen/vervollständigen</li>
 				<li>Absolventenfeier-Tabelle in DB umstrukturieren</li>
-				<li>Foto-Upload in Absolventenfeier-Anmeldeformular fertigstellen</li>
+				<li>Foto-Upload in Absolventenfeier-Anmeldeformular fertigstellen?</li>
 				<li>Bestätigungsmail bei Absolventenfeier-Anmeldung zum laufen bringen</li>
-				<li>Fußzeile befüllen</li>
 				<li>Vorteile der Mitgliedschaft separat aufführen</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
 				<li>"Passwort-Vergessen"-Funktionalität einbauen</li>
+				<li><s>Fußzeile befüllen</s></li>
+				<li><s>Anmeldeformulare für die Absolventenfeier implementieren</s></li>
 				<li><s>Geburtsdatum änderbar machen (absichtliche oder versehentliche Falschangabe selbst korrigierbar)</s></li>
 				</ul>			
 				
@@ -36,14 +36,12 @@
 				<h2>Bekannte Bugs/Verbesserungen</h2>
 				
 				<ul>
-				<li>Überflüssige Leerzeichen in manchen Formularfeldern einfach wegschneiden (statt Fehlermeldung auszugeben)</li>
-				<li>Nur korrekte und sinnvolle Datumsangaben als Geburtsdatum akzeptieren</li>
-				<li>IBAN immer in Großbuchstaben in DB schreiben</li>
-				<li>BIC auf ISO-Norm testen</li>
-				<li>Problem bei fehlerhafter Geburtsdatums-Eingabe (was genau?)</li>
-				<li>PLZ nicht nur 5 Ziffern zulassen und für Deutschland Fehlermeldung wenn nicht 5 Ziffern</li>
-				<li>Textfeld zur Passwortänderung direkt nur Punkte anzeigen lassen</li>
+				<li>BIC auf ISO-Norm testen - Beispiel für Fehler?</li>
 				<li>Lieber Passwort bei Registrierung angeben als Standardpasswort setzen?</li>
+				<li><s>Nur korrekte und sinnvolle Datumsangaben als Geburtsdatum akzeptieren</s></li>
+				<li><s>PLZ nicht nur 5 Ziffern zulassen und für Deutschland Fehlermeldung wenn nicht 5 Ziffern</s></li>
+				<li><s>Textfeld zur Passwortänderung direkt nur Punkte anzeigen lassen</s></li>
+				<li><s>IBAN immer in Großbuchstaben in DB schreiben</s></li>
 				<li><s>Ggf. wird das Passwort bei Abschicken der Datenänderung auf NULL gesetzt</s></li>
 				</ul>
 				

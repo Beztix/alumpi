@@ -128,8 +128,8 @@
 								$land = $_POST['land'];
 								$geburtstag = date('Y-m-d', strtotime($_POST['geburtstag'])); 				//Datum in Format YYYY-MM-DD für DB
 								$kontoinhaber = $_POST['kontoinhaber'];
-								$iban = $_POST['iban'];
-								$bic = $_POST['bic'];
+								$iban = strtoupper($_POST['iban']);
+								$bic = strtoupper($_POST['bic']);
 								$bezahlt = "n";							//immer n bei Registrierung
 								$newsletter = "j"; if(isset($_POST['newsletter'])) { $newsletter = "n";}	//n falls newsletter angewählt, j sonst
 								$pw = password_hash($_POST['geburtstag'], PASSWORD_DEFAULT);				//Standardpasswort ist der Geburtstag, speichere gehasht in DB

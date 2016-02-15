@@ -307,7 +307,7 @@
 								
 							</td>
 							<td>
-								<input type="text" name="passwort" placeholder="Neues Passwort" size="25">
+								<input type="password" name="passwort" placeholder="Neues Passwort" size="25">
 							</td>
 						</tr>
 												
@@ -319,7 +319,7 @@
 								
 							</td>
 							<td>
-								<input type="text" name="passwort2" placeholder="Neues Passwort wiederholen" size="25">
+								<input type="password" name="passwort2" placeholder="Neues Passwort wiederholen" size="25">
 							</td>
 						</tr>
 						

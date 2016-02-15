@@ -41,6 +41,29 @@ function checkIBAN($iban) {
 }
 
 
+function isValidDate($date) {
+	if (!preg_match("/^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4}$/",$date)) {
+		return false;
+	}
+	else {
+		if(!strtotime($date)) 
+		{ 
+			return false;
+		}
+		else {
+			list($day, $month, $year) = explode('.', $date); 
+			if(!checkdate($month, $day, $year)) {
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+	}
+}
+
+
+
 
 
 
