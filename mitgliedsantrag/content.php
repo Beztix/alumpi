@@ -26,7 +26,7 @@
 				
 				<?php
 				//Einbinden der PHP-Datei zur Formularauswertung
-				include '../_includes_functionality/register.php'; 
+				include 'process_memberRegistrationForm.php'; 
 				?>	
 
 				<br>				

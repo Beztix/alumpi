@@ -100,6 +100,9 @@
 								$studienbeginn = $_POST['studienbeginn'];
 								$studienabschluss = date('Y-m-d', strtotime($_POST['studienabschluss'])); 
 								
+								echo $_POST['studienabschluss'];
+								echo $studienabschluss;
+								
 							
 								//--------------------------
 								// TODO: BILD

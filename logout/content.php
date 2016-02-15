@@ -20,7 +20,7 @@
 				<br>
 				Zum Abmelden bitte hier klicken:<br>
 				<br>
-				<a href="../_includes_functionality/logout.php">Logout</a><br>
+				<a href="./logout_script.php">Logout</a><br>
 				<br>
 				
 			</section>

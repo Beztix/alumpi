@@ -27,11 +27,11 @@
 				
 				<?php
 				//Einbinden der PHP-Datei um die Mitgliedsdaten abzurufen
-				include '../_includes_functionality/get_memberdata_from_db.php'; 
+				include 'get_memberdata_from_db.php'; 
 				
 				
 				//Einbinden der PHP-Datei zur Formularauswertung
-				include '../_includes_functionality/update_memberdata.php'; 
+				include 'process_memberdataForm.php'; 
 				
 
 				//Abfrage einer GET-Variable, um festzustellen ob die Seite neu geladen wurde, nachdem ein DB-Update erfolgreich ausgeführt wurde

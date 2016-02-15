@@ -29,11 +29,11 @@
 				
 		
 				<?php
-				//Einbinden der PHP-Datei um die Anmeldedaten des Mitglieds abzurufen
-				include './get_partyRegistrationData_from_DB.php'; 
-				
 				//Einbinden der PHP-Datei zur Formularauswertung
 				include './process_partyRegistrationForm.php';
+				
+				//Einbinden der PHP-Datei um die Anmeldedaten des Mitglieds abzurufen
+				include './get_partyRegistrationData_from_DB.php'; 
 
 				
 				//User ist bereits zur Feier angemeldet (durch die DB-Abfrage ermittelt)

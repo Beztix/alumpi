@@ -36,5 +36,5 @@
 				
 				<?php
 					//Einbinden der PHP-Datei zur Auswertung des Login-Formulars
-					include '../_includes_functionality/login.php'; 
+					include 'login_script.php'; 
 				?>

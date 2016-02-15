@@ -22,8 +22,9 @@
 				<li>Keywords und Description im HTML fehlen noch</li>
 				<li>Anmeldeformulare für die Absolventenfeier implementieren</li>
 				<li>Lehrstühle im Absolventenfeier-Anmeldeformular überprüfen/vervollständigen</li>
-				<li>Titel wird in Absolventenfeier-Anmeldeformular explizit abgefragt aber nicht abgespeichert</li>
-				<li>Foto-Upload in Absolventenfeier-Anmeldeformular ferigstellen</li>
+				<li>Spalte "Titel" in der Absolventenfeier-Tabelle hinzufügen</li>
+				<li>Foto-Upload in Absolventenfeier-Anmeldeformular fertigstellen</li>
+				<li>Bestätigungsmail bei Absolventenfeier-Anmeldung zum laufen bringen</li>
 				<li>Fußzeile befüllen</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
 				<li>"Passwort-Vergessen"-Funktionalität einbauen</li>
@@ -35,11 +36,11 @@
 				
 				<ul>
 				<li>Überflüssige Leerzeichen in manchen Formularfeldern einfach wegschneiden (statt Fehlermeldung auszugeben)</li>
-				<li>Nur korrekte & sinnvolle Datumsangaben als Geburtsdatum akzeptieren</li>
+				<li>Nur korrekte und sinnvolle Datumsangaben als Geburtsdatum akzeptieren</li>
 				<li>IBAN immer in Großbuchstaben in DB schreiben</li>
 				<li>BIC auf ISO-Norm testen</li>
 				<li>Problem bei fehlerhafter Geburtsdatums-Eingabe (was genau?)</li>
-				<li>PLZ nicht nur 5 Ziffern zulassen & für Deutschland Fehlermeldung wenn nicht 5 Ziffern</li>
+				<li>PLZ nicht nur 5 Ziffern zulassen und für Deutschland Fehlermeldung wenn nicht 5 Ziffern</li>
 				<li>Textfeld zur Passwortänderung direkt nur Punkte anzeigen lassen</li>
 				<li>Lieber Passwort bei Registrierung angeben als Standardpasswort setzen?</li>
 				<li><s>Ggf. wird das Passwort bei Abschicken der Datenänderung auf NULL gesetzt</s></li>

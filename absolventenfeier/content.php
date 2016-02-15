@@ -22,7 +22,7 @@
 				<h2>Allgemeine Informationen zur Absolventenfeier</h2>
 				
 				<?php
-				if(ABSOLVENTENFEIER_AKTIV) {
+				if(ABSOLVENTENFEIER_INFO_AKTIV) {
 					echo "<p>\n";
 					echo "<strong>Die nächste Absolventenfeier findet am " . ABSOLVENTENFEIER_DATUM . " statt.</strong>\n";
 					echo "</p>\n";
@@ -48,7 +48,7 @@
 				
 				
 				<?php
-				if(ABSOLVENTENFEIER_AKTIV) {
+				if(ABSOLVENTENFEIER_INFO_AKTIV) {
 					echo "<h3>Anmeldefrist</h3>";
 					echo "\n";
 					echo "<p>\n";
@@ -68,7 +68,7 @@
 				Der offizielle Teil ist für alle Gäste kostenlos.<br>
 				<br >
 				<?php
-				if(ABSOLVENTENFEIER_AKTIV) {
+				if(ABSOLVENTENFEIER_INFO_AKTIV) {
 					echo "Der Eintritt für die Teilnahme an den anschließenden Feierlichkeiten beträgt " . ABSOLVENTENFEIER_PREIS . " Euro pro Person.\n";
 				}
 				else {
@@ -97,7 +97,7 @@
 				Die einzige Vorraussetzung ist, dass man im Absolventen- und Förderverein Mitglied ist. Keine Sorge, diejenigen, die das nicht bleiben möchten, 
 				können sich im Anschluss an die Absolventenfeier ohne Kündigungsfrist wieder austragen. Auch vom Mitgliedsbeitrag ist man im ersten Jahr freigestellt.<br>
 				<?php
-				if(ABSOLVENTENFEIER_AKTIV) {
+				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
 					echo "<a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";
 				}
 				?>
@@ -111,8 +111,11 @@
 				<p>
 				Um nach dem Festakt an den Feierlichkeiten mit Buffet, Cocktails und Musik teilzunehmen, ist eine vorherige Anmeldung erforderlich.
 				<?php
-				if(ABSOLVENTENFEIER_AKTIV) {
+				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
 					echo "Diese kann online erfolgen, mehr Informationen dazu finden sie auf folgender Seite: <a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";
+				}
+				else {
+					echo "Diese kann online erfolgen, die Anmeldung wird rechtzeitig vor der Feier freigeschaltet.\n";
 				}
 				?>
 				</p>
