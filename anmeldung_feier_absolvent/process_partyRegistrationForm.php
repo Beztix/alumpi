@@ -19,10 +19,10 @@
 				include_once '../../../config-files/db_config.php';
 				
 				//Einbinden der PHP-Datei zur Validierung der Eingaben
-				include 'validate_partyRegistrationForm.php';
+				include 'formValidation_partyRegistrationForm.php';
 
-				//Einbinden der PHP-Datei zum Verschicken der Bestätigungs-Emails
-				//include 'send_email.php';
+				//Einbinden der PHP-Datei zum Verschicken der Emails
+				include '../_includes_functionality/send_email.php';
 
 				//Formulardaten angekommen
 				if(!empty($_POST)) {

@@ -21,10 +21,10 @@
 				include '../../../config-files/db_config.php';
 				
 				//Einbinden der PHP-Datei zur Validierung der Eingaben
-				include 'form_validation.php';
+				include 'formValidation_memberRegistrationForm.php';
 
 				//Einbinden der PHP-Datei zum Verschicken der Bestätigungs-Emails
-				include 'send_email.php';
+				include '../_includes_functionality/send_email.php';
 
 				//Formulardaten angekommen
 				if(!empty($_POST)) {

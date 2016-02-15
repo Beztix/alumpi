@@ -16,7 +16,7 @@
 				include_once '../../../config-files/db_config.php';
 				
 				//Einbinden der PHP-Datei zur Validierung der Eingaben
-				include_once 'form_validation.php';
+				include 'formValidation_memberdataForm.php';
 				
 				
 				
