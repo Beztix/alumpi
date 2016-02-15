@@ -96,7 +96,6 @@
 										//Nutzer auf Server als eingelogged speichern (session wurde bereits durch index.php gestartet)
 										$_SESSION = array(
 												'login' => true,
-												'userEmail' => $recordObj['email'],
 												'userMID' => $recordObj['mid']
 										);
 										

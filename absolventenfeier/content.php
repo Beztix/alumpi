@@ -109,7 +109,7 @@
 
 				<h3>Teilnahme am Buffet</h3>
 				<p>
-				Um nach dem Festakt an den Feierlichkeiten mit Buffet, Cocktails und Musik teilzunehmen, ist eine vorherige Anmeldung erforderlich.
+				Um nach dem Festakt an den Feierlichkeiten mit Buffet, Cocktails und Musik teilzunehmen, ist eine vorherige Anmeldung erforderlich.<br>
 				<?php
 				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
 					echo "Diese kann online erfolgen, mehr Informationen dazu finden sie auf folgender Seite: <a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";

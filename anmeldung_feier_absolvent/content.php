@@ -30,7 +30,7 @@
 		
 				<?php
 				//Einbinden der PHP-Datei zur Formularauswertung
-				include './process_partyRegistrationForm.php';
+				include './process_partyGraduateRegistrationForm.php';
 				
 				//Einbinden der PHP-Datei um die Anmeldedaten des Mitglieds abzurufen
 				include './get_partyRegistrationData_from_DB.php'; 
@@ -48,7 +48,7 @@
 					//Anmeldung aktuell möglich
 					if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
 						//Zeige Anmeldeformular an
-						include './content_partyRegistrationForm.php';
+						include './content_partyGraduateRegistrationForm.php';
 					}
 					
 					

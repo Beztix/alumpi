@@ -27,7 +27,7 @@
 				
 				<?php
 				//Einbinden der PHP-Datei um die Mitgliedsdaten abzurufen
-				include 'get_memberdata_from_db.php'; 
+				include '../_includes_functionality/get_memberdata_from_db.php'; 
 				
 				
 				//Einbinden der PHP-Datei zur Formularauswertung
@@ -78,6 +78,18 @@
 							</td>
 							<td>
 								<?php echo $data_output['mid']; ?>
+							</td>
+							<td>
+								
+							</td>
+						</tr>
+						
+						<tr>
+							<td>
+								Eintrittsdatum
+							</td>
+							<td>
+								<?php echo $data_output['eintrittsdatum']; ?>
 							</td>
 							<td>
 								

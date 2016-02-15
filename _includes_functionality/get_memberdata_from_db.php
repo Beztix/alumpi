@@ -2,12 +2,14 @@
 
 //======================================================================
 // Diese PHP-Datei enthält den PHP-Code um die Daten eines Miglieds aus der Datenbank auszulesen.
-//
+// Von dieser Datei werden zwei Arrays angelegt, $data_db speichert die abgerufenen Daten in DB-Originalform,
+// $data_output speichert die abgerufenen Daten in Ausgabeform (Daten umformatiert etc.)
+// Falls die Datenabfrage aus der DB scheitert, werden Fehlermeldungen mit echo ins HTML ausgegeben.
 //======================================================================
 
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-include '../../../config-files/db_config.php';
+include_once '../../../config-files/db_config.php';
 
 //Array für die abgerufenen Daten in DB-Originalform
 $data_db;
@@ -39,7 +41,7 @@ else {
 	//Mitgliederdaten zur MID des aktuellen Users aus der Datenbank holen
 	//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 	$stmt = $mysqli->prepare('SELECT 
-	mid, titel, vorname, nachname, geburtstag, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, iban, bic, pw
+	mid, eintrittsdatum, geschlecht, titel, vorname, nachname, geburtstag, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, iban, bic, pw
 	FROM vereinsmitglieder WHERE mid = ?');
 	$stmt->bind_param('s', $_SESSION['userMID']);
 	$stmt->execute();
@@ -60,6 +62,8 @@ else {
 			
 			//gefundene Mitgliedsdaten in Ausgabeform für die Webseite umwandeln
 			$data_output['mid'] = $data_db['mid'];
+			$data_output['eintrittsdatum'] = date("d.m.Y", strtotime($data_db['eintrittsdatum']));
+			$data_output['geschlecht'] = $data_db['geschlecht'];
 			$data_output['titel'] = $data_db['titel'];
 			$data_output['vorname'] = $data_db['vorname'];
 			$data_output['nachname'] = $data_db['nachname'];

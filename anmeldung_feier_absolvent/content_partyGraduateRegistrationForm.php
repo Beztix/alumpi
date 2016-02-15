@@ -18,6 +18,8 @@
 					Falls Sie als Gast und nicht als aktueller Absolvent an der diesjährigen Absolventenfeier teilnehmen möchten, 
 					so melden Sie sich bitte nicht über dieses Formular an, siehe <a href="../anmeldung_absolventenfeier/index.php#gast">Anmeldung zur Absolventenfeier als Gast</a>.
 					<br>
+					Bitte überprüfen Sie vor der Anmeldung zur Feier mit diesem Formular ihre Mitgliedsdaten auf der Seie <a href="../datenabfrage/index.php">Datenabfrage</a> auf Korrektheit,
+					da diese Daten für die Anmeldung verwendet werden.
 					</p>
 
 					<table style="width:100%">
@@ -240,7 +242,7 @@
 						<tr>
 							<td>Erworbener Titel:</td>
 							<td>
-								<select name="titel" size="1" style="width:180px;">
+								<select name="neuer_titel" size="1" style="width:180px;">
 									<option value="">bitte auswählen</option>
 									<option value="B.Sc.">B.Sc.</option>
 									<option value="B.Ed.">B.Ed.</option>

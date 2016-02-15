@@ -28,7 +28,7 @@ function check_requiredFields_partyRegistrationAsGraduate($data_form) {
 		$error = $error . "Es wurde kein Studiengang ausgewählt.<br>\n";
 	}
 	
-	if(empty($data_form['titel'])) {
+	if(empty($data_form['neuer_titel'])) {
 		$error = $error . "Es wurde kein erworbener Titel ausgewählt.<br>\n";
 	}
 	

@@ -19,7 +19,7 @@
 				include_once '../../../config-files/db_config.php';
 				
 				//Einbinden der PHP-Datei zur Validierung der Eingaben
-				include 'formValidation_partyRegistrationForm.php';
+				include 'formValidation_partyGraduateRegistrationForm.php';
 
 				//Einbinden der PHP-Datei zum Verschicken der Emails
 				include '../_includes_functionality/send_email.php';
@@ -27,9 +27,10 @@
 				//Formulardaten angekommen
 				if(!empty($_POST)) {
 					
-					/*
-					echo "test - formular abgeschickt <br>";
-					*/
+					
+					//Einbinden der PHP-Datei um die Mitgliedsdaten abzurufen (werden zur Anmeldung benötigt)
+					include '../_includes_functionality/get_memberdata_from_db.php'; 
+					
 					
 					//Nicht alle Felder ausgefüllt
 					$error = check_requiredFields_partyRegistrationAsGraduate($_POST);
@@ -81,27 +82,28 @@
 							//DB-Verbindung erfolgreich
 							else {
 								
-
 								
-								
-								//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
+								//Überprüften Formularinput sowie Mitgliedsdaten in PHP-Variablen umspeichern und ggf. anpassen
 				
 								date_default_timezone_set("Europe/Berlin");
-								$datum_der_feier = date('Y-m-d', strtotime(ABSOLVENTENFEIER_DATUM)); 
-								$anzahl_gaeste = $_POST['anzahl_gaeste'];
+								$datum_der_feier = date('Y-m-d', strtotime(ABSOLVENTENFEIER_DATUM));
 								$mid = $_SESSION['userMID'];
+								$geschlecht = $data_db['geschlecht'];
+								$titel = $data_db['titel'];
+								$nachname = $data_db['nachname'];
+								$vorname =$data_db['vorname'];
+								$email = $data_db['email'];								
+								$anzahl_gaeste = $_POST['anzahl_gaeste'];
 								$will_kontoeinzug = $_POST['will_kontoeinzug'];
 								$mitbringsel = $_POST['mitbringsel'];
 								$selbstfeier = 'j';
 								$abschlussarbeitsthema = $_POST['abschlussarbeitsthema'];
 								$lehrstuhl = $_POST['lehrstuhl'];
 								$studiengang = $_POST['studiengang'];
-								$titel = $_POST['titel'];
+								$neuer_titel = $_POST['neuer_titel'];
 								$studienbeginn = $_POST['studienbeginn'];
 								$studienabschluss = date('Y-m-d', strtotime($_POST['studienabschluss'])); 
 								
-								echo $_POST['studienabschluss'];
-								echo $studienabschluss;
 								
 							
 								//--------------------------
@@ -112,9 +114,9 @@
 								//Anmeldedaten zur Feier in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 								$stmt = $mysqli->prepare("INSERT INTO absolventenfeier   
-								(datum_der_feier, anzahl_gaeste, mid, will_kontoeinzug, mitbringsel, selbstfeier, abschlussarbeitsthema, lehrstuhl, studiengang, titel, studienbeginn, studienabschluss) 
-								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-								$stmt->bind_param("siisssssssss", $datum_der_feier, $anzahl_gaeste, $mid, $will_kontoeinzug, $mitbringsel, $selbstfeier, $abschlussarbeitsthema, $lehrstuhl, $studiengang, $titel, $studienbeginn, $studienabschluss);
+								(datum_der_feier, mid, geschlecht, titel, nachname, vorname, email, anzahl_gaeste, will_kontoeinzug, mitbringsel, selbstfeier, abschlussarbeitsthema, lehrstuhl, studiengang, neuer_titel, studienbeginn, studienabschluss) 
+								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("sisssssisssssssss", $datum_der_feier, $mid, $geschlecht, $titel, $nachname, $vorname, $email, $anzahl_gaeste, $will_kontoeinzug, $mitbringsel, $selbstfeier, $abschlussarbeitsthema, $lehrstuhl, $studiengang, $neuer_titel, $studienbeginn, $studienabschluss);
 							
 							
 								//DB-Abfrage erfolgreich
@@ -152,10 +154,12 @@
 									
 									if ($mysqli->errno == 1062) {
 										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
-										echo "<p class=\"error\">";
-										echo "Für Ihre Mitglieds-ID wurde bereits eine Anmeldung zur diesjährigen Absolventenfeier vorgenommen.<br>";
-										echo "Falls die vorherige Anmeldung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>";
-										echo "</p>";
+										echo "<p class=\"error\">\n";
+										echo "Für Ihre Mitglieds-ID oder Email-Adresse wurde bereits eine Anmeldung zur diesjährigen Absolventenfeier vorgenommen.<br>\n";
+										echo "<br>\n";
+										echo "Falls die vorherige Anmeldung nicht durch Sie vorgenommen wurde (oder Sie sich versehentlich zuvor als Gast anstatt als aktueller Absolvent angemeldet haben)\n"; 
+										echo "wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>\n";
+										echo "</p>\n";
 									}
 									else {
 										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";

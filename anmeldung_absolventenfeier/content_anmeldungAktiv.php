@@ -29,7 +29,7 @@
 				<br>
 				Sollten Sie noch kein Vereinsmitglied sein, so melden Sie sich bitte auf über den <a href="../mitgliedsantrag/index.php">Mitgliedsantrag</a> als Mitglied des Absolventenvereins an.
 				Dies ist im ersten Jahr für Sie kostenlos, die Mitgliedschaft ist jahresweise kündbar.<br>
-				Anschließend könne Sie sich im Mitgliederbereich als aktueller Absolvent zur Feier anmelden.
+				Anschließend können Sie sich im Mitgliederbereich als aktueller Absolvent zur Feier anmelden.
 				</p>
 				<br>
 				

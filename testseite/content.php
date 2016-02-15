@@ -22,10 +22,11 @@
 				<li>Keywords und Description im HTML fehlen noch</li>
 				<li>Anmeldeformulare für die Absolventenfeier implementieren</li>
 				<li>Lehrstühle im Absolventenfeier-Anmeldeformular überprüfen/vervollständigen</li>
-				<li>Spalte "Titel" in der Absolventenfeier-Tabelle hinzufügen</li>
+				<li>Absolventenfeier-Tabelle in DB umstrukturieren</li>
 				<li>Foto-Upload in Absolventenfeier-Anmeldeformular fertigstellen</li>
 				<li>Bestätigungsmail bei Absolventenfeier-Anmeldung zum laufen bringen</li>
 				<li>Fußzeile befüllen</li>
+				<li>Vorteile der Mitgliedschaft separat aufführen</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
 				<li>"Passwort-Vergessen"-Funktionalität einbauen</li>
 				<li><s>Geburtsdatum änderbar machen (absichtliche oder versehentliche Falschangabe selbst korrigierbar)</s></li>
