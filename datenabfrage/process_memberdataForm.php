@@ -60,8 +60,8 @@
 						//DB-Verbindung erfolgreich
 						else {
 							
-							echo $_POST['telefon'] . "<br>";
-							echo $_POST['newsletter'] . "<br>";
+							//echo $_POST['telefon'] . "<br>";
+							//echo $_POST['newsletter'] . "<br>";
 							
 	
 							//abgerufene Mitgliedsdaten wieder in Variablen speichern und ggf. durch überprüfte Formulareingabe ersetzen

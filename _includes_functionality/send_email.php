@@ -17,7 +17,7 @@ Hallo " . $titleAndName . ",
 die E-Mail-Adresse dieses Accounts wurde bei der Anmeldung zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. angegeben. 
 Wollen Sie Mitglied dieses Vereins werden und bestätigen die Richtigkeit der angegebenen Daten, so klicken Sie bitte auf folgenden Link:
 
-XXXXX" . $verificationCode . "
+" . 'http://btfmx5.fs.uni-bayreuth.de/email_verifikation/index.php?email=' .$toEmail. '&verificationCode='. $verificationCode ."
 
 
 Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie Enter. Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
@@ -141,7 +141,7 @@ function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_de
 Hallo " . $titleAndName . ",
 
 vielen Dank für ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " als aktueller Absolvent. 
-Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://alumpi.uni-bayreuth.de/anmeldung_feier_absolvent/index.php einsehen.
+Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://btfmx5.uni-bayreuth.de/anmeldung_feier_absolvent/index.php einsehen.
 ";
 
 	if($will_kontoeinzug == "j") {		
