@@ -63,7 +63,7 @@
 							
 							//Email-Adresse und zugehöriges (gehashtes) Passwort aus der Datenbank holen
 							//Verwendung von prepared statements zur Vermeidung von SQL-Injection
-							$stmt = $mysqli->prepare('SELECT mid, email, pw FROM vereinsmitglieder WHERE email = ?');
+							$stmt = $mysqli->prepare('SELECT mid, email, pw, bestaetigt FROM vereinsmitglieder WHERE email = ?');
 							$stmt->bind_param('s', $_POST['email']);
 							$stmt->execute();
 							$result = $stmt->get_result();
@@ -84,42 +84,54 @@
 									echo "DB-Passwort: " . $recordObj['pw'] . "<br>";
 									*/
 									
-									//Überprüfen des eingegebenen Passwortes (mit eingebautem Hashing)
-									//Passwort korrekt
-									if(password_verify($_POST['pwd'], $recordObj['pw'])) {
-									
-										/*
-										echo "test - Passwort korrekt!<br>";
-										*/
+									//Wurde die E-Mail-Adresse des Users bereits bestaetigt?
+									if($recordObj['bestaetigt'] == 'j') {
 										
+										//Überprüfen des eingegebenen Passwortes (mit eingebautem Hashing)
+										//Passwort korrekt
+										if(password_verify($_POST['pwd'], $recordObj['pw'])) {
 										
-										//Nutzer auf Server als eingelogged speichern (session wurde bereits durch index.php gestartet)
-										$_SESSION = array(
-												'login' => true,
-												'userMID' => $recordObj['mid']
-										);
+											/*
+											echo "test - Passwort korrekt!<br>";
+											*/
+											
+											
+											//Nutzer auf Server als eingelogged speichern (session wurde bereits durch index.php gestartet)
+											$_SESSION = array(
+													'login' => true,
+													'userMID' => $recordObj['mid']
+											);
+											
+											//Seite neu laden (nun eingelogged)
+											header('Location: ./index.php');
+											
+										}
 										
-										//Seite neu laden (nun eingelogged)
-										header('Location: ./index.php');
+										//Passwort falsch
+										else {
+											echo "<p class=\"error\">\n";
+											echo "Das eingegebene Passwort ist falsch!<br>";
+											echo "</p>\n";
+										}
+										
 										
 									}
-									
-									//Passwort falsch
 									else {
 										echo "<p class=\"error\">\n";
-										echo "Das eingegebene Passwort ist falsch!<br>";
+										echo "Die eingegebene E-Mail-Adresse wurde noch nicht bestätigt. ";
+										echo "Verwenden Sie dazu bitte den Verifikationslink aus der Bestätigungsmail der Anmeldung als Mitglied.<br>";
+										echo "Bei Problemen kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 										echo "</p>\n";
-										
-										/*
-										echo password_hash($_POST['pwd'], PASSWORD_DEFAULT) . "<br>";
-										*/
 									}
+									
+									
+									
 								}
 								
 								//Kein entsprechender User gefunden
 								else {
 									echo "<p class=\"error\">\n";
-									echo "Die eingegebene Email-Adresse wurde nicht in der Datenbank gefunden!<br>";
+									echo "Die eingegebene E-Mail-Adresse wurde nicht in der Datenbank gefunden!<br>";
 									echo "</p>\n";
 								}
 							}
