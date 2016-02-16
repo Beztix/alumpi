@@ -29,9 +29,9 @@
 				//Formulardaten angekommen
 				if(!empty($_POST)) {
 					
-					/*
-					echo "test - formular abgeschickt <br>";
-					*/
+					
+					//echo "test - formular abgeschickt <br>";
+					
 					
 					//Nicht alle Felder ausgefüllt
 					$error = check_required_fields_register($_POST);
@@ -57,13 +57,9 @@
 						//Alle Felder korrekt formatiert
 						else {
 						
-							/*
-							echo "test - formular korrekt ausgefüllt abgeschickt <br>";
-							echo "<br>";
-							echo "Eingegebener Vorname: " . $_POST['vorname'] . "<br>";
-							echo "Eingegebener Nachname: " . $_POST['nachname'] . "<br>";
-							echo "<br>";
-							*/
+							
+							//echo "test - formular korrekt ausgefüllt abgeschickt <br>";
+							
 							
 							//Zur Datenbank verbinden
 							$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -83,34 +79,7 @@
 							//DB-Verbindung erfolgreich
 							else {
 								
-								/*
-								echo "Datenbankverbindung erfolgreich!<br>";
-								echo "<br>";
-								echo "<br>";
-								echo "<h3>Formular:</h3> <br>";
-								echo "<br>";
-								echo $_POST['geschlecht'] . "<br>";
-								echo $_POST['titel'] . "<br>";
-								echo $_POST['vorname'] . "<br>";
-								echo $_POST['nachname'] . "<br>";
-								echo $_POST['geburtstag'] . "<br>";
-								echo $_POST['email'] . "<br>";
-								echo $_POST['telefon'] . "<br>";
-								echo $_POST['kontoinhaber'] . "<br>";
-								echo $_POST['iban'] . "<br>";
-								echo $_POST['bic'] . "<br>";
-								echo $_POST['iststudent'] . "<br>";
-								echo $_POST['newsletter'] . "<br>";
-								echo $_POST['strasse'] . "<br>";
-								echo $_POST['plz'] . "<br>";
-								echo $_POST['ort'] . "<br>";
-								echo $_POST['land'] . "<br>";
-								
-								echo "<br>";
-								echo "<br>";
-								echo "<h3>SQL-Input:</h3> <br>";
-								echo "<br>";
-								*/
+								//echo "test - DB-Verbindung erfolgreich<br>";
 								
 								
 								//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
@@ -144,36 +113,7 @@
 								
 								
 								
-								
-								/*
-								echo $eintrittsdatum . "<br>";
-								echo $geschlecht . "<br>";
-								echo $titel . "<br>";
-								echo $nachname . "<br>";
-								echo $vorname . "<br>";
-								echo $email . "<br>";
-								echo $strasse . "<br>";
-								echo $plz . "<br>";
-								echo $ort . "<br>";
-								echo $land . "<br>";
-								echo $geburtstag . "<br>";
-								echo $kontoinhaber . "<br>";
-								echo $iban . "<br>";
-								echo $bic . "<br>";
-								echo $bezahlt . "<br>";
-								echo $newsletter . "<br>";
-								echo $pw . "<br>";
-								echo $usergruppe . "<br>";
-								echo $telefon . "<br>";
-								echo $studentennachweis_vorhanden . "<br>";
-								echo $iststudent . "<br>";
-								echo $code . "<br>";
-								echo $bestaetigt . "<br>";
-								echo $rechtegruppe . "<br>";
-								echo $beitrag . "<br>";
-								*/
-
-								
+							
 								
 								//Mitgliederdaten in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
@@ -186,13 +126,17 @@
 								//DB-Abfrage erfolgreich
 								if($stmt->execute()) {
 									
+									//echo "test - DB-Abfrage erfolgreich<br>";
+									
 									$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
 									
 									//Email an neues Mitglied schicken
-									if (send_verification_email($email, $titleAndName, $code, $iststudent)) {
+									if (send_verificationEmail_memberRegistration($email, $titleAndName, $code, $iststudent)) {
+										
+										//echo "test - Send Verification Email erfolgreich<br>";
 										
 										//Email an den Verein schicken
-										if(send_notification_email($email, $titleAndName, $iststudent)) {
+										if(send_notificationEmail_memberRegistration($email, $titleAndName, $iststudent)) {
 											echo "<h3 class=\"green\">Registrierung erfolgreich!</h3>";
 											echo "<p class=\"green\">";
 											echo "Sie erhalten in Kürze eine Email, diese enthält einen Bestätigungslink. Sobald sie ihre Email-Adresse bestätigt haben, können Sie sich im Mitgliederbreich einloggen.";
@@ -225,6 +169,8 @@
 								
 								//Fehler bei der DB-Abfrage
 								else {
+									
+									//echo "test - Fehler bei DB-Abfrage<br>";
 									
 									if ($mysqli->errno == 1062) {
 										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
