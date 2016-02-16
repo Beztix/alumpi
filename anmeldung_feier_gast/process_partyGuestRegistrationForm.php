@@ -95,20 +95,21 @@
 								//DB-Abfrage erfolgreich
 								if($stmt->execute()) {
 									
-									/*
-									//Email an neues Mitglied schicken
-									if (send_partyRegistration_email()) {
+									$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
 									
-									*/
+									//Bestätigungs-Email senden
+									if (send_partyGuestRegistration_email($email, $titleAndName, $datum_der_feier)) {
+									
+									
 										echo "<h3 class=\"green\">Anmeldung erfolgreich!</h3>";
 										echo "<p class=\"green\">";
 										echo "Sie erhalten in Kürze eine Email, die Ihre Anmeldung zur diesjährigen Absolventenfeier bestätigt.<br>";
 										echo "</p>";
 						
-									/*
+									
 									}
 									
-									//Fehler beim Schicken der Email an das neue Mitglied
+									//Fehler beim Schicken der Email
 									else {
 										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 										echo "<p class=\"error\">";
@@ -116,7 +117,7 @@
 										echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 										echo "</p>";
 									}
-									*/
+									
 					
 									
 								}								

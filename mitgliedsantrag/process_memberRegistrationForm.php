@@ -186,7 +186,7 @@
 								//DB-Abfrage erfolgreich
 								if($stmt->execute()) {
 									
-									$titleAndName = $titel . " " . $geschlecht . " " . $vorname . " " . $nachname;
+									$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
 									
 									//Email an neues Mitglied schicken
 									if (send_verification_email($email, $titleAndName, $code, $iststudent)) {

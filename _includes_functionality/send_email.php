@@ -4,70 +4,65 @@
 
 
 
-function send_verification_email($toEmail, $titleAndName, $verificationCode, $student) {
+function send_verificationEmail_memberRegistration($toEmail, $titleAndName, $verificationCode, $student) {
 	
 	//Betreff der Email
-	$subject = 'Registrierung bei AluMPI | Bestätigung des Accounts';
+	$subject = 'Registrierung bei AluMPI | BestÃ¤tigung des Accounts';
 	
 	
 	//Inhalt der Email
 	$message = "
-	 	
-		Hallo " . $titleAndName . ",\n
+Hallo " . $titleAndName . ",
 
-		die E-Mail-Adresse dieses Accounts wurde bei der Anmeldung zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. 
-        angegeben. Wollen Sie Mitglied dieses Vereins werden und bestätigen die Richtigkeit der angegebenen Daten, so klicken Sie
-        bitte auf folgenden Link.\n
-		\n
-		XXXXX" . $verificationCode . "\n
-		\n
-        \n      
-		Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers 
-		und drücken Sie Enter. Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite,
-		wenden Sie sich bitte an alumpi@uni-bayreuth.de\n
-		\n
-		
-		Sobald Sie als Mitglied bestätigt sind, können Sie sich auf der Seite im Mitgliederbereich mit dieser Email-Adresse und Ihrem 
-		Geburstag in der Form TT.MM.JJJJ als Passwort einloggen.\n 
-		Im internen Bereich können Sie sich für die Absolventenfeier anmelden und Ihre Daten einsehen und ändern, bitte ändern Sie 
-		schnellstmöglich Ihr Passwort!\n
-		\n
-		";
+die E-Mail-Adresse dieses Accounts wurde bei der Anmeldung zum Absolventen- und FÃ¶rderverein MPI Uni Bayreuth e.V. angegeben. 
+Wollen Sie Mitglied dieses Vereins werden und bestÃ¤tigen die Richtigkeit der angegebenen Daten, so klicken Sie bitte auf folgenden Link:
+
+XXXXX" . $verificationCode . "
+
+
+Wenn es Ihnen nicht mÃ¶glich ist, den angezeigten Link anzuwÃ¤hlen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drÃ¼cken Sie Enter. Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestÃ¤tigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
+
+
+Sobald Sie als Mitglied bestÃ¤tigt sind, kÃ¶nnen Sie sich auf der Seite im Mitgliederbereich mit dieser Email-Adresse und Ihrem Geburstag in der Form TT.MM.JJJJ als Passwort einloggen.
+Im internen Bereich kÃ¶nnen Sie sich fÃ¼r die Absolventenfeier anmelden und Ihre Daten einsehen und Ã¤ndern, bitte Ã¤ndern Sie schnellstmÃ¶glich Ihr Passwort!
+
+";
 
 	if($student == "j") {		
 		$message = $message . "
-			Sie haben außerdem angegeben, Student zu sein und sind somit vom Beitrag befreit. Diese Option wird jedoch erst gültig, 
-			wenn ein Studentennachweis von diesem oder letzem Semester vorhanden ist. Schicken Sie diesen bitte innerhalb der nächsten
-			Woche an alumpi@uni-bayreuth.de\n
-			";
+Sie haben auÃŸerdem angegeben, Student zu sein und sind somit vom Beitrag befreit. 
+Diese Option wird jedoch erst gÃ¼ltig, wenn ein Studentennachweis von diesem oder letzem Semester vorhanden ist. Schicken Sie diesen bitte innerhalb der nÃ¤chsten Woche an alumpi@uni-bayreuth.de
+";
 	}
 	
-	$message = $message . "
-		              
-        Wurde Ihre E-mailadresse fälschlicherweise angegeben oder möchten Sie aus dem Verein austreten, schreiben Sie bitte eine kurze 
-		E-mail an alumpi@uni-bayreuth.de mit der Bitte um Löschung ihrer persönlichen Daten.\n
-		\n
-		\n
-		Viele Grüße,\n
-        Ihr Vorstand von AluMPI\n
-        \n
-		\n
-        _________________________________________\n
-		Absolventen- und Förderverein MPI Uni Bayreuth e.V.\n
-		Postfach AluMPI\n
-		Gebäude NWII\n
-		95440 Bayreuth\n
-        \n
-        alumpi@uni-bayreuth.de\n
-        www.alumpi.uni-bayreuth.de\n
-        \n
-		";
+	$message = $message . "   
+Wurde Ihre E-mailadresse fÃ¤lschlicherweise angegeben oder mÃ¶chten Sie aus dem Verein austreten, schreiben Sie bitte eine kurze E-mail an alumpi@uni-bayreuth.de mit der Bitte um LÃ¶schung ihrer persÃ¶nlichen Daten.
+
+
+Viele GrÃ¼ÃŸe,
+Ihr Vorstand von AluMPI
+
+_________________________________________
+Absolventen- und FÃ¶rderverein MPI Uni Bayreuth e.V.
+Postfach AluMPI
+GebÃ¤ude NWII
+95440 Bayreuth
+
+alumpi@uni-bayreuth.de
+www.alumpi.uni-bayreuth.de
+";
 	 
-	//Absender-Information	
-	$headers = 'From:noreply@alumpi.uni-bayreuth.de' . "\r\n";
+	//Header-Informationen	
+	$headers   = array();
+	$headers[] = "MIME-Version: 1.0";
+	$headers[] = "Content-type: text/plain; charset=utf-8";
+	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "Subject: {$subject}";
+	$headers[] = "X-Mailer: PHP/".phpversion();
+
 	
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, $headers)) {
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
 		return TRUE;
 	} 
 	else {
@@ -84,7 +79,7 @@ function send_verification_email($toEmail, $titleAndName, $verificationCode, $st
 
 
 
-function send_notification_email($userEmail, $titleAndName, $student) {
+function send_notificationEmail_memberRegistration($userEmail, $titleAndName, $student) {
 	
 	//Email an den Verein
 	$toEmail = 'alumpi@uni-bayreuth.de';
@@ -95,40 +90,158 @@ function send_notification_email($userEmail, $titleAndName, $student) {
 	
 	//Inhalt der Email
 	$message = "
-	 	
-		Hallo,\n
+Hallo,
 
-		" . $titleAndName . " hat sich soeben auf der Webseite zum Verein angemeldet.\n
-		Die E-Mail-Adresse lautet " . $userEmail . " \n
-		\n
-		";
+" . $titleAndName . " hat sich soeben auf der Webseite zum Verein angemeldet.
+Die E-Mail-Adresse lautet " . $userEmail . "
+
+";
 
 	if($student == "j") {		
 		$message = $message . "
-			 Das neue Mitglied hat angegeben Student zu sein. Sollte in der nächsten Woche keine Studentenbescheinigung vorliegen, 
-			 so erinnern Sie das neue Mitglied daran!\n
-			";
+Das neue Mitglied hat angegeben Student zu sein. Sollte in der nÃ¤chsten Woche keine Studentenbescheinigung vorliegen, so erinnern Sie das neue Mitglied daran!
+";
 	}
 	
-	$message = $message . "
-		              
-        Prüfen Sie ob das Mitglied in der Datenbank bestätigt wurde!\n
-		\n
-		\n
-		";
+	$message = $message . "	  
+PrÃ¼fen Sie ob das Mitglied in der Datenbank bestÃ¤tigt wurde!
+";
 	 
-	//Absender-Information	
-	$headers = 'From:noreply@alumpi.uni-bayreuth.de' . "\r\n";
+	//Header-Informationen	
+	$headers   = array();
+	$headers[] = "MIME-Version: 1.0";
+	$headers[] = "Content-type: text/plain; charset=utf-8";
+	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "Subject: {$subject}";
+	$headers[] = "X-Mailer: PHP/".phpversion();
 	
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, $headers)) {
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
 		return TRUE;
 	} 
 	else {
 		return FALSE;
 	}
 										
-}							
+}		
+
+
+
+
+
+
+function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_der_feier, $will_kontoeinzug) {
+	
+	//Betreff der Email
+	$subject = 'Ihre Anmeldung zur Absoventenfeier';
+	
+	
+	//Inhalt der Email
+	$message = "
+Hallo " . $titleAndName . ",
+
+vielen Dank fÃ¼r ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " als aktueller Absolvent. 
+Diese E-Mail dient lediglich der BestÃ¤tigung der Anmeldung, sie kÃ¶nnen die von Ihnen angegeben Informationen auf der Webseite unter http://alumpi.uni-bayreuth.de/anmeldung_feier_absolvent/index.php einsehen.
+";
+
+	if($will_kontoeinzug == "j") {		
+		$message = $message . "
+Sie haben angegeben, dass Sie den Eintritt per Bankeinzug bezahlen mÃ¶chten, dieser wird ca. eine Woche vor der Feier von ihrem Konto abgebucht. 
+";
+	}
+	
+	$message = $message . "   
+Falls Sie Fragen haben oder sich nicht fÃ¼r die Feier angemeldet haben, schreiben Sie und bitte unter alumpi@uni-bayreuth.de .
+Wir freuen uns auf Ihre Teilnahme an der diesjÃ¤hrigen Absolventenfeier!
+
+
+Viele GrÃ¼ÃŸe,
+Ihr Vorstand von AluMPI
+
+_________________________________________
+Absolventen- und FÃ¶rderverein MPI Uni Bayreuth e.V.
+Postfach AluMPI
+GebÃ¤ude NWII
+95440 Bayreuth
+
+alumpi@uni-bayreuth.de
+www.alumpi.uni-bayreuth.de
+";
+	 
+	//Header-Informationen	
+	$headers   = array();
+	$headers[] = "MIME-Version: 1.0";
+	$headers[] = "Content-type: text/plain; charset=utf-8";
+	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "Subject: {$subject}";
+	$headers[] = "X-Mailer: PHP/".phpversion();
+
+	
+	//Mail abschicken
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+		return TRUE;
+	} 
+	else {
+		return FALSE;
+	}
+										
+}		
+
+
+
+
+
+
+
+
+function send_partyGuestRegistration_email($toEmail, $titleAndName, $datum_der_feier) {
+	
+	//Betreff der Email
+	$subject = 'Ihre Anmeldung zur Absoventenfeier';
+	
+	
+	//Inhalt der Email
+	$message = "
+Hallo " . $titleAndName . ",
+
+vielen Dank fÃ¼r ihre Anmeldung zum Buffet der Absolventenfeier am " . $datum_der_feier . ". 
+Diese E-Mail dient der BestÃ¤tigung der Anmeldung.
+ 
+Falls Sie Fragen haben oder sich nicht fÃ¼r die Feier angemeldet haben, schreiben Sie uns bitte unter alumpi@uni-bayreuth.de.
+Wir freuen uns auf Ihre Teilnahme an der diesjÃ¤hrigen Absolventenfeier!
+
+
+Viele GrÃ¼ÃŸe,
+Ihr Vorstand von AluMPI
+
+_________________________________________
+Absolventen- und FÃ¶rderverein MPI Uni Bayreuth e.V.
+Postfach AluMPI
+GebÃ¤ude NWII
+95440 Bayreuth
+
+alumpi@uni-bayreuth.de
+www.alumpi.uni-bayreuth.de
+";
+	 
+	//Header-Informationen	
+	$headers   = array();
+	$headers[] = "MIME-Version: 1.0";
+	$headers[] = "Content-type: text/plain; charset=utf-8";
+	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "Subject: {$subject}";
+	$headers[] = "X-Mailer: PHP/".phpversion();
+
+	
+	//Mail abschicken
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+		return TRUE;
+	} 
+	else {
+		return FALSE;
+	}
+										
+}				
 									
 									
 								

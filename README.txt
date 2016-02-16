@@ -31,7 +31,8 @@
 	
 4. Hinweise zu Implementierungsdetails
 	4.1 Form Validation
-	4.2 ?
+	4.2 Email-Versand
+	4.3 ?
 
 =======================
 
@@ -114,3 +115,20 @@
 ------------------------------------------------
 
 Regexes zur Überprüfung der Eingabefelder, wichtig die Modifier i für case-insensitive und u für UTF-8, um Umlaute etc. korrekt zu verarbeiten.
+
+
+	4.2 E-Mail-Versand
+------------------------------------------------
+
+Um keinen eigenen Mailserver installieren zu müssen, wurde initial versucht den Mailversand mittels SSMTP zu erledigen. Hierbei wird die E-Mail
+mittels SMTP über einen anderen, eigentlichen Mailserver verschickt. Dafür wurden zwei Alternativen getestet
+1. Uni-Webmail:	Nutzung der normalen Adresse alumpi@uni-bayreuth.de, Problem: Uni-Webmail zu langsam und unzuverlässig. Wenn die Bestätigungsmail
+				erste eine halbe Stunde nach Abschicken der Anmeldung kommt ist das kacke
+2. Gmail:		Account alumpi.ubt@gmail.com erstellt, versand der Mails darüber funktioniert instantan und gut, ABER: Keine eigene Angabe einer
+				Absenderadresse über "From:" möglich, Google überschreibt dies mit dem Accountnamen. Doof, da "no-reply@alumpi.de" als Absender
+				verwendet werden (für den User sichtbar sein) soll, keine Gmail-Adresse.
+				
+-> Jetzt doch Verwendung eines eigenen Mini-Mailservers
+Verwendung von "sendmail"
+Keine manuelle Konfiguration erforderlich, lediglich Installation und auto-Konfiguration von sendmail, 
+eintragen von "sendmail_path = /usr/sbin/sendmail -t -i" in der "php.ini"
