@@ -4,6 +4,10 @@
 // Diese PHP-Datei enthält den PHP-Code zur Verifikation der E-Mail-Adresse
 //======================================================================
 
+//Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
+if(!defined('AccessConstant')) {die('Direct access not permitted');}
+
+
 
 
 

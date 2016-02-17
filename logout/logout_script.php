@@ -6,7 +6,6 @@
 // Die zur Identifikation eingeloggter Nutzer verwendete Session-Variable wird gelöscht.
 //======================================================================
 
-
 	session_start(); 
 	session_destroy();
 	unset($_SESSION);

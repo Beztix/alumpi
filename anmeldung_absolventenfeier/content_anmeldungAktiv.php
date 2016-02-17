@@ -1,3 +1,8 @@
+<?php
+//Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
+if(!defined('AccessConstant')) {die('Direct access not permitted');}
+?>
+
 				<p>
 				Auf dieser Seite finden Sie alle Informationen zur Anmeldung zur Absolventenfeier.
 				Die Absolventenfeier ist als Fakultätsfeier zur Ehrung der Absolventen konzipiert, es sind neben den Absolventen selbst und ihren Gästen explizit alle Fakultätsangehörigen herzlich eingeladen!<br>

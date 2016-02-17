@@ -7,6 +7,9 @@
 // Dem Nutzer werden die eingetragenen Änderungen auf der Homepage angezeigt.
 //======================================================================
 
+//Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
+if(!defined('AccessConstant')) {die('Direct access not permitted');}
+
 
 
 

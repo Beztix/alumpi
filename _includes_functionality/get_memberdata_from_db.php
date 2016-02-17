@@ -7,6 +7,10 @@
 // Falls die Datenabfrage aus der DB scheitert, werden Fehlermeldungen mit echo ins HTML ausgegeben.
 //======================================================================
 
+//Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
+if(!defined('AccessConstant')) {die('Direct access not permitted');}
+
+
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
 include_once '../../../config-files/db_config.php';

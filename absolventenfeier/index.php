@@ -2,6 +2,9 @@
 <html>
 
 <?php
+// Konstante, die in inkludierten PHP-Dateien abgefragt wird, um direkten Zugriff auf die inkludierten Datein zu verhindern
+define('AccessConstant', TRUE);
+
 session_start();
 require '../_includes_functionality/global_constants.php';
 

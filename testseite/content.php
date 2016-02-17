@@ -1,3 +1,8 @@
+<?php
+//Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
+if(!defined('AccessConstant')) {die('Direct access not permitted');}
+?>
+
 		<section id="content">
 		
 			<section class="top_image">
@@ -18,15 +23,15 @@
 				<ul>
 				<li>Die Banner-Bilder durch sinnvolle Bilder ersetzen</li>
 				<li>Seiteninhalte vervollständigen</li>
-				<li>Bestätigungsmail bei Registrierung zum Laufen bringen</li>
 				<li>Keywords und Description im HTML fehlen noch</li>
 				<li>Lehrstühle im Absolventenfeier-Anmeldeformular überprüfen/vervollständigen</li>
-				<li>Absolventenfeier-Tabelle in DB umstrukturieren</li>
 				<li>Foto-Upload in Absolventenfeier-Anmeldeformular fertigstellen?</li>
-				<li>Bestätigungsmail bei Absolventenfeier-Anmeldung zum laufen bringen</li>
 				<li>Vorteile der Mitgliedschaft separat aufführen</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
 				<li>"Passwort-Vergessen"-Funktionalität einbauen</li>
+				<li><s>Absolventenfeier-Tabelle in DB umstrukturieren</s></li>
+				<li><s>Bestätigungsmail bei Registrierung zum Laufen bringen</s></li>
+				<li><s>Bestätigungsmail bei Absolventenfeier-Anmeldung zum laufen bringen</s></li>
 				<li><s>Fußzeile befüllen</s></li>
 				<li><s>Anmeldeformulare für die Absolventenfeier implementieren</s></li>
 				<li><s>Geburtsdatum änderbar machen (absichtliche oder versehentliche Falschangabe selbst korrigierbar)</s></li>

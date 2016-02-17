@@ -5,6 +5,9 @@
 // Sie muss von jeder Seite eingebunden wurden, die gegen den Zugriff nicht eingeloggter Nutzer geschützt werden soll.
 //======================================================================
 
+//Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
+if(!defined('AccessConstant')) {die('Direct access not permitted');}
+
 
 
 	//Session ID erneuern um Angriff über Session Fixation zu verhindern
