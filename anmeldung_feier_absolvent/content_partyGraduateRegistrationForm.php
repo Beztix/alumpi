@@ -97,16 +97,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									<option value="" selected="selected">bitte auswählen</option>
 									<optgroup label="Mathematik">
 										<option value="Mathematik I - Komplexe Analysis">Mathematik I - Komplexe Analysis</option>
-										<option value="Mathematik II - ?">Mathematik II - ?</option>
-										<option value="Mathematik III - ?">Mathematik III - ?</option>
+										<option value="Mathematik II - Computeralgebra">Mathematik II - Computeralgebra</option>
+										<option value="Mathematik III - Angewandte und Numerische Analysis">Mathematik III - Angewandte und Numerische Analysis</option>
 										<option value="Mathematik IV - Zahlentheorie">Mathematik IV - Zahlentheorie</option>
-										<option value="Mathematik ? - Angewandte Mathematik">Mathematik ? - Angewandte Mathematik</option>
+										<option value="Mathematik V - Angewandte Mathematik">Mathematik V - Angewandte Mathematik</option>
 										<option value="Mathematik VI - Nichtlineare Analysis und Mathematische Physik">Mathematik VI - Nichtlineare Analysis und Mathematische Physik</option>
-										<option value="Mathematik ? - Stochastik">Mathematik ? - Stochastik</option>
+										<option value="Mathematik VII - Stochastik">Mathematik VII - Stochastik</option>
 										<option value="Mathematik VIII - Algebraische Geometrie">Mathematik VIII - Algebraische Geometrie</option>
-										<option value="Mathematik ? - Ingenieurmathematik">Mathematik ? - Ingenieurmathematik</option>
-										<option value="Mathematik ? - Wirtschaftsmathematik">Mathematik ? - Wirtschaftsmathematik</option>
-										<option value="Mathematik ? - Mathematik und ihre Didaktik">Mathematik ? - Mathematik und ihre Didaktik</option>
+										<option value="Ingenieurmathematik">Ingenieurmathematik</option>
+										<option value="Wirtschaftsmathematik">Wirtschaftsmathematik</option>
+										<option value="Mathematik und ihre Didaktik">Mathematik und ihre Didaktik</option>
 									</optgroup>
 									<optgroup label="Physik">
 										<option value="Experimentalphysik I">Experimentalphysik I</option>
