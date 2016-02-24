@@ -30,7 +30,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Passwort
 							</td>
 							<td>
-								<input type="password" autocomplete="off" name="pwd" size="20">
+								<input type="password" autocomplete="off" name="pwd" size="35"> <a href="../passwort_vergessen/index.php" style="margin-left:10px;font-size:12px;">Passwort vergessen?</a>
 							</td>
 						</tr>
 					</table>

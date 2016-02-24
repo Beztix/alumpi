@@ -133,6 +133,70 @@ Prüfen Sie ob das Mitglied in der Datenbank bestätigt wurde!
 
 
 
+
+
+function send_passwordReset_email($toEmail, $resetCode) {
+	
+	//Betreff der Email
+	$subject = 'AluMPI | Zurücksetzen des Passworts';
+	
+	
+	//Inhalt der Email
+	$message = "
+Hallo,
+
+die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort für die Webseite Absolventen- und Fördervereins MPI Uni Bayreuth e.V. zurückzusetzen.
+Falls Sie ihr Passwort zurücksetzen möchten, so klicken Sie bitte auf folgenden Link:
+
+" . 'http://btfmx5.fs.uni-bayreuth.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&verificationCode='. $resetCode ."
+
+
+Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie Enter. Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
+
+
+Wurde Ihre E-mailadresse fälschlicherweise angegeben, so schreiben Sie bitte eine kurze E-Mail an alumpi@uni-bayreuth.de .
+
+
+Viele Grüße,
+Ihr Vorstand von AluMPI
+
+_________________________________________
+Absolventen- und Förderverein MPI Uni Bayreuth e.V.
+Postfach AluMPI
+Gebäude NWII
+95440 Bayreuth
+
+alumpi@uni-bayreuth.de
+www.alumpi.uni-bayreuth.de
+";
+	 
+	//Header-Informationen	
+	$headers   = array();
+	$headers[] = "MIME-Version: 1.0";
+	$headers[] = "Content-type: text/plain; charset=utf-8";
+	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "Subject: {$subject}";
+	$headers[] = "X-Mailer: PHP/".phpversion();
+
+	
+	//Mail abschicken
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+		return TRUE;
+	} 
+	else {
+		return FALSE;
+	}
+										
+}
+
+
+
+
+
+
+
+
+
 function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_der_feier, $will_kontoeinzug) {
 	
 	//Betreff der Email
