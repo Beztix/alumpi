@@ -54,7 +54,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>\n";
 							echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
 							echo "<br>\n";
-							echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "<br>\n";
+							echo "Failed to connect to MySQL<br>";
 							echo "</p>\n";
 						}
 						
@@ -89,7 +89,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									*/
 									
 									//Wurde die E-Mail-Adresse des Users bereits bestaetigt?
-									if($recordObj['bestaetigt'] == 'j') {
+									if($recordObj['bestaetigt'] === 'j') {
 										
 										//Überprüfen des eingegebenen Passwortes (mit eingebautem Hashing)
 										//Passwort korrekt
@@ -145,8 +145,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								echo "<p class=\"error\">\n";
 								echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
 								echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-								echo "<br>";
-								echo $mysqli->error;
 								echo "</p>\n";
 							}
 							

@@ -72,7 +72,7 @@ else {
 			$data_output['mid'] = $data_db['mid'];
 			$data_output['datum_der_feier'] = date("d.m.Y", strtotime($data_db['datum_der_feier']));
 			$data_output['anzahl_gaeste'] = $data_db['anzahl_gaeste'];
-			$data_output['will_kontoeinzug'] = 'Ja'; if($data_db['will_kontoeinzug'] == 'n') {$data_output['will_kontoeinzug'] = 'Nein';}
+			$data_output['will_kontoeinzug'] = 'Ja'; if($data_db['will_kontoeinzug'] === 'n') {$data_output['will_kontoeinzug'] = 'Nein';}
 			$data_output['mitbringsel'] = $data_db['mitbringsel'];
 			$data_output['abschlussarbeitsthema'] = $data_db['abschlussarbeitsthema'];
 			$data_output['lehrstuhl'] = $data_db['lehrstuhl'];

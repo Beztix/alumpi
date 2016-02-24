@@ -38,7 +38,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								(kommen Sie alleine, so sind dies 0)
 							</td>
 							<td>
-								<input type="text" name="anzahl_gaeste" placeholder="" size="3" <?php if(isset($_POST['anzahl_gaeste'])) echo "value=\"" . $_POST['anzahl_gaeste'] . "\"";?>>
+								<input type="text" name="anzahl_gaeste" placeholder="" size="3" <?php if(isset($_POST['anzahl_gaeste'])) echo "value=\"" . htmlspecialchars($_POST['anzahl_gaeste'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -47,7 +47,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								(leer, falls keine Nachspeise mitgebracht werden kann)
 							</td>
 							<td>
-								<input type="text" name="mitbringsel" placeholder="" size="40" <?php if(isset($_POST['mitbringsel'])) echo "value=\"" . $_POST['mitbringsel'] . "\"";?>>
+								<input type="text" name="mitbringsel" placeholder="" size="40" <?php if(isset($_POST['mitbringsel'])) echo "value=\"" . htmlspecialchars($_POST['mitbringsel'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -85,7 +85,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Titel der Abschlussarbeit
 							</td>
 							<td>
-								<input type="text" name="abschlussarbeitsthema" placeholder="" size="40" <?php if(isset($_POST['abschlussarbeitsthema'])) echo "value=\"" . $_POST['abschlussarbeitsthema'] . "\"";?>>
+								<input type="text" name="abschlussarbeitsthema" placeholder="" size="40" <?php if(isset($_POST['abschlussarbeitsthema'])) echo "value=\"" . htmlspecialchars($_POST['abschlussarbeitsthema'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -299,7 +299,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Abschlussdatum
 							</td>
 							<td>
-								<input type="text" name="studienabschluss" placeholder="TT.MM.JJJJ" size="10"  <?php if(isset($_POST['studienabschlus'])) echo "value=\"" . $_POST['studienabschluss'] . "\"";?>>
+								<input type="text" name="studienabschluss" placeholder="TT.MM.JJJJ" size="10"  <?php if(isset($_POST['studienabschlus'])) echo "value=\"" . htmlspecialchars($_POST['studienabschluss'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 					</table>

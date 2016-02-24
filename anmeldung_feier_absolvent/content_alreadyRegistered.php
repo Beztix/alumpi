@@ -23,7 +23,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Ihre MID
 						</td>
 						<td>
-							<?php echo $data_output['mid']; ?>
+							<?php echo htmlspecialchars($data_output['mid'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -31,7 +31,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Datum der Feier
 						</td>
 						<td>
-							<?php echo $data_output['datum_der_feier']; ?>
+							<?php echo htmlspecialchars($data_output['datum_der_feier'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -39,7 +39,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Anzahl mitgebrachter Gäste
 						</td>
 						<td>
-							<?php echo $data_output['anzahl_gaeste']; ?>
+							<?php echo htmlspecialchars($data_output['anzahl_gaeste'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -47,7 +47,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Zahlung per Kontoeinzug
 						</td>
 						<td>
-							<?php echo $data_output['will_kontoeinzug']; ?>
+							<?php echo htmlspecialchars($data_output['will_kontoeinzug'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -55,7 +55,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Beitrag zum Nachspeisenbuffet
 						</td>
 						<td>
-							<?php echo $data_output['mitbringsel']; ?>
+							<?php echo htmlspecialchars($data_output['mitbringsel'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -63,7 +63,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Thema der Abschlussarbeit
 						</td>
 						<td>
-							<?php echo $data_output['abschlussarbeitsthema']; ?>
+							<?php echo htmlspecialchars($data_output['abschlussarbeitsthema'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -71,7 +71,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Lehrstuhl der Abschlussarbeit
 						</td>
 						<td>
-							<?php echo $data_output['lehrstuhl']; ?>
+							<?php echo htmlspecialchars($data_output['lehrstuhl'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -79,7 +79,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Studiengang
 						</td>
 						<td>
-							<?php echo $data_output['studiengang']; ?>
+							<?php echo htmlspecialchars($data_output['studiengang'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -87,7 +87,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Erworbener Titel
 						</td>
 						<td>
-							<?php echo $data_output['titel']; ?>
+							<?php echo htmlspecialchars($data_output['titel'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -95,7 +95,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Studienbeginn
 						</td>
 						<td>
-							<?php echo $data_output['studienbeginn']; ?>
+							<?php echo htmlspecialchars($data_output['studienbeginn'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -103,7 +103,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Studienabschluss
 						</td>
 						<td>
-							<?php echo $data_output['studienabschluss']; ?>
+							<?php echo htmlspecialchars($data_output['studienabschluss'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 				

@@ -41,7 +41,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				//Abfrage einer GET-Variable, um festzustellen ob die Seite neu geladen wurde, nachdem ein DB-Update erfolgreich ausgeführt wurde
 				if(isset($_GET['status'])){
-						if($_GET['status'] == 'success') {
+						if($_GET['status'] === 'success') {
 							
 							echo "<h3 class=\"green\">Änderung erfolgreich!</h3>\n";
 							echo "<p class=\"green\">\n";
@@ -82,7 +82,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Mitglieds-ID
 							</td>
 							<td>
-								<?php echo $data_output['mid']; ?>
+								<?php echo htmlspecialchars($data_output['mid'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								
@@ -94,7 +94,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Eintrittsdatum
 							</td>
 							<td>
-								<?php echo $data_output['eintrittsdatum']; ?>
+								<?php echo htmlspecialchars($data_output['eintrittsdatum'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								
@@ -106,7 +106,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Titel
 							</td>
 							<td>
-								<?php echo $data_output['titel']; ?>
+								<?php echo htmlspecialchars($data_output['titel'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<select name="titel">
@@ -132,7 +132,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Vorname
 							</td>
 							<td>
-								<?php echo $data_output['vorname'];?>
+								<?php echo htmlspecialchars($data_output['vorname'], ENT_QUOTES, 'UTF-8');?>
 							</td>
 							<td>
 								<input type="text" name="vorname" placeholder="Vorname" size="25">
@@ -144,7 +144,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Nachname
 							</td>
 							<td>
-								<?php echo $data_output['nachname']; ?>
+								<?php echo htmlspecialchars($data_output['nachname'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="nachname" placeholder="Nachname" size="25">
@@ -156,7 +156,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Geburtsdatum
 							</td>
 							<td>
-								<?php echo $data_output['geburtstag']; ?>
+								<?php echo htmlspecialchars($data_output['geburtstag'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="25">
@@ -168,7 +168,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Email-Adresse
 							</td>
 							<td>
-								<?php echo $data_output['email']; ?>
+								<?php echo htmlspecialchars($data_output['email'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35">
@@ -180,7 +180,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Telefonnummer
 							</td>
 							<td>
-								<?php echo $data_output['telefon']; ?>
+								<?php echo htmlspecialchars($data_output['telefon'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25">
@@ -192,7 +192,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Newsletter abonniert
 							</td>
 							<td>
-								<?php echo $data_output['newsletter']; ?>
+								<?php echo htmlspecialchars($data_output['newsletter'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<select name="newsletter">
@@ -209,7 +209,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Straße, Hausnummer
 							</td>
 							<td>
-								<?php echo $data_output['strasse']; ?>
+								<?php echo htmlspecialchars($data_output['strasse'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30">		
@@ -221,7 +221,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								PLZ
 							</td>
 							<td>
-								<?php echo $data_output['plz']; ?>
+								<?php echo htmlspecialchars($data_output['plz'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="plz" placeholder="PLZ" size="10">
@@ -233,7 +233,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Ort
 							</td>
 							<td>
-								<?php echo $data_output['ort']; ?>
+								<?php echo htmlspecialchars($data_output['ort'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="ort" placeholder="Ort" size="25">
@@ -245,7 +245,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Land
 							</td>
 							<td>
-								<?php echo $data_output['land']; ?>
+								<?php echo htmlspecialchars($data_output['land'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="land" placeholder="Land" size="25">
@@ -257,7 +257,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Student
 							</td>
 							<td>
-								<?php echo $data_output['iststudent']; ?>
+								<?php echo htmlspecialchars($data_output['iststudent'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<select name="iststudent">
@@ -273,7 +273,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Kontoinhaber
 							</td>
 							<td>
-								<?php echo $data_output['kontoinhaber']; ?>
+								<?php echo htmlspecialchars($data_output['kontoinhaber'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="kontoinhaber" placeholder="Vorname Nachname" size="40">
@@ -285,7 +285,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								IBAN
 							</td>
 							<td>
-								<?php echo $data_output['iban']; ?>
+								<?php echo htmlspecialchars($data_output['iban'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="iban" placeholder="IBAN" size="34">
@@ -297,7 +297,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								BIC
 							</td>
 							<td>
-								<?php echo $data_output['bic']; ?>
+								<?php echo htmlspecialchars($data_output['bic'], ENT_QUOTES, 'UTF-8')x; ?>
 							</td>
 							<td>
 								<input type="text" name="bic" placeholder="BIC" size="15">
@@ -312,7 +312,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								
 							</td>
 							<td>
-								<input type="password" name="passwort" placeholder="Neues Passwort" size="25">
+								<input type="password" name="passwort" autocomplete="off" placeholder="Neues Passwort" size="25">
 							</td>
 						</tr>
 												
@@ -324,7 +324,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								
 							</td>
 							<td>
-								<input type="password" name="passwort2" placeholder="Neues Passwort wiederholen" size="25">
+								<input type="password" name="passwort2" autocomplete="off" placeholder="Neues Passwort wiederholen" size="25">
 							</td>
 						</tr>
 						

@@ -53,24 +53,24 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							</td>
 							<td>
 								<select name="geschlecht">
-									<option value="Herr" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] == "Herr") echo "selected";}?>>Herr</option>
-									<option value="Frau" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] == "Frau") echo "selected";}?>>Frau</option>
+									<option value="Herr" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] === "Herr") echo "selected";}?>>Herr</option>
+									<option value="Frau" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] === "Frau") echo "selected";}?>>Frau</option>
 								</select>
 								<select name="titel">
-									<option value="" <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "") echo "selected";}?>></option>
-									<option value="B.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "B.Sc.") echo "selected";}?>>B.Sc.</option>
-									<option value="B.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "B.Ed.") echo "selected";}?>>B.Ed.</option>
-									<option value="M.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "M.Sc.") echo "selected";}?>>M.Sc.</option>
-									<option value="M.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "M.Ed.") echo "selected";}?>>M.Ed.</option>
-									<option value="Dr. rer. nat." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. rer. nat.") echo "selected";}?>>Dr. rer. nat.</option>
-									<option value="Dr.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr.-Ing.") echo "selected";}?>>Dr.-Ing.</option>
-									<option value="Dr. mult." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. mult.") echo "selected";}?>>Dr. mult.</option>
-									<option value="Dr. h. c." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. h. c.") echo "selected";}?>>Dr. h. c.</option>
-									<option value="Dr. habil." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dr. habil.") echo "selected";}?>>Dr. habil.</option>
-									<option value="Dipl.-Inf." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Inf.") echo "selected";}?>>Dipl.-Inf.</option>
-									<option value="Dipl.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Ing.") echo "selected";}?>>Dipl.-Ing.</option>
-									<option value="Dipl.-Math." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Math.") echo "selected";}?>>Dipl.-Math.</option>
-									<option value="Dipl.-Phys." <?php if(isset($_POST['titel'])) {if($_POST['titel'] == "Dipl.-Phys.") echo "selected";}?>>Dipl.-Phys.</option>
+									<option value="" <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "") echo "selected";}?>></option>
+									<option value="B.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "B.Sc.") echo "selected";}?>>B.Sc.</option>
+									<option value="B.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "B.Ed.") echo "selected";}?>>B.Ed.</option>
+									<option value="M.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "M.Sc.") echo "selected";}?>>M.Sc.</option>
+									<option value="M.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "M.Ed.") echo "selected";}?>>M.Ed.</option>
+									<option value="Dr. rer. nat." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. rer. nat.") echo "selected";}?>>Dr. rer. nat.</option>
+									<option value="Dr.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr.-Ing.") echo "selected";}?>>Dr.-Ing.</option>
+									<option value="Dr. mult." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. mult.") echo "selected";}?>>Dr. mult.</option>
+									<option value="Dr. h. c." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. h. c.") echo "selected";}?>>Dr. h. c.</option>
+									<option value="Dr. habil." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. habil.") echo "selected";}?>>Dr. habil.</option>
+									<option value="Dipl.-Inf." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Inf.") echo "selected";}?>>Dipl.-Inf.</option>
+									<option value="Dipl.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Ing.") echo "selected";}?>>Dipl.-Ing.</option>
+									<option value="Dipl.-Math." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Math.") echo "selected";}?>>Dipl.-Math.</option>
+									<option value="Dipl.-Phys." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Phys.") echo "selected";}?>>Dipl.-Phys.</option>
 								</select>
 							</td>
 						</tr>
@@ -79,8 +79,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Name
 							</td>
 							<td>
-								<input type="text" name="vorname" placeholder="Vorname" size="25" <?php if(isset($_POST['vorname'])) echo "value=\"" . $_POST['vorname'] . "\"";?>>
-								<input type="text" name="nachname" placeholder="Nachname" size="25" <?php if(isset($_POST['nachname'])) echo "value=\"" . $_POST['nachname'] . "\"";?>>
+								<input type="text" name="vorname" placeholder="Vorname" size="25" <?php if(isset($_POST['vorname'])) echo "value=\"" . htmlspecialchars($_POST['vorname'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="nachname" placeholder="Nachname" size="25" <?php if(isset($_POST['nachname'])) echo "value=\"" . htmlspecialchars($_POST['nachname'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -88,7 +88,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Geburtsdatum
 							</td>
 							<td>
-								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="10" <?php if(isset($_POST['geburtstag'])) echo "value=\"" . $_POST['geburtstag'] . "\"";?>>
+								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="10" <?php if(isset($_POST['geburtstag'])) echo "value=\"" . htmlspecialchars($_POST['geburtstag'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -96,8 +96,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Kontakt
 							</td>
 							<td>
-								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . $_POST['email'] . "\"";?>>
-								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25" <?php if(isset($_POST['telefon'])) echo "value=\"" . $_POST['telefon'] . "\"";?>>
+								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25" <?php if(isset($_POST['telefon'])) echo "value=\"" . htmlspecialchars($_POST['telefon'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 					</table>
@@ -123,7 +123,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Kontoinhaber
 							</td>
 							<td>
-								<input type="text" name="kontoinhaber" placeholder="Vorname Nachname" size="40" <?php if(isset($_POST['kontoinhaber'])) echo "value=\"" . $_POST['kontoinhaber'] . "\"";?>>
+								<input type="text" name="kontoinhaber" placeholder="Vorname Nachname" size="40" <?php if(isset($_POST['kontoinhaber'])) echo "value=\"" . htmlspecialchars($_POST['kontoinhaber'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -131,8 +131,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Kontodaten
 							</td>
 							<td>
-								<input type="text" name="iban" placeholder="IBAN" size="34" <?php if(isset($_POST['iban'])) echo "value=\"" . $_POST['iban'] . "\"";?>>
-								<input type="text" name="bic" placeholder="BIC" size="15" <?php if(isset($_POST['bic'])) echo "value=\"" . $_POST['bic'] . "\"";?>>
+								<input type="text" name="iban" placeholder="IBAN" size="34" <?php if(isset($_POST['iban'])) echo "value=\"" . htmlspecialchars($_POST['iban'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="bic" placeholder="BIC" size="15" <?php if(isset($_POST['bic'])) echo "value=\"" . htmlspecialchars($_POST['bic'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 					</table>
@@ -165,7 +165,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Straße, Hausnummer
 							</td>
 							<td>
-								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30" <?php if(isset($_POST['strasse'])) echo "value=\"" . $_POST['strasse'] . "\"";?>>
+								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30" <?php if(isset($_POST['strasse'])) echo "value=\"" . htmlspecialchars($_POST['strasse'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -173,8 +173,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Postleitzahl, Ort
 							</td>
 							<td>
-								<input type="text" name="plz" placeholder="PLZ" size="10" <?php if(isset($_POST['plz'])) echo "value=\"" . $_POST['plz'] . "\"";?>>
-								<input type="text" name="ort" placeholder="Ort" size="25" <?php if(isset($_POST['ort'])) echo "value=\"" . $_POST['ort'] . "\"";?>>
+								<input type="text" name="plz" placeholder="PLZ" size="10" <?php if(isset($_POST['plz'])) echo "value=\"" . htmlspecialchars($_POST['plz'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="ort" placeholder="Ort" size="25" <?php if(isset($_POST['ort'])) echo "value=\"" . htmlspecialchars($_POST['ort'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -182,7 +182,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Land
 							</td>
 							<td>
-								<input type="text" name="land" placeholder="Land" size="25" <?php if(isset($_POST['land'])) echo "value=\"" . $_POST['land'] . "\"";?>>
+								<input type="text" name="land" placeholder="Land" size="25" <?php if(isset($_POST['land'])) echo "value=\"" . htmlspecialchars($_POST['land'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 					</table>

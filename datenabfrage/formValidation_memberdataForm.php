@@ -49,18 +49,18 @@ function check_fields_update($data_form, $data_db) {
 	//wenn der Newsletter neu abonniert wurde, muss die Adresse angegeben werden oder bereits vorhanden sein
 	
 	//newsletter jetzt abonniert
-	if($data_form['newsletter'] == 'j') {
+	if($data_form['newsletter'] === 'j') {
 		//Eigabefelder leer UND Datenbankeintrag leer
-		if((empty($data_form['strasse'])) && ($data_db['strasse'] == '')) {
+		if((empty($data_form['strasse'])) && ($data_db['strasse'] === '')) {
 			$error = $error . "Es wurde keine Straße eingegeben, obwohl der Newsletter abonniert wurde.<br>\n";
 		}
-		if((empty($data_form['plz'])) && ($data_db['plz'] == '')) {
+		if((empty($data_form['plz'])) && ($data_db['plz'] === '')) {
 			$error = $error . "Es wurde keine PLZ eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
 		}	
-		if((empty($data_form['ort'])) && ($data_db['ort'] == '')) {
+		if((empty($data_form['ort'])) && ($data_db['ort'] === '')) {
 			$error = $error . "Es wurde kein Ort eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
 		}
-		if((empty($data_form['land'])) && ($data_db['land'] == '')) {
+		if((empty($data_form['land'])) && ($data_db['land'] === '')) {
 			$error = $error . "Es wurde kein Land eingegeben, obwohl der Newsletter abonniert wurde..<br>\n";
 		}		
 	}
@@ -104,7 +104,7 @@ function check_fields_update($data_form, $data_db) {
 	
 	//Wenn das Passwort-Feld nicht leer ist, muss das zweite Passwort-Feld identisch sein
 	if(!empty($data_form['passwort'])) {
-		if(!($data_form['passwort'] == $data_form['passwort2'])) {
+		if(!($data_form['passwort'] === $data_form['passwort2'])) {
 			$error = $error . "Das eingegebene neue Passwort stimmt nicht mit der Passworteingabe im Kontrollfeld überein. Bitte geben Sie das Passwort in beide Felder ein, um fehlerhafte Änderungen zu vermeiden.<br>\n";
 		}
 		else {

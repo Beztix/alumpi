@@ -123,7 +123,7 @@ function check_fields_format_register($data_form) {
 		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
 		}
-		if($data_form['land'] == 'Deutschland') {
+		if($data_form['land'] === 'Deutschland') {
 			if (!preg_match("/^[0-9]{5}$/",$data_form['plz'])) {
 				$error = $error . "Keine korrekte deutsche PLZ.<br>\n";
 			}

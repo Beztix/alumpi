@@ -30,7 +30,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Passwort
 							</td>
 							<td>
-								<input type="password" name="pwd" size="20">
+								<input type="password" autocomplete="off" name="pwd" size="20">
 							</td>
 						</tr>
 					</table>
