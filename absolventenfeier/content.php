@@ -7,7 +7,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<section id="content">
 		
 			<section class="top_image">
-				<img src="../_images_content/man-looking-at-bookshelf.jpg" alt="man looking at bookshelf">
+				<img src="../_images_content/banner_sektglaeser.jpg" alt="Sektgläser">
 			</section>
 		
 		
@@ -27,6 +27,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<h2>Allgemeine Informationen zur Absolventenfeier</h2>
 				
+				<div class="left_img_container">
+					<img src="../_images_content/deko_absolventenfeier.jpg" alt="Deko Absolventenfeier" style="width:400px;">
+				</div>
+				
 				<?php
 				if(ABSOLVENTENFEIER_INFO_AKTIV) {
 					echo "<p>\n";
@@ -40,13 +44,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					echo "</p>\n";
 				}
 				?>
-
+				
 				<p>
 				Die Absolventenfeier der Fakultät I bietet den passenden Rahmen um den Abschluss der Absolventen gemeinsam mit ihren Familien, Freunden und Professoren zu feiern. 
 				Sie unterteilt sich in zwei Akte, den ersten Teil bildet der Festakt. 
 				Dieser beinhaltet einen Festvortrag, anschließend wird jedem Absolvent eine Abschlussurkunde der Fakultät verliehen, 
-				während die Absolventen in einer Präsentation kurz vorgestellt werden.
-				Im Anschluss daran beginnt der gemütliche Teil, nämlich die Feierlichkeiten mit Buffet, Cocktails der Physikerbar und gemütlichem Beisammensein im Foyer des NWII mit musikalischer Untermalung. 
+				während die Absolventen in einer Präsentation kurz vorgestellt werden.<br>
+				Im Anschluss daran beginnt der gemütliche Teil, nämlich die Feierlichkeiten mit Buffet, Cocktails der Physikerbar und gemütlichem Beisammensein im Foyer des NWII mit musikalischer Untermalung.<br>
+				<br>				
 				Während die Verabschiedung und der Festvortrag für jedermann frei zugänglich sind, ist für die gemütlichen Feierlichkeiten eine vorherige Anmeldung nötig.<br> 
 				Haben Sie Ihr Studium erst kürzlich abgeschlossen oder bisher noch nicht die Zeit gefunden Ihren Abschluss ausgiebig zu feiern? 
 				Dann ergreifen Sie nun die Gelegenheit!
@@ -86,9 +91,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 			
 				
-				
+				<br>
 				<br>
 				<h2>Der offizielle Teil</h2>
+				
+				<div class="right_img_container">
+					<img src="../_images_content/urkundenuebergabe.jpg" alt="Urkundenübergabe" style="width:450px;">
+				</div>
 
 				<h3>Teilnahme am offiziellen Teil</h3>
 				<p>
@@ -96,6 +105,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Gäste, die nur am offiziellen Festakt teilnehmen möchten, müssen sich nicht anmelden. 
 				Jeder ist herzlich eingeladen der Verabschiedung der Absolventen und dem Festvortrag beizuwohnen.
 				</p>
+				
+				
 
 				<h3>Vorraussetzungen für den Urkundenverleih</h3>
 				<p>
@@ -111,8 +122,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				
 				<br>
-				<h2>Das Buffet - der gemütliche Teil</h2>
+				<br>
+				<h2>Der gemütliche Teil - Das Buffet</h2>
 
+				
+				<div class="left_img_container">
+					<img src="../_images_content/buffet2.jpg" alt="Büffet" style="width:400px;">
+				</div>
+				
 				<h3>Teilnahme am Buffet</h3>
 				<p>
 				Um nach dem Festakt an den Feierlichkeiten mit Buffet, Cocktails und Musik teilzunehmen, ist eine vorherige Anmeldung erforderlich.<br>
@@ -126,6 +143,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				?>
 				</p>
 
+				<br style="clear:both">
 				
 				
 				<br>

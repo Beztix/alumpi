@@ -9,8 +9,8 @@ session_start();
 require '../_includes_functionality/global_constants.php';
 
 
-$thisPage = 'absolventengallerie';
-$title = 'AluMPI | Absolventengallerie';
+$thisPage = 'absolventengalerie';
+$title = 'AluMPI | Absolventengalerie';
 $keywords = 'x y z';
 $description = 'page description';
 ?>

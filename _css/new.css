@@ -132,7 +132,7 @@ header h2 {
 
 .top_image {
 	width: 880px;
-	height: 200px;
+	height: 250px;
 	margin: 0 0 20px 0;
 }
 
@@ -209,6 +209,23 @@ header h2 {
 
 #submenu_in_content ul li {
 	padding: 3px;
+}
+
+
+.left_img_container {
+	float:left;
+	margin-top: 10px;
+	margin-right: 25px;
+	margin-bottom: 10px;
+}
+
+
+
+.right_img_container {
+	float:right;
+	margin-top: 10px;
+	margin-left: 25px;
+	margin-bottom: 10px;
 }
 
 

@@ -18,6 +18,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<a <?php if ($thisPage=="anmeldung_absolventenfeier") {echo " class=\"currentpage\"";} ?> href="../anmeldung_absolventenfeier/index.php">Anmeldung</a>
 	</li>
 		<li>
-		<a <?php if ($thisPage=="absolventengallerie") {echo " class=\"currentpage\"";} ?> href="../absolventengallerie/index.php">Absolventengallerie</a>
+		<a <?php if ($thisPage=="absolventengalerie") {echo " class=\"currentpage\"";} ?> href="../absolventengalerie/index.php">Absolventengalerie</a>
 	</li>
 </ul>

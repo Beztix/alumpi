@@ -13,14 +13,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
 		
 			<section class="top_image">
-				<img src="../_images_content/campus_scene_fahrrad.jpg" alt="Campus Scene Fahrrad">
+				<img src="../_images_content/banner_absolventenfeier_party.jpg" alt="Party bei der Absolventenfeier">
 			</section>
 		
 		
 		
             <section class="text">
 
-				<h1>Bildergallerie</h1>
+				<h1>Bildergalerie</h1>
 				
 				<br>
 				## BILDER ##<br>

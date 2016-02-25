@@ -18,7 +18,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<a <?php if ($thisPage=="anmeldung_feier_absolvent") {echo " class=\"currentpage\"";} ?> href="../anmeldung_feier_absolvent/index.php">Anmeldung zur Absolventenfeier</a>
 	</li>
 	<li>
-		<a <?php if ($thisPage=="bildergallerie") {echo " class=\"currentpage\"";} ?> href="../bildergallerie/index.php">Bildergallerie</a>
+		<a <?php if ($thisPage=="bildergalerie") {echo " class=\"currentpage\"";} ?> href="../bildergalerie/index.php">Bildergalerie</a>
 	</li>
 	<li>
 		<a <?php if ($thisPage=="datenabfrage") {echo " class=\"currentpage\"";} ?> href="../datenabfrage/index.php">Datenabfrage</a>

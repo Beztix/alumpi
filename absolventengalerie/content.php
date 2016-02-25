@@ -7,18 +7,18 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
 		
 			<section class="top_image">
-				<img src="../_images_content/campus_scene_fahrrad.jpg" alt="Campus Scene Fahrrad">
+				<img src="../_images_content/banner_gruppenbild_absolventen2011.jpg" alt="Gruppenbild Absolventen 2011">
 			</section>
 		
 		
 		
             <section class="text">
 
-				<h1>Absolventengallerie</h1>
+				<h1>Absolventengalerie</h1>
 				
 				
 				<p>
-				Dies ist die Gallerie der ehemaligen Absolventen unserer Fakultät.
+				Dies ist die Galerie der ehemaligen Absolventen unserer Fakultät.
 				Die Fotos wurden jeweils bei der Absolventenfeier aufgenommen, es sind also lediglich die Teilnehmer an dieser Feier hier verewigt.<br>
 				<br>
 				Weitere Fotos der Absolventenfeiern finden sich im internen Mitgliederbereich.				

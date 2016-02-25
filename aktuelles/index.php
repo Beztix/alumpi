@@ -9,7 +9,7 @@ session_start();
 require '../_includes_functionality/global_constants.php';
 
 
-$thisPage = 'Aktuelles';
+$thisPage = 'aktuelles';
 $title = 'AluMPI | Aktuelles';
 $keywords = 'x y z';
 $description = 'page description';

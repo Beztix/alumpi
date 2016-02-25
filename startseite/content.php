@@ -6,7 +6,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<section id="content">
 		
 			<section class="top_image">
-				<img src="../_images_content/campus_scene_fahrrad.jpg" alt="Campus Scene Fahrrad">
+				<img src="../_images_content/banner_campus_scene_fahrrad.jpg" alt="Campus Scene Fahrrad">
 			</section>
 		
 		

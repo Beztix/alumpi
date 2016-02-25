@@ -35,7 +35,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					if($thisPage=="absolventenfeier" || 
 						$thisPage=="anmeldung_absolventenfeier" || 
 						$thisPage=="anmeldung_feier_gast" || 
-						$thisPage=="absolventengallerie") {
+						$thisPage=="absolventengalerie") {
 						include 'submenu_absolventenfeier.php';
 					}
 					?>
