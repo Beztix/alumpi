@@ -297,7 +297,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								BIC
 							</td>
 							<td>
-								<?php echo htmlspecialchars($data_output['bic'], ENT_QUOTES, 'UTF-8')x; ?>
+								<?php echo htmlspecialchars($data_output['bic'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
 								<input type="text" name="bic" placeholder="BIC" size="15">

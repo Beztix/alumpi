@@ -24,10 +24,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<li>Die Banner-Bilder durch sinnvolle Bilder ersetzen</li>
 				<li>Seiteninhalte vervollständigen</li>
 				<li>Keywords und Description im HTML fehlen noch</li>
-				<li>Foto-Upload in Absolventenfeier-Anmeldeformular fertigstellen?</li>
 				<li>Vorteile der Mitgliedschaft separat aufführen</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
-				<li>"Passwort-Vergessen"-Funktionalität einbauen</li>
+				<li><s>"Passwort-Vergessen"-Funktionalität einbauen</s></li>
 				<li><s>Lehrstühle im Absolventenfeier-Anmeldeformular überprüfen/vervollständigen</s></li>
 				<li><s>Absolventenfeier-Tabelle in DB umstrukturieren</s></li>
 				<li><s>Bestätigungsmail bei Registrierung zum Laufen bringen</s></li>

@@ -16,18 +16,26 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<h1>Mitglied bei aluMPI werden</h1>
 
 				<p>
-				Um die Vorzüge des Vereins genießen zu können, müssen Sie Mitglied des Vereins werden. 
+				Um die Vorzüge des Vereins genießen zu können, müssen Sie Mitglied des Absolventen- und Fördervereins MPI Uni Bayreuth e.V. werden.
+				</p>
+				
+				<br>
+				<h2>Vorteile der Vereinsmitgliedschaft</h2>
+				<p>
+				### AUSFORMULIEREN ###<br>
 				Zum Beispiel werden Sie dann automatisch zur nächsten Absolventenfeier eingeladen und können sich dann im Mitgliederbereich dafür anmelden. 
 				Zudem haben Sie als Mitglied des Absolventenvereins auch nach Ihrem Abschluss weiterhin die Möglichkeit am Unisport teilzunehmen.
 				</p>
 
+				<br>
+				<br>
+				
 				<p>
 				In folgendem Formular geben Sie persönliche Daten an, die es dem Verein ermöglichen mit Ihnen in Kontakt zu bleiben, und erklären somit den Beitritt zum Verein. 
 				Wenn der Antrag abgesendet wird bekommen Sie eine kurze Nachricht an die angegebene E-Mail-Adresse, durch die Sie die Richtigkeit Ihrer Daten bestätigen. 
 				Bitte lesen Sie vor dem Beitritt auch die Satzung und Beitragsordnung des Vereins.
 				</p>
 
-				<br>
 				
 				<?php
 				//Einbinden der PHP-Datei zur Formularauswertung

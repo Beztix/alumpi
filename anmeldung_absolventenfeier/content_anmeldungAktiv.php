@@ -19,7 +19,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<p>
 				Um als aktueller Absolvent an der Absolventenfeier teilzunehmen, ist die Mitgliedschaft im Absolventenverein erforderlich.
-				Diese ist für Studenten und aktuelle Absolventen kostenlos, Sie profitieren mit der Anmeldung zum Absolventenverein auch als beitragsbefreites Mitglied von den <a href="######">Vorteilen der Mitgliedschaft</a>.<br>
+				Diese ist für Studenten und aktuelle Absolventen kostenlos, Sie profitieren mit der Anmeldung zum Absolventenverein auch als beitragsbefreites Mitglied von den <a href="../mitgliedsantrag/index.php">Vorteilen der Mitgliedschaft</a>.<br>
 				<br>
 				Gäste der aktuellen Absolventen können von diesen mit angemeldet werden und müssen somit <strong>keine</strong> separate Anmeldung durchführen!<br>
 				<br>

@@ -23,9 +23,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<h1>Logout</h1>
 				
 				<br>
-				Zum Abmelden bitte hier klicken:<br>
+				Zum Abmelden aus dem Mitgliederbereich bitte hier klicken:<br>
 				<br>
-				<a href="./logout_script.php">Logout</a><br>
+				<form action="./logout_script.php">
+					<button class="absenden" type="submit">Logout</button>
+				</form>
 				<br>
 				
 			</section>

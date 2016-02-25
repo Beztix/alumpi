@@ -1,5 +1,5 @@
 <p>
-Sie haben diese Seite über den in der E-Mail angegebenen Link verwendet, um Ihr Passwort zurückzusetzen<br>
+Sie haben diese Seite über den in der E-Mail angegebenen Link erreicht, um Ihr Passwort zurückzusetzen<br>
 Geben Sie zum Setzen eines neuen Passworts dieses im untenstehenden Formular ein und klicken Sie auf "Neues Passwort setzen".<br>
 </p>
 

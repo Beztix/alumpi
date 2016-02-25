@@ -55,12 +55,9 @@
 
 - Keywords für alle Seiten in der jeweiligen index.php eintragen
 - Descriptions für alle Seiten in der jeweiligen index.php eintragen
-- DB-Config auf Server dann außerhalb des www-Verzeichnis lagern
-- Bestätigungsmail bei Registrierung zum laufen bringen
 - Was ist die Usergruppe in der DB?
-- Anmeldung Absolventenfeier programmieren
 - Bilder einpflegen
-- Footer befüllen
+
 
 - Login-Bereich testen
 - Registrierung in DB testen
@@ -73,6 +70,7 @@
 
 - Registrierung von Fördermitgliedern?
 - Mitgliedsbestätigung generieren
+- Foto-Upload in Absolventenfeier-Anmeldeformular
 
 
 
