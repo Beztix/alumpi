@@ -17,22 +17,28 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 			
 				<?php
-				//Wenn die GET-Variablen passend gesetzt sind: Versuche die Verifikation durchzuführen
+				//Wenn die GET-Variablen passend gesetzt sind: Zeige Formular zum Eingeben eines neuen Passworts an
 				if(isset($_GET['email']) && !empty($_GET['email']) AND isset($_GET['resetCode']) && !empty($_GET['resetCode'])){
 					
-					include 'content_passwordResetForm.php';
+					include 'verifyResetCode.php';
 					
 				}
 				
+				//Wenn die GET-Variablen eine erfolgte Änderung anzeigen: Zeige Erfolgmeldung an
 				else if(isset($_GET['status'])){
 						if($_GET['status'] === 'success') {
 
-							//ÄNDERUNG ERFOLGREICH
+							// Änderung erfolgreich
+							echo "<h3 class=\"green\">Passwortänderung erfolgreich!</h3>\n";
+							echo "<p class=\"green\">\n";
+							echo "Ihr neues Passwort wurde erfolgreich in die Datenbank eingetragen, sie können sich ab sofort damit im Mitgliederbereich anmelden.<br>\n";
+							echo "</p>\n";
 						}
 				}
 				
 				//GET-Variablen nicht passend gesetzt
 				else{
+					
 					// Invalid approach
 					echo "<p>";
 					echo "Inkorrekter Zugriff auf diese Unterseite, bitte verwenden Sie den Link aus der versendeten E-Mail.<br>";

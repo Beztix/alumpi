@@ -84,7 +84,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							$kontoinhaber_neu = $data_db['kontoinhaber'];	if(!empty($_POST['kontoinhaber'])) {$kontoinhaber_neu = $_POST['kontoinhaber'];}
 							$iban_neu = $data_db['iban'];					if(!empty($_POST['iban'])) {$iban_neu = $_POST['iban'];}
 							$bic_neu = $data_db['bic'];						if(!empty($_POST['bic'])) {$bic_neu = $_POST['bic'];}
-							$pw_neu = $data_db['pw'];					if(!empty($_POST['passwort'])) {$pw_neu = password_hash($_POST['passwort'], PASSWORD_DEFAULT);}
+							$pw_neu = $data_db['pw'];						if(!empty($_POST['passwort'])) {$pw_neu = password_hash($_POST['passwort'], PASSWORD_DEFAULT);}
 							
 							
 							

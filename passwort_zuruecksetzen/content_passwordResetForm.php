@@ -1,6 +1,6 @@
 <p>
-Sie haben diese Seite über den in der E-Mail-Adresse angegebenen Link erreicht, um Ihr Passwort zurückzusetzen<br>
-Geben Sie zum Setzen eines neuen Passworts dieses im untenstehenden Formular ein und klicken Sie auf "Passwort zurücksetzen".<br>
+Sie haben diese Seite über den in der E-Mail angegebenen Link verwendet, um Ihr Passwort zurückzusetzen<br>
+Geben Sie zum Setzen eines neuen Passworts dieses im untenstehenden Formular ein und klicken Sie auf "Neues Passwort setzen".<br>
 </p>
 
 
@@ -9,7 +9,7 @@ Geben Sie zum Setzen eines neuen Passworts dieses im untenstehenden Formular ein
 include 'process_passwordResetForm.php'; 
 ?>	
 
-<form action="index.php" method="POST" name="reset_password">
+<form action="index.php<?php echo '?email=' . $_GET['email'] . '&resetCode=' . $_GET['resetCode']; ?>" method="POST" name="reset_password">
 
 	<table style="width:100%">
 		<colgroup>
@@ -22,9 +22,6 @@ include 'process_passwordResetForm.php';
 				Passwort
 			</td>
 			<td>
-				
-			</td>
-			<td>
 				<input type="password" name="passwort" autocomplete="off" placeholder="Neues Passwort" size="25">
 			</td>
 		</tr>
@@ -34,15 +31,12 @@ include 'process_passwordResetForm.php';
 			
 			</td>
 			<td>
-				
-			</td>
-			<td>
 				<input type="password" name="passwort2" autocomplete="off" placeholder="Neues Passwort wiederholen" size="25">
 			</td>
 		</tr>
-		
 	</table>
+	
 	<br>
-	<button class="absenden" type="submit">E-Mail Versenden</button>
+	<button class="absenden" type="submit">Neues Passwort setzen</button>
 
 </form>	

@@ -11,23 +11,17 @@
 //Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
-
-
-				/*
-				echo "SESSION:<br>";
-				print_r($_SESSION);
-				echo "<br>";
-				echo "<br>";
-				*/
 				
 				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-				include '../../../config-files/db_config.php';
+				include_once '../../../config-files/db_config.php';
+				
+				//Einbinden der PHP-Datei zum Verschicken der Bestätigungs-Emails
+				include_once '../_includes_functionality/send_email.php';
+				
+				
 				
 				//Einbinden der PHP-Datei zur Validierung der Eingaben
 				include 'formValidation_memberRegistrationForm.php';
-
-				//Einbinden der PHP-Datei zum Verschicken der Bestätigungs-Emails
-				include '../_includes_functionality/send_email.php';
 
 				//Formulardaten angekommen
 				if(!empty($_POST)) {

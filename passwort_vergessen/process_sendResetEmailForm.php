@@ -25,10 +25,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				//Formulardaten angekommen
 				if(!empty($_POST)) {
 					
-					/*
-					echo "test - formular abgeschickt <br>";
-					*/
-					
 					//Nicht alle Felder ausgefüllt
 					if(empty($_POST['email'])) {
 						echo "<p class=\"error\">\n";
@@ -38,7 +34,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					
 					//Alle Felder ausgefüllt
 					else {
-						
 						
 						//Zur Datenbank verbinden
 						$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -57,57 +52,88 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						//DB-Verbindung erfolgreich
 						else {
 
-							
-							//Code zur Rücksetzen des Passworts erzeugen
-							date_default_timezone_set("Europe/Berlin");
-							$currentDate = date("Y-m-d");				//aktuelles Datum
-							$resetCode = md5($_POST['email'] . $currentDate);	//Reset-Code zum Zurücksetzen des Passworts
+							//Teste, ob angegebene E-Mail-Adresse existiert
+							$stmt = $mysqli->prepare("SELECT email FROM vereinsmitglieder WHERE email = ?");
+							$stmt->bind_param("s", $_POST['email']);
 						
-						
-						
-							//Reset-Code in die DB schreiben
-							$stmt = $mysqli->prepare("UPDATE vereinsmitglieder SET
-							resetCode = ? 
-							WHERE email = ?");
-							$stmt->bind_param("ss", $resetCode, $_POST['email']);
-
-						
-							//DB-Abfrage erfolgreich
-							if($stmt->execute()) {
+							//DB-Abfrage 1 erfolgreich
+							if($stmt->execute()){
 								
-								//E-Mail zum Rücksetzen versenden
-								if(send_passwordReset_email($_POST['email'], $resetCode)) {
+								$result = $stmt->get_result();
+								
+								
+								//E-Mail-Adresse gefunden
+								if ($recordObj = $result->fetch_assoc()) {
+											
+									//resetCode zum Rücksetzen des Passworts erzeugen
+									date_default_timezone_set("Europe/Berlin");
+									$currentDate = date("Y-m-d");				//aktuelles Datum
+									$resetCode = md5($_POST['email'] . $currentDate);	//Reset-Code zum Zurücksetzen des Passworts
+								
+									//resetCode in die DB schreiben
+									$stmt = $mysqli->prepare("UPDATE vereinsmitglieder SET
+									resetCode = ? 
+									WHERE email = ?");
+									$stmt->bind_param("ss", $resetCode, $_POST['email']);
+
+								
+									//DB-Abfrage 2 erfolgreich
+									if($stmt->execute()) {
+										
+										//E-Mail zum Rücksetzen versenden
+										if(send_passwordReset_email($_POST['email'], $resetCode)) {
+											echo "<h3 class=\"green\">E-Mail versendet!</h3>";
+											echo "<p class=\"green\">";
+											echo "Sie erhalten in Kürze eine E-Mail, diese enthält einen Link um das Passwort zurückzusetzen.";
+											echo "</p>";
+										}
+										
+										//Fehler beim Schicken der E-Mail
+										else {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Leider ist ein Fehler beim Versand der E-Mail aufgetreten.<br>";
+											echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+											echo "</p>";
+										}
+										
+										
+									}//eof DB-Abfrage 2 erfolgreich							
+																		
+									//Fehler bei der DB-Abfrage 2
+									else {
+										echo "<p class=\"error\">";
+										echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
+										echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+										echo "</p>";
+									} 
+
+								}//eof E-Mail-Adresse gefunden
+								
+								
+								//E-Mail-Adresse nicht gefunden
+								else {
+									
+									//trotzdem Erfolgsmeldung, um keine Informationen preiszugeben!
 									echo "<h3 class=\"green\">E-Mail versendet!</h3>";
 									echo "<p class=\"green\">";
 									echo "Sie erhalten in Kürze eine E-Mail, diese enthält einen Link um das Passwort zurückzusetzen.";
 									echo "</p>";
 								}
 								
-								//Fehler beim Schicken der E-Mail an den Verein
-								else {
-									echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
-									echo "<p class=\"error\">";
-									echo "Leider ist ein Fehler beim Versand der E-Mail aufgetreten.<br>";
-									echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-									echo "</p>";
-								}
-								
-								
-							}								
-																
-							//Fehler bei der DB-Abfrage
+							}//eof DB-Abfrage 1 erfolgreich
+						
+							//Fehler bei der DB-Abfrage 1
 							else {
 								
-								
-								//TODO: HIER GGF AUCH ERFOLGSMELDUNG
 								echo "<p class=\"error\">";
 								echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
 								echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 								echo "</p>";
 							
-							}
-							
-						}// eof DB-Verbindung erfolgreich
+							}//eof Fehler bei der DB-Abfrage 1
+						
+						}//eof DB-Verbindung erfolgreich
 						
 					} //eof Alle Felder ausgefüllt
 

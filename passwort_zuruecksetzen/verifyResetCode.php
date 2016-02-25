@@ -16,7 +16,7 @@ include_once '../../../config-files/db_config.php';
 
 
 $email = $_GET['email']; 
-$verificationCode =$_GET['verificationCode']; 
+$resetCode =$_GET['resetCode']; 
 
 
 
@@ -36,14 +36,11 @@ if ($mysqli->connect_errno) {
 
 //DB-Verbindung erfolgreich
 else {
-	/*
-	echo "Datenbankverbindung erfolgreich!<br>";
-	*/
 	
-	//verificationCode zur E-Mail-Adresse des aktuellen Users aus der Datenbank holen
+	//resetCode zur E-Mail-Adresse des aktuellen Users aus der Datenbank holen
 	//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 	$stmt = $mysqli->prepare('SELECT 
-	code
+	resetCode
 	FROM vereinsmitglieder WHERE email = ?');
 	$stmt->bind_param('s', $email);
 	$stmt->execute();
@@ -53,56 +50,25 @@ else {
 	if($result) {
 		
 		
-		/*
-		echo "Abfrage erfolgreich!<br>";
-		*/
-		
 		//E-Mail-Adresse gefunden
 		if ($recordObj = $result->fetch_assoc()) {
 			
-			$code_db = $recordObj['code'];
+			$resetCode_db = $recordObj['resetCode'];
 
 			//Verifikationscode korrekt
-			if($verificationCode === $code_db) {
+			if($resetCode === $resetCode_db) {
 	
-				$bestaetigt = 'j';
-	
-				//Setze Mitglied in DB als bestätigt
-				$stmt = $mysqli->prepare("UPDATE vereinsmitglieder SET
-				bestaetigt = ?
-				WHERE email = ?");
-				$stmt->bind_param("ss", $bestaetigt, $email);
-			
-				//DB-Abfrage erfolgreich
-				if($stmt->execute()) {
-					
-					echo "<p class=\"green\">\n";
-					echo "Der Verifikationscode ist korrekt!<br>";
-					echo "Ihre Email-Adresse wurde bestätigt, Sie können sich ab sofort im Mitgliedsbereich anmelden.<br>";
-					echo "</p>\n";
-				}								
-													
-				
-				//Fehler bei der DB-Abfrage
-				else {
-				
-					echo "<p class=\"error\">";
-					echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-					echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-					echo "<br>";
-					echo $mysqli->error;
-					echo "</p>";
-				}
-				
-				
+				//Anzeige des Formulars zum Ändern des Passworts
+				include 'content_passwordResetForm.php';
+							
 			}
 			
 			//Verifikationscode falsch
 			else {
-				echo "<p class=\"error\">\n";
-				echo "Der Verifikationscode ist nicht korrekt!<br>";
-				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-				echo "</p>\n";
+				echo "<p class=\"error\">";
+				echo "Der verwendete Link zum Rücksetzen des Passworts ist nicht korrekt! Bitte verwenden Sie den Link aus der E-Mail um dass Passwort zurückzusetzen.<br>";
+				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+				echo "</p>";
 			}
 			
 			
@@ -111,10 +77,10 @@ else {
 		
 		//Kein entsprechender User gefunden
 		else {
-			echo "<p class=\"error\">\n";
-			echo "Die E-Mail-Adresse wurde nicht in der Datenbank gefunden!<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-			echo "</p>\n";
+			echo "<p class=\"error\">";
+			echo "Der verwendete Link zum Rücksetzen des Passworts ist nicht korrekt! Bitte verwenden Sie den Link aus der E-Mail um dass Passwort zurückzusetzen.<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "</p>";
 		}
 	}
 	

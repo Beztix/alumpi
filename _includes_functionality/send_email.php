@@ -23,7 +23,7 @@ Wollen Sie Mitglied dieses Vereins werden und bestätigen die Richtigkeit der an
 " . 'http://btfmx5.fs.uni-bayreuth.de/email_verifikation/index.php?email=' .$toEmail. '&verificationCode='. $verificationCode ."
 
 
-Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie Enter. Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
+Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
 
 
 Sobald Sie als Mitglied bestätigt sind, können Sie sich auf der Seite im Mitgliederbereich mit dieser Email-Adresse und Ihrem Geburstag in der Form TT.MM.JJJJ als Passwort einloggen.
@@ -39,7 +39,7 @@ Diese Option wird jedoch erst gültig, wenn ein Studentennachweis von diesem ode
 	}
 	
 	$message = $message . "   
-Wurde Ihre E-mailadresse fälschlicherweise angegeben oder möchten Sie aus dem Verein austreten, schreiben Sie bitte eine kurze E-mail an alumpi@uni-bayreuth.de mit der Bitte um Löschung ihrer persönlichen Daten.
+Wurde Ihre E-Mail-Adresse fälschlicherweise angegeben oder möchten Sie aus dem Verein austreten, schreiben Sie bitte eine kurze E-mail an alumpi@uni-bayreuth.de mit der Bitte um Löschung ihrer persönlichen Daten.
 
 
 Viele Grüße,
@@ -148,13 +148,13 @@ Hallo,
 die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort für die Webseite Absolventen- und Fördervereins MPI Uni Bayreuth e.V. zurückzusetzen.
 Falls Sie ihr Passwort zurücksetzen möchten, so klicken Sie bitte auf folgenden Link:
 
-" . 'http://btfmx5.fs.uni-bayreuth.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&verificationCode='. $resetCode ."
+" . 'http://btfmx5.fs.uni-bayreuth.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&resetCode='. $resetCode ."
 
 
-Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie Enter. Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
+Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
 
 
-Wurde Ihre E-mailadresse fälschlicherweise angegeben, so schreiben Sie bitte eine kurze E-Mail an alumpi@uni-bayreuth.de .
+Wurde Ihre E-Mail-Adresse fälschlicherweise angegeben, so schreiben Sie bitte eine kurze E-Mail an alumpi@uni-bayreuth.de .
 
 
 Viele Grüße,

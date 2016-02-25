@@ -17,8 +17,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 			
 				<p>
-				Falls Sie ihr Passwort vergessen haben geben Sie bitte ihre E-Mail-Adresse ein, 
-				wir werden Ihnen eine E-Mail mit Instruktionen zum Zurücksetzen des Passworts schicken.
+				Falls Sie Ihr Passwort vergessen haben geben Sie bitte Ihre E-Mail-Adresse ein, 
+				Ihnen wird eine E-Mail mit Instruktionen zum Zurücksetzen des Passworts zugeschickt.
 				</p>
 
 
