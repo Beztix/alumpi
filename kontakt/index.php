@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage= 'kontakt';
 $title = 'AluMPI | Kontakt';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Kontakt, Anschrift, Vorstand, Verantwortliche, E-Mail-Adresse';
+$description = 'Kontaktdaten des Vorstands des Absolventen- und Fördervereins MPI Uni Bayreuth e.V.';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

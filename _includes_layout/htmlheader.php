@@ -27,9 +27,10 @@ if(!isset($title)) {
 echo "\t<title>" . $title . "</title>\n";
 
 
-if(!isset($keywords)) { 
-	$keywords = "AluMPI, Absolventenverein, Förderverein, Absolvent, Student, Universität, Bayreuth, Fakultät, Physik, Mathematik, Informatik, MPI";
-}
+
+$standardKeywords = "AluMPI, Absolventenverein, Förderverein, Absolvent, Alumni, Student, Universität, Bayreuth, Fakultät, Physik, Mathematik, Informatik, MPI" ;
+$keywords = $standardKeywords . ", " . $keywords;
+
 echo "\t<meta name=\"keywords\" content=\"" . $keywords . "\" />\n";
 
 

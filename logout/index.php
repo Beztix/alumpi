@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'logout';
 $title = 'AluMPI | Logout';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Logout, Ausloggen, Abmelden';
+$description = 'Logout aus dem Mitgliederbereich des Absolventen- und Fördervereins MPI Uni Bayreuth e.V.';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

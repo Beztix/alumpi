@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'mitgliederbereich';
 $title = 'AluMPI | Mitgliederbereich';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Mitgliederbereich, Mitglied, Intern, Login, Einloggen, Anmelden';
+$description = 'Interner Mitgliederbereich des Absolventen- und Fördervereins MPI Uni Bayreuth e.V.';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

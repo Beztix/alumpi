@@ -9,10 +9,10 @@ session_start();
 require '../_includes_functionality/global_constants.php';
 
 
-$thisPage = 'passwortZuruecksetzen';
-$title = 'AluMPI | Passwort Zurücksetzen';
-$keywords = 'x y z';
-$description = 'page description';
+$thisPage = 'passwortVergesse';
+$title = 'AluMPI | Passwort Vergessen';
+$keywords = 'Passwort, Vergessen, Zurücksetzen';
+$description = 'E-Mail zum zurücksetzen des Passworts für den internen Mitgliederbereich von AluMPI anfordern';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

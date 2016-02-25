@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'startseite';
 $title = 'AluMPI | Startseite';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Startseite, Start, Willkommen, Begrüßung';
+$description = 'Startseite mit allgemeinen Informationen zu AluMPI, dem Absolventen- und Förderverein MPI Uni Bayreuth e.V.';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

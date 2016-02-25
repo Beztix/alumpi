@@ -26,6 +26,69 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				
 				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2015</h3>
+				
+					<img src="../_images_content/absolventenfeier15absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2014</h3>
+				
+					<img src="../_images_content/absolventenfeier14absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2012</h3>
+				
+					<img src="../_images_content/absolventenfeier12absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2011</h3>
+				
+					<img src="../_images_content/absolventenfeier11absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2010</h3>
+				
+					<img src="../_images_content/absolventenfeier10absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2009</h3>
+				
+					<img src="../_images_content/absolventenfeier09absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2008</h3>
+				
+					<img src="../_images_content/absolventenfeier08absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2007</h3>
+				
+					<img src="../_images_content/absolventenfeier07absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+				</article>
+				
+				
 				
 				
 				## BILDER ##<br>

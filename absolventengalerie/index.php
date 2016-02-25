@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'absolventengalerie';
 $title = 'AluMPI | Absolventengalerie';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Absolventengalerie, Absolventen, Fotos, Ehemalige, Alumni';
+$description = 'Die Absolventengalerie der Fakultät I der Uni Bayreuth';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

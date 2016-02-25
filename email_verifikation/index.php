@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'emailVerifikation';
 $title = 'AluMPI | E-Mail-Verifikation';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'E-Mail-Verifikation, E-Mail, email, Bestätigung, Verifikation, Aktivierung';
+$description = 'Bestätigung der bei AluMPI angegebenen E-Mail-Adresse';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

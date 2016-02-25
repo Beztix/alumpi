@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'aktuelles';
 $title = 'AluMPI | Aktuelles';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Aktuelles, News, Neuigkeiten, Informationen, Newsletter';
+$description = 'Aktuelles rund um den Absolventen- und Förderverein MPI Uni Bayreuth e.V.';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

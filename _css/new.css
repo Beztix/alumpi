@@ -220,7 +220,6 @@ header h2 {
 }
 
 
-
 .right_img_container {
 	float:right;
 	margin-top: 10px;
@@ -228,6 +227,21 @@ header h2 {
 	margin-bottom: 10px;
 }
 
+
+.absolventengalerie {
+	text-align: center;
+	margin: 70px;
+}
+
+.absolventengalerie img {
+	width: 600px;
+	margin: 20px;
+}
+
+.absolventengalerie h3 {
+	font-size: 23px;
+	font-weight: bold;
+}
 
 
 

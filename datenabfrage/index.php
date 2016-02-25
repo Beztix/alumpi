@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'datenabfrage';
 $title = 'AluMPI | Datenabfrage';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Datenabfrage, Daten, Mitgliedsdaten, Passwort, Ändern';
+$description = 'Abfrage der Mitgliedsdaten bei AluMPI - interner Bereich!';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

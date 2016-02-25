@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'absolventenfeier';
 $title = 'AluMPI | Absolventenfeier';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Absolventenfeier, Feier, Party, Abschluss, Urkunde, Buffet';
+$description = 'Die Absolventenfeier der Fakultät I an der Uni Bayreuth, durchgeführt von AluMPI';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

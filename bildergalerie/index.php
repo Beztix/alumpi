@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'bildergalerie';
 $title = 'AluMPI | Bildergalerie';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Bildergalerie, Absolventenfeier, Feier, Party, Bilder, Fotos, Galerie';
+$description = 'Die Bildergalerie von AluMPI - interner Bereich!';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

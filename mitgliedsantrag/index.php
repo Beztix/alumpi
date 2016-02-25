@@ -11,8 +11,8 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'mitgliedsantrag';
 $title = 'AluMPI | Mitgliedsantrag';
-$keywords = 'x y z';
-$description = 'page description';
+$keywords = 'Mitgliedsantrag, Antrag, Mitglied, Anmelden, Registrieren, Beitreten, Beitritt';
+$description = 'Anmeldung zu AluMPI, dem Absolventen- und Förderverein MPI Uni Bayreuth e.V.';
 ?>
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>

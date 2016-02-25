@@ -21,11 +21,24 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<h2>Noch zu erledigen</h2>
 
 				<ul>
-				<li>Die Banner-Bilder durch sinnvolle Bilder ersetzen</li>
-				<li>Seiteninhalte vervollständigen</li>
-				<li>Keywords und Description im HTML fehlen noch</li>
-				<li>Vorteile der Mitgliedschaft separat aufführen</li>
+				<li>Fehlende Banner-Bilder ergänzen:
+					<ul>
+					<li>"Aktuelles": Foto des Absolventenbriefs</li>
+					<li>"Mitgliederbereich": Foto eines AluMPI-Hemdes (oder Buttons o.ä.)</li>
+					<li>"Logout": Foto von Hinten im NWII-Innenhof</li>
+					<li>"Kontakt":Foto des aktuellen Vorstands</li>
+					</ul>
+				</li>
+				<li>Seiteninhalte vervollständigen:
+					<ul>
+					<li>"Aktuelles"</li>
+					<li>"Absolventengalerie"</li>
+					<li>"Bildergallerie"</li>
+					<li>"Mitgliedsantrag": Vorzüge der Mitgliedschaft</li>
+					</ul>
+				</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
+				<li><s>Keywords und Description im HTML fehlen noch</s></li>
 				<li><s>"Passwort-Vergessen"-Funktionalität einbauen</s></li>
 				<li><s>Lehrstühle im Absolventenfeier-Anmeldeformular überprüfen/vervollständigen</s></li>
 				<li><s>Absolventenfeier-Tabelle in DB umstrukturieren</s></li>
