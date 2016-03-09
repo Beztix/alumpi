@@ -243,7 +243,13 @@ header h2 {
 	font-weight: bold;
 }
 
-
+.news {
+	border-left: 5px solid #d6d6d6;
+	margin: 20px 100px 40px 30px;
+	padding: 20px 20px 20px 30px;
+	background-color: #f0f0ed;
+	
+}
 
 
 

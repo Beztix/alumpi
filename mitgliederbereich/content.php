@@ -6,7 +6,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<section id="content">
 		
 			<section class="top_image">
-				<img src="../_images_content/banner_alumpi_button.jpg" alt="">
+				<img src="../_images_content/banner_intern.jpg" alt="">
 			</section>
 			
 			
