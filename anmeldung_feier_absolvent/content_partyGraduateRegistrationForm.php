@@ -309,10 +309,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<h3>Präsentation mit Foto</h3>
 					<p>
 					Während der Übergabe der Abschlussurkunden wird eine Präsentation gezeigt, in der die Absolventen mit Informationen zu ihrem Abschluss zu sehen sind.<br>
-					Für die Präsentation ist auch ein Portraitfoto von Ihnen vorgesehen, das Sie hier hochladen können.<br>
+					Für die Präsentation ist auch ein Portraitfoto von Ihnen vorgesehen, das Sie bitte bis spätestens eine Woche vor der Feier per E-Mail an alumpi@uni-bayreuth.de schicken.<br>
 					<br>
 					Anforderungen: <br> 
-					Auflösung von XXXX bis XXX, Dateityp XXX <br>
+					Auflösung von XXXX bis XXX, Dateityp .jpg oder .png<br>
 					</p>
 					
 					<input type="file" name="portrait"><br>

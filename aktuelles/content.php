@@ -40,21 +40,24 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</p>
 				</article>
 				
-				<article class="news">
-					<h2>Überschrift</h2>
-					
-					<p>
-					TEXT
-					</p>
-				</article>
+				
 				
 				<article class="news">
-					<h2>Überschrift</h2>
+					<h2>NWalumni Absolventenbrief 2015/2</h2>
+					
+					<a href="../_pdfs/NW-Alumni_Newsletter_2015-02__WEB.pdf">
+						<img class="absolventenbrief" src="../_images_content/nwalumni_15_2_klein.jpg" alt="NWalumni Absolventenbrieg 2015/2">
+					</a>
 					
 					<p>
-					TEXT
+					Der gemeinsame Absolventenbrief von AluMPI, BCG Alumni und CSG.<br>
+					Dieses Mal u.a. mit dem Rückblick der Absolventenfeier 2015 und einem Artikel zur Hochdruckforschung an der Uni Bayreuth.<br>
+					<br>
+					<a href="../_pdfs/NW-Alumni_Newsletter_2015-02__WEB.pdf">Absolventenbrief 2015/2</a>
 					</p>
+					<br style="clear:both">
 				</article>
+				
 				
 			</section>
 			
