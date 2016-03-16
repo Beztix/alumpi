@@ -21,16 +21,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<h2>Noch zu erledigen</h2>
 
 				<ul>
-				<li>Seiteninhalte vervollständigen:
-					<ul>
-					<li><s>"Aktuelles"</s></li>
-					<li><s>"Absolventengalerie"</s></li>
-					<li><s>"Bildergallerie"</s></li>
-					<li>"Mitgliedsantrag": Vorzüge der Mitgliedschaft</li>
-					<li><s>Foto bei Absolventenfeier-Anmeldung</s></li>
-					</ul>
-				</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>
+				<li><s>Seiteninhalte vervollständigen:</s></li>
 				<li><s>Fehlende Banner-Bilder ergänzen</s></li>
 				<li><s>Keywords und Description im HTML fehlen noch</s></li>
 				<li><s>"Passwort-Vergessen"-Funktionalität einbauen</s></li>

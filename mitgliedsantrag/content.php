@@ -22,9 +22,18 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<h2>Vorteile der Vereinsmitgliedschaft</h2>
 				<p>
-				### AUSFORMULIEREN ###<br>
-				Zum Beispiel werden Sie dann automatisch zur nächsten Absolventenfeier eingeladen und können sich dann im Mitgliederbereich dafür anmelden. 
-				Zudem haben Sie als Mitglied des Absolventenvereins auch nach Ihrem Abschluss weiterhin die Möglichkeit am Unisport teilzunehmen.
+				Mit dem Beitritt zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. bleiben Sie der Fakultät, an der Sie Ihre Ausbildung erhalten und einige wichtige Jahre 
+				Ihres Lebens verbracht haben, ein Stück weit verbunden.<br>
+				Nur als Vereinsmitglied ist es möglich, als aktueller Absolvent an der jährlich organisierten Absolventenfeier teilzunehmen, wobei die Mitgliedschaft in diesem 
+				ersten Jahr kostenlos ist.
+				Des Weiteren können Sie als Vereinsmitglied weiterhin am umfangreichen Hochschulsport-Angebot der Universität Bayreuth teilnehmen.<br>
+				Sie haben außerdem die Möglichkeit, in unregelmäßigen Abständen Informationen über Neuigkeiten an der Universität, die Absolventen der Fakultät 1 betreffen, 
+				sowie über die Aktivitäten des Absolventenvereins selbst zu erhalten.
+				Der Verein möchte dabei als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren, und in Zukunft auch Homecoming-Veranstaltungen, 
+				Absolventenforen und ähnliche Veranstaltungen organisieren, bei denen die Absolventen untereinander in Kontakt bleiben oder auch den aktuellen Studenten
+				ihre Erfahrungen weitergeben können.<br>
+				Zu guter Letzt kommt ihr Jahresbeitrag direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> zugute, d.h. vor allem den Ihnen 
+				nachfolgenden Studenten der Fakultät 1, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 				
 				</p>
 
 				<br>

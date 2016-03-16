@@ -203,6 +203,18 @@ header h2 {
 	color: #ee0000;
 }
 
+#content button {
+	border: none;
+	background-color: #ccc;
+	padding: 10px 30px;
+	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+	font-size: 16px;
+}
+	
+
 #submenu_in_content ul {
 	list-style: none;
 }
