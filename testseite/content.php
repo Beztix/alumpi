@@ -27,7 +27,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<li><s>"Absolventengalerie"</s></li>
 					<li><s>"Bildergallerie"</s></li>
 					<li>"Mitgliedsantrag": Vorzüge der Mitgliedschaft</li>
-					<li>Foto bei Absolventenfeier-Anmeldung</li>
+					<li><s>Foto bei Absolventenfeier-Anmeldung</s></li>
 					</ul>
 				</li>
 				<li>Was ist die "Usergruppe" in der DB?</li>

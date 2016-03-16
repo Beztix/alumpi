@@ -217,8 +217,10 @@ Sie haben angegeben, dass Sie den Eintritt per Bankeinzug bezahlen möchten, die
 ";
 	}
 	
-	$message = $message . "   
-Falls Sie Fragen haben oder sich nicht für die Feier angemeldet haben, schreiben Sie und bitte unter alumpi@uni-bayreuth.de .
+	$message = $message . "
+Bitte denken Sie daran, uns ein Portraitfoto von Ihnen für die Abschlusspräsentation per E-Mail zu schicken.
+
+Falls Sie Fragen haben oder sich nicht für die Feier angemeldet haben, schreiben Sie uns bitte unter alumpi@uni-bayreuth.de .
 Wir freuen uns auf Ihre Teilnahme an der diesjährigen Absolventenfeier!
 
 

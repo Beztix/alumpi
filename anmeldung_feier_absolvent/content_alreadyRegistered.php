@@ -110,14 +110,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</table>
 				
 				<br>
-				
-				Ihr bereitsgestelltes Portrait: <br>
-				<br>
-				
-				<img src="xxx" style="width:240px; height:300px;">
-				
-				<br>
-				<br>
 				<br>
 				
 				<h3>Hinweis:</h3>
