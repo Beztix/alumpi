@@ -37,7 +37,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2014</h3>
 				
-					<img src="../_images_content/absolventenfeier14absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<img class="absolventenbild_links" src="../_images_content/absolventenfeier14absolventen1.jpg" alt="Gruppenbild 1 Absolventen 2014">
+					<img class="absolventenbild_rechts" src="../_images_content/absolventenfeier14absolventen2.jpg" alt="Gruppenbild 2 Absolventen 2014">
+					<br style="clear:both">
+				
 				</article>
 				
 				
@@ -45,7 +48,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2012</h3>
 				
-					<img src="../_images_content/absolventenfeier12absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<img src="../_images_content/absolventenfeier12absolventen.jpg" alt="Gruppenbild Absolventen 2012">
 				</article>
 				
 				
@@ -53,7 +56,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2011</h3>
 				
-					<img src="../_images_content/absolventenfeier11absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<img src="../_images_content/absolventenfeier11absolventen.jpg" alt="Gruppenbild Absolventen 2011">
 				</article>
 				
 				
@@ -61,7 +64,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2010</h3>
 				
-					<img src="../_images_content/absolventenfeier10absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<img src="../_images_content/absolventenfeier10absolventen.jpg" alt="Gruppenbild Absolventen 2010">
 				</article>
 				
 				
@@ -69,7 +72,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2009</h3>
 				
-					<img src="../_images_content/absolventenfeier09absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<img src="../_images_content/absolventenfeier09absolventen.jpg" alt="Gruppenbild Absolventen 2009">
 				</article>
 				
 				
@@ -77,7 +80,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2008</h3>
 				
-					<img src="../_images_content/absolventenfeier08absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<img src="../_images_content/absolventenfeier08absolventen.jpg" alt="Gruppenbild Absolventen 2008">
 				</article>
 				
 				
@@ -85,17 +88,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2007</h3>
 				
-					<img src="../_images_content/absolventenfeier07absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<img src="../_images_content/absolventenfeier07absolventen.jpg" alt="Gruppenbild Absolventen 2007">
 				</article>
 				
 				
-				
-				
-				## BILDER ##<br>
-				
-				
-			
-				
+	
 				
 			</section>
 			

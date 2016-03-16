@@ -229,25 +229,75 @@ header h2 {
 
 
 .absolventengalerie {
+	margin: 50px auto 50px auto;
 	text-align: center;
-	margin: 70px;
+	padding-top: 30px;
+	padding-bottom: 20px;
 }
 
 .absolventengalerie img {
-	width: 600px;
-	margin: 20px;
+	width: 800px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
+.absolventengalerie .absolventenbild_links {
+	width: 420px;
+	float: left;
+}
+
+.absolventengalerie .absolventenbild_rechts {
+	width: 420px;
+	float: right;
+}
+	
 .absolventengalerie h3 {
 	font-size: 23px;
 	font-weight: bold;
 }
 
+
+
+.bildergalerie {
+	width: 600px;
+	margin: 50px auto 50px auto;
+	background-color: #eaeaea;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.bildergalerie img {
+	width: 400px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.bildergalerie .absolventenbild_links {
+	width: 230px;
+	float: left;
+	margin-left: 50px;
+}
+
+.bildergalerie .absolventenbild_rechts {
+	width: 230px;
+	float: right;
+	margin-right: 50px;
+}
+	
+.bildergalerie h3 {
+	font-size: 23px;
+	font-weight: bold;
+}
+
+
+
 .news {
+	width: 700px;
+	margin: 50px auto 50px auto;
 	border-left: 5px solid #d6d6d6;
-	margin: 20px 100px 40px 30px;
 	padding: 20px 20px 20px 30px;
-	background-color: #f0f0ed;
+	background-color: #eaeaea;
 	
 }
 

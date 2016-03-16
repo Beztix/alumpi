@@ -23,9 +23,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<ul>
 				<li>Seiteninhalte vervollständigen:
 					<ul>
-					<li>"Aktuelles"</li>
-					<li>"Absolventengalerie"</li>
-					<li>"Bildergallerie"</li>
+					<li><s>"Aktuelles"</s></li>
+					<li><s>"Absolventengalerie"</s></li>
+					<li><s>"Bildergallerie"</s></li>
 					<li>"Mitgliedsantrag": Vorzüge der Mitgliedschaft</li>
 					<li>Foto bei Absolventenfeier-Anmeldung</li>
 					</ul>
