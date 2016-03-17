@@ -18,15 +18,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	const ABSOLVENTENFEIER_INFO_AKTIV = True;
 	
 	const ABSOLVENTENFEIER_ORT = 'Foyer des NWII-Gebäudes';
-	const ABSOLVENTENFEIER_DATUM = '18.06.2016';
-	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '04.06.2016';
+	const ABSOLVENTENFEIER_DATUM = '11.06.2016';
+	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '28.05.2016';
 	const ABSOLVENTENFEIER_UHRZEIT = '15:00';
-	const ABSOLVENTENFEIER_PREIS = '22';
+	const ABSOLVENTENFEIER_PREIS = '25';
 	
 	
 	
 	
 	//Diese Variable definiert, ob die Anmeldung zur Absolventenfeier aktuell freigeschaltet ist
-	const ABSOLVENTENFEIER_ANMELDUNG_AKTIV = True;
+	const ABSOLVENTENFEIER_ANMELDUNG_AKTIV = False;
 
 ?>
