@@ -116,8 +116,10 @@ function check_fields_format_register($data_form) {
 	if(!isset($data_form['newsletter'])) {
 		
 		//Überprüfe Straße und Hausnummer auf korrektes Format (Straße ggf. mit Punkt abgekürzt, Hausnummer ggf. mit Buchstabe am Ende)
-		if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
-			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
+		if($data_form['land'] === 'Deutschland') {
+			if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+[ ]?([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
+				$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
+			}
 		}
 		
 		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
@@ -129,8 +131,10 @@ function check_fields_format_register($data_form) {
 			}
 		}
 		
-		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
-			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
+		if($data_form['land'] === 'Deutschland') {
+			if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
+				$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
+			}
 		}
 		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['land'])) {
 			$error = $error . "Als Land sind nur Buchstaben erlaubt.<br>\n";

@@ -50,7 +50,7 @@ function check_fields_update($data_form, $data_db) {
 	
 	//newsletter jetzt abonniert
 	if($data_form['newsletter'] === 'j') {
-		//Eigabefelder leer UND Datenbankeintrag leer
+		//Eingabefelder leer UND Datenbankeintrag leer
 		if((empty($data_form['strasse'])) && ($data_db['strasse'] === '')) {
 			$error = $error . "Es wurde keine Straße eingegeben, obwohl der Newsletter abonniert wurde.<br>\n";
 		}
@@ -67,8 +67,11 @@ function check_fields_update($data_form, $data_db) {
 
 	
 	if(!empty($data_form['strasse'])) {
-		if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
-			$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
+		//Entweder Land in DB Deutschland und keine Änderung, oder Änderung auf Deutschland
+		if(((empty($data_form['land'])) && ($data_db['land'] === 'Deutschland')) || ($data_form['land'] === 'Deutschland')) {
+			if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+[ ]?([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
+				$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
+			}
 		}
 	}
 	if(!empty($data_form['plz'])) {
@@ -77,8 +80,11 @@ function check_fields_update($data_form, $data_db) {
 		}
 	}	
 	if(!empty($data_form['ort'])) {
-		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
-			$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
+		//Entweder Land in DB Deutschland und keine Änderung, oder Änderung auf Deutschland
+		if(((empty($data_form['land'])) && ($data_db['land'] === 'Deutschland')) || ($data_form['land'] === 'Deutschland')) {
+			if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
+				$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
+			}
 		}
 	}
 	if(!empty($data_form['land'])) {
