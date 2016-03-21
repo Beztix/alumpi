@@ -41,6 +41,7 @@ echo "\t<meta name=\"description\" content=\"" . $description . "\" />\n";
 ?>
   
 	<link href="../_css/new.css" rel="stylesheet"/>
+	<link href="../_css/lightbox.css" rel="stylesheet"/>
 
 <?php 
 //optionales Einbinden von zusätzlichem (seitenspezifischem) header-code	

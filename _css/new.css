@@ -247,7 +247,7 @@ header h2 {
 	padding-bottom: 20px;
 }
 
-.absolventengalerie img {
+.absolventengalerie .absolventenbild {
 	width: 800px;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -256,11 +256,15 @@ header h2 {
 .absolventengalerie .absolventenbild_links {
 	width: 420px;
 	float: left;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .absolventengalerie .absolventenbild_rechts {
 	width: 420px;
 	float: right;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 	
 .absolventengalerie h3 {
@@ -279,7 +283,7 @@ header h2 {
 	padding-bottom: 30px;
 }
 
-.bildergalerie img {
+.bildergalerie .absolventenbild {
 	width: 400px;
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -289,12 +293,16 @@ header h2 {
 	width: 230px;
 	float: left;
 	margin-left: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .bildergalerie .absolventenbild_rechts {
 	width: 230px;
 	float: right;
 	margin-right: 50px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 	
 .bildergalerie h3 {
