@@ -61,7 +61,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</a>
 					<!-- lightbox container hidden with CSS -->
 					<a href="#_" class="lightbox" id="absolventenfeier14absolventen1">
-					  <img src="../_images_content/absolventenfeier14absolventen1.jpg" alt="Gruppenbild 1 Absolventen 2014">
+					  <img src="../_images_content/absolventenfeier14absolventen1_gross.jpg" alt="Gruppenbild 1 Absolventen 2014">
 					</a>
 					
 					<!-- thumbnail image wrapped in a link -->
@@ -70,7 +70,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</a>
 					<!-- lightbox container hidden with CSS -->
 					<a href="#_" class="lightbox" id="absolventenfeier14absolventen2">
-					  <img src="../_images_content/absolventenfeier14absolventen2.jpg" alt="Gruppenbild 2 Absolventen 2014">
+					  <img src="../_images_content/absolventenfeier14absolventen2_gross.jpg" alt="Gruppenbild 2 Absolventen 2014">
 					</a>
 					
 					
