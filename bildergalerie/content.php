@@ -34,12 +34,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					
 
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#img1">
+					<a href="#absolventenfeier15absolventen">
 						<img class="absolventenbild" src="../_images_content/absolventenfeier15absolventen.jpg" alt="Gruppenbild Absolventen 2015">
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="img1">
-						<img src="../_images_content/absolventenfeier15absolventen.jpg" alt="Gruppenbild Absolventen 2015">
+					<a href="#_" class="lightbox" id="absolventenfeier15absolventen">
+						<img src="../_images_content/absolventenfeier15absolventen_gross.jpg" alt="Gruppenbild Absolventen 2015">
 					</a>
 
 			
@@ -56,20 +56,20 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					
 					
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#img2">
+					<a href="#absolventenfeier14absolventen1">
 						<img class="absolventenbild_links" src="../_images_content/absolventenfeier14absolventen1.jpg" alt="Gruppenbild 1 Absolventen 2014">
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="img2">
+					<a href="#_" class="lightbox" id="absolventenfeier14absolventen1">
 					  <img src="../_images_content/absolventenfeier14absolventen1.jpg" alt="Gruppenbild 1 Absolventen 2014">
 					</a>
 					
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#img3">
+					<a href="#absolventenfeier14absolventen2">
 						<img class="absolventenbild_rechts" src="../_images_content/absolventenfeier14absolventen2.jpg" alt="Gruppenbild 2 Absolventen 2014">
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="img3">
+					<a href="#_" class="lightbox" id="absolventenfeier14absolventen2">
 					  <img src="../_images_content/absolventenfeier14absolventen2.jpg" alt="Gruppenbild 2 Absolventen 2014">
 					</a>
 					
@@ -86,12 +86,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<h3>Absolventenfeier 2012</h3>
 					
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#img4">
+					<a href="#absolventenfeier12absolventen">
 						<img class="absolventenbild" src="../_images_content/absolventenfeier12absolventen.jpg" alt="Gruppenbild Absolventen 2012">
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="img4">
-						<img src="../_images_content/absolventenfeier12absolventen.jpg" alt="Gruppenbild Absolventen 2012">
+					<a href="#_" class="lightbox" id="absolventenfeier12absolventen">
+						<img src="../_images_content/absolventenfeier12absolventen_gross.jpg" alt="Gruppenbild Absolventen 2012">
 					</a>
 				
 				
@@ -108,12 +108,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					
 					
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#img5">
+					<a href="#absolventenfeier11absolventen">
 						<img class="absolventenbild" src="../_images_content/absolventenfeier11absolventen.jpg" alt="Gruppenbild Absolventen 2011">
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="img5">
-						<img src="../_images_content/absolventenfeier11absolventen.jpg" alt="Gruppenbild Absolventen 2011">
+					<a href="#_" class="lightbox" id="absolventenfeier11absolventen">
+						<img src="../_images_content/absolventenfeier11absolventen_gross.jpg" alt="Gruppenbild Absolventen 2011">
 					</a>
 					
 					
@@ -131,12 +131,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<h3>Absolventenfeier 2010</h3>
 					
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#img6">
+					<a href="#absolventenfeier10absolventen">
 						<img class="absolventenbild" src="../_images_content/absolventenfeier10absolventen.jpg" alt="Gruppenbild Absolventen 2010">
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="img6">
-						<img src="../_images_content/absolventenfeier10absolventen.jpg" alt="Gruppenbild Absolventen 2010">
+					<a href="#_" class="lightbox" id="absolventenfeier10absolventen">
+						<img src="../_images_content/absolventenfeier10absolventen_gross.jpg" alt="Gruppenbild Absolventen 2010">
 					</a>
 				
 
