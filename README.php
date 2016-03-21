@@ -15,7 +15,7 @@
 =======================
 
 0. TO DO
-	0.1 Notwendig
+	0.1 Wichtig
 	0.2 Optional
 	
 1. Allgemeines
@@ -41,45 +41,54 @@
 
 
 
-
+################################################
 	0. TO DO
 ################################################
 
 
-	0.1 Notwendig
+	0.1 Wichtig
 ------------------------------------------------
 
 
-- Feld für Passwort ist in original-DB zu kurz!!
-- In DB auf IBAN/BIC umstellen
-
-- Keywords für alle Seiten in der jeweiligen index.php eintragen
-- Descriptions für alle Seiten in der jeweiligen index.php eintragen
+- Bei Veröffentlichung die DB anpassen!
 - Was ist die Usergruppe in der DB?
-- Bilder einpflegen
-
-
-- Login-Bereich testen
-- Registrierung in DB testen
-- Datenabfrage testen
 
 
 
 	0.2 Optional
 ------------------------------------------------
 
-- Registrierung von Fördermitgliedern?
+- Registrierung von Fördermitgliedern
 - Mitgliedsbestätigung generieren
-- Foto-Upload in Absolventenfeier-Anmeldeformular
+- Foto-Upload in Absolventenfeier-Anmeldeformular?
+- Arbeitgeber angeben
+- Absolventennetzwerk
 
 
 
 
 
-
+################################################
 	1. Allgemeines
 ################################################
 
+Die Homepage ist in PHP geschrieben und läuft unabhängig von jeglichen externen Frameworks. Sie ist separat lauffähig, d.h. wenn der 
+entsprechende Ordnerstruktur auf einen anderen PHP-fähigen Webserver kopiert wird, kann die Homepage dort direkt verwendet werden.
+
+Aktuell läuft die Homepage über den AluMPI-Server, der im Fachschaftszimmer steht.
+Name: btfmx5
+IP-Adresse: 132.180.136.54
+Sub-Netzwerk: fs.uni-bayreuth.de
+MAC-Adresse: 00 04 48 b2 49 0c
+Netzantrag Nr. 140894
+
+Auf diesem Server ist Debian installiert, als Webserver wird Apache verwendet. Die Homepage liegt im öffentlichen Verzeichnis des 
+Webservers unter /var/www/html/ .
+Sendmail ist zum Versand der E-Mails installiert, MySQL ist als Datenbank-Server installiert, wird aber nur zu Testzwecken genutzt.
+Die eigentliche verwendete Datenbank liegt NICHT auf dem eigenen Webserver, sondern ist auch weiterhin unter Verwaltung des IT-Servicezentrums 
+der Uni Bayreuth, s.d. die Verantwortung für Datensicherung, Backups etc. nicht bei uns liegt.
+
+Die Datenbank ist unter mysql.rz.uni-bayreuth.de erreichbar, Account-Name ist "alumpi", das Passwort ist dem Vorstand bekannt.
 
 
 
@@ -87,16 +96,25 @@
 
 
 
+
+################################################
 	2. Struktur der Homepage
 ################################################
 
+	0.1 Ordnerstruktur
+------------------------------------------------
+
+
+
+
+	0.2 Aufbau einer Seite
+------------------------------------------------
 
 
 
 
 
-
-
+################################################
 	3. Übliche Arbeitsschritte
 ################################################
 
@@ -105,7 +123,7 @@
 
 
 
-
+################################################
 	4. Hinweise zu Implementierungsdetails
 ################################################
 
