@@ -60,12 +60,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<br>
 					
 					<p>
-					Hiermit melde ich mich verbindlich zum Buffet der Absolventenfeier am <?php echo ABSOLVENTENFEIER_DATUM; ?> zum Preis von <?php echo ABSOLVENTENFEIER_PREIS; ?>€ an 
-					und bestätige die Korrektheit der oben stehenden Angaben.
+					Hiermit melde ich mich verbindlich zum Buffet der Absolventenfeier am <?php echo ABSOLVENTENFEIER_DATUM; ?> zum Preis von <?php echo ABSOLVENTENFEIER_PREIS; ?> € an 
+					und bestätige die Korrektheit der oben stehenden Angaben.<br>
+					Der Betrag von <?php echo ABSOLVENTENFEIER_PREIS; ?> € ist bis spätestens 3 Tage vor der Feier auf das Konto des Absolventenvereins zu überweisen.<br>
 					<br>
+					<u>Kontodaten:</u><br>
+					Absolventen- und Förderverein MPI Uni Bayreuth e.V.<br>
+					IBAN: DE05 7735 0110 0038 0189 41<br>
+					BIC: BYLADEM1SBT<br>
+					Verwendungszweck: [Nachname],[Vorname]<br>
 					</p>
-					
-					
 
 
 					<button class="absenden" type="submit">Anmeldung Absenden</button>

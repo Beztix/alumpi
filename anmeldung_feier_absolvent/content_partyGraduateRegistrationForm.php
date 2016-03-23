@@ -50,19 +50,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<input type="text" name="mitbringsel" placeholder="" size="40" <?php if(isset($_POST['mitbringsel'])) echo "value=\"" . htmlspecialchars($_POST['mitbringsel'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
-						<tr>
-							<td>
-								Ich wünsche eine Zahlung des Eintrittspreises für mich und meine <br>
-								Gäste durch Bankeinzug von meinem Konto <br>
-								(andernfalls Barzahlung bei der Feier)
-							</td>
-							<td>
-								<select name="will_kontoeinzug">
-									<option value="j">Ja</option>
-									<option value="n">Nein</option>
-								</select>
-							</td>
-						</tr>
 					</table>
 					
 					<br>
@@ -319,6 +306,23 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						<li>Auflösung bitte mindestens 300x400 Pixel</li>
 						<li>Dateityp: .jpg oder .png</li>
 					</ul>
+					</p>
+					
+					
+					<br>
+					<h3>Zahlung</h3>
+
+					<p>
+					Bitte überweisen Sie den Betrag von <?php echo ABSOLVENTENFEIER_PREIS; ?> € pro Person bis spätestens 3 Tage vor der Feier auf das Konto des Absolventenvereins.<br>
+					<br>
+					<u>Kontodaten:</u><br>
+					Absolventen- und Förderverein MPI Uni Bayreuth e.V.<br>
+					IBAN: DE05 7735 0110 0038 0189 41<br>
+					BIC: BYLADEM1SBT<br>
+					Verwendungszweck: [Nachname],[Vorname]<br>
+					
+					<br>
+					Die entsprechenden Angaben finden Sie auch in der Bestätigungsmail zur Anmeldung.
 					</p>
 					
 					

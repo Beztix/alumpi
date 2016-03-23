@@ -20,7 +20,7 @@ Hallo " . $titleAndName . ",
 die E-Mail-Adresse dieses Accounts wurde bei der Anmeldung zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. angegeben. 
 Wollen Sie Mitglied dieses Vereins werden und bestätigen die Richtigkeit der angegebenen Daten, so klicken Sie bitte auf folgenden Link:
 
-" . 'http://btfmx5.fs.uni-bayreuth.de/email_verifikation/index.php?email=' .$toEmail. '&verificationCode='. $verificationCode ."
+" . 'http://alumpi.uni-bayreuth.de/email_verifikation/index.php?email=' .$toEmail. '&verificationCode='. $verificationCode ."
 
 
 Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
@@ -148,7 +148,7 @@ Hallo,
 die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort für die Webseite Absolventen- und Fördervereins MPI Uni Bayreuth e.V. zurückzusetzen.
 Falls Sie ihr Passwort zurücksetzen möchten, so klicken Sie bitte auf folgenden Link:
 
-" . 'http://btfmx5.fs.uni-bayreuth.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&resetCode='. $resetCode ."
+" . 'http://alumpi.uni-bayreuth.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&resetCode='. $resetCode ."
 
 
 Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
@@ -197,7 +197,7 @@ www.alumpi.uni-bayreuth.de
 
 
 
-function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_der_feier, $will_kontoeinzug) {
+function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_der_feier, $gesamtpreis) {
 	
 	//Betreff der Email
 	$subject = 'Ihre Anmeldung zur Absoventenfeier';
@@ -208,16 +208,17 @@ function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_de
 Hallo " . $titleAndName . ",
 
 vielen Dank für ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " als aktueller Absolvent. 
-Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://btfmx5.uni-bayreuth.de/anmeldung_feier_absolvent/index.php einsehen.
-";
+Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://alumpi.uni-bayreuth.de/anmeldung_feier_absolvent/index.php einsehen.
 
-	if($will_kontoeinzug == "j") {		
-		$message = $message . "
-Sie haben angegeben, dass Sie den Eintritt per Bankeinzug bezahlen möchten, dieser wird ca. eine Woche vor der Feier von ihrem Konto abgebucht. 
-";
-	}
-	
-	$message = $message . "
+
+Bitte überweisen Sie den Betrag von insgesamt " . $gesamtpreis . " € bis spätestens 3 Tage vor der Feier auf das Konto des Absolventenvereins.
+
+Kontodaten:
+Absolventen- und Förderverein MPI Uni Bayreuth e.V.
+IBAN: DE05 7735 0110 0038 0189 41
+BIC: BYLADEM1SBT
+Verwendungszweck: [Nachname],[Vorname]
+
 Bitte denken Sie daran, uns ein Portraitfoto von Ihnen für die Abschlusspräsentation per E-Mail zu schicken.
 
 Falls Sie Fragen haben oder sich nicht für die Feier angemeldet haben, schreiben Sie uns bitte unter alumpi@uni-bayreuth.de .
@@ -263,7 +264,7 @@ www.alumpi.uni-bayreuth.de
 
 
 
-function send_partyGuestRegistration_email($toEmail, $titleAndName, $datum_der_feier) {
+function send_partyGuestRegistration_email($toEmail, $titleAndName, $datum_der_feier, $preis) {
 	
 	//Betreff der Email
 	$subject = 'Ihre Anmeldung zur Absoventenfeier';
@@ -275,6 +276,15 @@ Hallo " . $titleAndName . ",
 
 vielen Dank für ihre Anmeldung zum Buffet der Absolventenfeier am " . $datum_der_feier . ". 
 Diese E-Mail dient der Bestätigung der Anmeldung.
+
+Bitte überweisen Sie den Betrag von " . $preis . " € bis spätestens 3 Tage vor der Feier auf das Konto des Absolventenvereins.
+
+Kontodaten:
+Absolventen- und Förderverein MPI Uni Bayreuth e.V.
+IBAN: DE05 7735 0110 0038 0189 41
+BIC: BYLADEM1SBT
+Verwendungszweck: [Nachname],[Vorname]
+
  
 Falls Sie Fragen haben oder sich nicht für die Feier angemeldet haben, schreiben Sie uns bitte unter alumpi@uni-bayreuth.de.
 Wir freuen uns auf Ihre Teilnahme an der diesjährigen Absolventenfeier!

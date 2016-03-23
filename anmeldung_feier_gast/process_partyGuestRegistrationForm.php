@@ -85,15 +85,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								$anzahl_gaeste = '0';
 								$will_kontoeinzug = 'n';
 								$selbstfeier = 'n';
-							
+								$gesamtpreis = str_replace(',', '.', ABSOLVENTENFEIER_PREIS);
 								
 								
 								//Anmeldedaten zur Feier in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 								$stmt = $mysqli->prepare("INSERT INTO absolventenfeier   
-								(datum_der_feier, geschlecht, titel, nachname, vorname, email, anzahl_gaeste, will_kontoeinzug, selbstfeier) 
+								(datum_der_feier, geschlecht, titel, nachname, vorname, email, anzahl_gaeste, will_kontoeinzug, selbstfeier, gesamtpreis) 
 								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)");
-								$stmt->bind_param("ssssssiss", $datum_der_feier, $geschlecht, $titel, $nachname, $vorname, $email, $anzahl_gaeste, $will_kontoeinzug, $selbstfeier);
+								$stmt->bind_param("ssssssissd", $datum_der_feier, $geschlecht, $titel, $nachname, $vorname, $email, $anzahl_gaeste, $will_kontoeinzug, $selbstfeier, $gesamtpreis);
 							
 							
 								//DB-Abfrage erfolgreich
@@ -102,7 +102,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
 									
 									//Bestätigungs-Email senden
-									if (send_partyGuestRegistration_email($email, $titleAndName, $datum_der_feier)) {
+									if (send_partyGuestRegistration_email($email, $titleAndName, $datum_der_feier, $preis)) {
 									
 									
 										echo "<h3 class=\"green\">Anmeldung erfolgreich!</h3>";

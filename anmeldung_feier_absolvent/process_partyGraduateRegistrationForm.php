@@ -99,7 +99,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								$vorname =$data_db['vorname'];
 								$email = $data_db['email'];								
 								$anzahl_gaeste = $_POST['anzahl_gaeste'];
-								$will_kontoeinzug = $_POST['will_kontoeinzug'];
 								$mitbringsel = $_POST['mitbringsel'];
 								$selbstfeier = 'j';
 								$abschlussarbeitsthema = $_POST['abschlussarbeitsthema'];
@@ -109,19 +108,24 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								$studienbeginn = $_POST['studienbeginn'];
 								$studienabschluss = date('Y-m-d', strtotime($_POST['studienabschluss'])); 
 								
+								//gesamt angemeldete gaeste als integer ausrechnen
+								$int_gaeste = intval($anzahl_gaeste);
+								$gesamtgaeste = $int_gaeste + 1;
+								//einzelpreis mit punkt als trennzeichen generieren
+								$einzelpreis = str_replace(',', '.', ABSOLVENTENFEIER_PREIS);
+								//gesamtpreis berechnen
+								$gesamtpreis = bcmul($gesamtgaeste, $einzelpreis, 2);
 								
-							
-								//--------------------------
-								// TODO: BILD
-								//--------------------------
-								
+
 								
 								//Anmeldedaten zur Feier in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 								$stmt = $mysqli->prepare("INSERT INTO absolventenfeier   
-								(datum_der_feier, mid, geschlecht, titel, nachname, vorname, email, anzahl_gaeste, will_kontoeinzug, mitbringsel, selbstfeier, abschlussarbeitsthema, lehrstuhl, studiengang, neuer_titel, studienbeginn, studienabschluss) 
+								(datum_der_feier, mid, geschlecht, titel, nachname, vorname, email, anzahl_gaeste, mitbringsel, selbstfeier, abschlussarbeitsthema, lehrstuhl, studiengang, neuer_titel, studienbeginn, studienabschluss, gesamtpreis) 
 								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-								$stmt->bind_param("sisssssisssssssss", $datum_der_feier, $mid, $geschlecht, $titel, $nachname, $vorname, $email, $anzahl_gaeste, $will_kontoeinzug, $mitbringsel, $selbstfeier, $abschlussarbeitsthema, $lehrstuhl, $studiengang, $neuer_titel, $studienbeginn, $studienabschluss);
+								$stmt->bind_param("sisssssissssssssd", $datum_der_feier, $mid, $geschlecht, $titel, $nachname, $vorname, $email, $anzahl_gaeste, $mitbringsel, $selbstfeier, $abschlussarbeitsthema, $lehrstuhl, $studiengang, $neuer_titel, $studienbeginn, $studienabschluss, $gesamtpreis);
+							
+							
 							
 							
 								//DB-Abfrage erfolgreich
@@ -130,7 +134,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
 									
 									//Bestätigungs-Email senden
-									if (send_partyGraduateRegistration_email($email, $titleAndName, $datum_der_feier, $will_kontoeinzug)) {
+									if (send_partyGraduateRegistration_email($email, $titleAndName, $datum_der_feier, $gesamtpreis)) {
 									
 									
 										echo "<h3 class=\"green\">Anmeldung erfolgreich!</h3>";

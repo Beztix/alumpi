@@ -44,10 +44,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</tr>
 					<tr>
 						<td>
-							Zahlung per Kontoeinzug
+							Eintrittspreis insgesamt
 						</td>
 						<td>
-							<?php echo htmlspecialchars($data_output['will_kontoeinzug'], ENT_QUOTES, 'UTF-8'); ?>
+							<?php echo htmlspecialchars($data_output['gesamtpreis'], ENT_QUOTES, 'UTF-8'); ?> €
 						</td>
 					</tr>
 					<tr>
@@ -108,6 +108,22 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</tr>
 				
 				</table>
+				<br>
+				<br>
+				<?php
+				if($data_output['hat_bezahlt'] === 'j') {
+					echo "Ihre Zahlung des Eintrittspreises ist bereits eingegangen, vielen Dank!<br>\n";
+				}
+				else {
+					echo "Bisher wurde noch kein Zahlungseingang verarbeitet.<br>\n";
+					echo "Falls Sie den Eintrittspreis bisher noch nicht gezahlt haben, so überweisen Sie diesen bitte auf folgendes Konto:<br>\n";
+					echo "<br>\n";
+					echo "Absolventen- und Förderverein MPI Uni Bayreuth e.V.<br>\n";
+					echo "IBAN: DE05 7735 0110 0038 0189 41<br>\n";
+					echo "BIC: BYLADEM1SBT<br>\n";
+					echo "Verwendungszweck: [Nachname],[Vorname]<br>\n";
+				}
+				?>
 				
 				<br>
 				<br>
