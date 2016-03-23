@@ -14,8 +14,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			<section class="text">
 		
 				
+				
 	
 				<?php
+				
 				//Wenn die Session-Variable "login" für den aktuellen User nicht gesetzt wurde, ist dieser nicht eingeloggt
 				if (empty($_SESSION['login'])) {#
 				
