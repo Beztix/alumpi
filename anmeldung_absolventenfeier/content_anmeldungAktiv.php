@@ -45,17 +45,17 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				<p>
-				Wir freuen uns, dass Sie an der diesjährigen Feier teilnehmen möchten, zur Teilnahme am Festakt selbst ist keine Anmeldung nötig.<br>
+				Wir freuen uns, dass Sie an der diesjährigen Feier teilnehmen möchten, zur Teilnahme am offiziellen Festakt selbst ist keine Anmeldung nötig.<br>
 				Die Feier beginnt um <?php echo ABSOLVENTENFEIER_UHRZEIT; ?> im <?php echo ABSOLVENTENFEIER_ORT; ?>, wir freuen uns darauf Sie dort Begrüßen zu dürfen.<br>
 				</p>
 				
-				<h3>Buffetteilnahme</h3>
+				<h3>Teilnahme an den anschließenden Feierlichkeiten</h3>
 				
 				<p>
-				Falls Sie zusätzlich am Buffet teilnehmen möchten, so benötigen wir eine vorherige verbindliche Anmeldung, um das Catering entsprechend planen zu können.<br>
+				Falls Sie zusätzlich an den Feierlichkeiten inklusive Buffet nach dem offiziellen Teil teilnehmen möchten, so benötigen wir eine vorherige verbindliche Anmeldung, um das Catering entsprechend planen zu können.<br>
 				Die Teilnahme an der Feier incl. Buffet kostet pro Person <?php echo ABSOLVENTENFEIER_PREIS; ?>€.<br>
 				<br>
-				Wenn Sie Gast eines der feiernden Absolventen sind, so lassen Sie sich bitte von diesem mit Anmelden, dann ist keine Anmeldung ihrerseits nötig.
+				Wenn Sie Gast eines der feiernden Absolventen sind, so lassen Sie sich bitte von diesem mit Anmelden, dann ist keine separate Anmeldung ihrerseits nötig.
 				Andernfalls füllen sie bitte das entsprechende Anmeldeformular aus, um am Buffet teilzunehmen:<br>
 				<br>
 				<a href="../anmeldung_feier_gast/index.php">Zum Anmeldeformular zur Buffetteilnahme</a>.

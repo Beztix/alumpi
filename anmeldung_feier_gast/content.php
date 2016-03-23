@@ -14,14 +14,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
             <section class="text">
 
-				<h1>Anmeldung zur Buffetteilnahme als Gast</h1>
+				<h1>Anmeldung zur Teilnahme an den Feierlichkeiten als Gast</h1>
 				
 				<p>
-				Diese Seite ist nur zur Anmeldung zur Teilnahme am Buffet der Absolventenfeier als <strong>Fakultätsangehöriger</strong> oder <strong>eigenständiger Gast</strong> gedacht.<br>
+				Diese Seite ist nur zur Anmeldung zur Teilnahme an den Feierlichkeiten der Absolventenfeier als <strong>Fakultätsangehöriger</strong> oder <strong>eigenständiger Gast</strong> gedacht.<br>
 				Falls Sie aktueller Absolvent oder Gast eines aktuellen Absolventen sind, melden Sie sich bitte nicht mit diesem Formular an, 
 				sondern klicken Sie bitte <a href="../anmeldung_absolventenfeier/index.php#absolvent">hier</a>.<br>
 				<br>
-				Möchten Sie lediglich am offiziellen Festakt, aber nicht am Buffet teilnehmen, so ist keine Anmeldung erforderlich.
+				Möchten Sie lediglich am offiziellen Festakt, aber nicht an den anschließenden Feierlichkeiten mit Buffet teilnehmen, so ist keine Anmeldung erforderlich.
 				</p>
 				<br>
 				

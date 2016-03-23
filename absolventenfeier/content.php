@@ -130,15 +130,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<img src="../_images_content/buffet2.jpg" alt="Büffet" style="width:400px;">
 				</div>
 				
-				<h3>Teilnahme am Buffet</h3>
+				<h3>Teilnahme an den anschließenden Feierlichkeiten</h3>
 				<p>
-				Um nach dem Festakt an den Feierlichkeiten mit Buffet, Cocktails und Musik teilzunehmen, ist eine vorherige Anmeldung erforderlich.<br>
+				Um nach dem Festakt an den Feierlichkeiten mit Buffet teilzunehmen, ist eine vorherige Anmeldung erforderlich.<br>
+				Dieser Teil der Absolventenfeier beginnt nach dem offiziellen Festakt und ist Open-End.<br>
 				<?php
 				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
-					echo "Diese kann online erfolgen, mehr Informationen dazu finden sie auf folgender Seite: <a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";
+					echo "Die Anmeldung kann online erfolgen, mehr Informationen dazu finden sie auf folgender Seite: <a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";
 				}
 				else {
-					echo "Diese kann online erfolgen, die Anmeldung wird rechtzeitig vor der Feier freigeschaltet.\n";
+					echo "Die Anmeldung kann online erfolgen, sie wird rechtzeitig vor der Feier freigeschaltet.\n";
 				}
 				?>
 				</p>
