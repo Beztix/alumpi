@@ -18,8 +18,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	
 				<?php
 				
+
 				//Wenn die Session-Variable "login" für den aktuellen User nicht gesetzt wurde, ist dieser nicht eingeloggt
-				if (empty($_SESSION['login'])) {#
+				if (empty($_SESSION['login'])) {
 				
 					//Anzeigen des Login-Formulars
 					include 'content_not_loggedin.php';
@@ -31,6 +32,17 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					
 					//Anzeigen des Content für eingeloggte User
 					include 'content_loggedin.php';
+				}
+				
+				
+				//Abfrage einer GET-Variable, diese zeigt an dass der Nutzer aufgrund fehler Zugriffsrechte auf diese Seite umgeleitet wurde
+				if(isset($_GET['status'])){
+						if($_GET['status'] === 'no_permission') {
+							echo "<br>\n";
+							echo "<p class=\"error\">\n";
+							echo "Sie verfügen nicht über die erforderlichen Zugriffsrechte, um die angeforderte Seite aufzurufen.<br>\n";
+							echo "</p>\n";
+						}
 				}
 				?>
 				

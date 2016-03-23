@@ -8,7 +8,7 @@
 //Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
-
+	include_once 'calculateAccessPermissions.php';
 
 	//Session ID erneuern um Angriff über Session Fixation zu verhindern
 	session_regenerate_id();
@@ -18,4 +18,19 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		header('Location: ../mitgliederbereich/index.php');
 		exit;
 	}
+	
+	
+	//Nutzer ist eingelogged, Test auf in der Seite selbst gesetzte Zugriffrechte
+	$zugriff_erlauben = doesCurrentUserHaveAccess($mitglied_zugriff, $orga_zugriff, $finanzer_zugriff, $vorstand_zugriff, $admin_zugriff, $foerderer_zugriff);
+	
+	
+	
+	//Wenn aufgrund der Zugriffsrechte kein Zugriff erlaubt werden soll: Weiterleiten auf Mitgliederbereich-Startseite, Anzeigen einer Fehlermeldung
+	if(!$zugriff_erlauben) {
+		header('Location: ../mitgliederbereich/index.php?status=no_permission');
+		exit;
+	}
+	
+	
+	
 ?>

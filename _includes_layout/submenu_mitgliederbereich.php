@@ -11,6 +11,8 @@
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
+include_once '../_includes_functionality/calculateAccessPermissions.php';
+
 ?>	
 
 <ul>
@@ -23,7 +25,30 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	<li>
 		<a <?php if ($thisPage=="datenabfrage") {echo " class=\"currentpage\"";} ?> href="../datenabfrage/index.php">Datenabfrage</a>
 	</li>
+	
+<?php
+
+//Menuepunkt nur anzeigen, wenn angemeldeter Nutzer passende Zugriffsrechte hat
+//Wer Zugriff haben soll in den Argumenten: mitglied, orga, finanzer, vorstand, admin, foerderer
+if(doesCurrentUserHaveAccess(False, False, False, True, True, False)) {
+	echo "<li>\n";
+	echo "<a ";
+	if($thisPage=="vorstandsfunktionen") {echo " class=\"currentpage\"";}
+	echo "href=\"../vorstandsfunktionen/index.php\">Vorstandsfunktionen</a>\n";
+	echo "</li>\n";
+}
+
+
+
+
+?>
+	
+	
+	
+	
+	
 	<li>
 		<a <?php if ($thisPage=="logout") {echo " class=\"currentpage\"";} ?> href="../logout/index.php">Logout</a>
 	</li>
 </ul>
+

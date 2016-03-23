@@ -6,23 +6,20 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<section id="content">
 		
 		
+		
 			<section class="top_image">
-				<img src="../_images_content/banner_logout.jpg" alt="">
+				<img src="../_images_content/banner_vorstandsfunktionen.jpg" alt="Der Vorstand">
 			</section>
 		
 		
 		
             <section class="text">
 
-				<h1>Logout</h1>
+				<h1>Vorstandsfunktionen</h1>
 				
-				<br>
-				Zum Abmelden aus dem Mitgliederbereich bitte hier klicken:<br>
-				<br>
-				<form action="./logout_script.php">
-					<button class="absenden" type="submit">Logout</button>
-				</form>
-				<br>
+				
+
+		
 				
 			</section>
 			

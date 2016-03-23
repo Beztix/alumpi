@@ -93,22 +93,22 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 											$mitglied = $orga = $finanzer = $vorstand = $admin = $foerderer = False;
 											
-											if($int_rechtegruppe & 1) {
+											if($int_rechtegruppe & MITGLIED) {
 												$mitglied = True;
 											}
-											if($int_rechtegruppe & 2) {
+											if($int_rechtegruppe & ORGA) {
 												$orga = True;
 											}
-											if($int_rechtegruppe & 4) {
+											if($int_rechtegruppe & FINANZER) {
 												$finanzer = True;
 											}
-											if($int_rechtegruppe & 8) {
+											if($int_rechtegruppe & VORSTAND) {
 												$vorstand = True;
 											}
-											if($int_rechtegruppe & 16) {
+											if($int_rechtegruppe & ADMIN) {
 												$admin = True;
 											}
-											if($int_rechtegruppe & 32) {
+											if($int_rechtegruppe & FOERDERER) {
 												$foerderer = True;
 											}
 											

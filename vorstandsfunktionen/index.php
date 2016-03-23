@@ -9,27 +9,28 @@ session_start();
 require '../_includes_functionality/global_constants.php';
 
 
-$thisPage = 'logout';
-$title = 'AluMPI | Logout';
-$keywords = 'Logout, Ausloggen, Abmelden';
-$description = 'Logout aus dem Mitgliederbereich des Absolventen- und Fördervereins MPI Uni Bayreuth e.V.';
+$thisPage = 'vorstandsfunktionen';
+$title = 'AluMPI | Vorstandsfunktionen';
+$keywords = '';
+$description = '';
 
 
 //Definition der Seitenspezifischen Zugriffsrechte
 //True = Gruppe darf diese Seite sehen
 //False = Gruppe darf diese Seite NICHT sehen
-$mitglied_zugriff = True;
-$orga_zugriff = True;
-$finanzer_zugriff = True;
+$mitglied_zugriff = False;
+$orga_zugriff = False;
+$finanzer_zugriff = False;
 $vorstand_zugriff = True;
 $admin_zugriff = True;
-$foerderer_zugriff = True;
+$foerderer_zugriff = False;
 
 
 
 //Einbinden von auth.php, um diese Seite nur eingeloggten Mitgliedern mit passenden Zugriffsrechten zur Verfügung zu stellen
 require '../_includes_functionality/auth.php'; echo "\n"; 	
 ?>
+
 
 <?php require '../_includes_layout/htmlheader.php'; echo "\n"; ?>
 
