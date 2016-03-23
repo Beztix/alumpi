@@ -15,24 +15,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
             <section class="text">
 
-				<h1>Vorstandsfunktionen</h1>
+				<h1>Finanzerfunktionen</h1>
 				
 				
-				
-				
-				<h2>Alle Mitgliederdaten aus der Datenbank abrufen</h2>
-				<form action="index.php" method="POST">
-					<button class="absenden" type="submit" name="mitglieder_abrufen">Mitglieder abrufen</button>
-				</form>
 
-				
-				
-				
-				
-				<?php
-				//Einbinden der PHP-Datei zur Formularauswertung
-				include 'process_vorstandsForm.php'; 
-				?>
 		
 				
 			</section>

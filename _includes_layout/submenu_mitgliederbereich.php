@@ -38,7 +38,14 @@ if(doesCurrentUserHaveAccess(False, False, False, True, True, False)) {
 	echo "</li>\n";
 }
 
-
+//Wer Zugriff haben soll in den Argumenten: mitglied, orga, finanzer, vorstand, admin, foerderer
+if(doesCurrentUserHaveAccess(False, False, True, True, True, False)) {
+	echo "<li>\n";
+	echo "<a ";
+	if($thisPage=="finanzerfunktionen") {echo " class=\"currentpage\"";}
+	echo "href=\"../finanzerfunktionen/index.php\">Finanzerfunktionen</a>\n";
+	echo "</li>\n";
+}
 
 
 ?>
