@@ -8,7 +8,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
 		
 			<section class="top_image">
-				<img src="../_images_content/banner_vorstandsfunktionen.jpg" alt="Der Vorstand">
+				<img src="../_images_content/banner_finanzerfunktionen.jpg" alt="Der Vorstand">
 			</section>
 		
 		
@@ -17,7 +17,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				<h1>Finanzerfunktionen</h1>
 				
-				
+				<p>
+				Hier finden sich alle Funktionen, die für den Finanzer relevant sind.
+				</p>
+				<br>
+				<br>
 
 		
 				

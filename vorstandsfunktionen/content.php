@@ -17,10 +17,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				<h1>Vorstandsfunktionen</h1>
 				
+				<p>
+				Hier finden sich alle Funktionen, die nur für den Vorstand nutzbar sind.
+				</p>
+				<br>
+				<br>
 				
 				
 				
-				<h2>Alle Mitgliederdaten aus der Datenbank abrufen</h2>
+				<h3>Alle Mitgliederdaten aus der Datenbank abrufen</h3>
 				<form action="index.php" method="POST">
 					<button class="absenden" type="submit" name="mitglieder_abrufen">Mitglieder abrufen</button>
 				</form>

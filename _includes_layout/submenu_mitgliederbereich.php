@@ -27,8 +27,10 @@ include_once '../_includes_functionality/calculateAccessPermissions.php';
 	</li>
 	
 <?php
+//Menuepunkte nur anzeigen, wenn angemeldeter Nutzer passende Zugriffsrechte hat
 
-//Menuepunkt nur anzeigen, wenn angemeldeter Nutzer passende Zugriffsrechte hat
+
+
 //Wer Zugriff haben soll in den Argumenten: mitglied, orga, finanzer, vorstand, admin, foerderer
 if(doesCurrentUserHaveAccess(False, False, False, True, True, False)) {
 	echo "<li>\n";
@@ -44,6 +46,15 @@ if(doesCurrentUserHaveAccess(False, False, True, True, True, False)) {
 	echo "<a ";
 	if($thisPage=="finanzerfunktionen") {echo " class=\"currentpage\"";}
 	echo "href=\"../finanzerfunktionen/index.php\">Finanzerfunktionen</a>\n";
+	echo "</li>\n";
+}
+
+//Wer Zugriff haben soll in den Argumenten: mitglied, orga, finanzer, vorstand, admin, foerderer
+if(doesCurrentUserHaveAccess(False, True, True, True, True, False)) {
+	echo "<li>\n";
+	echo "<a ";
+	if($thisPage=="orgafunktionen") {echo " class=\"currentpage\"";}
+	echo "href=\"../orgafunktionen/index.php\">Orga-Team-Funktionen</a>\n";
 	echo "</li>\n";
 }
 
