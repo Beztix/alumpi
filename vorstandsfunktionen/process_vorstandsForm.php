@@ -343,6 +343,18 @@ if(isset($_POST['mitglied_suchen'])) {
 		
 		//Hinzufügen der eingegebenen Kriterien
 		
+		if(!empty($_POST['mid'])) {
+			if($criteria_selected === False) {	
+				$query_string = $query_string . ' WHERE mid=?';
+				$criteria_selected = True;
+			}
+			else {								
+				$query_string = $query_string . ' AND mid=?';
+			}
+			$param_string = $param_string . 'i';
+			array_push($where_array, $_POST['mid']);
+		}
+		
 		if(!empty($_POST['vorname'])) {
 			if($criteria_selected === False) {	
 				$query_string = $query_string . ' WHERE vorname=?';
@@ -415,6 +427,10 @@ if(isset($_POST['mitglied_suchen'])) {
 		
 		//DB-Abfrage erfolgreich
 		if($result) {
+			
+			echo "<h3>Gefundene Mitglieder:</h3>\n";
+			echo "<br>\n";
+			
 			
 			//Gefundene Einträge in Tabelle formatiert ausgeben
 			while($recordObj = $result->fetch_assoc()) {
@@ -544,7 +560,70 @@ if(isset($_POST['mitglied_suchen'])) {
 
 
 
+
+
 		
+
+//===================================================
+//      Rechte ändern
+//===================================================
+
+
+//Formulardaten angekommen
+if(isset($_POST['rechte_aendern'])) {
+	
+
+	
+	//Zur Datenbank verbinden
+	$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+	$mysqli->set_charset("utf8");
+	
+	//Fehler bei der DB-Verbindung		
+	if ($mysqli->connect_errno) {
+		echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
+		echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+		echo "<br>";
+		echo "Failed to connect to MySQL<br>";
+	}
+	
+	//DB-Verbindung erfolgreich
+	else {
+		
+		
+		//Neue Rechte in die Datenbank schreiben
+		$stmt = $mysqli->prepare("UPDATE vereinsmitglieder SET
+		foerderer = ?, 
+		mitglied = ?,
+		orga = ?,
+		kuratorium = ?,
+		finanzer = ?, 
+		vorstand = ?, 
+		admin = ?
+		WHERE mid = ?");
+		$stmt->bind_param("iiiiiiii", $_POST['foerderer'], $_POST['mitglied'], $_POST['orga'], $_POST['kuratorium'], $_POST['finanzer'], $_POST['vorstand'], $_POST['admin'], $_POST['mid']);
+	
+
+		//DB-Abfrage erfolgreich
+		if($stmt->execute()) {
+			
+			//Seite neu laden (mit Übergabe einer GET-Variable, um Erfolgsmeldung auf der neu geladenen Seite anzuzeigen)
+			echo "<p class=\"green\">\n";
+			echo "Rechte erfolgreich eingetragen, bitte korrekten Eintrag mittels der Suche nach der MID überprüfen";
+			echo "</p>\n";
+		}	
+		
+		//Fehler bei der DB-Abfrage
+		else {
+			echo "<p class=\"error\">\n";
+			echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "</p>\n";
+		}
+		
+	}// eof DB-Verbindung erfolgreich
+
+}//eof Formulardaten angekommen
+
 
 
 
