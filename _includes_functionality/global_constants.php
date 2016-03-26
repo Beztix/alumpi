@@ -29,14 +29,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	const ABSOLVENTENFEIER_ANMELDUNG_AKTIV = False;
 	
 	
-	
-	
-	//Diese Variablen definieren die verwendeten Rechtegruppen, um verschiedene Zugriffsrechte auf verschiedene Teile des Mitgliederbereichs zu ermöglichen
-	const MITGLIED = 1;
-	const ORGA = 2;
-	const FINANZER = 4;
-	const VORSTAND = 8;
-	const ADMIN = 16;
-	const FOERDERER = 32;
+
 
 ?>

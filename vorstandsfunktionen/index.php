@@ -18,12 +18,13 @@ $description = '';
 //Definition der Seitenspezifischen Zugriffsrechte
 //True = Gruppe darf diese Seite sehen
 //False = Gruppe darf diese Seite NICHT sehen
+$foerderer_zugriff = False;
 $mitglied_zugriff = False;
 $orga_zugriff = False;
+$kuratorium_zugriff = False;
 $finanzer_zugriff = False;
 $vorstand_zugriff = True;
 $admin_zugriff = True;
-$foerderer_zugriff = False;
 
 
 

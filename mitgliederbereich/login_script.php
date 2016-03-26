@@ -67,7 +67,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							
 							//Email-Adresse und zugehöriges (gehashtes) Passwort aus der Datenbank holen
 							//Verwendung von prepared statements zur Vermeidung von SQL-Injection
-							$stmt = $mysqli->prepare('SELECT mid, email, pw, bestaetigt, rechtegruppe FROM vereinsmitglieder WHERE email = ?');
+							$stmt = $mysqli->prepare('SELECT mid, email, pw, bestaetigt, foerderer, mitglied, orga, kuratorium, finanzer, vorstand, admin FROM vereinsmitglieder WHERE email = ?');
 							$stmt->bind_param('s', $_POST['email']);
 							$stmt->execute();
 							$result = $stmt->get_result();
@@ -88,41 +88,30 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 										if(password_verify($_POST['pwd'], $recordObj['pw'])) {
 										
 
-											//Rechte durch bitweise tests berechnen
-											$int_rechtegruppe = intval($recordObj['rechtegruppe']);
-
-											$mitglied = $orga = $finanzer = $vorstand = $admin = $foerderer = False;
+											//Rechte des Users abfragen
+											$foerderer = $mitglied = $orga = $kuratorium = $finanzer = $vorstand = $admin = False;
 											
-											if($int_rechtegruppe & MITGLIED) {
-												$mitglied = True;
-											}
-											if($int_rechtegruppe & ORGA) {
-												$orga = True;
-											}
-											if($int_rechtegruppe & FINANZER) {
-												$finanzer = True;
-											}
-											if($int_rechtegruppe & VORSTAND) {
-												$vorstand = True;
-											}
-											if($int_rechtegruppe & ADMIN) {
-												$admin = True;
-											}
-											if($int_rechtegruppe & FOERDERER) {
-												$foerderer = True;
-											}
+											if($recordObj['foerderer'] === 1) 	$foerderer = True;
+											if($recordObj['mitglied'] === 1) 	$mitglied = True;
+											if($recordObj['orga'] === 1) 		$orga = True;
+											if($recordObj['kuratorium'] === 1) 	$kuratorium = True;
+											if($recordObj['finanzer'] === 1) 	$finanzer = True;
+											if($recordObj['vorstand'] === 1) 	$vorstand = True;
+											if($recordObj['admin'] === 1) 		$admin = True;
+											
 											
 											
 											//Nutzer auf Server als eingelogged speichern (session wurde bereits durch index.php gestartet)
 											$_SESSION = array(
 													'login' => true,
 													'userMID' => $recordObj['mid'],
+													'foerderer' => $foerderer,
 													'mitglied' => $mitglied,
 													'orga' => $orga,
+													'kuratorium' => $kuratorium,
 													'finanzer' => $finanzer,
 													'vorstand' => $vorstand,
-													'admin' => $admin,
-													'foerderer' => $foerderer,
+													'admin' => $admin
 											);
 											
 											//Seite neu laden (nun eingelogged)

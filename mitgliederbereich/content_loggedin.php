@@ -17,8 +17,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<p class="green">
 				<?php
+				if($_SESSION['foerderer']) {
+					echo "Sie haben Förderer-Zugriffsrechte.<br>\n";
+				}
 				if($_SESSION['orga']) {
 					echo "Sie haben Orga-Team-Zugriffsrechte.<br>\n";
+				}
+				if($_SESSION['kuratorium']) {
+					echo "Sie haben Kuratoriums-Zugriffsrechte.<br>\n";
 				}
 				if($_SESSION['finanzer']) {
 					echo "Sie haben Finanzer-Zugriffsrechte.<br>\n";
@@ -28,9 +34,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				}
 				if($_SESSION['admin']) {
 					echo "Sie haben Admin-Zugriffsrechte.<br>\n";
-				}
-				if($_SESSION['foerderer']) {
-					echo "Sie haben Förderer-Zugriffsrechte.<br>\n";
 				}
 				?>
 				</p>

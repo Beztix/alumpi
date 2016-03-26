@@ -21,7 +21,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	
 	
 	//Nutzer ist eingelogged, Test auf in der Seite selbst gesetzte Zugriffrechte
-	$zugriff_erlauben = doesCurrentUserHaveAccess($mitglied_zugriff, $orga_zugriff, $finanzer_zugriff, $vorstand_zugriff, $admin_zugriff, $foerderer_zugriff);
+	$zugriff_erlauben = doesCurrentUserHaveAccess($foerderer_zugriff, $mitglied_zugriff, $orga_zugriff, $kuratorium_zugriff, $finanzer_zugriff, $vorstand_zugriff, $admin_zugriff);
 	
 	
 	

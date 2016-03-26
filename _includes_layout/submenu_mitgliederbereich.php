@@ -31,8 +31,8 @@ include_once '../_includes_functionality/calculateAccessPermissions.php';
 
 
 
-//Wer Zugriff haben soll in den Argumenten: mitglied, orga, finanzer, vorstand, admin, foerderer
-if(doesCurrentUserHaveAccess(False, False, False, True, True, False)) {
+//Wer Zugriff haben soll in den Argumenten: foerderer, mitglied, orga, kuratorium, finanzer, vorstand, admin
+if(doesCurrentUserHaveAccess(False, False, False, False, False, True, True)) {
 	echo "<li>\n";
 	echo "<a ";
 	if($thisPage=="vorstandsfunktionen") {echo " class=\"currentpage\"";}
@@ -40,8 +40,8 @@ if(doesCurrentUserHaveAccess(False, False, False, True, True, False)) {
 	echo "</li>\n";
 }
 
-//Wer Zugriff haben soll in den Argumenten: mitglied, orga, finanzer, vorstand, admin, foerderer
-if(doesCurrentUserHaveAccess(False, False, True, True, True, False)) {
+//Wer Zugriff haben soll in den Argumenten: foerderer, mitglied, orga, kuratorium, finanzer, vorstand, admin
+if(doesCurrentUserHaveAccess(False, False, False, False, True, True, True)) {
 	echo "<li>\n";
 	echo "<a ";
 	if($thisPage=="finanzerfunktionen") {echo " class=\"currentpage\"";}
@@ -49,8 +49,8 @@ if(doesCurrentUserHaveAccess(False, False, True, True, True, False)) {
 	echo "</li>\n";
 }
 
-//Wer Zugriff haben soll in den Argumenten: mitglied, orga, finanzer, vorstand, admin, foerderer
-if(doesCurrentUserHaveAccess(False, True, True, True, True, False)) {
+//Wer Zugriff haben soll in den Argumenten: foerderer, mitglied, orga, kuratorium, finanzer, vorstand, admin
+if(doesCurrentUserHaveAccess(False, False, True, True, True, True, True)) {
 	echo "<li>\n";
 	echo "<a ";
 	if($thisPage=="orgafunktionen") {echo " class=\"currentpage\"";}

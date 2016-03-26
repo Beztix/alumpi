@@ -8,10 +8,15 @@
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
-function doesCurrentUserHaveAccess($mitglied_rechte, $orga_rechte, $finanzer_rechte, $vorstand_rechte, $admin_rechte, $foerderer_rechte) {
+function doesCurrentUserHaveAccess($foerderer_rechte, $mitglied_rechte, $orga_rechte, $kuratorium_rechte, $finanzer_rechte, $vorstand_rechte, $admin_rechte) {
 	
 	
 	$zugriff_erlauben = False;
+	
+	//Foerderer sollen Zugriff haben und Nutzer ist Foerderer
+	if($foerderer_rechte && $_SESSION['foerderer']) {
+		$zugriff_erlauben = True;
+	}
 	
 	//Mitglieder sollen Zugriff haben und Nutzer ist Mitglied
 	if($mitglied_rechte && $_SESSION['mitglied']) {
@@ -20,6 +25,11 @@ function doesCurrentUserHaveAccess($mitglied_rechte, $orga_rechte, $finanzer_rec
 	
 	//Orga-Team soll Zugriff haben und Nutzer ist Orga-Team
 	if($orga_rechte && $_SESSION['orga']) {
+		$zugriff_erlauben = True;
+	}
+	
+	//Kuratorium soll Zugriff haben und Nutzer ist Kuratoriums-Mitglied
+	if($kuratorium_rechte && $_SESSION['kuratorium']) {
 		$zugriff_erlauben = True;
 	}
 	
@@ -38,10 +48,7 @@ function doesCurrentUserHaveAccess($mitglied_rechte, $orga_rechte, $finanzer_rec
 		$zugriff_erlauben = True;
 	}
 	
-	//Foerderer sollen Zugriff haben und Nutzer ist Foerderer
-	if($foerderer_rechte && $_SESSION['foerderer']) {
-		$zugriff_erlauben = True;
-	}
+
 	
 	return $zugriff_erlauben;
 }

@@ -29,8 +29,26 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<form action="index.php" method="POST">
 					<button class="absenden" type="submit" name="mitglieder_abrufen">Mitglieder abrufen</button>
 				</form>
-
+				<br>
+				<br>
 				
+				
+				<br>
+				<h3>E-Mail-Adressen abrufen</h3>
+				<form action="index.php" method="POST">
+					<input type="checkbox" name="mitglied"> Mitglieder
+					<input type="checkbox" name="orga"> Orga-Team
+					<input type="checkbox" name="finanzer"> Finanzer
+					<input type="checkbox" name="vorstand"> Vorstand
+					<input type="checkbox" name="admin"> Admins
+					<input type="checkbox" name="foerderer"> Förderer
+					<input type="checkbox" name="kuratorium"> Kuratorium
+					<br>
+					<br>
+					<button class="absenden" type="submit" name="emails_abrufen">Mitglieder abrufen</button>
+				</form>
+				<br>
+				<br>
 				
 				
 				
