@@ -5,7 +5,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 		<section id="content">
 		
-			<?php $data_output = array(); ?>
+			<?php $data_output = array(); ob_start();?>
 		
 			<section class="top_image">
 				<img src="../_images_content/banner_vorstandsfunktionen.jpg" alt="Der Vorstand">

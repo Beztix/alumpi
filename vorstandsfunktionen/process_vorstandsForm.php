@@ -17,7 +17,7 @@ include_once '../../../config-files/db_config.php';
 
 
 //Hilfsfunktion, um Werte als Reference statt als Value zu übergeben
-//(benötigt für mysqli bin_params in Kombination mit call_user_func_array(), da hier die Werte als Reference übergeben werden müssen)
+//(benötigt für mysqli bind_params in Kombination mit call_user_func_array(), da hier die Werte als Reference übergeben werden müssen)
 function refValues($arr){
     if (strnatcmp(phpversion(),'5.3') >= 0) //Reference is required for PHP 5.3+
     {
@@ -38,7 +38,6 @@ function refValues($arr){
 
 //Formulardaten angekommen
 if(isset($_POST['mitglieder_abrufen'])) {
-	
 
 	
 	//Zur Datenbank verbinden
@@ -57,9 +56,7 @@ if(isset($_POST['mitglieder_abrufen'])) {
 	else {
 		
 		//Mitgliederdaten aus der Datenbank holen
-		$stmt = $mysqli->prepare('SELECT 
-		mid, eintrittsdatum, geschlecht, titel, vorname, nachname, geburtstag, email, telefon, newsletter, strasse, plz, ort, land, iststudent, kontoinhaber, iban, bic, pw
-		FROM vereinsmitglieder');
+		$stmt = $mysqli->prepare('SELECT * FROM vereinsmitglieder');
 		$stmt->execute();
 		$result = $stmt->get_result();
 		
@@ -72,9 +69,13 @@ if(isset($_POST['mitglieder_abrufen'])) {
 
 			//Zeilen der Datenbankabfrage in CSV-Datei schreiben
 			while($recordObj = $result->fetch_assoc()) {
-				 fputcsv($output, $recordObj);
+				fputcsv($output, $recordObj);
 			}
+
 			fclose($output);
+			
+			
+			ob_end_clean();
 			
 			//Datei an User zum Download ausliefern
 			header('Content-Description: File Transfer');
@@ -82,13 +83,14 @@ if(isset($_POST['mitglieder_abrufen'])) {
 			header('Content-Disposition: attachment; filename='.basename($file));
 			header('Content-Transfer-Encoding: binary');
 			header('Expires: 0');
-			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+			header('Cache-Control: must-revalidate');
 			header('Pragma: public');
 			header('Content-Length: ' . filesize($file));
-			ob_clean();
+			ob_end_clean();
 			flush();
 			readfile($file);
 			exit;
+			
 		}
 		
 		//Fehler bei der DB-Abfrage
@@ -156,7 +158,7 @@ if(isset($_POST['emails_abrufen'])) {
 				$checkbox_selected = True;
 			}
 			else {								
-				$query_string = $query_string . ' AND foerderer=?';
+				$query_string = $query_string . ' OR foerderer=?';
 			}
 			$param_string = $param_string . 'i';
 			array_push($where_array, 1);
@@ -168,7 +170,7 @@ if(isset($_POST['emails_abrufen'])) {
 				$checkbox_selected = True;
 			}
 			else {
-				$query_string = $query_string . ' AND mitglied=?';
+				$query_string = $query_string . ' OR mitglied=?';
 			}
 			$param_string = $param_string . 'i';
 			array_push($where_array, 1);
@@ -180,7 +182,7 @@ if(isset($_POST['emails_abrufen'])) {
 				$checkbox_selected = True;
 			}
 			else {								
-				$query_string = $query_string . ' AND orga=?';
+				$query_string = $query_string . ' OR orga=?';
 			}
 			$param_string = $param_string . 'i';
 			array_push($where_array, 1);
@@ -192,7 +194,7 @@ if(isset($_POST['emails_abrufen'])) {
 				$checkbox_selected = True;
 			}
 			else {								
-				$query_string = $query_string . ' AND kuratorium=?';
+				$query_string = $query_string . ' OR kuratorium=?';
 			}
 			$param_string = $param_string . 'i';
 			array_push($where_array, 1);
@@ -204,7 +206,7 @@ if(isset($_POST['emails_abrufen'])) {
 				$checkbox_selected = True;
 			}
 			else {								
-				$query_string = $query_string . ' AND finanzer=?';
+				$query_string = $query_string . ' OR finanzer=?';
 			}
 			$param_string = $param_string . 'i';
 			array_push($where_array, 1);
@@ -216,7 +218,7 @@ if(isset($_POST['emails_abrufen'])) {
 				$checkbox_selected = True;
 			}
 			else {								
-				$query_string = $query_string . ' AND vorstand=?';
+				$query_string = $query_string . ' OR vorstand=?';
 			}
 			$param_string = $param_string . 'i';
 			array_push($where_array, 1);
@@ -228,7 +230,7 @@ if(isset($_POST['emails_abrufen'])) {
 				$checkbox_selected = True;
 			}
 			else {								
-				$query_string = $query_string . ' AND admin=?';
+				$query_string = $query_string . ' OR admin=?';
 			}
 			$param_string = $param_string . 'i';
 			array_push($where_array, 1);
@@ -270,6 +272,8 @@ if(isset($_POST['emails_abrufen'])) {
 			}
 			fclose($output);
 			
+			ob_end_clean();
+			
 			//Datei an User zum Download ausliefern
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');
@@ -279,7 +283,7 @@ if(isset($_POST['emails_abrufen'])) {
 			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
 			header('Pragma: public');
 			header('Content-Length: ' . filesize($file));
-			ob_clean();
+			ob_end_clean();
 			flush();
 			readfile($file);
 			exit;
