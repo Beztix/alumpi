@@ -58,5 +58,5 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Wenn Sie Gast eines der feiernden Absolventen sind, so lassen Sie sich bitte von diesem mit Anmelden, dann ist keine separate Anmeldung ihrerseits nötig.
 				Andernfalls füllen sie bitte das entsprechende Anmeldeformular aus, um am Buffet teilzunehmen:<br>
 				<br>
-				<a href="../anmeldung_feier_gast/index.php">Zum Anmeldeformular zur Buffetteilnahme</a>.
+				<a href="../anmeldung_feier_gast/index.php">Zum Anmeldeformular für die Feierlichkeiten.</a>.
 				</p>
