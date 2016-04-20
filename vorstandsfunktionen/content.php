@@ -27,7 +27,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<h3>Alle Mitgliederdaten als CSV abrufen</h3>
 				<p>
-				Es werden sämtliche Mitgliederdaten aus der Datenbank abgerufen und als CSV-Datei zum Download zur Verfügung gestellt.
+				Es werden sämtliche Mitgliederdaten aus der Datenbank abgerufen und als CSV-Datei zum Download zur Verfügung gestellt.<br>
+				ACHTUNG: Die generierte CSV-Datei enthält SÄMLICHE Daten der Mitglieder aus der Datenbank, also bitte sorgsam mit der Datei umgehen.
 				</p>
 				
 				<form action="index.php" method="POST">

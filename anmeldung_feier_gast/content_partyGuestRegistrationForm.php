@@ -60,7 +60,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<br>
 					
 					<p>
-					Hiermit melde ich mich verbindlich zum Buffet der Absolventenfeier am <?php echo ABSOLVENTENFEIER_DATUM; ?> zum Preis von <?php echo ABSOLVENTENFEIER_PREIS; ?> € an 
+					Hiermit melde ich mich verbindlich zur Absolventenfeier am <?php echo ABSOLVENTENFEIER_DATUM; ?> zum Preis von <?php echo ABSOLVENTENFEIER_PREIS; ?> € an 
 					und bestätige die Korrektheit der oben stehenden Angaben.<br>
 					Der Betrag von <?php echo ABSOLVENTENFEIER_PREIS; ?> € ist bis spätestens 7 Tage vor der Feier auf das Konto des Absolventenvereins zu überweisen.<br>
 					<br>

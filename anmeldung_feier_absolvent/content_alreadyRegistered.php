@@ -87,7 +87,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							Erworbener Titel
 						</td>
 						<td>
-							<?php echo htmlspecialchars($data_output['titel'], ENT_QUOTES, 'UTF-8'); ?>
+							<?php echo htmlspecialchars($data_output['neuer_titel'], ENT_QUOTES, 'UTF-8'); ?>
 						</td>
 					</tr>
 					<tr>
@@ -130,8 +130,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<h3>Hinweis:</h3>
 				<p>
-				Aus organisatorischen Gründen (Erstellen der Urkunden, Vorbereitung der Präsentation) ist es nicht möglich, die angegeben Daten selbst auf der Webseite zu ändern.<br>
-				Falls die gespeicherten Daten nicht korrekt sind, kontaktieren Sie bitte den Absolventenverein unter alumpi@uni-bayreuth.de.
+				Aus organisatorischen Gründen (Erstellen der Urkunden, Vorbereitung der Präsentation) ist es nicht möglich, die angegeben Daten selbst auf der Webseite zu ändern.
+				Falls die gespeicherten Daten nicht korrekt sind, kontaktieren Sie bitte den Absolventenverein unter <a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a>.
 				</p>
 				
 			

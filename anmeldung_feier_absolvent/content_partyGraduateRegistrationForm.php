@@ -23,7 +23,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					Falls Sie als Gast und nicht als aktueller Absolvent an der diesjährigen Absolventenfeier teilnehmen möchten, 
 					so melden Sie sich bitte nicht über dieses Formular an, siehe <a href="../anmeldung_absolventenfeier/index.php#gast">Anmeldung zur Absolventenfeier als Gast</a>.
 					<br>
-					Bitte überprüfen Sie vor der Anmeldung zur Feier mit diesem Formular ihre Mitgliedsdaten auf der Seie <a href="../datenabfrage/index.php">Datenabfrage</a> auf Korrektheit,
+					Bitte überprüfen Sie vor der Anmeldung zur Feier mit diesem Formular ihre Mitgliedsdaten auf der Seite <a href="../datenabfrage/index.php">Datenabfrage</a> auf Korrektheit,
 					da diese Daten für die Anmeldung verwendet werden.
 					</p>
 
@@ -296,15 +296,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<h3>Präsentation mit Foto</h3>
 					<p>
 					Während der Übergabe der Abschlussurkunden wird eine Präsentation gezeigt, in der die Absolventen mit Informationen zu ihrem Abschluss zu sehen sind.<br>
-					Für die Präsentation ist auch ein Portraitfoto von Ihnen vorgesehen, das Sie bitte bis spätestens eine Woche vor der Feier per E-Mail an alumpi@uni-bayreuth.de schicken.
+					Für die Präsentation ist auch ein Portraitfoto von Ihnen vorgesehen, das Sie bitte bis spätestens eine Woche vor der Feier per E-Mail an <a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a> schicken.
 					Spätere Einsendungen können nicht mehr berücksichtigt werden, da die Präsentation rechtzeitig erstellt werden muss.<br>
 					<br>
 					
 					Anforderungen an das Bild:
 					<ul>
 						<li>Seitenformat möglichst 4:3 (Höhe:Breite)</li>
-						<li>Auflösung bitte mindestens 300x400 Pixel</li>
-						<li>Dateityp: .jpg oder .png</li>
+						<li>Auflösung bitte mindestens 400x300 Pixel</li>
+						<li>Dateityp: möglichst .jpg oder .png</li>
 					</ul>
 					</p>
 					
@@ -333,7 +333,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<p>
 					Fehlt Ihr Studiengang/Abschluss in der Auswahlliste? 
 					Haben Sie weitere Fragen zum Ablauf der Feier oder möchten Sie im Orga-Team der Feier mithelfen? <br>
-					Bei Fragen, Anmerkungen und Anregungen können Sie uns jederzeit über alumpi@uni-bayreuth.de kontaktieren. 
+					Bei Fragen, Anmerkungen und Anregungen können Sie uns jederzeit über <a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a> kontaktieren. 
 					</p>
 
 
