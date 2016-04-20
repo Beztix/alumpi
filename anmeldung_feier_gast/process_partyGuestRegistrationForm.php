@@ -101,7 +101,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
 									
 									//Bestätigungs-Email senden
-									if (send_partyGuestRegistration_email($email, $titleAndName, $datum_der_feier, $gesamtpreis)) {
+									if (send_partyGuestRegistration_email($email, $titleAndName, ABSOLVENTENFEIER_DATUM, $gesamtpreis)) {
 									
 									
 										echo "<h3 class=\"green\">Anmeldung erfolgreich!</h3>";

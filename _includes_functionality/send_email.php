@@ -197,7 +197,7 @@ www.alumpi.uni-bayreuth.de
 
 
 
-function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_der_feier, $gesamtpreis) {
+function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_der_feier, $anzahl_gaeste, $gesamtpreis) {
 	
 	//Betreff der Email
 	$subject = 'Ihre Anmeldung zur Absoventenfeier';
@@ -210,8 +210,8 @@ Hallo " . $titleAndName . ",
 vielen Dank für ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " als aktueller Absolvent. 
 Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://alumpi.uni-bayreuth.de/anmeldung_feier_absolvent/index.php einsehen.
 
-
-Bitte überweisen Sie den Betrag von insgesamt " . $gesamtpreis . " € bis spätestens 3 Tage vor der Feier auf das Konto des Absolventenvereins.
+Sie haben zusätzlich " . $anzahl_gaeste . " Gäste mit angemeldet. 
+Bitte überweisen Sie den Betrag von insgesamt " . $gesamtpreis . " € bis spätestens 7 Tage vor der Feier auf das Konto des Absolventenvereins.
 
 Kontodaten:
 Absolventen- und Förderverein MPI Uni Bayreuth e.V.
@@ -274,10 +274,10 @@ function send_partyGuestRegistration_email($toEmail, $titleAndName, $datum_der_f
 	$message = "
 Hallo " . $titleAndName . ",
 
-vielen Dank für ihre Anmeldung zum Buffet der Absolventenfeier am " . $datum_der_feier . ". 
+vielen Dank für ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " inklusive Buffetteilnahme. 
 Diese E-Mail dient der Bestätigung der Anmeldung.
 
-Bitte überweisen Sie den Betrag von " . $preis . " € bis spätestens 3 Tage vor der Feier auf das Konto des Absolventenvereins.
+Bitte überweisen Sie den Betrag von " . $preis . " € bis spätestens 7 Tage vor der Feier auf das Konto des Absolventenvereins.
 
 Kontodaten:
 Absolventen- und Förderverein MPI Uni Bayreuth e.V.
