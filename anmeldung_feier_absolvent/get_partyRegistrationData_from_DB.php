@@ -44,12 +44,12 @@ else {
 	echo "Datenbankverbindung erfolgreich!<br>";
 	*/
 	
-	//Mitgliederdaten zur Email-Adresse des aktuellen Users aus der Datenbank holen
+	//Anmeldedaten zur aktuellen Absolventenfeier zur MID des aktuellen Users aus der Datenbank holen
 	//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 	$stmt = $mysqli->prepare('SELECT 
 	mid, datum_der_feier, anzahl_gaeste, mitbringsel, abschlussarbeitsthema, lehrstuhl, studiengang, neuer_titel, studienbeginn, studienabschluss, hat_bezahlt, gesamtpreis
-	FROM absolventenfeier WHERE mid = ?');
-	$stmt->bind_param('s', $_SESSION['userMID']);
+	FROM absolventenfeier WHERE mid = ? AND datum_der_feier = ?');
+	$stmt->bind_param('ss', $_SESSION['userMID'], date('Y-m-d', strtotime(ABSOLVENTENFEIER_DATUM)));
 	$stmt->execute();
 	$result = $stmt->get_result();
 

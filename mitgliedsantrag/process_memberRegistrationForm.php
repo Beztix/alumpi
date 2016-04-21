@@ -123,9 +123,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								//DB-Abfrage erfolgreich
 								if($stmt->execute()) {
 									
-									//echo "test - DB-Abfrage erfolgreich<br>";
-									
-									$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
+									if($titel === 'B.Sc.' || $titel === 'M.Sc.' || $titel === 'B.Ed.' || $titel === 'M.Ed.') {
+										$titleAndName = $geschlecht . " " . $vorname . " " . $nachname;
+									}
+									else {
+										$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
+									}
 									
 									//Email an neues Mitglied schicken
 									if (send_verificationEmail_memberRegistration($email, $titleAndName, $code, $iststudent)) {
