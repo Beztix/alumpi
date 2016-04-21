@@ -25,9 +25,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				Die Teilnahme an der Feier incl. Buffet kostet pro Person <?php echo ABSOLVENTENFEIER_PREIS; ?>€.<br>
 				<br>
-				Als aktueller Absolvent sind Sie der Mittelpunkt dieser Veranstaltung können Ihren Abschluss in einem festlichen Rahmen feiern.
+				Als aktueller Absolvent sind Sie der Mittelpunkt dieser Veranstaltung und können Ihren Abschluss in einem festlichen Rahmen feiern.
 				Sie erhalten im Anschluss an die Festrede Ihre Abschlussurkunde, die vom Dekan überreicht wird.
-				Zusätzlich gibt es ein kleines Abschlussgeschenk des Absolventenverein, Sie werden an der Absolventenwand unserer Fakultät verewigt und es gibt ausreihend Gelegenheiten für schöne Erinnerungsfotos.<br>
+				Zusätzlich gibt es ein kleines Abschlussgeschenk des Absolventenvereins, Sie werden an der Absolventenwand unserer Fakultät verewigt und es gibt ausreichend Gelegenheiten für schöne Erinnerungsfotos.<br>
 				<br>
 				<br>
 				Falls Sie bereits Vereinsmitglied sind, loggen Sie sich bitte im <a href="../mitgliederbereich/index.php">Mitgliederbereich</a> ein, um dort ihre Anmeldung zur Absolventenfeier als aktueller Absolvent durchzuführen.<br>
@@ -53,9 +53,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<p>
 				Falls Sie zusätzlich an den Feierlichkeiten inklusive Buffet nach dem offiziellen Teil teilnehmen möchten, so benötigen wir eine vorherige verbindliche Anmeldung, um das Catering entsprechend planen zu können.<br>
-				Die Teilnahme an der Feier incl. Buffet kostet pro Person <?php echo ABSOLVENTENFEIER_PREIS; ?>€.<br>
+				Die Teilnahme an der Feier incl. Buffet kostet pro Person <?php echo ABSOLVENTENFEIER_PREIS; ?> €.<br>
 				<br>
-				Wenn Sie Gast eines der feiernden Absolventen sind, so lassen Sie sich bitte von diesem mit Anmelden, dann ist keine separate Anmeldung ihrerseits nötig.
+				Wenn Sie Gast eines der feiernden Absolventen sind, so lassen Sie sich bitte von diesem mit anmelden, dann ist keine separate Anmeldung ihrerseits nötig.
 				Andernfalls füllen sie bitte das entsprechende Anmeldeformular aus, um am Buffet teilzunehmen:<br>
 				<br>
 				<a href="../anmeldung_feier_gast/index.php">Zum Anmeldeformular für die Feierlichkeiten.</a>.
