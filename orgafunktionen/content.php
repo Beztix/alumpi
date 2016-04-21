@@ -5,7 +5,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 		<section id="content">
 		
-		
+			<?php $data_output = array(); ob_start();?>
 		
 			<section class="top_image">
 				<img src="../_images_content/banner_orgafunktionen.jpg" alt="Der Vorstand">
@@ -104,6 +104,29 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					
 				
 				</table>
+				
+				<br>
+				<br>
+				<br>
+				
+				<h3>Alle Anmeldungen als CSV abrufen</h3>
+				<p>
+				Es werden sämtliche Daten aller zur Absolventenfeier angemeldeten  Personen aus der Datenbank abgerufen und als CSV-Datei zum Download zur Verfügung gestellt.<br>
+				ACHTUNG: Die generierte CSV-Datei enthält SÄMLICHE Daten zu den Anmeldungen aus der Datenbank, also bitte sorgsam mit der Datei umgehen.
+				</p>
+				
+				<form action="index.php" method="POST">
+					<button class="absenden" type="submit" name="anmeldungen_abrufen">Anmeldungen abrufen</button>
+				</form>
+				<br>
+				<br>
+				<br>
+				<br>
+				
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_orgaForm.php'; 
+				?>
 
 		
 				
