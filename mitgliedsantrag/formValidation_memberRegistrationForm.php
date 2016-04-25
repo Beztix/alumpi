@@ -115,12 +115,7 @@ function check_fields_format_register($data_form) {
 	// falls die Checkbox "newsletter" nicht(!) ausgewählt wurde, muss eine Adresse eingegeben werden
 	if(!isset($data_form['newsletter'])) {
 		
-		//Überprüfe Straße und Hausnummer auf korrektes Format (Straße ggf. mit Punkt abgekürzt, Hausnummer ggf. mit Buchstabe am Ende)
-		if($data_form['land'] === 'Deutschland') {
-			if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+[ ]?([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
-				$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
-			}
-		}
+		//Straße und Hausnummer überprüfen macht keinen Sinn (Zu viele Ausnahmefälle)
 		
 		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
