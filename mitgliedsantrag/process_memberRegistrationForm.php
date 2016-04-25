@@ -105,8 +105,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								$iststudent = "n"; if(isset($_POST['iststudent'])) { $iststudent = "j";}		//j falls student angewählt, n sonst
 								$code = md5($email . $eintrittsdatum);	//Bestätigungscode zum Überprüfen der Email-Adresse
 								$bestaetigt = "n";						//immer n bei Registrierung
-								$rechtegruppe = 1;						//immer 1 (normales Mitglied) bei Registrierung
 								$beitrag = 10;							//??? ggf. Fördermitglied ???
+								$mitglied = 1;							//User als Mitglied eintragen
 								
 								
 								
@@ -115,9 +115,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								//Mitgliederdaten in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 								$stmt = $mysqli->prepare("INSERT INTO vereinsmitglieder   
-								(eintrittsdatum, geschlecht, titel, nachname, vorname, email, strasse, plz, ort, land, geburtstag, kontoinhaber, iban, bic, bezahlt, newsletter, pw, usergruppe, telefon, studentennachweis_vorhanden, iststudent, code, bestaetigt, rechtegruppe, beitrag) 
-								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-								$stmt->bind_param("sssssssssssssssssisssssid", $eintrittsdatum, $geschlecht, $titel, $nachname, $vorname, $email, $strasse, $plz, $ort, $land, $geburtstag, $kontoinhaber, $iban, $bic, $bezahlt, $newsletter, $pw, $usergruppe, $telefon, $studentennachweis_vorhanden, $iststudent, $code, $bestaetigt, $rechtegruppe, $beitrag);
+																		(eintrittsdatum, 	geschlecht, 	titel, 	nachname, 	vorname, 	email, 	strasse, 	plz, 	ort, 	land, 	geburtstag, 	kontoinhaber, 	iban, 	bic, 	bezahlt, 	newsletter, 	pw, 	telefon, 	studentennachweis_vorhanden, 	iststudent, 	code, 	bestaetigt, 	beitrag, 	mitglied) 
+								VALUES 									(?, 				?, 				?, 		?, 			?, 			?, 		?, 			?, 		?, 		?, 		?, 				?, 				?, 		?, 		?, 			?, 				?, 		?, 			?, 								?, 				?, 		?, 				?, 			?)");
+								$types = 								"s					s				s		s			s			s		s			s		s		s		s				s				s		s		s			s				s		s			s								s				s		s				d			s";
+								$types_collapsed = preg_replace('/\s+/', '', $types);  //whitespace zur übergabe an bind_param entfernen
+								$stmt->bind_param($types_collapsed, 	$eintrittsdatum, 	$geschlecht, 	$titel, $nachname, 	$vorname, 	$email, $strasse, 	$plz, 	$ort, 	$land, 	$geburtstag, 	$kontoinhaber, 	$iban, 	$bic, 	$bezahlt, 	$newsletter, 	$pw, 	$telefon, 	$studentennachweis_vorhanden, 	$iststudent, 	$code, 	$bestaetigt, 	$beitrag, 	$mitglied);
 							
 							
 								//DB-Abfrage erfolgreich
