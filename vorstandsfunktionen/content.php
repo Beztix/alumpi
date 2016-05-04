@@ -140,8 +140,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<form action="index.php" method="POST">
 					<table style="width:100%">
 						<colgroup>
-							<col style="width:30%;">
-							<col style="width:70%;">
+							<col style="width:29%;">
+							<col style="width:71%;">
 						</colgroup>
 						<tr>
 							<td>
