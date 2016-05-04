@@ -30,6 +30,14 @@ include_once '../_includes_functionality/calculateAccessPermissions.php';
 //Menuepunkte nur anzeigen, wenn angemeldeter Nutzer passende Zugriffsrechte hat
 
 
+//Wer Zugriff haben soll in den Argumenten: foerderer, mitglied, orga, kuratorium, finanzer, vorstand, admin
+if(doesCurrentUserHaveAccess(False, False, False, False, True, True, True)) {
+	echo "<li>\n";
+	echo "<a ";
+	if($thisPage=="mitgliedersuche") {echo " class=\"currentpage\"";}
+	echo "href=\"../mitgliedersuche/index.php\">Mitgliedersuche</a>\n";
+	echo "</li>\n";
+}
 
 //Wer Zugriff haben soll in den Argumenten: foerderer, mitglied, orga, kuratorium, finanzer, vorstand, admin
 if(doesCurrentUserHaveAccess(False, False, False, False, False, True, True)) {
