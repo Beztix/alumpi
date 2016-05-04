@@ -54,26 +54,25 @@ Gebäude NWII
 alumpi@uni-bayreuth.de
 www.alumpi.uni-bayreuth.de
 ";
-	 
+
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
 	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
-	$headers[] = "Subject: {$subject}";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
 	
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers), '-f alumpi@uni-bayreuth.de')) {
 		return TRUE;
 	} 
 	else {
 		return FALSE;
 	}
-										
+
 }
-							
+
 
 
 
@@ -109,24 +108,23 @@ Das neue Mitglied hat angegeben Student zu sein. Sollte in der nächsten Woche k
 	$message = $message . "	  
 Prüfen Sie ob das Mitglied in der Datenbank bestätigt wurde!
 ";
-	 
+
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
 	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
-	$headers[] = "Subject: {$subject}";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 	
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers), '-f alumpi@uni-bayreuth.de')) {
 		return TRUE;
 	} 
 	else {
 		return FALSE;
 	}
-										
-}		
+
+}
 
 
 
@@ -169,24 +167,23 @@ Gebäude NWII
 alumpi@uni-bayreuth.de
 www.alumpi.uni-bayreuth.de
 ";
-	 
+
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
 	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
-	$headers[] = "Subject: {$subject}";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
-	
+
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers), '-f alumpi@uni-bayreuth.de')) {
 		return TRUE;
 	} 
 	else {
 		return FALSE;
 	}
-										
+
 }
 
 
@@ -237,25 +234,24 @@ Gebäude NWII
 alumpi@uni-bayreuth.de
 www.alumpi.uni-bayreuth.de
 ";
-	 
+
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
 	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
-	$headers[] = "Subject: {$subject}";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
-	
+
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers), '-f alumpi@uni-bayreuth.de')) {
 		return TRUE;
 	} 
 	else {
 		return FALSE;
 	}
-										
-}		
+
+}
 
 
 
@@ -302,27 +298,25 @@ Gebäude NWII
 alumpi@uni-bayreuth.de
 www.alumpi.uni-bayreuth.de
 ";
-	 
+
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
 	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
-	$headers[] = "Subject: {$subject}";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
-	
+
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, implode("\r\n",$headers))) {
+	if(mail($toEmail, $subject, $message, implode("\r\n",$headers), '-f alumpi@uni-bayreuth.de')) {
 		return TRUE;
 	} 
 	else {
 		return FALSE;
 	}
-										
+
 }				
-									
-									
-								
+
+
 
 ?>
