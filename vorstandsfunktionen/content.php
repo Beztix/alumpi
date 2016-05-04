@@ -36,6 +36,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</form>
 				<br>
 				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_mitgliederabrufenForm.php'; 
+				?>
 				<br>
 				<br>
 				
@@ -61,6 +65,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</form>
 				<br>
 				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_emailsabrufenForm.php';
+				?>
 				<br>
 				<br>
 				
@@ -125,7 +133,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<h3>Rechtegruppen eines Mitglieds setzen</h3>
 				<p>
-				Wichtig: Es werden ALLE Rechte geändert, also alle Gruppen passend einstellen (auch "Mitglied")!
+				Wichtig: Es werden ALLE Rechte geändert, also alle Gruppen passend einstellen (auch "Mitglied")!<br>
+				Änderungen bitte anschließend über die Mitglieds-Suche noch einmal überprüfen.
 				</p>
 				
 				<form action="index.php" method="POST">
@@ -229,12 +238,51 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</form>
 				<br>
 				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung		
+				include 'process_rechteaendernForm.php'; 
+				?>
+				<br>
+				<br>
+				
+				
+				<br>
+				<h3>Bestätigungsmail eneut schicken</h3>
+				<p>
+				Diese Funktion versendet die bei der Anmeldung zum Verein verschickte Bestätigungsmail mit dem Code zur Verifikation der E-Mail-Adresse erneut.
+				</p>
+				
+				<form action="index.php" method="POST">
+					<table style="width:100%">
+						<colgroup>
+							<col style="width:30%;">
+							<col style="width:70%;">
+						</colgroup>
+						<tr>
+							<td>
+								Mitglieds-ID
+							</td>
+							<td>
+								<input type="text" name="mid" placeholder="MID" size="25">
+							</td>
+						</tr>
+					</table>
+					<br>
+					<br>
+					<button class="absenden" type="submit" name="mail_verschicken">Mail verschicken</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_mailverschickenForm.php'; 
+				?>
 				<br>
 				<br>
 				
 				<?php
 				//Einbinden der PHP-Datei zur Formularauswertung
-				include 'process_vorstandsForm.php'; 
+				include 'process_mitgliedsuchenForm.php'; 		
 				?>
 		
 				
