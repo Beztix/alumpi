@@ -5,7 +5,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 		<section id="content">
 		
-			<?php $data_output = array(); ob_start();?>
+			<?php 
+			//Buffern des PHP-Outputs, um während PHP-Verarbeitung HTTP-Header schicken zu können
+			//(Benötigt um Dateidownload aus geschütztem Bereich zu initiieren)
+			$data_output = array(); ob_start();
+			?>
 		
 			<section class="top_image">
 				<img src="../_images_content/banner_vorstandsfunktionen.jpg" alt="Der Vorstand">

@@ -5,7 +5,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 		<section id="content">
 		
-		
+			
+			<?php 
+			//Buffern des PHP-Outputs, um während PHP-Verarbeitung HTTP-Header schicken zu können
+			//(Benötigt um Dateidownload aus geschütztem Bereich zu initiieren)
+			$data_output = array(); ob_start();
+			?>
 		
 			<section class="top_image">
 				<img src="../_images_content/banner_finanzerfunktionen.jpg" alt="Der Vorstand">
@@ -71,9 +76,31 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
+				<h3>E-Mail-Adressen zu fehlenden Studentennachweisen abrufen</h3>
+				<p>
+				Es werden die E-Mail-Adressen aller Mitglieder abgerufen, die selbst angegeben haben Student zu sein, bei denen laut Datenbank aber noch kein Studentennachweis vorliegt.<br>
+				An diese Mitglieder kann dann noch eine Erinnerungsmail vor dem Einzug der Mitgliedsbeiträge geschickt werden.
+				</p>
+
+
+				<form action="index.php" method="POST">
+					<button class="absenden" type="submit" name="fehlende_studentennachweise_abrufen">E-Mail-Adressen abrufen</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_fehlendenachweiseForm.php'; 
+				?>
+				<br>
+				<br>
+				
+				
+				
+				
 				<h3>Alle Studentennachweise zurücksetzen</h3>
 				<p>
-				Diese Funktion, setzt ALLE Einträge von "studentennachweis vorhanden" in der DB wieder auf false. <br>
+				Diese Funktion setzt ALLE Einträge von "studentennachweis vorhanden" in der DB wieder auf false. <br>
 				Dies sollte einmal zu Beginn des Jahres gemacht werden, um die neuen Studentennachweise eintragen zu können.
 				</p>
 
