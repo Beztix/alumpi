@@ -19,6 +19,42 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<br>
 				<br>
+				
+				
+				<article class="news">
+				
+					<!-- thumbnail image wrapped in a link -->
+					<a href="#absolventenfeier16plakat">
+						<div class="right_img_container">
+							<img src="../_images_content/absolventenfeier2016_plakat_klein.jpg" alt="Plakat Absolventenfeier" style="width:300px;">
+						</div>
+					</a>
+					
+					<!-- lightbox container hidden with CSS -->
+					<a href="#_" class="lightbox" id="absolventenfeier16plakat">
+						<img src="../_images_content/absolventenfeier2016_plakat_mittel.jpg" alt="Plakat Absolventenfeier 2016">
+					</a>
+					
+				
+					<h2>Absolventenfeier 2016</h2>
+					
+					<p>
+					Die diesjährige Absolventenfeier findet am Samstag, dem 11. Juni ab 15 Uhr statt. <br>
+					<br>
+					Die Absolventenfeier ist wie immer die beste Gelegenheit, einen erworbenen Abschluss gemeinsam mit Familie, Freunden und Professoren 
+					in einem festlichen Rahmen zu feiern.
+					Wir bitten um vorherige Anmeldung, Anmeldeschluss ist der 28. Mai, weitere Informationen dazu finden Sie unter 
+					<a href="../absolventenfeier/index.php">Absolventenfeier</a>.<br>
+					<br>
+					Wir würden uns freuen Sie auf der diesjährigen Feier begrüßen zu dürfen!
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					
+				</article>
+				
 		
 				<article class="news">
 					<h2>Neue AluMPI-Homepage</h2>
