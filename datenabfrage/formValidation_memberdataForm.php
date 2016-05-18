@@ -66,14 +66,8 @@ function check_fields_update($data_form, $data_db) {
 	}
 
 	
-	if(!empty($data_form['strasse'])) {
-		//Entweder Land in DB Deutschland und keine Änderung, oder Änderung auf Deutschland
-		if(((empty($data_form['land'])) && ($data_db['land'] === 'Deutschland')) || ($data_form['land'] === 'Deutschland')) {
-			if (!preg_match("/^[a-zäöüß]+[.]?[ ]{1}[0-9]+[ ]?([a-zäöüß]{1})?/iu",$data_form['strasse'])) {
-				$error = $error . "Die eingegebene Straße und Hausnummer ist ungültig.<br>\n";
-			}
-		}
-	}
+	//Straße und Hausnummer überprüfen macht keinen Sinn (Zu viele Ausnahmefälle)
+	
 	if(!empty($data_form['plz'])) {
 		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
 			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
