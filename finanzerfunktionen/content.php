@@ -76,6 +76,54 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
+				<br>
+				<h3>Bezahlung der Absolventenfeier eines Mitglieds setzen</h3>
+				<p>
+				Es wird der Status des DB-Eintrags "hat bezahlt" des Mitglieds mit der eingegebenen Feier-ID in der Datenbank der Absolventenfeier-Anmeldungen gesetzt.<br>
+				Die FID muss auf der Seite "Orga-Team-Funktionen" mittels der Suche (nicht mit der Mitgliedersuche) ermittelt werden!
+				</p>
+				
+				<form action="index.php" method="POST">
+					<table style="width:100%">
+						<colgroup>
+							<col style="width:29%;">
+							<col style="width:71%;">
+						</colgroup>
+						<tr>
+							<td>
+								Feier-ID
+							</td>
+							<td>
+								<input type="text" name="fid" placeholder="FID" size="25">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Hat bezahlt?
+							</td>
+							<td>
+								<select name="hat_bezahlt">
+									<option value="j">Ja</option>
+									<option value="n">Nein</option>
+								</select> 
+							</td>
+						</tr>
+					</table>
+					<br>
+					
+					<button class="absenden" type="submit" name="feier_bezahlt_setzen">Absolventenfeier bezahlt setzen</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung		
+				include 'process_feierbezahltsetzenForm.php'; 
+				?>
+				<br>
+				<br>
+				
+				
+				
 				<h3>E-Mail-Adressen zu fehlenden Studentennachweisen abrufen</h3>
 				<p>
 				Es werden die E-Mail-Adressen aller Mitglieder abgerufen, die selbst angegeben haben Student zu sein, bei denen laut Datenbank aber noch kein Studentennachweis vorliegt.<br>
