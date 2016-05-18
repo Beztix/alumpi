@@ -13,23 +13,41 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
 			<section class="text">
 		
+				<?php
+				if(ABSOLVENTENFEIER_INFO_AKTIV) {
+					
+					//<!-- thumbnail image wrapped in a link -->
+					echo "<a href=\"#absolventenfeier16plakat\">\n";
+					echo 	"<div class=\"right_img_container\">\n";
+					echo 		"<img src=\"../_images_content/absolventenfeier2016_plakat_klein.jpg\" alt=\"Plakat Absolventenfeier\" style=\"width:350px;\">\n";
+					echo 	"</div>\n";
+					echo "</a>\n";
+					
+					//<!-- lightbox container hidden with CSS -->
+					echo "<a href=\"#_\" class=\"lightbox\" id=\"absolventenfeier16plakat\">\n";
+					echo 	"<img src=\"../_images_content/absolventenfeier2016_plakat_mittel.jpg\" alt=\"Plakat Absolventenfeier 2016\">\n";
+					echo "</a>\n";
+					
+				}
+				?>
+		
 				<h1>Absolventenfeier</h1>
-				
+
+
 				<p>
 				Eine Reihe von nervösen Studenten steht am Eingang des Hörsaals. Man hört leise Musik spielen, das Foyer ist festlich dekoriert. 
-				Man kann das Tippen von fein herausgeputzten Schuhen hören, hochgesteckte Frisuren im Abendlicht schimmern sehen und erkennen, wie den Krawattenknoten der letzten Schliff gegeben wird. 
-				Studenten? Nicht mehr lange. Hier werden heute neue Absolventen geboren!
+				Man kann das Tippen von fein herausgeputzten Schuhen hören, hochgesteckte Frisuren im Abendlicht schimmern sehen und erkennen, 
+				wie den Krawattenknoten der letzten Schliff gegeben wird. <br>
+				Studenten? Nicht mehr lange. Hier werden heute neue Absolventen geboren! <br>
 				Die letzten Staubkörner werden von den festlichen Kleidern entfernt und schon marschieren sie zum letzten Abenteuer des Studiums.
 				</p>
 				
-
+				<br>
+				<br>
 				
 				<br>
 				<h2>Allgemeine Informationen zur Absolventenfeier</h2>
 				
-				<div class="left_img_container">
-					<img src="../_images_content/deko_absolventenfeier.jpg" alt="Deko Absolventenfeier" style="width:400px;">
-				</div>
 				
 				<?php
 				if(ABSOLVENTENFEIER_INFO_AKTIV) {
@@ -51,7 +69,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Dieser beinhaltet einen Festvortrag, anschließend wird jedem Absolvent eine Abschlussurkunde der Fakultät verliehen, 
 				während die Absolventen in einer Präsentation kurz vorgestellt werden.<br>
 				Im Anschluss daran beginnt der gemütliche Teil, nämlich die Feierlichkeiten mit Buffet, Cocktails der Physikerbar und gemütlichem Beisammensein im Foyer des NWII mit musikalischer Untermalung.<br>
-				<br>				
+				</p>		
+
+				<div class="left_img_container">
+					<img src="../_images_content/deko_absolventenfeier.jpg" alt="Deko Absolventenfeier" style="width:400px;">
+				</div>
+				
+				<p>				
 				Während die Verabschiedung und der Festvortrag für jedermann frei zugänglich sind, ist für die gemütlichen Feierlichkeiten eine vorherige Anmeldung nötig.<br> 
 				Haben Sie Ihr Studium erst kürzlich abgeschlossen oder bisher noch nicht die Zeit gefunden Ihren Abschluss ausgiebig zu feiern? 
 				Dann ergreifen Sie nun die Gelegenheit!
