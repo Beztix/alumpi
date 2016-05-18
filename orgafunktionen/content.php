@@ -111,7 +111,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<h3>Alle Anmeldungen als CSV abrufen</h3>
 				<p>
-				Es werden sämtliche Daten aller zur Absolventenfeier angemeldeten  Personen aus der Datenbank abgerufen und als CSV-Datei zum Download zur Verfügung gestellt.<br>
+				Es werden sämtliche Daten aller zur aktuellen Absolventenfeier angemeldeten Personen aus der Datenbank abgerufen und als CSV-Datei zum Download zur Verfügung gestellt.<br>
 				ACHTUNG: Die generierte CSV-Datei enthält SÄMLICHE Daten zu den Anmeldungen aus der Datenbank, also bitte sorgsam mit der Datei umgehen.
 				</p>
 				
@@ -136,11 +136,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<p>
 				Dies ist die Suchmaske, mit der nach Anmeldungen in der Absolventenfeier-Datenbank gesucht werden kann. 
 				Diese kann von Orga-Team, Finanzer, Vorstand und Admin genutzt werden und dient v.a. dazu die Feier-ID eines Mitglieds zu bestimmen, 
-				um Finanzer- und Vorstandsfunktionen eindeutig zugeordnet ausführen zu können. 
-				</p>
+				um Finanzer- und Vorstandsfunktionen eindeutig zugeordnet ausführen zu können.<br>
 				<br>
-
-				<p>
 				Es werden die gewünschten Anmeldungsdaten abgerufen und direkt hier auf der Seite angezeigt.<br>
 				Die Kriterien werden UND-verknüpft, es werden also alle Einträge abgerufen, die ALLEN angegeben Kriterien genügen. 
 				Wird ein Feld frei gelassen, so wird dieses Kriterium nicht angewendet.
@@ -175,7 +172,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Datum der Feier
 							</td>
 							<td>
-								<input type="text" name="datum" placeholder="TT.MM.JJJJ" size="25" <?php if(isset($_POST['datum'])) echo "value=\"" . htmlspecialchars($_POST['datum'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="datum_der_feier" placeholder="TT.MM.JJJJ" size="25" <?php if(isset($_POST['datum_der_feier'])) echo "value=\"" . htmlspecialchars($_POST['datum_der_feier'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 					</table>

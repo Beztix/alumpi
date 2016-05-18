@@ -86,7 +86,7 @@ if(isset($_POST['anmeldung_suchen'])) {
 			array_push($where_array, $_POST['nachname']);
 		}
 		
-		if(!empty($_POST['datum'])) {
+		if(!empty($_POST['datum_der_feier'])) {
 			if($criteria_selected === False) {	
 				$query_string = $query_string . ' WHERE datum_der_feier=?';
 				$criteria_selected = True;
@@ -95,8 +95,8 @@ if(isset($_POST['anmeldung_suchen'])) {
 				$query_string = $query_string . ' AND datum_der_feier=?';
 			}
 			$param_string = $param_string . 's';
-			$vor_datum = date('Y-m-d', strtotime($_POST['datum_der_feier']));
-			array_push($where_array, $datum);
+			$datum_der_feier = date('Y-m-d', strtotime($_POST['datum_der_feier']));
+			array_push($where_array, $datum_der_feier);
 		}
 		
 		
@@ -136,7 +136,7 @@ if(isset($_POST['anmeldung_suchen'])) {
 				
 				//gefundene Mitgliedsdaten in Ausgabeform für die Webseite umwandeln
 				$data_output['fid'] = 							$data_db['fid'];
-				$data_output['datum'] =			 				date("d.m.Y", strtotime($data_db['datum_der_feier']));
+				$data_output['datum_der_feier'] =			 	date("d.m.Y", strtotime($data_db['datum_der_feier']));
 				$data_output['mid'] = 							$data_db['mid'];
 				$data_output['geschlecht'] = 					$data_db['geschlecht'];
 				$data_output['titel'] = 						$data_db['titel'];
@@ -160,9 +160,9 @@ if(isset($_POST['anmeldung_suchen'])) {
 				echo '<table class="striped outlined" style="width:100%;"><colgroup><col style="width:40%;"><col style="width:60%;"></colgroup>' . "\n";
 				
 				
-				echo '<tr><td>Feier-ID, Eintrittdatum, Mitglieds-ID</td><td>' . "\n";
+				echo '<tr><td>Feier-ID, Datum der Feier, Mitglieds-ID</td><td>' . "\n";
 				echo "<strong>" . htmlspecialchars($data_output['fid'], ENT_QUOTES, 'UTF-8') . "</strong>" . ', '; 
-				echo htmlspecialchars($data_output['datum'], ENT_QUOTES, 'UTF-8') . ', '; 
+				echo htmlspecialchars($data_output['datum_der_feier'], ENT_QUOTES, 'UTF-8') . ', '; 
 				echo htmlspecialchars($data_output['mid'], ENT_QUOTES, 'UTF-8'); 		
 				echo '</td></tr>' . "\n";
 				
