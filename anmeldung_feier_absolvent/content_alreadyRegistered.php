@@ -110,6 +110,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</table>
 				<br>
 				<br>
+				<h3>Zahlung:</h3>
+				<p>
 				<?php
 				if($data_output['hat_bezahlt'] === 'j') {
 					echo "Ihre Zahlung des Eintrittspreises ist bereits eingegangen, vielen Dank!<br>\n";
@@ -124,7 +126,24 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					echo "Verwendungszweck: [Nachname],[Vorname]<br>\n";
 				}
 				?>
+				</p>
+				<br>
+				<br>
 				
+				<h3>Präsentation mit Foto</h3>
+				<p>
+				Für die Präsentation ist auch ein Portraitfoto von Ihnen vorgesehen. 
+				Falls Sie dieses noch nicht übermittelt haben, so schicken Sie dieses bitte bis spätestens eine Woche vor derm Termin der Feier per Mail an <a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a>.
+				Spätere Einsendungen können nicht mehr berücksichtigt werden, da die Präsentation rechtzeitig erstellt werden muss.<br>
+				<br>
+				
+				Anforderungen an das Bild:
+				<ul>
+					<li>Seitenformat möglichst 4:3 (Höhe:Breite)</li>
+					<li>Auflösung bitte mindestens 400x300 Pixel</li>
+					<li>Dateityp: möglichst .jpg oder .png</li>
+				</ul>
+				</p>
 				<br>
 				<br>
 				
