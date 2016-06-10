@@ -3,5 +3,5 @@
 //Durch diese Weiterleitung funktionieren auch die alten Links noch.
 
 
-header('Location: ./startseite/index.php');
+header('Location: ../startseite/index.php');
 ?>
