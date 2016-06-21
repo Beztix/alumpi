@@ -14,15 +14,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
             <section class="text left_content">
 
 				<h1>Herzlich Willkommen beim Internetauftritt von AluMPI!</h1>
-
-
-				<p class="green">
-				<strong>
-				ACHTUNG: Die neue Homepage befindet sich aktuell noch im Aufbau, wie bitten um Ihr Verständnis falls noch nicht alle Seiten korrekt funktionieren.<br>
-				<br>
-				Sollten Sie ein Problem bei der Nutzung der Seite feststellen, benachrichtigen Sie bitte den IT-Beauftragten, siehe "Kontakt".</strong>
-				</p>
-				
+			
 				
 				<p>
 				Der Absolventen- und Förderverein MPI Uni Bayreuth e.V. versteht sich als Einrichtung für aktive Studierende und Absolventen sowie für Förderer und Freunde der Fakultät I der Universität Bayreuth.<br>
@@ -52,19 +44,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			
 			
 			<aside class="sidebar">
-				
-				
-				<!-- thumbnail image wrapped in a link -->
-				<a href="#absolventenfeier16plakat">
-					<img class= "sidebar-img" src="../_images_content/absolventenfeier2016_plakat_klein.jpg" alt="Plakat Absolventenfeier 2016">
-				</a>
-				<!-- lightbox container hidden with CSS -->
-				<a href="#_" class="lightbox" id="absolventenfeier16plakat">
-					<img src="../_images_content/absolventenfeier2016_plakat_mittel.jpg" alt="Plakat Absolventenfeier 2016">
-				</a>
-				
-				<br>
-				<br>
 				
 				<img class="sidebar-img" src="../_images_content/rollup_cut_klein.jpg" alt="AluMPI Rollup Banner">
 			</aside>
