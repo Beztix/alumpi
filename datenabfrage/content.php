@@ -48,7 +48,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<br>
 				
-				<form action="index.php" method="POST" name="datenabfrage">
+				<form action="index.php" method="POST" name="datenabfrage" autocomplete="off">
 				
 				
 					<table class="striped" style="width:100%">
@@ -294,7 +294,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['bic'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="bic" placeholder="BIC" size="15">
+								<input type="text" name="bic" placeholder="BIC" size="15" autocomplete="off">
 							</td>
 						</tr>
 												

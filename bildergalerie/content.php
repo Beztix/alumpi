@@ -23,6 +23,24 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 				<br>
 				
+				
+				<article class="bildergalerie">
+					<h3>Absolventenfeier 2016</h3>
+					
+					
+					<a href="../bildergalerie_absolventenfeier2016/index.php">
+						<img class="absolventenbild" src="../_images_content/absolventenfeier16absolventen.jpg" alt="Gruppenbild Absolventen 2016">
+					</a>
+			
+					<br>
+					
+					<a href="../_zips/absolventenfeier2016.zip">ZIP-Archiv</a>
+					<br>
+					<a href="../bildergalerie_absolventenfeier2016/index.php">Online-Galerie</a>
+					
+				</article>
+				
+				
 				<article class="bildergalerie">
 					<h3>Absolventenfeier 2015</h3>
 					

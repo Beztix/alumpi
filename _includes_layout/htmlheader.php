@@ -46,18 +46,18 @@ echo "\t<meta name=\"description\" content=\"" . $description . "\" />\n";
 <?php 
 //optionales Einbinden von zusätzlichem (seitenspezifischem) header-code	
 if(file_exists('headers.php')) { 
-	echo '\t'; 
+	echo "\t"; 
 	include 'headers.php'; 
-	echo '\n'; 
+	echo "\n"; 
 }; 
 ?>
 
 <?php 
 //optionales Einbinden von zusätzlichen (seitenspezifischen) scripts 
 if(file_exists('scripts.php')) {
-    echo "\t" . '<script>' . "\n\t" . '/* <![CDATA[ */';
+    echo "\t";
     include 'scripts.php';
-    echo "\t" . '/* ]]> */' . "\n\t" . '</script>' . "\n"; 
+    echo "\n"; 
 };
 ?>
 </head>
