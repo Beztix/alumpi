@@ -68,7 +68,7 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 			/*
 			 * Setzen der von der Bundesbank übermittelte Gläubiger-ID 
 			 */
-			$creator->setGlaeubigerId("DE58zzz0000159557");
+			$creator->setGlaeubigerId("DE58zzz00000159557");
 			
 			/*
 			 * Ausführung auf nächsten Tag setzen
@@ -90,6 +90,7 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 					//Bei inkorrekten Bankdaten: Datensatz überspringen (um inkorrekte XML-Datei zu verhindern)
 					continue;
 				}
+				
 				
 				
 				// Erzeugung eines neuen Buchungssatzez

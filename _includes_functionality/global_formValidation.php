@@ -48,7 +48,7 @@ function checkIBAN($iban) {
 
 function checkBIC($bic) {
 	
-	if(preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?/",$bic)) {
+	if(preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?$/",$bic)) {
 		return true;
 	}
 	else {

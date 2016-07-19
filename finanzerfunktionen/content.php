@@ -27,7 +27,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 				<br>
 				<br>
-
+				
+				<?php
+				echo "test1";
+				// Einbinden der PHP-Datei mit allgemeinen Validierungs-Funktionen
+				include_once '../_includes_functionality/global_formValidation.php';
+				
+				if(checkBic('andidemleitner@germansmash.de')) {
+					echo "check!<br>";
+				}
+				?>
 				
 				<br>
 				<h3>Studentennachweis eines Mitglieds setzen</h3>
@@ -189,6 +198,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				?>
 				<br>
 				<br>
+				
 				
 				
 				
