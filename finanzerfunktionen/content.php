@@ -189,6 +189,26 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				?>
 				<br>
 				<br>
+				
+				
+				
+				<h3>Inkorrekte Bankdaten extrahieren</h3>
+				<p>
+				Diese Funktion extrahiert alle Mitgliedsdaten mit fehlerhaften Bankdaten aus der Datenbank (noch Kontonummer & BLZ, keine Kontodaten angegeben etc.).
+				</p>
+
+
+				<form action="index.php" method="POST">
+					<button class="absenden" type="submit" name="inkorrekte_bankdaten">Inkorrekte Daten extrahieren</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_inkorrekteBankdatenForm.php'; 
+				?>
+				<br>
+				<br>
 		
 				
 			</section>

@@ -95,11 +95,6 @@ function check_fields_format_register($data_form) {
 	if (!filter_var($data_form['email'], FILTER_VALIDATE_EMAIL)) {
 		$error = $error . "Die eingegebene Email-Adresse ist ungültig.<br>\n";
 	}
-
-	// Überprüfe den Kontoinhaber
-	if (!preg_match("/^[a-zäöüß]+[ ]{1}[a-zäöüß]+$/iu",$data_form['kontoinhaber'])) {
-		$error = $error . "Das Feld \"Kontoinhaber\" wurde nicht korrekt ausgefüllt, bitte Vor- und Nachname durch ein Leerzeichen getrennt eingeben.<br>\n";
-	}
 	
 	// Überprüfe die IBAN
 	if (!checkIBAN($data_form['iban'])) {
