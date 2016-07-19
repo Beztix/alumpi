@@ -164,6 +164,31 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				?>
 				<br>
 				<br>
+				
+				
+				
+				
+				
+				
+				<h3>SEPA-XML-Datei zum Einzug der diesjährigen Mitgliedsbeiträge erzeugen</h3>
+				<p>
+				Diese Funktion erzeugt aus der Datenbank eine SEPA-XML-Datei, die zum Einzug der Mitgliedsbeiträge an die Bank übermittelt wird.<br>
+				Es wird der Mitgliedsbeitrag von allen Mitgliedern eingezogen, die nicht erst in diesem Jahr Mitglied wurden, und bei denen "studentennachweis vorhanden" 
+				in der DB auf false gesetzt ist.
+				</p>
+
+
+				<form action="index.php" method="POST">
+					<button class="absenden" type="submit" name="sepa_einzug_generieren">SEPA-XML-Datei generieren</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_sepaEinzugGenerierenForm.php'; 
+				?>
+				<br>
+				<br>
 		
 				
 			</section>
