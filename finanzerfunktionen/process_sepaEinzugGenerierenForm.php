@@ -95,8 +95,8 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 			//Setzen der von der Bundesbank übermittelte Gläubiger-ID 
 			$creator->setGlaeubigerId("DE58zzz00000159557");
 			
-			//Ausführung auf in 10 Tagen setzen (schneller kann Bank ggf. nicht)
-			$creator->setAusfuehrungOffset(10);
+			//Ausführung auf in 9 Tagen setzen (schneller kann Bank ggf. nicht)
+			$creator->setAusfuehrungOffset(9);
 		
 			//Formatierung setzen - true: XML-Datei mit Tabs und Zeilenumbrüchen, sonst ohne
 			$creator->setFormatted(true);
@@ -171,8 +171,9 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 			//generiere die XML-Datei
 			$sepaxml = $creator->generateBasislastschriftXml();
 			file_put_contents($file, $sepaxml);
-			ob_end_clean();
 			
+			
+			ob_end_clean();
 			//Datei an User zum Download ausliefern
 			header('Content-Description: File Transfer');
 			header('Content-Type: application/octet-stream');

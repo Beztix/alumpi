@@ -29,7 +29,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 					
 				<br>
-				<h3>Studentennachweis eines Mitglieds setzen</h3>
+				<h2>Studentennachweis eines Mitglieds setzen</h2>
 				<p>
 				Es wird der Status des DB-Eintrags "Studentennachweis vorhanden" des Mitglieds mit der eingegebenen MID gesetzt.
 				</p>
@@ -76,7 +76,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				<br>
-				<h3>Bezahlung der Absolventenfeier eines Mitglieds setzen</h3>
+				<h2>Bezahlung der Absolventenfeier eines Mitglieds setzen</h2>
 				<p>
 				Es wird der Status des DB-Eintrags "hat bezahlt" des Mitglieds mit der eingegebenen Feier-ID in der Datenbank der Absolventenfeier-Anmeldungen gesetzt.<br>
 				Die FID muss auf der Seite "Orga-Team-Funktionen" mittels der Suche (nicht mit der Mitgliedersuche) ermittelt werden!
@@ -123,7 +123,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
-				<h3>E-Mail-Adressen zu fehlenden Studentennachweisen abrufen</h3>
+				<h2>E-Mail-Adressen zu fehlenden Studentennachweisen abrufen</h2>
 				<p>
 				Es werden die E-Mail-Adressen aller Mitglieder abgerufen, die selbst angegeben haben Student zu sein, bei denen laut Datenbank aber noch kein Studentennachweis vorliegt.<br>
 				An diese Mitglieder kann dann noch eine Erinnerungsmail vor dem Einzug der Mitgliedsbeiträge geschickt werden.
@@ -145,7 +145,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
-				<h3>Alle Studentennachweise zurücksetzen</h3>
+				<h2>Alle Studentennachweise zurücksetzen</h2>
 				<p>
 				Diese Funktion setzt ALLE Einträge von "studentennachweis vorhanden" in der DB wieder auf false. <br>
 				Dies sollte einmal zu Beginn des Jahres gemacht werden, um die neuen Studentennachweise eintragen zu können.
@@ -169,7 +169,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
-				<h3>SEPA-XML-Datei zum Einzug der diesjährigen Mitgliedsbeiträge erzeugen</h3>
+				<h2>SEPA-XML-Datei zum Einzug der diesjährigen Mitgliedsbeiträge erzeugen</h2>
 				<p>
 				Diese Funktion erzeugt aus der Datenbank eine SEPA-XML-Datei, die zum Einzug der Mitgliedsbeiträge an die Bank übermittelt wird.<br>
 				Es wird der Mitgliedsbeitrag von allen Mitgliedern eingezogen, die nicht erst in diesem Jahr Mitglied wurden, und bei denen "studentennachweis vorhanden" 
@@ -186,28 +186,67 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				//Einbinden der PHP-Datei zur Formularauswertung
 				include 'process_sepaEinzugGenerierenForm.php'; 
 				?>
-				<br>
-				<br>
-				
-				
-				
-				
-				<h3>Inkorrekte Bankdaten extrahieren</h3>
-				<p>
-				Diese Funktion extrahiert alle Mitgliedsdaten mit fehlerhaften Bankdaten aus der Datenbank (noch Kontonummer & BLZ, keine Kontodaten angegeben etc.).
-				</p>
 
+				<div style="margin-left:80px;">
+				
+					<h3>Kontrolldateien herunterladen</h3>
+					<p>
+					<strong>Diese Funktionen sind erst NACH dem Generieren der SEPA-XML-Datei verwendbar (ansonsten ggf. veraltet)!</strong><br>
+					Sie dienen v.a. der Kontrolle der generierten SEPA-XML-Datei, um mittels der Gesamtzahl der Buchungssätze zu überprüfen, ob alle Datensätze aus der Datenbank korrekt gefiltert 
+					und verarbeitet werden. Die Gesamtzahl der Mitglieder in der Datenbank muss dabei der Summe der Einträge in diesen vier Kontrolldateien entsprechen.
+					</p>
 
-				<form action="index.php" method="POST">
-					<button class="absenden" type="submit" name="inkorrekte_bankdaten">Inkorrekte Daten extrahieren</button>
-				</form>
-				<br>
-				<br>
-				<?php
-				//Einbinden der PHP-Datei zur Formularauswertung
-				include 'process_inkorrekteBankdatenForm.php'; 
-				?>
-				<br>
+					<br>
+					
+					<p>
+					Diese Funktionen erzeugt die Kontrolldatei, die alle Mitgliedsdaten von Mitgliedern enthält, deren Bankdaten fehlerhaft sind.<br>
+					Von diesen Mitgliedern kann kein Beitrag eingezogen werden.
+					</p>
+					<form action="index.php" method="POST">
+						<button class="absenden" type="submit" name="inkorrekte_bankdaten">Inkorrekte Bankdaten herunterladen</button>
+					</form>
+					<br>
+					<br>
+					
+					<p>
+					Diese Funktionen erzeugt die Kontrolldatei, die alle Mitgliedsdaten von Mitgliedern enthält, die erst im aktuellen Jahr Mitglied wurden (und deren Bankdaten korrekt sind).<br>
+					Von diesen Mitgliedern wird kein Beitrag eingezogen, da der Stichtag zum Einzug immer der Jahreswechsel ist.
+					</p>
+					<form action="index.php" method="POST">
+						<button class="absenden" type="submit" name="neue_mitglieder">Neue Mitglieder herunterladen</button>
+					</form>
+					<br>
+					<br>
+					
+					<p>
+					Diese Funktionen erzeugt die Kontrolldatei, die alle Mitgliedsdaten von Mitgliedern enthält, die eine gültige Studienbescheinigung eingereicht haben 
+					(und die nicht erst seit diesem jahr Mitglied sind und korrekte Bankdaten angegeben haben).<br>
+					Von diesen Mitgliedern wird kein Beitrag eingezogen, da sie laut Stazung vom Beitrag befreit sind.
+					</p>
+					<form action="index.php" method="POST">
+						<button class="absenden" type="submit" name="studienbescheinigungen">Mitglieder mit Studienbescheinigung herunterladen</button>
+					</form>
+					<br>
+					<br>
+					
+					<p>
+					Diese Funktionen erzeugt die Kontrolldatei, die alle Mitgliedsdaten von Mitgliedern enthält, von denen der Beitrag eingezogen werden soll.
+					</p>
+					<form action="index.php" method="POST">
+						<button class="absenden" type="submit" name="zahler">Zahler herunterladen</button>
+					</form>
+					<br>
+					<br>
+					
+				
+					<?php
+					//Einbinden der PHP-Datei zur Formularauswertung
+					include 'process_kontrollDateienForm.php'; 
+					?>
+				
+				
+				</div>
+				
 				<br>
 		
 				
