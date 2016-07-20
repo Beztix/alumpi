@@ -97,7 +97,7 @@ function check_fields_update($data_form, $data_db) {
 		}
 	}
 	if(!empty($data_form['bic'])) {
-		if (!preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?/",$data_form['bic'])) {
+		if (!checkBIC($data_form['bic'])) {
 			$error = $error . "Die eingegebene BIC ist ungültig.<br>\n";
 		}
 	}

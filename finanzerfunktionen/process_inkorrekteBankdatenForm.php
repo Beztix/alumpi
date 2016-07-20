@@ -44,7 +44,7 @@ if(isset($_POST['inkorrekte_bankdaten'])) {
 		if($result) {
 			
 			//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file = '../../../generated_files/inkorrekte_bankdaten.csv';
+			$file = '../../../generated_files/inkorrekte_bankdaten_direktGeneriert.csv';
 			$output = fopen($file, 'w');
 			
 
@@ -57,9 +57,8 @@ if(isset($_POST['inkorrekte_bankdaten'])) {
 				}
 			}
 			fclose($output);
-			
-			
 			ob_end_clean();
+			
 			
 			//Datei an User zum Download ausliefern
 			header('Content-Description: File Transfer');

@@ -46,6 +46,10 @@ function checkIBAN($iban) {
 
 
 
+
+// Überprüft, ob der übergebene String eine korrekte BIC ist (Format mittels Regex).
+// Gibt true zurück falls ja oder gibt false zurück falls nein
+
 function checkBIC($bic) {
 	
 	if(preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?$/",$bic)) {

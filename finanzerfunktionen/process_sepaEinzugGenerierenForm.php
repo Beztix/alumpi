@@ -51,8 +51,17 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 		//DB-Abfrage erfolgreich
 		if($result) {
 			
+			
+			
+			
 			//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
 			$file = '../../../generated_files/sepa_lastschriften_mitgliedsbeitraege.xml';
+			
+			//Zu generierende Datei für die inkorrekten Bankdaten (ausserhalb des öffentlichen www-verzeichnis!!)
+			$file_inkorrekt = '../../../generated_files/inkorrekte_bankdaten_sepaGeneriert.csv';
+			$output_inkorrekt = fopen($file_inkorrekt, 'w');
+			
+			
 			
 			// Erzeugen einer neuen Instanz
 			$creator = new SepaXmlCreator();
@@ -81,17 +90,21 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 			 */
 			$creator->setFormatted(true);
 			
+			
 
 			//Extrahierte Mitgliedsdaten verarbeiten: Jeweils einzeln einen Buchungseintrag in der XML-Datei generieren
 			while($recordObj = $result->fetch_assoc()) {
 				
 				//Checke die Bankdaten auf Korrektheit
 				if(!checkIBAN($recordObj['iban']) || !checkBIC($recordObj['bic']) || empty($recordObj['kontoinhaber'])) {
-					//Bei inkorrekten Bankdaten: Datensatz überspringen (um inkorrekte XML-Datei zu verhindern)
+					//Bei inkorrekten Bankdaten: 
+					
+					//Datensatz in die csv-Datei mit den inkorrekten Datensätzen speichern
+					fputcsv($output_inkorrekt, $recordObj);
+					
+					//Datensatz XML-Datei überspringen (um inkorrekte XML-Datei zu verhindern)
 					continue;
 				}
-				
-				
 				
 				// Erzeugung eines neuen Buchungssatzez
 				$buchung = new SepaBuchung();
@@ -113,11 +126,15 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 				$creator->addBuchung($buchung); 
 			}
 			
+			fclose($output_inkorrekt);
+			ob_end_clean();
+			
+
+			//generiere die XML-Datei
 			$sepaxml = $creator->generateBasislastschriftXml();
 			file_put_contents($file, $sepaxml);
-			
-			
 			ob_end_clean();
+			
 			
 			//Datei an User zum Download ausliefern
 			header('Content-Description: File Transfer');
