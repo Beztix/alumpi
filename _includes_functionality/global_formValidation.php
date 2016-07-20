@@ -45,6 +45,22 @@ function checkIBAN($iban) {
 }
 
 
+
+function checkBIC($bic) {
+	
+	if(preg_match("/^[a-zA-Z]{6}[0-9a-zA-Z]{2}([0-9a-zA-Z]{3})?$/",$bic)) {
+		return true;
+	}
+	else {
+		return false;
+	}
+	
+}
+
+
+
+
+
 function isValidDate($date) {
 	if (!preg_match("/^[0-9]{1,2}\.[0-9]{1,2}\.[0-9]{4}$/",$date)) {
 		return false;
@@ -65,6 +81,8 @@ function isValidDate($date) {
 		}
 	}
 }
+
+
 
 
 

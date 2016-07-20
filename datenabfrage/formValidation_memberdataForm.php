@@ -103,12 +103,12 @@ function check_fields_update($data_form, $data_db) {
 	}
 	
 	//Wenn das Passwort-Feld nicht leer ist, muss das zweite Passwort-Feld identisch sein
-	if(!empty($data_form['passwort'])) {
-		if(!($data_form['passwort'] === $data_form['passwort2'])) {
+	if(!empty($data_form['neuespasswort'])) {
+		if(!($data_form['neuespasswort'] === $data_form['neuespasswort2'])) {
 			$error = $error . "Das eingegebene neue Passwort stimmt nicht mit der Passworteingabe im Kontrollfeld überein. Bitte geben Sie das Passwort in beide Felder ein, um fehlerhafte Änderungen zu vermeiden.<br>\n";
 		}
 		else {
-			if(strlen($data_form['passwort']) < 6) {
+			if(strlen($data_form['neuespasswort']) < 6) {
 				$error = $error . "Das neue Passwort muss mindestens 6 Zeichen lang sein.<br>\n";
 			}
 		}

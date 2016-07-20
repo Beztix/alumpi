@@ -50,6 +50,18 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<form action="index.php" method="POST" name="datenabfrage" autocomplete="off">
 				
+					<?php
+					//Dies ist eine hacky Lösung!
+					//Moderne Passwort-Manager ignorieren das autocomplete=off einfach, und setzen Username und Passwort ein, wann immer sie meinen
+					//dass das gerade passend wäre. Das sorgt dafür, dass bei diesem Formular die Felder für BIC und Passwort immer ausgefüllt werden,
+					//da der Passwort-Manager meint das wäre dort sinnvoll (dummes Scheissverhalten der drecks Browserentwickler).
+					//Lösung: Wir packen hier schon ein text und ein password Feld hin, das einfach nicht angezeigt wird, dann lässt der Passwort-Manager
+					//die Felder weiter unten in Ruhe!
+					?>
+					<input type="text" style="display:none">
+					<input type="password" style="display:none">
+					
+					
 				
 					<table class="striped" style="width:100%">
 						
@@ -129,7 +141,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['vorname'], ENT_QUOTES, 'UTF-8');?>
 							</td>
 							<td>
-								<input type="text" name="vorname" placeholder="Vorname" size="25">
+								<input type="text" name="vorname" placeholder="Vorname" size="40">
 							</td>
 						</tr>
 						
@@ -141,7 +153,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['nachname'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="nachname" placeholder="Nachname" size="25">
+								<input type="text" name="nachname" placeholder="Nachname" size="40">
 							</td>
 						</tr>
 						
@@ -153,7 +165,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['geburtstag'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="25">
+								<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="40">
 							</td>
 						</tr>
 						
@@ -165,7 +177,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['email'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35">
+								<input type="text" name="email" placeholder="E-Mail-Adresse" size="40">
 							</td>
 						</tr>
 						
@@ -177,7 +189,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['telefon'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25">
+								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="40">
 							</td>
 						</tr>
 						
@@ -206,7 +218,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['strasse'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30">		
+								<input type="text" name="strasse" placeholder="Straße Hausnummer" size="40">		
 							</td>
 						</tr>
 						
@@ -218,7 +230,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['plz'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="plz" placeholder="PLZ" size="10">
+								<input type="text" name="plz" placeholder="PLZ" size="40">
 							</td>
 						</tr>
 						
@@ -230,7 +242,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['ort'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="ort" placeholder="Ort" size="25">
+								<input type="text" name="ort" placeholder="Ort" size="40">
 							</td>
 						</tr>
 						
@@ -242,7 +254,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['land'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="land" placeholder="Land" size="25">
+								<input type="text" name="land" placeholder="Land" size="40">
 							</td>
 						</tr>
 						
@@ -282,7 +294,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['iban'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="iban" placeholder="IBAN" size="34">
+								<input type="text" name="iban" placeholder="IBAN" size="40">
 							</td>
 						</tr>
 												
@@ -294,19 +306,19 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								<?php echo htmlspecialchars($data_output['bic'], ENT_QUOTES, 'UTF-8'); ?>
 							</td>
 							<td>
-								<input type="text" name="bic" placeholder="BIC" size="15" autocomplete="off">
+								<input type="text" name="bic" placeholder="BIC" size="40" autocomplete="off">
 							</td>
 						</tr>
 												
 						<tr>
 							<td>
-								Passwort
+								Neues Passwort
 							</td>
 							<td>
 								
 							</td>
 							<td>
-								<input type="password" name="passwort" autocomplete="off" placeholder="Neues Passwort" size="25">
+								<input type="password" name="neuespasswort" autocomplete="off" placeholder="Neues Passwort" size="40">
 							</td>
 						</tr>
 												
@@ -318,12 +330,20 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								
 							</td>
 							<td>
-								<input type="password" name="passwort2" autocomplete="off" placeholder="Neues Passwort wiederholen" size="25">
+								<input type="password" name="neuespasswort2" autocomplete="off" placeholder="Neues Passwort wiederholen" size="40">
 							</td>
 						</tr>
 						
 					</table>
+					<br>
+					<br>
+					
+					Zur Sicherheit geben Sie hier bitte ihr aktuelles Passwort ein, um die Änderungen durchzuführen:<br>
+					<br>
 				
+					<input type="password" name="aktuellespasswort" autocomplete="off" placeholder="Aktuelles Passwort" size="40">
+				
+					<br>
 					<br>
 					<button class="absenden" type="submit">Absenden</button>
 

@@ -22,6 +22,25 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				<article class="news">
+					<h2>NWalumni Absolventenbrief 2016/1</h2>
+					
+					<a href="../_pdfs/NW-Alumni_Newsletter_2016-01__web.pdf">
+						<img class="absolventenbrief" src="../_images_content/nwalumni_16_1_klein.jpg" alt="NWalumni Absolventenbrief 2016/1">
+					</a>
+					
+					<p>
+					Der gemeinsame Absolventenbrief von AluMPI, BCG Alumni und CSG.<br>
+					Dieses Mal u.a. mit Neuigkeiten rund um den Verein sowie dem Rückblick auf die Absolventenfeier 2016, 
+					einem Artikel zur Beteiligung der Uni Bayreuth am neuen Forschungsverbund "For3D" und einem Artikel
+					über die aktuelle Forschung zu Ferrofluiden.<br>
+					<br>
+					<a href="../_pdfs/NW-Alumni_Newsletter_2016-01__web.pdf">Absolventenbrief 2016/1</a>
+					</p>
+					<br style="clear:both">
+				</article>
+				
+				
+				<article class="news">
 				
 					<!-- thumbnail image wrapped in a link -->
 					<a href="#absolventenfeier16plakat">
@@ -82,7 +101,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<h2>NWalumni Absolventenbrief 2015/2</h2>
 					
 					<a href="../_pdfs/NW-Alumni_Newsletter_2015-02__WEB.pdf">
-						<img class="absolventenbrief" src="../_images_content/nwalumni_15_2_klein.jpg" alt="NWalumni Absolventenbrieg 2015/2">
+						<img class="absolventenbrief" src="../_images_content/nwalumni_15_2_klein.jpg" alt="NWalumni Absolventenbrief 2015/2">
 					</a>
 					
 					<p>

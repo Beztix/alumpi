@@ -27,7 +27,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 				<br>
 				<br>
-
+				
+				<?php
+				echo "test1";
+				// Einbinden der PHP-Datei mit allgemeinen Validierungs-Funktionen
+				include_once '../_includes_functionality/global_formValidation.php';
+				
+				if(checkBic('andidemleitner@germansmash.de')) {
+					echo "check!<br>";
+				}
+				?>
 				
 				<br>
 				<h3>Studentennachweis eines Mitglieds setzen</h3>
@@ -161,6 +170,52 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<?php
 				//Einbinden der PHP-Datei zur Formularauswertung
 				include 'process_studentennachweisezuruecksetzenForm.php'; 
+				?>
+				<br>
+				<br>
+				
+				
+				
+				
+				
+				
+				<h3>SEPA-XML-Datei zum Einzug der diesjährigen Mitgliedsbeiträge erzeugen</h3>
+				<p>
+				Diese Funktion erzeugt aus der Datenbank eine SEPA-XML-Datei, die zum Einzug der Mitgliedsbeiträge an die Bank übermittelt wird.<br>
+				Es wird der Mitgliedsbeitrag von allen Mitgliedern eingezogen, die nicht erst in diesem Jahr Mitglied wurden, und bei denen "studentennachweis vorhanden" 
+				in der DB auf false gesetzt ist.
+				</p>
+
+
+				<form action="index.php" method="POST">
+					<button class="absenden" type="submit" name="sepa_einzug_generieren">SEPA-XML-Datei generieren</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_sepaEinzugGenerierenForm.php'; 
+				?>
+				<br>
+				<br>
+				
+				
+				
+				
+				<h3>Inkorrekte Bankdaten extrahieren</h3>
+				<p>
+				Diese Funktion extrahiert alle Mitgliedsdaten mit fehlerhaften Bankdaten aus der Datenbank (noch Kontonummer & BLZ, keine Kontodaten angegeben etc.).
+				</p>
+
+
+				<form action="index.php" method="POST">
+					<button class="absenden" type="submit" name="inkorrekte_bankdaten">Inkorrekte Daten extrahieren</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				include 'process_inkorrekteBankdatenForm.php'; 
 				?>
 				<br>
 				<br>

@@ -27,23 +27,24 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<article class="bildergalerie">
 					<h3>Absolventenfeier 2016</h3>
 					
-					
-
 					<!-- thumbnail image wrapped in a link -->
 					<a href="#absolventenfeier16absolventen">
 						<img class="absolventenbild" src="../_images_content/absolventenfeier16absolventen.jpg" alt="Gruppenbild Absolventen 2016">
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="absolventenfeier15absolventen">
+					<a href="#_" class="lightbox" id="absolventenfeier16absolventen">
 						<img src="../_images_content/absolventenfeier16absolventen_gross.jpg" alt="Gruppenbild Absolventen 2016">
 					</a>
-
-			
+					
 					<br>
 					
 					<a href="../_zips/absolventenfeier2016.zip">ZIP-Archiv</a>
+
+					<br>
+					<a href="../bildergalerie_absolventenfeier2016/index.php">Online-Galerie</a>
 					
 				</article>
+				
 				
 				
 				<article class="bildergalerie">
@@ -60,7 +61,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						<img src="../_images_content/absolventenfeier15absolventen_gross.jpg" alt="Gruppenbild Absolventen 2015">
 					</a>
 
-			
 					<br>
 					
 					<a href="../_zips/absolventenfeier2015.zip">ZIP-Archiv</a>
@@ -90,7 +90,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<a href="#_" class="lightbox" id="absolventenfeier14absolventen2">
 					  <img src="../_images_content/absolventenfeier14absolventen2_gross.jpg" alt="Gruppenbild 2 Absolventen 2014">
 					</a>
-					
 					
 					<br style="clear:both">
 				

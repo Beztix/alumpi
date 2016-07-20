@@ -15,40 +15,69 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 
-				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-				include_once '../../../config-files/db_config.php';
+//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
+include_once '../../../config-files/db_config.php';
+
+//Einbinden der PHP-Datei zur Validierung der Eingaben
+include 'formValidation_memberdataForm.php';
+
+
+
+
+//Formulardaten angekommen
+if(!empty($_POST)) {
+	
+	
+	//Fehler in der Formatierung der Eingabe
+	$error = check_fields_update($_POST, $data_db);
+	if(!empty($error)) {
+		echo "<h3 class=\"error\">Fehler bei der Änderung:</h3>\n";
+		echo "<p class=\"error\">";
+		echo $error;
+		echo "</p>";
+	}
+
+	
+	//Alle Felder korrekt formatiert
+	else {
+	
+		//Zur Datenbank verbinden, um das Passwort zu überprüfen
+		$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+		$mysqli->set_charset("utf8");
+		
+		//Fehler bei der DB-Verbindung		
+		if ($mysqli->connect_errno) {
+			echo "<p class=\"error\">\n";
+			echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>\n";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
+			echo "<br>\n";
+			echo "Failed to connect to MySQL<br>";
+			echo "</p>\n";
+		}
+		
+		//DB-Verbindung erfolgreich
+		else {
+			
+			//(gehashtes) Passwort aus der Datenbank holen
+			//Verwendung von prepared statements zur Vermeidung von SQL-Injection
+			$stmt = $mysqli->prepare('SELECT pw FROM vereinsmitglieder WHERE mid = ?');
+			$stmt->bind_param('s', $data_db['mid']);
+			$stmt->execute();
+			$result = $stmt->get_result();
+
+			
+			//DB-Abfrage des Passworts erfolgreich
+			if($result) {
 				
-				//Einbinden der PHP-Datei zur Validierung der Eingaben
-				include 'formValidation_memberdataForm.php';
-				
-				
-				
-				//Formulardaten angekommen
-				if(!empty($_POST)) {
+				//User gefunden
+				if ($recordObj = $result->fetch_assoc()) {
+
+					//Überprüfen des eingegebenen Passwortes (mit eingebautem Hashing)
 					
+					//Passwort korrekt
+					if(password_verify($_POST['aktuellespasswort'], $recordObj['pw'])) {
 					
-						
-					//Fehler in der Formatierung der Eingabe
-					$error = check_fields_update($_POST, $data_db);
-					if(!empty($error)) {
-						echo "<h3 class=\"error\">Fehler bei der Änderung:</h3>\n";
-						echo "<p class=\"error\">";
-						echo $error;
-						echo "</p>";
-					}
-				
-					//Alle Felder korrekt formatiert
-					else {
-					
-						/*
-						echo "test - formular korrekt ausgefüllt abgeschickt <br>";
-						echo "<br>";
-						echo "Eingegebener Vorname: " . $_POST['vorname'] . "<br>";
-						echo "Eingegebener Nachname: " . $_POST['nachname'] . "<br>";
-						echo "<br>";
-						*/
-						
-						//Zur Datenbank verbinden
+						//Zur Datenbank verbinden, um die Daten zu aktualisieren
 						$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 						$mysqli->set_charset("utf8");
 						
@@ -63,10 +92,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						//DB-Verbindung erfolgreich
 						else {
 							
-							//echo $_POST['telefon'] . "<br>";
-							//echo $_POST['newsletter'] . "<br>";
-							
-	
 							//abgerufene Mitgliedsdaten wieder in Variablen speichern und ggf. durch überprüfte Formulareingabe ersetzen
 			
 							$titel_neu = $data_db['titel'];					if(!empty($_POST['titel'])) {$titel_neu = $_POST['titel'];}
@@ -84,14 +109,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							$kontoinhaber_neu = $data_db['kontoinhaber'];	if(!empty($_POST['kontoinhaber'])) {$kontoinhaber_neu = $_POST['kontoinhaber'];}
 							$iban_neu = $data_db['iban'];					if(!empty($_POST['iban'])) {$iban_neu = $_POST['iban'];}
 							$bic_neu = $data_db['bic'];						if(!empty($_POST['bic'])) {$bic_neu = $_POST['bic'];}
-							$pw_neu = $data_db['pw'];						if(!empty($_POST['passwort'])) {$pw_neu = password_hash($_POST['passwort'], PASSWORD_DEFAULT);}
-							
-							
+							$pw_neu = $data_db['pw'];						if(!empty($_POST['neuespasswort'])) {$pw_neu = password_hash($_POST['neuespasswort'], PASSWORD_DEFAULT);}
 							
 
-							
-							
-							//(Ggf. neue) Mitgliederdaten in die Daten
+							//(Ggf. neue) Mitgliederdaten in die Datenbank schreiben
 							//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 							$stmt = $mysqli->prepare("UPDATE vereinsmitglieder SET
 							titel = ?, 
@@ -113,42 +134,64 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							WHERE mid = ?");
 							$stmt->bind_param("sssssssssssssssss", $titel_neu, $vorname_neu, $nachname_neu, $geburtstag_neu, $email_neu, $telefon_neu, $newsletter_neu, $strasse_neu, $plz_neu, $ort_neu, $land_neu, $iststudent_neu, $kontoinhaber_neu, $iban_neu, $bic_neu, $pw_neu, $data_db['mid']);
 						
-						
-							//DB-Abfrage erfolgreich
+					
+							//DB-Abfrage der Datenaktualisierung erfolgreich
 							if($stmt->execute()) {
 								
 								//Seite neu laden (mit Übergabe einer GET-Variable, um Erfolgsmeldung auf der neu geladenen Seite anzuzeigen)
 								header('Location: ./index.php?status=success');
 								
 							}								
-																
-							
+															
+						
 							//Fehler bei der DB-Abfrage
 							else {
 								
-							
 								echo "<p class=\"error\">";
 								echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
 								echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 								echo "</p>";
-							
 								
 							}
-							
-							
-						}// eof DB-Verbindung erfolgreich
 						
-					} //eof Alle Felder korrekt formatiert
+						
+						}// eof DB-Verbindung erfolgreich
+					
+					}// eof Passwort korrekt
+				
+				
+					//Passwort falsch
+					else {
+						echo "<p class=\"error\">\n";
+						echo "Das eingegebene Passwort ist falsch!<br>";
+						echo "</p>\n";
+					}
+					
+				}// eof User gefunden
 					
 					
-
-				}//eof Formulardaten angekommen
-
-
-
-				//Formular (noch) nicht abgeschickt
+				//Kein entsprechender User gefunden
 				else {
-					/*
-					echo "test - formular noch nicht abgeschickt";
-					*/
+					echo "<p class=\"error\">\n";
+					echo "Fehler: Es wurde keine Eintrag zu ihrer MID in der Datenbank gefunden! Bitte kontaktieren Sie den IT-Verantwortlichen.<br>";
+					echo "</p>\n";
 				}
+			
+			}// eof DB-Abfrage des Passworts erfolgreich
+			
+			//Fehler bei der DB-Abfrage
+			else {
+				echo "<p class=\"error\">\n";
+				echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
+				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+				echo "</p>\n";
+			}
+			
+		}// eof DB-Verbindung erfolgreich
+	
+	
+	} //eof Alle Felder korrekt formatiert
+
+	
+}//eof Formulardaten angekommen
+
