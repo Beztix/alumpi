@@ -43,7 +43,7 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 		$jahr = date('Y');
 		
 		//Mitgliederdaten aus der Datenbank holen
-		$stmt = $mysqli->prepare('SELECT * FROM vereinsmitglieder WHERE studentennachweis_vorhanden = ? AND eintrittsdatum < ?');
+		$stmt = $mysqli->prepare('SELECT * FROM vereinsmitglieder');
 		$stmt->bind_param('ss', $studentennachweis_vorhanden, $eintrittsdatum_grenze);
 		$stmt->execute();
 		$result = $stmt->get_result();
@@ -51,19 +51,37 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 		//DB-Abfrage erfolgreich
 		if($result) {
 			
+			//=========================
+			// Kontrolldateien
+			//=========================
 			
-			
-			
-			//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file = '../../../generated_files/sepa_lastschriften_mitgliedsbeitraege.xml';
-			
-			//Zu generierende Datei für die inkorrekten Bankdaten (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file_inkorrekt = '../../../generated_files/inkorrekte_bankdaten_sepaGeneriert.csv';
+			//Zu generierende Kontrolldatei für die inkorrekten Bankdaten (ausserhalb des öffentlichen www-verzeichnis!!)
+			$file_inkorrekt = '../../../generated_files/kontrollDatei_inkorrekteBankdaten.csv';
 			$output_inkorrekt = fopen($file_inkorrekt, 'w');
 			
+			//Zu generierende Kontrolldatei für die Mitglieder aus dem aktuellen Jahr (ausserhalb des öffentlichen www-verzeichnis!!)
+			$file_newMembers = '../../../generated_files/kontrollDatei_neueMitglieder.csv';
+			$output_newMembers = fopen($file_newMembers, 'w');
+			
+			//Zu generierende Kontrolldatei für die Mitglieder aus den Vorjahren, die eine Studentenbescheinigung eingereicht haben (ausserhalb des öffentlichen www-verzeichnis!!)
+			$file_students = '../../../generated_files/kontrollDatei_studenten.csv';
+			$output_students = fopen($file_students, 'w');
+			
+			//Zu generierende Kontrolldatei für die Mitglieder von denen eingezogen wird (ausserhalb des öffentlichen www-verzeichnis!!)
+			$file_payment = '../../../generated_files/kontrollDatei_zahler.csv';
+			$output_payment = fopen($file_payment, 'w');
 			
 			
-			// Erzeugen einer neuen Instanz
+			
+			
+			//=========================
+			// SEPA XML Generierung
+			//=========================
+			
+			//Zu generierende XML-Datei (ausserhalb des öffentlichen www-verzeichnis!!)
+			$file = '../../../generated_files/sepa_lastschriften_mitgliedsbeitraege.xml';
+			
+			//Erzeugen einer neuen Instanz des SEPA-XML-Creators
 			$creator = new SepaXmlCreator();
 			
 			/*
@@ -74,67 +92,86 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 			 */ 
 			$creator->setAccountValues('Oliver Stauffert', 'DE05773501100038018941', 'BYLADEM1SBT');
 	
-			/*
-			 * Setzen der von der Bundesbank übermittelte Gläubiger-ID 
-			 */
+			//Setzen der von der Bundesbank übermittelte Gläubiger-ID 
 			$creator->setGlaeubigerId("DE58zzz00000159557");
 			
-			/*
-			 * Ausführung auf nächsten Tag setzen
-			 */
-			$creator->setAusfuehrungOffset(1);
-			
-			
-			/*
-			 * Formatierung setzen - true: XML-Datei mit Tabs und Zeilenumbrüchen, sonst ohne
-			 */
+			//Ausführung auf in 10 Tagen setzen (schneller kann Bank ggf. nicht)
+			$creator->setAusfuehrungOffset(10);
+		
+			//Formatierung setzen - true: XML-Datei mit Tabs und Zeilenumbrüchen, sonst ohne
 			$creator->setFormatted(true);
 			
 			
+			
+			//=========================
+			// Datensätze verarbeiten
+			//=========================
 
-			//Extrahierte Mitgliedsdaten verarbeiten: Jeweils einzeln einen Buchungseintrag in der XML-Datei generieren
 			while($recordObj = $result->fetch_assoc()) {
 				
 				//Checke die Bankdaten auf Korrektheit
 				if(!checkIBAN($recordObj['iban']) || !checkBIC($recordObj['bic']) || empty($recordObj['kontoinhaber'])) {
-					//Bei inkorrekten Bankdaten: 
-					
 					//Datensatz in die csv-Datei mit den inkorrekten Datensätzen speichern
 					fputcsv($output_inkorrekt, $recordObj);
-					
-					//Datensatz XML-Datei überspringen (um inkorrekte XML-Datei zu verhindern)
-					continue;
 				}
 				
-				// Erzeugung eines neuen Buchungssatzez
-				$buchung = new SepaBuchung();
+				//Filtere Neu-Mitglieder
+				else if($recordObj['eintrittsdatum'] > $eintrittsdatum_grenze) {
+					//Datensatz in die csv-Datei mit den ineuen Mitgliedern speichern
+					fputcsv($output_newMembers, $recordObj);
+				}
 				
-				$buchung->setBetrag($recordObj['beitrag']);				// Einzugsbetrag
-				$buchung->setBic($recordObj['bic']);					// BIC des Zahlungspflichtigen Institutes
-				$buchung->setName($recordObj['kontoinhaber']);			// Name des Zahlungspflichtigen
-				$buchung->setIban($recordObj['iban']);					// IBAN des Zahlungspflichtigen
-				$buchung->setVerwendungszweck('Mitgliedsbeitrag ' . $jahr . ' Absolventen- und Förderverein MPI Uni Bayreuth e.V.');	// Verwendungszweck
-				
-				// Referenz auf das vom Kunden erteilte Lastschriftmandat
-				// ID = Mitglieds-ID
-				// Erteilung = Beitrittsdatum
-				// False = seit letzter Lastschrift wurde am Mandat nichts geändert
-				$buchung->setMandat($recordObj['mid'], $recordObj['eintrittsdatum'], false);
+				//Filtere Studentennachweise
+				else if($recordObj['studentennachweis_vorhanden'] === 'j') {
+					//Datensatz in die csv-Datei mit den Studenten speichern
+					fputcsv($output_students, $recordObj);
+				}
 				
 				
-				// Buchung zur Liste hinzufügen
-				$creator->addBuchung($buchung); 
+				//Mitglieder, von denen eingezogen wird
+				else {
+					//Datensatz in die csv-Datei mit den Zahlern speichern
+					fputcsv($output_payment, $recordObj);
+					
+					
+					// Erzeugung eines neuen Buchungssatzez
+					$buchung = new SepaBuchung();
+					$buchung->setBetrag($recordObj['beitrag']);				// Einzugsbetrag
+					$buchung->setBic($recordObj['bic']);					// BIC des Zahlungspflichtigen Institutes
+					$buchung->setName($recordObj['kontoinhaber']);			// Name des Zahlungspflichtigen
+					$buchung->setIban($recordObj['iban']);					// IBAN des Zahlungspflichtigen
+					$buchung->setVerwendungszweck('Mitgliedsbeitrag ' . $jahr . ' Absolventen- und Förderverein MPI Uni Bayreuth e.V.');	// Verwendungszweck
+					
+					// Referenz auf das vom Kunden erteilte Lastschriftmandat
+					// ID = Mitglieds-ID
+					// Erteilung = Beitrittsdatum
+					// False = seit letzter Lastschrift wurde am Mandat nichts geändert
+					$buchung->setMandat($recordObj['mid'], $recordObj['eintrittsdatum'], false);
+					
+					
+					// Buchung zur Liste hinzufügen
+					$creator->addBuchung($buchung); 
+				}
 			}
 			
+			
 			fclose($output_inkorrekt);
+			fclose($output_newMember);
+			fclose($output_student);
+			fclose($output_payment);
 			ob_end_clean();
 			
 
+			
+			
+			//=========================
+			// SEPA XML Datei ausliefern
+			//=========================
+			
 			//generiere die XML-Datei
 			$sepaxml = $creator->generateBasislastschriftXml();
 			file_put_contents($file, $sepaxml);
 			ob_end_clean();
-			
 			
 			//Datei an User zum Download ausliefern
 			header('Content-Description: File Transfer');
