@@ -24,7 +24,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				
 				
-				<h3>Daten der aktuellen Absolventenfeier</h3>
+				<h2>Daten der aktuellen Absolventenfeier</h2>
 				<?php
 				include 'get_partydata_from_db.php';
 				?>
@@ -109,7 +109,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<br>
 				
-				<h3>Alle Anmeldungen als CSV abrufen</h3>
+				<h2>Alle Anmeldungen als CSV abrufen</h2>
 				<p>
 				Es werden sämtliche Daten aller zur aktuellen Absolventenfeier angemeldeten Personen aus der Datenbank abgerufen und als CSV-Datei zum Download zur Verfügung gestellt.<br>
 				ACHTUNG: Die generierte CSV-Datei enthält SÄMLICHE Daten zu den Anmeldungen aus der Datenbank, also bitte sorgsam mit der Datei umgehen.
@@ -131,7 +131,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
-				<h3>Anmeldungssuche</h3>
+				<h2>Anmeldungssuche</h2>
 				
 				<p>
 				Dies ist die Suchmaske, mit der nach Anmeldungen in der Absolventenfeier-Datenbank gesucht werden kann. 
@@ -144,7 +144,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 				<br>
 				
-				<form action="index.php" method="POST">
+				
+				<a name="anmeldung_suchen"></a>
+				<form action="index.php#anmeldung_suchen" method="POST">
 					<table style="width:100%">
 						<colgroup>
 							<col style="width:30%;">
@@ -181,14 +183,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</form>
 				<br>
 				<br>
-				<br>
-				<br>
-				
 			
 				<?php
 				//Einbinden der PHP-Datei zur Formularauswertung
 				include 'process_anmeldungsuchenForm.php'; 		
 				?>
+				
+				<br>
+				<br>
 		
 				
 			</section>

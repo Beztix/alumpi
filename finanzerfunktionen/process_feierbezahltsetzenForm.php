@@ -41,25 +41,33 @@ if(isset($_POST['feier_bezahlt_setzen'])) {
 	else {
 		
 		
-		//Neue Rechte in die Datenbank schreiben
+		//Bzehaltstatus in die Datenbank schreiben
 		$stmt = $mysqli->prepare("UPDATE absolventenfeier SET hat_bezahlt = ? WHERE fid = ?");
 		$stmt->bind_param("si", $_POST['hat_bezahlt'], $_POST['fid']);
-	
+		$stmt->execute();
+		$affected_rows = $stmt->affected_rows;
 
+		
 		//DB-Abfrage erfolgreich
-		if($stmt->execute()) {
+		if($affected_rows === 1) {
 			
 			//Erfolgsmeldung anzeigen
 			echo "<p class=\"green\">\n";
-			echo "Bezahlung der Absolventenfeier erfolgreich eingetragen, bitte korrekten Eintrag mittels der Suche nach der FID auf der Orga-Team-Seite überprüfen";
+			echo "Bezahltstatus erfolgreich eingetragen, bitte korrekten Eintrag in den Orga-Team-Funktionen überprüfen.";
 			echo "</p>\n";
 		}	
 		
 		//Fehler bei der DB-Abfrage
+		else if($affected_rows === 0) {
+			echo "<p class=\"error\">\n";
+			echo "Bei der Datenbank-Abfrage ist ein Fehler aufgetreten, es wurden kein Status geändert, überprüfen Sie bitte die eingegebene MID.<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "</p>\n";
+		}
 		else {
 			echo "<p class=\"error\">\n";
-			echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "Bei der Datenbank-Abfrage ist eine Fehler aufgetreten, möglicherweise wurden mehr als ein Datensatz verändert.<br>";
+			echo "Bitte nutzen Sie diese Funktion aktuell nicht mehr und kontaktieren Sie umgehend den Homepage-Verantwortlichen, siehe \"Kontakt\"!<br>";
 			echo "</p>\n";
 		}
 		

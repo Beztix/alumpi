@@ -28,13 +28,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<br>
 					
+					
+					
 				<br>
+				<a name="studentennachweis_setzen"></a>
 				<h2>Studentennachweis eines Mitglieds setzen</h2>
 				<p>
 				Es wird der Status des DB-Eintrags "Studentennachweis vorhanden" des Mitglieds mit der eingegebenen MID gesetzt.
 				</p>
 				
-				<form action="index.php" method="POST">
+				<form action="index.php#studentennachweis_setzen" method="POST">
 					<table style="width:100%">
 						<colgroup>
 							<col style="width:29%;">
@@ -76,13 +79,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				<br>
+				<a name="feier_bezahlt_setzen"></a>
 				<h2>Bezahlung der Absolventenfeier eines Mitglieds setzen</h2>
 				<p>
 				Es wird der Status des DB-Eintrags "hat bezahlt" des Mitglieds mit der eingegebenen Feier-ID in der Datenbank der Absolventenfeier-Anmeldungen gesetzt.<br>
 				Die FID muss auf der Seite "Orga-Team-Funktionen" mittels der Suche (nicht mit der Mitgliedersuche) ermittelt werden!
 				</p>
 				
-				<form action="index.php" method="POST">
+				<form action="index.php#feier_bezahlt_setzen" method="POST">
 					<table style="width:100%">
 						<colgroup>
 							<col style="width:29%;">
@@ -123,6 +127,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
+				<br>
+				<a name="fehlende_studentennachweise_abrufen"></a>
 				<h2>E-Mail-Adressen zu fehlenden Studentennachweisen abrufen</h2>
 				<p>
 				Es werden die E-Mail-Adressen aller Mitglieder abgerufen, die selbst angegeben haben Student zu sein, bei denen laut Datenbank aber noch kein Studentennachweis vorliegt.<br>
@@ -130,7 +136,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 
 
-				<form action="index.php" method="POST">
+				<form action="index.php#fehlende_studentennachweise_abrufen" method="POST">
 					<button class="absenden" type="submit" name="fehlende_studentennachweise_abrufen">E-Mail-Adressen abrufen</button>
 				</form>
 				<br>
@@ -144,7 +150,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				
-				
+				<br>
+				<a name="studentennachweise_zuruecksetzen"></a>
 				<h2>Alle Studentennachweise zurücksetzen</h2>
 				<p>
 				Diese Funktion setzt ALLE Einträge von "studentennachweis vorhanden" in der DB wieder auf false. <br>
@@ -152,7 +159,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 
 
-				<form action="index.php" method="POST" onsubmit="return confirm('Sollen wirklich ALLE Einträge über vorhandene Studentennachweise auf false gesetzt werden?');">
+				<form action="index.php#studentennachweise_zuruecksetzen" method="POST" onsubmit="return confirm('Sollen wirklich ALLE Einträge über vorhandene Studentennachweise auf false gesetzt werden?');">
 					<button class="absenden" type="submit" name="studentennachweise_zuruecksetzen">Studentennachweise zurücksetzen</button>
 				</form>
 				<br>
@@ -165,10 +172,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				
 				
-				
-				
-				
-				
+
+				<br>
+				<a name="sepa_einzug_generieren"></a>
 				<h2>SEPA-XML-Datei zum Einzug der diesjährigen Mitgliedsbeiträge erzeugen</h2>
 				<p>
 				Diese Funktion erzeugt aus der Datenbank eine SEPA-XML-Datei, die zum Einzug der Mitgliedsbeiträge an die Bank übermittelt wird.<br>
@@ -177,7 +183,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 
 
-				<form action="index.php" method="POST">
+				<form action="index.php#sepa_einzug_generieren" method="POST">
 					<button class="absenden" type="submit" name="sepa_einzug_generieren">SEPA-XML-Datei generieren</button>
 				</form>
 				<br>
@@ -202,7 +208,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					Diese Funktionen erzeugt die Kontrolldatei, die alle Mitgliedsdaten von Mitgliedern enthält, deren Bankdaten fehlerhaft sind.<br>
 					Von diesen Mitgliedern kann kein Beitrag eingezogen werden.
 					</p>
-					<form action="index.php" method="POST">
+					<form action="index.php#sepa_einzug_generieren" method="POST">
 						<button class="absenden" type="submit" name="inkorrekte_bankdaten">Inkorrekte Bankdaten herunterladen</button>
 					</form>
 					<br>
@@ -212,7 +218,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					Diese Funktionen erzeugt die Kontrolldatei, die alle Mitgliedsdaten von Mitgliedern enthält, die erst im aktuellen Jahr Mitglied wurden (und deren Bankdaten korrekt sind).<br>
 					Von diesen Mitgliedern wird kein Beitrag eingezogen, da der Stichtag zum Einzug immer der Jahreswechsel ist.
 					</p>
-					<form action="index.php" method="POST">
+					<form action="index.php#sepa_einzug_generieren" method="POST">
 						<button class="absenden" type="submit" name="neue_mitglieder">Neue Mitglieder herunterladen</button>
 					</form>
 					<br>
@@ -223,7 +229,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					(und die nicht erst seit diesem jahr Mitglied sind und korrekte Bankdaten angegeben haben).<br>
 					Von diesen Mitgliedern wird kein Beitrag eingezogen, da sie laut Stazung vom Beitrag befreit sind.
 					</p>
-					<form action="index.php" method="POST">
+					<form action="index.php#sepa_einzug_generieren" method="POST">
 						<button class="absenden" type="submit" name="studienbescheinigungen">Mitglieder mit Studienbescheinigung herunterladen</button>
 					</form>
 					<br>
@@ -232,7 +238,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<p>
 					Diese Funktionen erzeugt die Kontrolldatei, die alle Mitgliedsdaten von Mitgliedern enthält, von denen der Beitrag eingezogen werden soll.
 					</p>
-					<form action="index.php" method="POST">
+					<form action="index.php#sepa_einzug_generieren" method="POST">
 						<button class="absenden" type="submit" name="zahler">Zahler herunterladen</button>
 					</form>
 					<br>

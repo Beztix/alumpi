@@ -41,8 +41,7 @@ if(isset($_POST['rechte_aendern'])) {
 	}
 	
 	//DB-Verbindung erfolgreich
-	else {
-		
+	else {	
 		
 		//Neue Rechte in die Datenbank schreiben
 		$stmt = $mysqli->prepare("UPDATE vereinsmitglieder SET
@@ -55,10 +54,12 @@ if(isset($_POST['rechte_aendern'])) {
 		admin = ?
 		WHERE mid = ?");
 		$stmt->bind_param("iiiiiiii", $_POST['foerderer'], $_POST['mitglied'], $_POST['orga'], $_POST['kuratorium'], $_POST['finanzer'], $_POST['vorstand'], $_POST['admin'], $_POST['mid']);
-	
+		$stmt->execute();
+		$affected_rows = $stmt->affected_rows;
 
+		
 		//DB-Abfrage erfolgreich
-		if($stmt->execute()) {
+		if($affected_rows === 1) {
 			
 			//Erfolgsmeldung anzeigen
 			echo "<p class=\"green\">\n";
@@ -67,10 +68,16 @@ if(isset($_POST['rechte_aendern'])) {
 		}	
 		
 		//Fehler bei der DB-Abfrage
+		else if($affected_rows === 0) {
+			echo "<p class=\"error\">\n";
+			echo "Bei der Datenbank-Abfrage ist ein Fehler aufgetreten, es wurden keine Rechte gesetzt, überprüfen Sie bitte die eingegebene MID.<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "</p>\n";
+		}
 		else {
 			echo "<p class=\"error\">\n";
-			echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "Bei der Datenbank-Abfrage ist eine Fehler aufgetreten, möglicherweise wurden mehr als ein Datensatz verändert.<br>";
+			echo "Bitte nutzen Sie diese Funktion aktuell nicht mehr und kontaktieren Sie umgehend den Homepage-Verantwortlichen, siehe \"Kontakt\"!<br>";
 			echo "</p>\n";
 		}
 		

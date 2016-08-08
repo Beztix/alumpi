@@ -146,61 +146,64 @@ if(isset($_POST['emails_abrufen'])) {
 			echo "<p class=\"error\">\n";
 			echo "Es wurden keine zu extrahierenden E-Mail-Adressen ausgewählt.<br>";
 			echo "</p>\n"; 
-			exit;
 		}
 
-
-		//Parameter für den bind_param aufruf zusammenbauen (erster Parameter ist der param_string, weitere Pameter sind die zu bindenen Werte)
-		$param_array = $where_array;
-		array_unshift($param_array, $param_string);
 		
-
-		//Mitgliederdaten aus der Datenbank holen
-		$stmt = $mysqli->prepare($query_string);
-		//Rufe bind_param() auf dem Objekt stmt mit den Parametern aus dem param_array auf, verwende Hilfsfunktion um Übergabe als Reference zu realisieren
-		call_user_func_array(array(&$stmt, 'bind_param'), refValues($param_array));
-		$stmt->execute();
-		$result = $stmt->get_result();
-		
-		//DB-Abfrage erfolgreich
-		if($result) {
-			
-			//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file = '../../../generated_files/emailadressen.csv';
-			$output = fopen($file, 'w');
-
-			//Zeilen der Datenbankabfrage in CSV-Datei schreiben
-			while($recordObj = $result->fetch_assoc()) {
-				 fputcsv($output, $recordObj);
-			}
-			fclose($output);
-			
-			ob_end_clean();
-			
-			//Datei an User zum Download ausliefern
-			header('Content-Description: File Transfer');
-			header('Content-Type: application/octet-stream');
-			header('Content-Disposition: attachment; filename='.basename($file));
-			header('Content-Transfer-Encoding: binary');
-			header('Expires: 0');
-			header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
-			header('Pragma: public');
-			header('Content-Length: ' . filesize($file));
-			ob_end_clean();
-			flush();
-			readfile($file);
-			exit;
-			
-		}
-		
-		//Fehler bei der DB-Abfrage
 		else {
-			echo "<p class=\"error\">\n";
-			echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-			echo "<br>";
-			echo $mysqli->error;
-			echo "</p>\n";
+			
+			//Parameter für den bind_param aufruf zusammenbauen (erster Parameter ist der param_string, weitere Pameter sind die zu bindenen Werte)
+			$param_array = $where_array;
+			array_unshift($param_array, $param_string);
+			
+
+			//Mitgliederdaten aus der Datenbank holen
+			$stmt = $mysqli->prepare($query_string);
+			//Rufe bind_param() auf dem Objekt stmt mit den Parametern aus dem param_array auf, verwende Hilfsfunktion um Übergabe als Reference zu realisieren
+			call_user_func_array(array(&$stmt, 'bind_param'), refValues($param_array));
+			$stmt->execute();
+			$result = $stmt->get_result();
+			
+			//DB-Abfrage erfolgreich
+			if($result) {
+				
+				//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
+				$file = '../../../generated_files/emailadressen.csv';
+				$output = fopen($file, 'w');
+
+				//Zeilen der Datenbankabfrage in CSV-Datei schreiben
+				while($recordObj = $result->fetch_assoc()) {
+					 fputcsv($output, $recordObj);
+				}
+				fclose($output);
+				
+				ob_end_clean();
+				
+				//Datei an User zum Download ausliefern
+				header('Content-Description: File Transfer');
+				header('Content-Type: application/octet-stream');
+				header('Content-Disposition: attachment; filename='.basename($file));
+				header('Content-Transfer-Encoding: binary');
+				header('Expires: 0');
+				header('Cache-Control: must-revalidate, post-check=0, pre-check=0');
+				header('Pragma: public');
+				header('Content-Length: ' . filesize($file));
+				ob_end_clean();
+				flush();
+				readfile($file);
+				exit;
+				
+			}
+			
+			//Fehler bei der DB-Abfrage
+			else {
+				echo "<p class=\"error\">\n";
+				echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
+				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+				echo "<br>";
+				echo $mysqli->error;
+				echo "</p>\n";
+			}
+		
 		}
 		
 	}// eof DB-Verbindung erfolgreich

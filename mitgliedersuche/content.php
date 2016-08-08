@@ -30,7 +30,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 				<br>
 				
-				<form action="index.php" method="POST">
+				<a name="mitglied_suchen"></a>
+				<form action="index.php#mitglied_suchen" method="POST">
 					<table style="width:100%">
 						<colgroup>
 							<col style="width:30%;">
