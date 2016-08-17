@@ -17,6 +17,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="shortcut icon" href="../_images_layout/favicon.ico">
 
 <?php 
 // Einfügen der in der index.php definierten Variablen, ansonsten Standard-Titel, Keywords und Description
