@@ -119,7 +119,7 @@ Strukturelle Order beginnen jeweils mit einem Unterstrich und enthalten diversen
 
 Neben den Dateien und Ordnern im Hauptordner der Homepage wird zum Aufbau der Datenbankverbindung eine Datei "db_config.php" benötigt, die außerhalb
 des zugänglichen Webserver-Verzeichnisses liegt, um die dort enthaltenen Daten wie das DB-Passwort zu schützen.
-Diese muss vom Hauptordner aus unter dem Pfad "../../config_files/db_config.php" zu finden sein, also in einem separaten Ordner "config-files" liegen.
+Diese muss vom Hauptordner aus unter dem Pfad HOME_DIRECTORY . "config_files/db_config.php" zu finden sein, also in einem separaten Ordner "config-files" liegen.
 
 
 

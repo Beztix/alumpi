@@ -45,7 +45,7 @@ if(isset($_POST['anmeldungen_abrufen'])) {
 		if($result) {
 			
 			//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file = '../../../generated_files/anmeldungen_absolventenfeier.csv';
+			$file = HOME_DIRECTORY . 'generated_files/anmeldungen_absolventenfeier.csv';
 			$output = fopen($file, 'w');
 
 			//Zeilen der Datenbankabfrage in CSV-Datei schreiben
