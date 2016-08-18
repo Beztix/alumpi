@@ -15,7 +15,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 if(isset($_POST['inkorrekte_bankdaten'])) {
 
 	//Kontrolldatei für die inkorrekten Bankdaten (ausserhalb des öffentlichen www-verzeichnis!!)
-	$file_inkorrekt = '../../../generated_files/kontrollDatei_inkorrekteBankdaten.csv';
+	$file_inkorrekt = HOME_DIRECTORY . 'generated_files/kontrollDatei_inkorrekteBankdaten.csv';
 	
 	ob_end_clean();
 	//Datei an User zum Download ausliefern
@@ -41,7 +41,7 @@ if(isset($_POST['inkorrekte_bankdaten'])) {
 if(isset($_POST['neue_mitglieder'])) {
 
 	//Zu generierende Kontrolldatei für die Mitglieder aus dem aktuellen Jahr (ausserhalb des öffentlichen www-verzeichnis!!)
-	$file_newMembers = '../../../generated_files/kontrollDatei_neueMitglieder.csv';
+	$file_newMembers = HOME_DIRECTORY . 'generated_files/kontrollDatei_neueMitglieder.csv';
 	
 	ob_end_clean();
 	//Datei an User zum Download ausliefern
@@ -67,7 +67,7 @@ if(isset($_POST['neue_mitglieder'])) {
 if(isset($_POST['studienbescheinigungen'])) {
 	
 	//Zu generierende Kontrolldatei für die Mitglieder aus den Vorjahren, die eine Studentenbescheinigung eingereicht haben (ausserhalb des öffentlichen www-verzeichnis!!)
-	$file_students = '../../../generated_files/kontrollDatei_studenten.csv';
+	$file_students = HOME_DIRECTORY . 'generated_files/kontrollDatei_studenten.csv';
 
 	ob_end_clean();
 	//Datei an User zum Download ausliefern
@@ -95,7 +95,7 @@ if(isset($_POST['studienbescheinigungen'])) {
 if(isset($_POST['zahler'])) {
 
 	//Zu generierende Kontrolldatei für die Mitglieder von denen eingezogen wird (ausserhalb des öffentlichen www-verzeichnis!!)
-	$file_payment = '../../../generated_files/kontrollDatei_zahler.csv';
+	$file_payment = HOME_DIRECTORY . 'generated_files/kontrollDatei_zahler.csv';
 			
 	ob_end_clean();		
 	//Datei an User zum Download ausliefern

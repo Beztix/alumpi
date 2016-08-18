@@ -16,7 +16,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 				//Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-				include '../../../config-files/db_config.php';
+				include_once HOME_DIRECTORY . 'config-files/db_config.php';
 
 				
 				//Formulardaten angekommen
@@ -61,9 +61,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						//DB-Verbindung erfolgreich
 						else {
 							
-							/*
+							
 							echo "Datenbankverbindung erfolgreich!<br>";
-							*/
+							
 							
 							//Email-Adresse und zugehöriges (gehashtes) Passwort aus der Datenbank holen
 							//Verwendung von prepared statements zur Vermeidung von SQL-Injection

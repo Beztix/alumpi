@@ -13,7 +13,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-include_once '../../../config-files/db_config.php';
+include_once HOME_DIRECTORY . 'config-files/db_config.php';
 
 //Einbinden der PHP-Datei zum Verschicken der Bestätigungs-Emails
 include_once '../_includes_functionality/send_email.php';

@@ -16,7 +16,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-include_once '../../../config-files/db_config.php';
+include_once HOME_DIRECTORY . 'config-files/db_config.php';
 
 //Einbinden der PHP-Datei zur Validierung der Eingaben
 include 'formValidation_memberdataForm.php';

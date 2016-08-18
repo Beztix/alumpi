@@ -9,7 +9,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-include_once '../../../config-files/db_config.php';
+include_once HOME_DIRECTORY . 'config-files/db_config.php';
 
 // Einbinden der PHP-Datei mit allgemeinen Validierungs-Funktionen
 include_once '../_includes_functionality/global_formValidation.php';
@@ -56,19 +56,19 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 			//=========================
 			
 			//Zu generierende Kontrolldatei für die inkorrekten Bankdaten (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file_inkorrekt = '../../../generated_files/kontrollDatei_inkorrekteBankdaten.csv';
+			$file_inkorrekt = HOME_DIRECTORY . 'generated_files/kontrollDatei_inkorrekteBankdaten.csv';
 			$output_inkorrekt = fopen($file_inkorrekt, 'w');
 			
 			//Zu generierende Kontrolldatei für die Mitglieder aus dem aktuellen Jahr (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file_newMembers = '../../../generated_files/kontrollDatei_neueMitglieder.csv';
+			$file_newMembers = HOME_DIRECTORY . 'generated_files/kontrollDatei_neueMitglieder.csv';
 			$output_newMembers = fopen($file_newMembers, 'w');
 			
 			//Zu generierende Kontrolldatei für die Mitglieder aus den Vorjahren, die eine Studentenbescheinigung eingereicht haben (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file_students = '../../../generated_files/kontrollDatei_studenten.csv';
+			$file_students = HOME_DIRECTORY . 'generated_files/kontrollDatei_studenten.csv';
 			$output_students = fopen($file_students, 'w');
 			
 			//Zu generierende Kontrolldatei für die Mitglieder von denen eingezogen wird (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file_payment = '../../../generated_files/kontrollDatei_zahler.csv';
+			$file_payment = HOME_DIRECTORY . 'generated_files/kontrollDatei_zahler.csv';
 			$output_payment = fopen($file_payment, 'w');
 			
 			
@@ -79,7 +79,7 @@ if(isset($_POST['sepa_einzug_generieren'])) {
 			//=========================
 			
 			//Zu generierende XML-Datei (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file = '../../../generated_files/sepa_lastschriften_mitgliedsbeitraege.xml';
+			$file = HOME_DIRECTORY . 'generated_files/sepa_lastschriften_mitgliedsbeitraege.xml';
 			
 			//Erzeugen einer neuen Instanz des SEPA-XML-Creators
 			$creator = new SepaXmlCreator();

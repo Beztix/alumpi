@@ -9,7 +9,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 //Einbinden der Konfigurationsdatei (Passwort etc. für die Datenbank)
-include_once '../../../config-files/db_config.php';
+include_once HOME_DIRECTORY . 'config-files/db_config.php';
 
 
 
@@ -51,7 +51,7 @@ if(isset($_POST['fehlende_studentennachweise_abrufen'])) {
 		if($result) {
 			
 			//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
-			$file = '../../../generated_files/emailadressen_studentennachweisFehlt.csv';
+			$file = HOME_DIRECTORY . 'generated_files/emailadressen_studentennachweisFehlt.csv';
 			$output = fopen($file, 'w');
 
 			//Zeilen der Datenbankabfrage in CSV-Datei schreiben

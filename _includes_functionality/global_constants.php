@@ -12,6 +12,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 
+	//Diese Variable definiert das Home-Verzeichnis, das außerhalb des öffentlich zugänglichen Webspaces liegen soll!
+	//In diesem müssen sich die Ordner 'generated_files' und 'config-files' mit den zugehörigen Dateien befinden.
+	const HOME_DIRECTORY = '/home/alumpi/';
+
+
+
 	//Diese Variable definiert, wie die Informationen zur Absolventenfeier auf der Homepage dargestellt werden
 	//False: Es werden allgemeine Infos über die Absolventenfeier genannt
 	//True: Es werden die konkreten Infos aus den nachfolgenden Variablen auf der Homepage dargestellt
