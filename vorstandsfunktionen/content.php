@@ -237,9 +237,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<a name="mitglied_loeschen"></a>
 				<h2>Mitglied aus der Datenbank löschen</h2>
 				<p>
-				Diese Funktion entfernt ein Mitglied aus der Datenbank, dies is im Falle eines Austritts aus dem Verein durchzuführen.
+				Diese Funktion entfernt ein Mitglied aus der Datenbank, dies ist im Falle eines Austritts aus dem Verein durchzuführen.
 				Zur Sicherheit muss neben der MID auch der Nachname eingegeben werden.<br>
-				Achtung: Es werden ALLE Daten dieses Mitglieds gelöscht, dies kann nicht rückgängig gemacht werden!
+				Achtung: Es werden ALLE Daten dieses Mitglieds gelöscht, dies kann nicht rückgängig gemacht werden!<br>
+				<br>
+				Es wird keine automatische Bestätigungs-Email geschickt, bitte informieren Sie das Mitglied über die erfolgte Verarbeitung
+				des Austritts.
 				</p>
 				
 				<form action="index.php#mitglied_loeschen" method="POST" onsubmit="return confirm('Soll dieses Mitglied wirklich endgültig aus der Datenbank gelöscht werden?');">
