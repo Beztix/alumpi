@@ -18,7 +18,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			<img src="../_images_layout/logo-university-of-bayreuth.png" alt="Logo of the University of Bayreuth">
 		</a>
 		
-		<a href="http://www.alumpi.uni-bayreuth.de" id="logo_right" title="AluMPI">
+		<a href="https://www.alumpi.de" id="logo_right" title="AluMPI">
 			<img src="../_images_layout/logo_neu_klein.png" alt="Logo of AluMPI">
 		</a>
 		

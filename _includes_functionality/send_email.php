@@ -20,7 +20,7 @@ Hallo " . $titleAndName . ",
 die E-Mail-Adresse dieses Accounts wurde bei der Anmeldung zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. angegeben. 
 Wollen Sie Mitglied dieses Vereins werden und bestätigen die Richtigkeit der angegebenen Daten, so klicken Sie bitte auf folgenden Link:
 
-" . 'http://alumpi.uni-bayreuth.de/email_verifikation/index.php?email=' .$toEmail. '&verificationCode='. $verificationCode ."
+" . 'https://alumpi.de/email_verifikation/index.php?email=' .$toEmail. '&verificationCode='. $verificationCode ."
 
 
 Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
@@ -52,14 +52,14 @@ Gebäude NWII
 95440 Bayreuth
 
 alumpi@uni-bayreuth.de
-www.alumpi.uni-bayreuth.de
+www.alumpi.de
 ";
 
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
-	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "From: noreply@alumpi.de";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
 	
@@ -113,7 +113,7 @@ Prüfen Sie ob das Mitglied in der Datenbank bestätigt wurde!
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
-	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "From: noreply@alumpi.de";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 	
 	//Mail abschicken
@@ -146,7 +146,7 @@ Hallo,
 die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort für die Webseite Absolventen- und Fördervereins MPI Uni Bayreuth e.V. zurückzusetzen.
 Falls Sie ihr Passwort zurücksetzen möchten, so klicken Sie bitte auf folgenden Link:
 
-" . 'http://alumpi.uni-bayreuth.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&resetCode='. $resetCode ."
+" . 'https://alumpi.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&resetCode='. $resetCode ."
 
 
 Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
@@ -165,14 +165,14 @@ Gebäude NWII
 95440 Bayreuth
 
 alumpi@uni-bayreuth.de
-www.alumpi.uni-bayreuth.de
+www.alumpi.de
 ";
 
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
-	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "From: noreply@alumpi.de";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
 
@@ -205,7 +205,7 @@ function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_de
 Hallo " . $titleAndName . ",
 
 vielen Dank für ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " als aktueller Absolvent. 
-Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://alumpi.uni-bayreuth.de/anmeldung_feier_absolvent/index.php einsehen.
+Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://alumpi.de/anmeldung_feier_absolvent/index.php einsehen.
 
 Sie haben zusätzlich " . $anzahl_gaeste . " Gäste mit angemeldet. 
 Bitte überweisen Sie den Betrag von insgesamt " . $gesamtpreis . " € bis spätestens 7 Tage vor der Feier auf das Konto des Absolventenvereins.
@@ -232,14 +232,14 @@ Gebäude NWII
 95440 Bayreuth
 
 alumpi@uni-bayreuth.de
-www.alumpi.uni-bayreuth.de
+www.alumpi.de
 ";
 
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
-	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "From: noreply@alumpi.de";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
 
@@ -296,14 +296,14 @@ Gebäude NWII
 95440 Bayreuth
 
 alumpi@uni-bayreuth.de
-www.alumpi.uni-bayreuth.de
+www.alumpi.de
 ";
 
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
 	$headers[] = "Content-type: text/plain; charset=utf-8";
-	$headers[] = "From: noreply@alumpi.uni-bayreuth.de";
+	$headers[] = "From: noreply@alumpi.de";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
 
