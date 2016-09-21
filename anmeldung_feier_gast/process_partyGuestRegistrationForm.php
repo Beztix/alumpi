@@ -19,7 +19,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				include 'formValidation_partyGuestRegistrationForm.php';
 
 				//Einbinden der PHP-Datei zum Verschicken der Emails
-				include '../_includes_functionality/send_email.php';
+				include 'send_partyGuestRegistrationEmail.php';
 
 				//Formulardaten angekommen
 				if(!empty($_POST)) {

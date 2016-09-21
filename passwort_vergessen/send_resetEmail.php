@@ -4,7 +4,7 @@
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
-require_once 'phpmailer/PHPMailerAutoload.php';
+require_once '../_includes_functionality/phpmailer/PHPMailerAutoload.php';
 
 
 function send_passwordReset_email($toEmail, $resetCode) {
@@ -21,7 +21,7 @@ function send_passwordReset_email($toEmail, $resetCode) {
 	$mail->addReplyTo('alumpi@uni-bayreuth.de', 'aluMPI');
 	
 	//Betreff der Email
-	$mail->Subject = 'AluMPI | Zurücksetzen des Passworts TEST TEST TEST';
+	$mail->Subject = 'AluMPI | Zurücksetzen des Passworts';
 	
 
 	//Inhalt der Email
@@ -53,17 +53,12 @@ alumpi@uni-bayreuth.de
 www.alumpi.de
 ";
 
-echo 'trying to send mail<br>';
 
-if(!$mail->send()) {
-	echo 'error<br>';
-    echo 'Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
-	return false;
-} 
-else {
-    echo 'Message has been sent';
-	return true;
+	if(!$mail->send()) {
+		return false;
+	} 
+	else {
+		return true;
 }
 
 }
