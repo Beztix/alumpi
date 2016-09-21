@@ -19,7 +19,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				include_once HOME_DIRECTORY . 'config-files/db_config.php';
 				
 				//Einbinden der PHP-Datei zum Verschicken der Emails
-				include '../_includes_functionality/send_email.php';
+				include '../_includes_functionality/send_phpmailer_email.php';
 
 				
 				//Formulardaten angekommen

@@ -138,6 +138,10 @@ function send_passwordReset_email($toEmail, $resetCode) {
 	//Betreff der Email
 	$subject = 'AluMPI | Zurücksetzen des Passworts';
 	
+	//Betreff kodieren
+	$preferences = ["input-charset" => "UTF-8", "output-charset" => "UTF-8"];
+	$encoded_subject = iconv_mime_encode("Subject", $subject, $preferences);
+	
 	
 	//Inhalt der Email
 	$message = "
@@ -167,17 +171,21 @@ Gebäude NWII
 alumpi@uni-bayreuth.de
 www.alumpi.de
 ";
+	//Inhalt kodieren
+	$message = quoted_printable_encode($message);
 
+	
 	//Header-Informationen	
 	$headers   = array();
 	$headers[] = "MIME-Version: 1.0";
-	$headers[] = "Content-type: text/plain; charset=utf-8";
+	$headers[] = "Content-Transfer-Encoding: quoted-printable";
+	$headers[] = "Content-type: text/plain;charset=utf-8";
 	$headers[] = "From: noreply@alumpi.de";
 	$headers[] = "X-Mailer: PHP/".phpversion();
 
 
 	//Mail abschicken
-	if(mail($toEmail, $subject, $message, implode("\r\n",$headers), '-f alumpi@uni-bayreuth.de')) {
+	if(mail($toEmail, $encoded_subject, $message, implode("\r\n",$headers), '-f alumpi@uni-bayreuth.de')) {
 		return TRUE;
 	} 
 	else {
