@@ -11,7 +11,9 @@ function send_passwordReset_email($toEmail, $resetCode) {
 	
 	$mail = new PHPMailer;
 	
-	//Empfänger
+	$mail->CharSet = 'UTF-8';
+	
+	//EmpfÃ¤nger
 	$mail->addAddress($toEmail);  
 	
 	//Absender
@@ -19,32 +21,32 @@ function send_passwordReset_email($toEmail, $resetCode) {
 	$mail->addReplyTo('alumpi@uni-bayreuth.de', 'aluMPI');
 	
 	//Betreff der Email
-	$mail->Subject = 'AluMPI | Zurücksetzen des Passworts TEST TEST TEST';
+	$mail->Subject = 'AluMPI | ZurÃ¼cksetzen des Passworts TEST TEST TEST';
 	
 
 	//Inhalt der Email
 	$mail->Body    =  "
 Hallo,
 
-die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort für die Webseite Absolventen- und Fördervereins MPI Uni Bayreuth e.V. zurückzusetzen.
-Falls Sie ihr Passwort zurücksetzen möchten, so klicken Sie bitte auf folgenden Link:
+die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort fÃ¼r die Webseite Absolventen- und FÃ¶rdervereins MPI Uni Bayreuth e.V. zurÃ¼ckzusetzen.
+Falls Sie ihr Passwort zurÃ¼cksetzen mÃ¶chten, so klicken Sie bitte auf folgenden Link:
 
 " . 'https://alumpi.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&resetCode='. $resetCode ."
 
 
-Wenn es Ihnen nicht möglich ist, den angezeigten Link anzuwählen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drücken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestätigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
+Wenn es Ihnen nicht mÃ¶glich ist, den angezeigten Link anzuwÃ¤hlen, kopieren Sie ihn bitte in die Adressleiste Ihres Browsers und drÃ¼cken Sie \"Enter\". Erhalten Sie bei Klicken des Links oder auch nach Kopieren des Links keine bestÃ¤tigende Seite, wenden Sie sich bitte an alumpi@uni-bayreuth.de
 
 
-Wurde Ihre E-Mail-Adresse fälschlicherweise angegeben, so schreiben Sie bitte eine kurze E-Mail an alumpi@uni-bayreuth.de .
+Wurde Ihre E-Mail-Adresse fÃ¤lschlicherweise angegeben, so schreiben Sie bitte eine kurze E-Mail an alumpi@uni-bayreuth.de .
 
 
-Viele Grüße,
+Viele GrÃ¼ÃŸe,
 Ihr Vorstand von AluMPI
 
 _________________________________________
-Absolventen- und Förderverein MPI Uni Bayreuth e.V.
+Absolventen- und FÃ¶rderverein MPI Uni Bayreuth e.V.
 Postfach AluMPI
-Gebäude NWII
+GebÃ¤ude NWII
 95440 Bayreuth
 
 alumpi@uni-bayreuth.de
