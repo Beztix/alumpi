@@ -23,11 +23,11 @@ function send_notificationEmail_memberRegistration($userEmail, $titleAndName, $s
 	$mail->addReplyTo('alumpi@uni-bayreuth.de', 'aluMPI');
 	
 	//Betreff der Email
-	$subject = 'Neue Registrierung bei AluMPI';
+	$mail->Subject = 'Neue Registrierung bei AluMPI';
 	
 
 	//Inhalt der Email
-	$message = "
+	$message =  "
 Hallo,
 
 " . $titleAndName . " hat sich soeben auf der Webseite zum Verein angemeldet.
@@ -44,6 +44,8 @@ Das neue Mitglied hat angegeben Student zu sein. Sollte in der nächsten Woche k
 	$message = $message . "	  
 Prüfen Sie ob das Mitglied in der Datenbank bestätigt wurde!
 ";
+
+	$mail->Body = $message;
 
 
 	if(!$mail->send()) {

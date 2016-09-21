@@ -25,10 +25,10 @@ function send_passwordReset_email($toEmail, $resetCode) {
 	
 
 	//Inhalt der Email
-	$mail->Body    =  "
+	$message =  "
 Hallo,
 
-die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort für die Webseite Absolventen- und Fördervereins MPI Uni Bayreuth e.V. zurückzusetzen.
+die E-Mail-Adresse dieses Accounts wurde angegeben, um das Passwort für die Webseite des Absolventen- und Fördervereins MPI Uni Bayreuth e.V. zurückzusetzen.
 Falls Sie ihr Passwort zurücksetzen möchten, so klicken Sie bitte auf folgenden Link:
 
 " . 'https://alumpi.de/passwort_zuruecksetzen/index.php?email=' .$toEmail. '&resetCode='. $resetCode ."
@@ -53,7 +53,9 @@ alumpi@uni-bayreuth.de
 www.alumpi.de
 ";
 
+	$mail->Body = $message;
 
+	
 	if(!$mail->send()) {
 		return false;
 	} 

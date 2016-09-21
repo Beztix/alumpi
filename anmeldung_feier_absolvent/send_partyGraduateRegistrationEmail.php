@@ -20,11 +20,11 @@ function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_de
 	$mail->addReplyTo('alumpi@uni-bayreuth.de', 'aluMPI');
 	
 	//Betreff der Email
-	$subject = 'Ihre Anmeldung zur Absoventenfeier';
+	$mail->Subject = 'Ihre Anmeldung zur Absoventenfeier';
 	
 
 	//Inhalt der Email
-	$message = "
+	$message =  "
 Hallo " . $titleAndName . ",
 
 vielen Dank für ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " als aktueller Absolvent. 
@@ -57,6 +57,8 @@ Gebäude NWII
 alumpi@uni-bayreuth.de
 www.alumpi.de
 ";
+
+	$mail->Body = $message;
 
 
 	if(!$mail->send()) {

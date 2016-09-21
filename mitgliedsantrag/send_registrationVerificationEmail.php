@@ -21,11 +21,11 @@ function send_verificationEmail_memberRegistration($toEmail, $titleAndName, $ver
 	$mail->addReplyTo('alumpi@uni-bayreuth.de', 'aluMPI');
 	
 	//Betreff der Email
-	$subject = 'Registrierung bei AluMPI | Bestätigung des Accounts';
+	$mail->Subject = 'Registrierung bei AluMPI | Bestätigung des Accounts';
 	
 
 	//Inhalt der Email
-	$message = "
+	$message =  "
 Hallo " . $titleAndName . ",
 
 die E-Mail-Adresse dieses Accounts wurde bei der Anmeldung zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. angegeben. 
@@ -66,8 +66,12 @@ alumpi@uni-bayreuth.de
 www.alumpi.de
 ";
 
+	$mail->Body = $message;
+	
+
 
 	if(!$mail->send()) {
+		echo 'Mailer Error: ' . $mail->ErrorInfo;
 		return false;
 	} 
 	else {
