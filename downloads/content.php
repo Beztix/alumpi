@@ -5,13 +5,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 		<section id="content">
 		
-		
+	
+	
+	
 			<section class="top_image">
 				<img src="../_images_content/banner_daten.jpg" alt="Kalenderdaten">
 			</section>
 		
 		
-	
 		
             <section class="text">
 	
@@ -30,7 +31,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 				
 				<form action="index.php#mitgliedsbescheinigung" method="POST">
-					<button class="absenden" type="submit" name="mitgliedsbescheinigung">Mitgliedsbescheinigung herunterladen</button>
+					<button class="absenden" type="submit" name="mitgliedsbescheinigung">Mitgliedsbescheinigung generieren</button>
 				</form>
 				<br>
 				<br>

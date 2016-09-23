@@ -4,6 +4,7 @@
 // 
 //======================================================================
 
+
 //Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
@@ -13,6 +14,7 @@ include_once HOME_DIRECTORY . 'config-files/db_config.php';
 
 include_once 'generate_mitgliedsbescheinigung.php';
 
+
 //Array für die abgerufenen Daten in DB-Originalform
 $data_db;
 
@@ -20,6 +22,7 @@ $data_db;
 //===================================================
 //      Mitgliedsdaten abrufen
 //===================================================
+
 
 
 //Formulardaten angekommen
@@ -78,6 +81,7 @@ if(isset($_POST['mitgliedsbescheinigung'])) {
 			$jahr = date("Y");
 			$vorstand = ERSTER_VORSTAND;
 			$datum = date("d.m.Y");
+			
 			
 			generate_mitgliedsbescheinigung($titleAndName, $strasse, $plz, $ort, $land, $jahr, $vorstand, $datum);
 			

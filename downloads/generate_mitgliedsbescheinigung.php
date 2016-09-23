@@ -20,7 +20,7 @@ function generate_mitgliedsbescheinigung($titleAndName, $strasse, $plz, $ort, $l
 	// add a page
 	$pdf->AddPage();
 	// set the source file
-	$pdf->setSourceFile('Mitgliedsbestaetigung_blank.pdf');
+	$pdf->setSourceFile(HOME_DIRECTORY . 'alumpiHP_libraries/Mitgliedsbestaetigung_blank.pdf');
 	// import page 1
 	$tplIdx = $pdf->importPage(1);
 	// use the imported page and place it at position 0,0 with a width of 210 mm (full page)
@@ -71,15 +71,16 @@ function generate_mitgliedsbescheinigung($titleAndName, $strasse, $plz, $ort, $l
 
 
 	// add signature
-	$pdf->Image('unterschrift_krinninger.png', 20, 155, 50);
+	$pdf->Image(HOME_DIRECTORY . 'alumpiHP_libraries/unterschrift_krinninger.png', 20, 155, 50);
 
 
 	// add place and date
 	$dateString = "Bayreuth, " . $datum;
 	$pdf->SetXY(20, 180);
 	$pdf->Multicell(170,6,$dateString);
-
-
+	
+	ob_clean();
+	
 	$pdf->Output();
 }
 
