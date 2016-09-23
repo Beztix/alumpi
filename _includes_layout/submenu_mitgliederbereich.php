@@ -25,6 +25,9 @@ include_once '../_includes_functionality/calculateAccessPermissions.php';
 	<li>
 		<a <?php if ($thisPage=="datenabfrage") {echo " class=\"currentpage\"";} ?> href="../datenabfrage/index.php">Datenabfrage</a>
 	</li>
+	<li>
+		<a <?php if ($thisPage=="downloads") {echo " class=\"currentpage\"";} ?> href="../downloads/index.php">Downloads</a>
+	</li>
 	
 <?php
 //Menuepunkte nur anzeigen, wenn angemeldeter Nutzer passende Zugriffsrechte hat
