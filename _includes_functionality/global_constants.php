@@ -17,6 +17,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	const HOME_DIRECTORY = '/home/alumpi/';
 
 
+	
+	const ERSTER_VORSTAND = 'Philip Krinninger';
+	
 
 	//Diese Variable definiert, wie die Informationen zur Absolventenfeier auf der Homepage dargestellt werden
 	//False: Es werden allgemeine Infos über die Absolventenfeier genannt
