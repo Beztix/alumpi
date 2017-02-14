@@ -18,7 +18,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 	
-	const ERSTER_VORSTAND = 'Philip Krinninger';
+	const ERSTER_VORSTAND = 'Armin Kögel';
 	
 
 	//Diese Variable definiert, wie die Informationen zur Absolventenfeier auf der Homepage dargestellt werden
