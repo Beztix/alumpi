@@ -31,7 +31,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 				
 				<form action="index.php#mitgliedsbescheinigung" method="POST">
-					<button class="absenden" type="submit" name="mitgliedsbescheinigung">Mitgliedsbescheinigung generieren</button>
+					<button class="absenden" type="submit" name="mitgliedsbescheinigung">Mitgliedsbescheinigung herunterladen</button>
 				</form>
 				<br>
 				<br>
