@@ -21,6 +21,26 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				
 				
+				
+				<article class="news">
+					<h2>NWalumni Absolventenbrief 2017/1</h2>
+					
+					<a href="../_pdfs/NW-Alumni_Newsletter_2017-01__WEB.pdf">
+						<img class="absolventenbrief" src="../_images_content/nwalumni_17_1_klein.jpg" alt="NWalumni Absolventenbrief 2017/1">
+					</a>
+					
+					<p>
+					Der gemeinsame Absolventenbrief von AluMPI, BCG Alumni und CSG.<br>
+					Dieses Mal u.a. mit Neuigkeiten rund um die Jahreshauptversammlung des Vereins inkl. Neuwahl des Vorstands, 
+					sowie mehreren Artikeln rund um die Physik an der Universität Bayreuth, sowohl zur Forschung als auch zur Lehre.<br>
+					<br>
+					<a href="../_pdfs/NW-Alumni_Newsletter_2017-01__WEB.pdf">Absolventenbrief 2017/1</a>
+					</p>
+					<br style="clear:both">
+				</article>
+				
+				
+				
 				<article class="news">
 					<h2>NWalumni Absolventenbrief 2016/1</h2>
 					
