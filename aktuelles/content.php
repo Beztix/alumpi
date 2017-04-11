@@ -21,6 +21,77 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				
 				
+				<article class="news">
+					<h2>Jahreshauptversammlung 2017</h2>
+					
+					<p>
+					Die Jahreshauptversammlung fand am 29. Januar 2017 im Restaurant Quetschn in Bayreuth statt. Über folgende Punkte 
+					würden wir Sie gerne informieren:<br>
+					<br>
+					<br>
+					1) Absolvententreffen und Berufsinformationsveranstaltung<br>
+					Für das kommende Sommersemester planen wir eine Informationsveranstaltung
+					zur Berufsorientierung für die Studenten unserer Fakultät. Dies soll im
+					Rahmen einer kleinen Vortragsrunde berufstätiger Absolventen stattfinden,
+					in dem Mathematiker, Physiker und Informatiker aus den verschiedensten
+					Berufsrichtungen in fünf bis zehn Minuten über ihre Erfahrungen berichten
+					können. Wir freuen uns, dass wir mit über 200 Mitgliedern auf einen großen
+					Pool von erfolgreichen Absolventen zurückgreifen können. Diese
+					Veranstaltung möchten wir gerne mit einem geselligen Absolvententreffen
+					der aluMPI-Mitglieder verbinden. Eine wunderbare Gelegenheit, einmal
+					wieder die Uni Bayreuth zu besuchen, sie vielleicht Freunden oder Familie
+					zu zeigen und sich mit ehemaligen Kommilitonen, aber auch aktuellen
+					Studenten auszutauschen.<br>
+					Nähere Informationen folgen in Kürze.<br>
+					<br>
+					2) Änderung der Beitragssatzung<br>
+					Die Beitragssatzung wurde unter anderem in den Punkten Einzugsdatum und
+					Befreiung von Mitgliedsbeiträgen aktualisiert. Die Beiträge werden nun
+					jährlich am 1. März eingezogen, bis dahin können
+					Immatrikulationsbescheinigungen eingereicht werden. Aus
+					Terminschwierigkeiten wird dies in diesem Jahr jedoch zwei bis drei Wochen
+					verspätet stattfinden. Die Höhe der Beiträge bleibt unverändert.<br>
+					<br>
+					3) Absolventenfeier<br>
+					Die Absolventenfeier 2017 findet am 17. Juni im NW2 statt, Ausweichtermin
+					ist der 24. Juni.  Natürlich sind alle Mitglieder des Vereins sehr
+					herzlich eingeladen, an der Feier teilzunehmen. Die Ehrung der Absolventen
+					im Hörsaal mit einem Festvortrag aus der Informatik ist öffentlich und
+					ohne Eintritt. Auch würden wir uns freuen, Sie beim anschließenden Buffet
+					als Gäste begrüßen zu dürfen, hierzu ist jedoch eine Anmeldung
+					erforderlich und ein Unkostenbeitrag von 25 Euro zu entrichten. Alle
+					weiteren Informationen zur Feier und zur Anmeldung finden Sie zu gegebener
+					Zeit auf der Homepage unter
+					<a href="http://alumpi.de/absolventenfeier/">http://alumpi.de/absolventenfeier/</a>.<br>
+					Wir freuen uns auf Ihr Kommen!<br>
+					<br>
+					4) Aktualisierung der Mitgliedsdaten<br>
+					In den nächsten Wochen findet der Einzug der Mitgliedsbeiträge für das
+					Jahr 2017 statt, sowie der Versand des neuen Absolventenbriefs! Wir bitten
+					daher alle Mitglieder, ihre persönlichen Daten im Mitgliederbereich der
+					Homepage (<a href="https://alumpi.de/mitgliederbereich">https://alumpi.de/mitgliederbereich</a> -> Datenabfrage) zu
+					überprüfen und ggf. zu aktualisieren. Bitte denken Sie auch daran, uns
+					eine aktuelle Studienbescheinigung an alumpi@uni-bayreuth.de zukommen zu
+					lassen, falls Sie noch Student und damit beitragsbefreites Mitglied sind.<br>
+					<br>
+					5) Wechsel in der Vorstandschaft<br>
+					Nach zwei Jahren als 1. und 2. Vorsitzender schieden Philip Krinninger und
+					Tino Franz aus dem Vorstand aus. Für ihr Engagement möchten wir uns
+					herzlich bedanken. Auf der Jahreshauptversammlung wurden Armin Kögel und
+					Bianca Bauer als Nachfolger gewählt, wodurch sich die Vorstandschaft 2017
+					folgendermaßen zusammensetzt:<br>
+					<br>
+					1. Vorsitzender:<br>
+					Armin Kögel, Masterstudent Physik<br>
+					2. Vorsitzende:<br>
+					Bianca Bauer, Masterstudentin Mathematik<br>
+					Schatzmeister:<br>
+					Dorian Rohner, M.Sc. Computer Science<br>
+					</p>
+				</article>
+				
+				
+				
 				
 				<article class="news">
 					<h2>NWalumni Absolventenbrief 2017/1</h2>
