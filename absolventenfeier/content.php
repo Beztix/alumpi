@@ -17,15 +17,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				if(ABSOLVENTENFEIER_INFO_AKTIV) {
 					
 					//<!-- thumbnail image wrapped in a link -->
-					echo "<a href=\"#absolventenfeier16plakat\">\n";
+					echo "<a href=\"#absolventenfeier17plakat\">\n";
 					echo 	"<div class=\"right_img_container\">\n";
-					echo 		"<img src=\"../_images_content/absolventenfeier2016_plakat_klein.jpg\" alt=\"Plakat Absolventenfeier\" style=\"width:350px;\">\n";
+					echo 		"<img src=\"../_images_content/absolventenfeier2017_plakat_klein.jpg\" alt=\"Plakat Absolventenfeier\" style=\"width:350px;\">\n";
 					echo 	"</div>\n";
 					echo "</a>\n";
 					
 					//<!-- lightbox container hidden with CSS -->
-					echo "<a href=\"#_\" class=\"lightbox\" id=\"absolventenfeier16plakat\">\n";
-					echo 	"<img src=\"../_images_content/absolventenfeier2016_plakat_mittel.jpg\" alt=\"Plakat Absolventenfeier 2016\">\n";
+					echo "<a href=\"#_\" class=\"lightbox\" id=\"absolventenfeier17plakat\">\n";
+					echo 	"<img src=\"../_images_content/absolventenfeier2017_plakat_mittel.jpg\" alt=\"Plakat Absolventenfeier 2017\">\n";
 					echo "</a>\n";
 					
 				}
