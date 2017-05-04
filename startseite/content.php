@@ -23,26 +23,45 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Zusätzlich will der Verein als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren.<br>
 				Als Vereinsmitglieds bieten sich zusätzliche Vorteile, so ist es möglich, weiterhin am Unisport teilzunehmen. 
 				Darüber hinaus bekommen Sie auf Wunsch den regelmäßig erscheinenden Newsletter der Universität Bayreuth und darin Informationen zu Alumniveranstaltungen.<br>
-				<br>
-				Um den Studierenden einen Einblick ins Berufsleben zu geben, suchen wir stets interessierte Absolventen, die an der Universität aus ihrem Arbeitsalltag berichten und mit den Studenten ins Gespräch kommen. 
-				Diese Treffen finden meist im Rahmen größerer Absolvententreffen statt, bei denen Sie vielleicht auch Ihre Kommilitonen und Dozenten wieder antreffen.<br>
-				<br>
-				<br>
-				Wir freuen uns auf Sie!<br>
-				<br>
-				<br>
-				Weitere Informationen erteilt Ihnen gerne der Absolventen- und Förderverein MPI Universtität Bayreuth e.V. unter <br>
-				<br>
-				Postfach aluMPI<br>
-				Gebäude NWII<br>
-				95440 Bayreuth<br>
-				<a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a><br>
-				</p>			
-				
+				</p>
+
+				<h2>Unsere aktuellen Projekte:</h2>
+				<div class="news-boxen-container">
+					<div class="news-box">
+						<h3>Absolventenfeier</h3>
+						Bei der jährlich stattfindenden Veranstaltung geben wir den frisch gebackenen Absolventen
+						(Bachelor, Master, Staatsexamen, Promotion) die Möglichkeit,
+						den erreichten Abschluss in einem gebührenden Rahmen mit Eltern,
+						Kommilitonen und Freunden zu feiern.
+					</div>
+					<div class="news-box">
+						<h3>Berufsorientierung</h3>
+						Um den Studierenden einen Ausblick auf mögliche Werdegänge nach dem Abschluss zu geben,
+						stellen berufstätige Absolventen ihre persönlichen Erfahrungen vor.
+						Des Weiteren wird die Möglichkeit geboten, in gemütlicher Atmosphäre weitere
+						Details zu erfragen.
+					</div>
+					<div class="news-box">
+						<h3>Ehemaligentreffen</h3>
+						Um den Kontakt der Absolventen untereinander und mit der Universität aufrechtzuerhalten,
+						wird diesen Sommer erstmals ein Treffen für alle bisherigen Absolventen stattfinden.
+						Dabei haben diese die Möglichkeit, Familie und Freunden die Universität und die Stadt Bayreuth
+						zu zeigen, ehemalige Kommilitonen zu treffen oder ihre alten Lehrstühle zu besuchen.
+					</div>
+					<div class="news-box">
+						<h3>Exkursionen</h3>
+						In Kooperation mit der Fachschaft Mathe/Physik/Informatik werden verschiedene Ausflüge für
+						Studierende der Fakultät zu Museen, Forschungseinrichtungen, Firmen etc. (Ideen sind erwünscht)
+						geplant bzw. gefördert.
+					</div>
+				</div>
+
+				<div>
+					<h2>Interesse?</h2>
+					Hast Du gute Ideen bzgl. der Veranstaltungen, willst Du diese aktiv mitgestalten oder Dich einfach nur informieren? Dann schreib uns, besuch unsere Facebook-Seite oder komm' einfach zur nächsten Sitzung.
+				</div>
 			</section>
-			
-			
-			
+
 			<aside class="sidebar">
 				
 				<img class="sidebar-img" src="../_images_content/rollup_cut_klein.jpg" alt="AluMPI Rollup Banner">

@@ -79,6 +79,54 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				<br>
+				<a name="studentennachweis_setzen"></a>
+				<h2>Studentenstatus eines Mitglieds setzen</h2>
+				<p>
+				Es wird der Status des DB-Eintrags "Ist Student" des Mitglieds mit der eingegebenen MID gesetzt.
+				</p>
+				
+				<form action="index.php#studentenstatus_setzen" method="POST">
+					<table style="width:100%">
+						<colgroup>
+							<col style="width:29%;">
+							<col style="width:71%;">
+						</colgroup>
+						<tr>
+							<td>
+								Mitglieds-ID
+							</td>
+							<td>
+								<input type="text" name="mid" placeholder="MID" size="25">
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Ist Student?
+							</td>
+							<td>
+								<select name="studentenstatus">
+									<option value="j">Ja</option>
+									<option value="n">Nein</option>
+								</select> 
+							</td>
+						</tr>
+					</table>
+					<br>
+					
+					<button class="absenden" type="submit" name="studentenstatus_setzen">Studentenstatus setzen</button>
+				</form>
+				<br>
+				<br>
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung		
+				include 'process_studentenstatussetzenForm.php'; 
+				?>
+				<br>
+				<br>
+				
+				
+				
+				<br>
 				<a name="feier_bezahlt_setzen"></a>
 				<h2>Bezahlung der Absolventenfeier eines Mitglieds setzen</h2>
 				<p>

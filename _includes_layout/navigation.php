@@ -18,7 +18,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 
-		<nav id="navigation">
+		<div id="navigation">
 			<ul>
 				<li>
 					<a <?php if ($thisPage=="startseite") {echo " class=\"currentpage\"";} ?>  href="../startseite/index.php">Startseite</a>
@@ -59,5 +59,37 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<a <?php if ($thisPage=="kontakt") {echo " class=\"currentpage\"";} ?> href="../kontakt/index.php">Kontakt</a>
 				</li>
 			</ul>
-		</nav>
+
+			<div class="sidebar-informationen">
+				<h3>Termine</h3>
+				<div class="sidebar-termin">
+					<h4>Samstag, 17. Juni 2017</h4>
+					Absolventenfeier
+				</div>
+				<div class="sidebar-termin">
+					<h4>Freitag, 07. Juli 2017</h4>
+					Ehemaligentreffen und Berufsorientierung
+				</div>
+
+				<h3>Sitzungen</h3>
+				Unsere Sitzungen finden alle zwei Wochen dienstags um 18:00 Uhr im Fachschafts-zimmer im NW2 statt.
+				Wir freuen uns über eine rege Beteiligung!
+				<br>
+				<br>
+				Sitzungstermine im SS 2017:<br>
+				02., 16., 30. Mai<br>
+				06., 20. Juni<br>
+				04., 18. Juli<br>
+				<br>
+				Weitere Termine werden bekanntgegeben.
+
+				<h3>Kontakt</h3>
+				Postfach aluMPI<br>
+				Gebäude NWII<br>
+				95440 Bayreuth<br>
+
+				<a href="mailto:alumpi@uni-bayreuth.de" class="kontakt-link">alumpi@uni-bayreuth.de</a>
+				<a href="://facebook.com/aluMPI" class="kontakt-link">Facebook-Seite</a>
+			</div>
+		</div>
 		
