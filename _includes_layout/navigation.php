@@ -77,9 +77,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<br>
 				Sitzungstermine im SS 2017:<br>
-				02., 16., 30. Mai<br>
-				06., 20. Juni<br>
-				04., 18. Juli<br>
+				01., 08., 29. Juni<br>
+				06. Juli<br>
 				<br>
 				Weitere Termine werden bekanntgegeben.
 
