@@ -29,6 +29,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<div class="news-boxen-container">
 					<div class="news-box">
 						<h3>Absolventenfeier</h3>
+						<span class="news-important">Anmeldeschluss verlängert bis zum 10.06.</span>
 						Bei der jährlich stattfindenden Veranstaltung geben wir den frisch gebackenen Absolventen
 						(Bachelor, Master, Staatsexamen, Promotion) die Möglichkeit,
 						den erreichten Abschluss in einem gebührenden Rahmen mit Eltern,

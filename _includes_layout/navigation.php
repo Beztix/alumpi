@@ -88,7 +88,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				95440 Bayreuth<br>
 
 				<a href="mailto:alumpi@uni-bayreuth.de" class="kontakt-link">alumpi@uni-bayreuth.de</a>
-				<a href="://facebook.com/aluMPI" class="kontakt-link">Facebook-Seite</a>
+				<a href="https://facebook.com/aluMPI" class="kontakt-link" target="_blank">Facebook-Seite</a>
 			</div>
 		</div>
 		

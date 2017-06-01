@@ -379,6 +379,12 @@ header h2 {
 	clear:both;
 }
 
+.news-important {
+	display: block;
+	font-weight: bold;
+	color: red;
+}
+
 .absolventenbrief {
 	width: 400px;
 	float: right;
