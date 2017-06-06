@@ -373,6 +373,10 @@ header h2 {
 	margin-right: 5px;
 }
 
+.news-box:nth-child(2n +1) {
+	clear: left;
+}
+
 .news-boxen-container::after {
 	content:"";
 	display:block;
@@ -392,7 +396,18 @@ header h2 {
 }
 
 
+.highlight-indent {
+	font-weight: bold;
+	margin: 10px 20px;
+	display: block;
+}
 
+/**
+Image that will fit into the content container on pages
+ */
+.content-image {
+	width: 400px;
+}
 
 
 .sidebar {

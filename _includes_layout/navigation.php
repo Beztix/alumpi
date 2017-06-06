@@ -40,6 +40,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					}
 					?>
 				</li>
+
+                <li>
+                    <a <?php if ($thisPage=="ehemaligen_treffen") {echo " class=\"currentpage\"";} ?>  href="../ehemaligen_treffen/index.php">Ehemaligentreffen</a>
+                </li>
 				
 				<li>
 					<a <?php if ($thisPage=="mitgliedsantrag") {echo " class=\"currentpage\"";} ?> href="../mitgliedsantrag/index.php">Mitgliedsantrag</a>
