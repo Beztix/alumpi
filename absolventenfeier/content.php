@@ -55,7 +55,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					echo "<strong>Die nächste Absolventenfeier findet am " . ABSOLVENTENFEIER_DATUM . " statt.</strong>\n";
 					echo "</p>\n";
 				}
-				
 				else {
 					echo "<p>\n";
 					echo "Die nächste Absolventenfeier findet voraussichtlich gegen Ende des nächsten Sommersemesters statt, der genaue Termin wird noch bekannt gegeben.\n";
@@ -64,6 +63,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				?>
 				
 				<p>
+				<span class='news-important'>Anmeldeschluss verlängert bis zum 10.06.!</span>
 				Die Absolventenfeier der Fakultät I bietet den passenden Rahmen um den Abschluss der Absolventen gemeinsam mit ihren Familien, Freunden und Professoren zu feiern. 
 				Sie unterteilt sich in zwei Akte, den ersten Teil bildet der Festakt. 
 				Dieser beinhaltet einen Festvortrag, anschließend wird jedem Absolvent eine Abschlussurkunde der Fakultät verliehen, 
