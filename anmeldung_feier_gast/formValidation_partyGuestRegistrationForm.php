@@ -38,10 +38,10 @@ function check_fieldsFormatting_partyRegistrationAsGuest($data_form) {
 	$error ="";
 	
 	// Überprüfe ob die Namensfelder nur Buchstaben enthalten
-	if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['vorname'])) {
+	if (!preg_match("/^[a-zäöüß-]+$/iu",$data_form['vorname'])) {
 		$error = $error . "Als Vorname sind nur Buchstaben erlaubt.<br>\n";
 	}
-	if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['nachname'])) {
+	if (!preg_match("/^[a-zäöüß-]+$/iu",$data_form['nachname'])) {
 		$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
 	}
 	
