@@ -24,7 +24,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	//Diese Variable definiert, wie die Informationen zur Absolventenfeier auf der Homepage dargestellt werden
 	//False: Es werden allgemeine Infos über die Absolventenfeier genannt
 	//True: Es werden die konkreten Infos aus den nachfolgenden Variablen auf der Homepage dargestellt
-	const ABSOLVENTENFEIER_INFO_AKTIV = True;
+	const ABSOLVENTENFEIER_INFO_AKTIV = False;
 	
 	const ABSOLVENTENFEIER_ORT = 'Foyer des NWII-Gebäudes';
 	const ABSOLVENTENFEIER_DATUM = '17.06.2017';

@@ -63,8 +63,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				?>
 				
 				<p>
-				<span class='news-important'>Anmeldeschluss verlängert bis zum 10.06.!</span>
-				Die Absolventenfeier der Fakultät I bietet den passenden Rahmen um den Abschluss der Absolventen gemeinsam mit ihren Familien, Freunden und Professoren zu feiern. 
+				Die Absolventenfeier der Fakultät I bietet den passenden Rahmen um den Abschluss der Absolventen gemeinsam mit ihren Familien, Freunden und Professoren zu feiern.
 				Sie unterteilt sich in zwei Akte, den ersten Teil bildet der Festakt. 
 				Dieser beinhaltet einen Festvortrag, anschließend wird jedem Absolvent eine Abschlussurkunde der Fakultät verliehen, 
 				während die Absolventen in einer Präsentation kurz vorgestellt werden.<br>
