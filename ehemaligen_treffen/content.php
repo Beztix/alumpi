@@ -92,9 +92,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
                         <td>Parallel dazu gibt es Kaffee und Kuchen im Foyer des AI</td>
                     </tr>
                     <tr>
-                        <th>15:30 Uhr bis 18:00 Uhr</th>
-                        <td>Führungen im Ökologisch Botanischen Garten, sowie der Bibliothek</td>
+                        <th>ab 16:00 Uhr</th>
+                        <td>Führungen im Ökologisch Botanischen Garten</td>
                     </tr>
+					<tr>
+						<th>ab 17:15 Uhr</th>
+						<td>Führungen durch die Bibliothek</td>
+					</tr>
                     <tr>
                         <th>18:00 Uhr</th>
                         <td>Festvortrag von Prof. Wim Martens im H33</td>
