@@ -93,15 +93,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
                     </tr>
                     <tr>
                         <th>ab 16:00 Uhr</th>
-                        <td>Führungen im Ökologisch Botanischen Garten</td>
+                        <td>Führung durch den Ökologisch Botanischen Garten</td>
                     </tr>
 					<tr>
 						<th>ab 17:15 Uhr</th>
-						<td>Führungen durch die Bibliothek</td>
+						<td>Führung durch die Bibliothek</td>
 					</tr>
                     <tr>
                         <th>18:00 Uhr</th>
-                        <td>Festvortrag von Prof. Wim Martens im H33</td>
+						<td>Festvortrag zum Thema <i>"Optimizing Graph Queries: Is Cutting Enough?"</i> von Prof. Wim Martens im H33</td>
                     </tr>
                     <tr>
                         <th>19:00 Uhr</th>
