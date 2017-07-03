@@ -67,21 +67,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			<div class="sidebar-informationen">
 				<h3>Termine</h3>
 				<div class="sidebar-termin">
-					<h4>Samstag, 17. Juni 2017</h4>
-					Absolventenfeier
-				</div>
-				<div class="sidebar-termin">
 					<h4>Freitag, 07. Juli 2017</h4>
 					Ehemaligentreffen und Berufsorientierung
 				</div>
 
 				<h3>Sitzungen</h3>
-				Unsere Sitzungen finden alle zwei Wochen dienstags um 18:00 Uhr im Fachschafts-zimmer im NW2 statt.
+				Unsere Sitzungen finden alle zwei Wochen donnerstags um 17:00 Uhr im Fachschafts-zimmer im NW2 statt.
 				Wir freuen uns über eine rege Beteiligung!
 				<br>
 				<br>
 				Sitzungstermine im SS 2017:<br>
-				01., 08., 29. Juni<br>
 				06. Juli<br>
 				<br>
 				Weitere Termine werden bekanntgegeben.

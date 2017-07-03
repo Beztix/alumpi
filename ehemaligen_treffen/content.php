@@ -75,15 +75,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
                     kommt. Für die Feierlaunigen bietet sich danach noch ein Besuch des Bayreuther Bürgerfestes an.
                 </p>
 
-                <p>
-                    Wem ein Nachmittag Bayreuth noch nicht genug ist, hat am Samstag noch die Möglichkeit, die Stadt zu
-                    erkunden. Beginnend mit einem Frühschoppen in einer Bayreuther Wirtschaft kann der Tag nur gut werden.
-                    Danach gibt es zum Abschluss eine Stadtführung durch die historische und durchaus sehenswerte
-                    Innenstadt von Bayreuth. Bitte beachten Sie, dass wir das Angebot am Samstag nur bei einer
-                    ausreichenden Zahl von Anmeldungen anbieten können. Die aktuellen Informationen finden Sie
-                    auf dieser Internetseite.
-                </p>
-
                 <h2>Das vorläufige Programm:</h2>
 
                 <table>
@@ -98,15 +89,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
                     </tr>
                     <tr>
                         <th>15:00 Uhr</th>
-                        <td>Kaffee und Kuchen im Foyer des AI</td>
+                        <td>Parallel dazu gibt es Kaffee und Kuchen im Foyer des AI</td>
                     </tr>
                     <tr>
                         <th>15:30 Uhr bis 18:00 Uhr</th>
-                        <td>Verschiedene Führungen an der Fakultät und der Universität (ÖBG, Labore, Bibliothek, usw.)</td>
+                        <td>Führungen im Ökologisch Botanischen Garten, sowie der Bibliothek</td>
                     </tr>
                     <tr>
                         <th>18:00 Uhr</th>
-                        <td>Festvortrag (N.N.) im H33</td>
+                        <td>Festvortrag von Prof. Wim Martens im H33</td>
                     </tr>
                     <tr>
                         <th>19:00 Uhr</th>
@@ -114,7 +105,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
                     </tr>
                     <tr>
                         <th>Samstag 9:00 Uhr</th>
-                        <td>Frühschoppen in einem Bayreuther Lokal, anschließend Stadtführung (nur bei ausreichend Anmeldungen)</td>
+                        <td>Frühschoppen in einem Bayreuther Lokal, anschließend Stadtführung (nur bei ausreichend Anmeldungen) <span style="color:red"><br>Findet nicht statt!</span></td>
                     </tr>
                     </tbody>
                 </table>
@@ -125,12 +116,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
                 <h2>Anmeldung</h2>
 
-                <p>
-                    Um die Veranstaltung ordentlich planen zu können, bitten wir Sie, bei Interesse bis zum
-                    <strong>23. Juni 2017</strong>
-                    eine formlose E-Mail an
+                <p style="color:red">
+                    Gerne nehmen wir noch kurzfristige Anmeldungen unter
                     <a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a>
-                    zu schicken, in der Sie uns folgendes mitteilen:
+                    entgegen. Bitte teilen Sie uns dennoch in der Mail folgendes mit:
                 </p>
 
                 <ul>
