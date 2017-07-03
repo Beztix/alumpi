@@ -27,14 +27,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				<h2>Unsere aktuellen Projekte:</h2>
 				<div class="news-boxen-container">
-					<div class="news-box">
+					<!--<div class="news-box">
 						<h3>Absolventenfeier</h3>
 						<span class="news-important">Anmeldeschluss verlängert bis zum 10.06.</span>
 						Bei der jährlich stattfindenden Veranstaltung geben wir den frisch gebackenen Absolventen
 						(Bachelor, Master, Staatsexamen, Promotion) die Möglichkeit,
 						den erreichten Abschluss in einem gebührenden Rahmen mit Eltern,
 						Kommilitonen und Freunden zu feiern.
-					</div>
+					</div>-->
 					<div class="news-box">
 						<h3>Berufsorientierung</h3>
 						Um den Studierenden einen Ausblick auf mögliche Werdegänge nach dem Abschluss zu geben,
