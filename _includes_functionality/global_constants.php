@@ -28,7 +28,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	
 	const ABSOLVENTENFEIER_ORT = 'Foyer des NWII-Gebäudes';
 	const ABSOLVENTENFEIER_DATUM = '17.06.2017';
-	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '03.06.2017';
+	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '10.06.2017';
 	const ABSOLVENTENFEIER_UHRZEIT = '15:00';
 	const ABSOLVENTENFEIER_PREIS = '25';
 	

@@ -31,8 +31,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<h3>Vertreten durch:</h3>
 				
-				Philip Krinninger<br>
-				philip.krinninger (at) uni-bayreuth.de<br>
+				Armin Kögel<br>
+				armin.koegel (at) uni-bayreuth.de<br>
 				<br>
 				<br>
 				
