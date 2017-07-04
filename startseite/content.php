@@ -65,7 +65,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 			<aside class="sidebar">
 				
-				<img class="sidebar-img" src="../_images_content/rollup_cut_klein.jpg" alt="AluMPI Rollup Banner">
+				<img class="sidebar-img" src="../_images_content/rollup_ohne_druckraender_klein.jpg" alt="AluMPI Rollup Banner">
 			</aside>
 			
 			
