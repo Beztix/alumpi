@@ -35,7 +35,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	
 	
 	//Diese Variable definiert, ob die Anmeldung zur Absolventenfeier aktuell freigeschaltet ist
-	const ABSOLVENTENFEIER_ANMELDUNG_AKTIV = True;
+	const ABSOLVENTENFEIER_ANMELDUNG_AKTIV = False;
 	
 	
 

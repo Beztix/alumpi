@@ -26,6 +26,22 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				
 				
+				
+				<article class="absolventengalerie">
+					<h3>Absolventenfeier 2017</h3>
+				
+					<!-- thumbnail image wrapped in a link -->
+					<a href="#absolventenfeier17absolventen">
+						<img class="absolventenbild" src="../_images_content/absolventenfeier17absolventen.jpg" alt="Gruppenbild Absolventen 2017">
+					</a>
+					<!-- lightbox container hidden with CSS -->
+					<a href="#_" class="lightbox" id="absolventenfeier17absolventen">
+						<img src="../_images_content/absolventenfeier17absolventen_gross.jpg" alt="Gruppenbild Absolventen 2017">
+					</a>
+				</article>
+				
+				
+				
 				<article class="absolventengalerie">
 					<h3>Absolventenfeier 2016</h3>
 				

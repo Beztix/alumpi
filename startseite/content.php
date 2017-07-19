@@ -36,18 +36,18 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						Kommilitonen und Freunden zu feiern.
 					</div>-->
 					<div class="news-box">
-						<h3>Berufsorientierung</h3>
-						Um den Studierenden einen Ausblick auf mögliche Werdegänge nach dem Abschluss zu geben,
-						stellen berufstätige Absolventen ihre persönlichen Erfahrungen vor.
-						Des Weiteren wird die Möglichkeit geboten, in gemütlicher Atmosphäre weitere
-						Details zu erfragen.
-					</div>
-					<div class="news-box">
 						<h3>Ehemaligentreffen</h3>
 						Um den Kontakt der Absolventen untereinander und mit der Universität aufrechtzuerhalten,
 						wird diesen Sommer erstmals ein Treffen für alle bisherigen Absolventen stattfinden.
 						Dabei haben diese die Möglichkeit, Familie und Freunden die Universität und die Stadt Bayreuth
 						zu zeigen, ehemalige Kommilitonen zu treffen oder ihre alten Lehrstühle zu besuchen.
+					</div>
+					<div class="news-box">
+						<h3>Berufsorientierung</h3>
+						Um den Studierenden einen Ausblick auf mögliche Werdegänge nach dem Abschluss zu geben,
+						stellen berufstätige Absolventen ihre persönlichen Erfahrungen vor.
+						Des Weiteren wird die Möglichkeit geboten, in gemütlicher Atmosphäre weitere
+						Details zu erfragen.
 					</div>
 					<div class="news-box">
 						<h3>Exkursionen</h3>

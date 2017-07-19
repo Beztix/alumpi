@@ -13,6 +13,76 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			
 			<section class="text">
 			
+			
+			
+			
+			
+			
+				<h1>Ehemaligentreffen</h1>
+
+				<p>
+                    Einmal wieder die Uni besuchen, wer hat sich das nicht schon so oft vorgenommen und es dann vielleicht
+                    doch nicht gemacht. Der Familie oder den Freunden die Alma Mater zeigen, über den Campus schlendern,
+                    auf dem man so viel gelernt und so viel gefeiert hat.  Schauen, was aus dem Lehrstuhl geworden ist,
+                    an dem man seine Abschlussarbeit geschrieben hat, was ist seit damals denn so alles passiert?
+                </p>
+			
+				<div class="right_img_container">
+                    <img src="../_images_content/oekologisch_botanischer_garten.jpg" class="content-image">
+                </div>
+			
+				 <p>
+                    Um diesen guten Vorsatz endlich einmal in die Tat umzusetzen, organisiert der Absolventen- und Förderverein 
+					aluMPI zukünftig regelmäßig ein Absolvententreffen.
+					<br>
+					<br>
+					Am<br>
+                    <span class="highlight-indent">
+                        Freitag, den 7. Juli 2017 ab 15 Uhr<br>
+                        im H33 und im Foyer des AI, Uni Bayreuth<br>
+                    </span>
+                    fand das erste Ehemaligentreffen der Fakultät 1 statt.
+                </p>
+				
+				<p>
+                    Das Ehemaligentreffen bietet allen Absolventen und ehemaligen Mitarbeitern die Gelegenheit, die
+                    Kontakte untereinander und mit den aktuellen Mitarbeitern und Studierenden zu pflegen. In einer
+                    herzlichen Atmosphäre begrüßt die Fakultät alle Besucher und lädt zum Erfahrungsaustausch ein.
+                    Darüber hinaus ist dies die perfekte Gelegenheit, der vielleicht inzwischen gegründeten Familie,
+                    aber auch Freunden und sonstigen Verwandten die Universität und die Stadt zu zeigen, in der man
+                    viele Jahre seines Lebens verbracht hat.
+                </p>
+			
+			
+				
+			
+				<div class="left_img_container">
+                    <img src="../_images_content/bbq.jpg" class="content-image">
+                </div>
+				
+				<p>
+                    2017 bestand der erste Teil der Veranstaltung besteht aus einem lockeren Programm aus verschiedenen 
+					Führungenn der Universität.
+                    Parallel dazu fand im Hörsaal eine Berufsinformationsveranstaltung für Studierende der Fakultät
+                    statt, in der berufstätige Absolventen über ihre Arbeit und ihren Werdegang erzählten.
+
+                </p>
+				
+                <p>
+                    Am Abend wurde ein gemütliches Grillen im Innenhof des AI veranstaltet, wo man bei kühlen Getränken
+                    und heißen <i>Brodwöschd</i> schnell ins Gespräch mit anderen Absolventen, Mitarbeitern und Studierenden
+                    kommt.
+                </p>
+				
+				<p>
+                    Wir freuen uns sehr über die zahlreiche Teilnahme am Ehemaligentreffen 2017 und freuen uns auf die 
+					zukünftigen Ehemaligentreffen!
+                </p>
+			
+			
+				<!--
+			
+			
 				<h1>Ehemaligentreffen 2017</h1>
 
                 <p>
@@ -140,6 +210,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
                 <br>
 				<br>
+				
+				-->
+				
 			</section>
 			
 			
