@@ -36,7 +36,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				
 				//User ist bereits zur Feier angemeldet (durch die DB-Abfrage ermittelt)
-				if($userIsRegistered) {
+				if($userIsRegistered && ABSOLVENTENFEIER_ANMELDEDATEN_SICHTBAR) {
 					include './content_alreadyRegistered.php';
 				}
 				
