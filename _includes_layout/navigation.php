@@ -66,18 +66,22 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 			<div class="sidebar-informationen">
 				<h3>Termine</h3>
+				
 				<div class="sidebar-termin">
-					<h4>Freitag, 07. Juli 2017</h4>
-					Ehemaligentreffen und Berufsorientierung
+					<h4>Mittwoch, 15. November</h4>
+					Side-Event zum Karriereforum, Berufsinformation mit Bearing Point und Rehau AG<br>
+					Ab 10:00 Uhr im S81, NWII
 				</div>
-
+				
+				
 				<h3>Sitzungen</h3>
-				Unsere Sitzungen finden alle zwei Wochen donnerstags um 17:00 Uhr im Fachschafts-zimmer im NW2 statt.
+				Unsere Sitzungen finden ca. alle zwei Wochen dienstags um 17:30 Uhr im Fachschafts-zimmer im NW2 statt.
 				Wir freuen uns über eine rege Beteiligung!
 				<br>
 				<br>
-				Sitzungstermine im SS 2017:<br>
-				06. Juli<br>
+				Sitzungstermine im WS 2017:<br>
+				21. November<br>
+				12. Dezember<br>
 				<br>
 				Weitere Termine werden bekanntgegeben.
 

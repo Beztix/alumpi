@@ -22,6 +22,64 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				<article class="news">
+				
+				
+				
+					<h2>Berufsorientierung und Ehemaligentreffen 2017</h2>
+					
+					<p>
+					Zum ersten Mal lud der Absolventen- und Förderverein MPI am Freitag den 07. Juli 2017 zu einem Ehemaligentreffen 
+					mit Berufsorientierung für Studierende ein.  <br>
+					<br>
+					Um 15:00 Uhr eröffnete unser Vorstand Armin Kögel die Veranstaltung für die bereits anwesenden Ehemaligen und Freunde der Fakultät. 
+					Im Anschluss gab es ein zweigleisiges Programm für Absolventen und Studierende:
+					<!-- thumbnail image wrapped in a link -->
+					<a href="#ehemaligentreffen2017">
+						<div class="left_img_container">
+							<img src="../_images_content/ehemaligentreffen2017.jpg" alt="Vortrag zur Berufsorientierung" style="width:350px;">
+						</div>
+					</a>
+					<!-- lightbox container hidden with CSS -->
+					<a href="#_" class="lightbox" id="ehemaligentreffen2017">
+						<img src="../_images_content/ehemaligentreffen2017.jpg" alt="Vortrag zur Berufsorientierung">
+					</a>
+					
+					Während Erstere bei Führungen durch den Botanischen Garten und die Zentralbibliothek die Erinnerungen an ihre ehemalige 
+					Wirkungsstätte auffrischen konnten, gab es für die Studierenden sechs spannende Vorträge zu verschiedenen beruflichen 
+					Einstiegs- und Entwicklungsmöglichkeiten im Anschluss an ihr Studium. 
+				
+					
+					An dieser Stelle noch ein besonderer Dank an die Redner, alles Absolventen unserer Fakultät, die sich bereit erklärt haben, 
+					mit ihren Ausführungen Einblicke in ihren Lebenslauf sowie ihren Berufsalltag zu geben. <br>
+					
+					Abschluss des offiziellen Teils bildete der Festvortrag "Optimizing Graph Queries: Is Cutting Enough?" in dem Prof. Wim Martens 
+					Ehemaligen sowie aktuellen Studierenden interessante Einblicke in die Problemstellungen der Optimierung der Anfragen an Datenbanken gab.
+					<br>
+					<br>
+					
+					<!-- thumbnail image wrapped in a link -->
+					<a href="#ehemaligentreffen2017_2">
+						<div class="right_img_container">
+							<img src="../_images_content/ehemaligentreffen2017_2.jpg" alt="Grillen im Innenhof" style="width:350px;">
+						</div>
+					</a>
+					<!-- lightbox container hidden with CSS -->
+					<a href="#_" class="lightbox" id="ehemaligentreffen2017_2">
+						<img src="../_images_content/ehemaligentreffen2017_2.jpg" alt="Grillen im Innenhof">
+					</a>
+					
+					Es folgte der gemütliche Teil des Abends: <br>
+					In der einladenden Atmosphäre des AI Innenhofes bestand bei Grillgut und kühlen Getränken die Möglichkeit ins Gespräch über berufliche 
+					Perspektiven zu kommen, oder schlicht in aller Ruhe eine gute Zeit mit alten Freunden zu verbringen. <br>
+					<br>
+					<br>
+					Der Verein bedankt sich bei allen anwesenden Gästen für die angenehme Stimmung und freut sich auf ein baldiges Wiedersehen.
+					</p>
+				</article>
+				
+				
+				
+				<article class="news">
 					<h2>Jahreshauptversammlung 2017</h2>
 					
 					<p>
@@ -139,7 +197,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							<img src="../_images_content/absolventenfeier2016_plakat_klein.jpg" alt="Plakat Absolventenfeier" style="width:300px;">
 						</div>
 					</a>
-					
 					<!-- lightbox container hidden with CSS -->
 					<a href="#_" class="lightbox" id="absolventenfeier16plakat">
 						<img src="../_images_content/absolventenfeier2016_plakat_mittel.jpg" alt="Plakat Absolventenfeier 2016">
