@@ -24,6 +24,27 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Als Vereinsmitglieds bieten sich zusätzliche Vorteile, so ist es möglich, weiterhin am Unisport teilzunehmen. 
 				Darüber hinaus bekommen Sie auf Wunsch den regelmäßig erscheinenden Newsletter der Universität Bayreuth und darin Informationen zu Alumniveranstaltungen.<br>
 				</p>
+				
+				
+				<br>
+
+				<h2>Aktuelle Veranstaltung zur Berufsinformation:</h2>
+				
+				<p>
+				Am Mittwoch, 15. November findet in Ergänzung zum KarriereForum der Uni Bayreuth ein Side-Event speziell für Mathematiker, Informatiker und Physiker statt.
+				Hierbei sind die beiden Unternehmen Bearing Point sowie Rehau AG mit Fachpersonal vor Ort und bieten mit interessanten Vorträgen und Gesprächsangeboten eine ideale Möglichkeit sich über Karrieremöglichkeiten zu informieren.<br>
+				Dabei wird unter anderem auch eine Demonstration und die Möglichkeit zum Ausprobieren des HoloLens Development Kits sowie die Versorung mit Kaffee und Kuchen geboten.
+				Die Veranstaltung findet von 10:00 bis 11:30 Uhr (Bearing Point) und 12:30 bis 14:00 Uhr (Rehau AG) im S81 im Gebäude NWII statt.<br>
+				<br>
+				Um eine kurze Anmeldung per E-Mail an karriereforum@uni-bayreuth.de mit dem Betreff "MPI-Event" wird (möglichst bis zum Montag, 13. November) gebeten.<br>
+				<br>
+				Siehe auch: <a href="https://www.facebook.com/aluMPI/photos/a.421130111606546.1073741829.413726805680210/508199002899656/?type=3&theater">Veranstaltungshinsweis auf Facebook</a>
+				</p>
+				
+
+				<br>
+				<br>
+				
 
 				<h2>Unsere aktuellen Projekte:</h2>
 				<div class="news-boxen-container">
