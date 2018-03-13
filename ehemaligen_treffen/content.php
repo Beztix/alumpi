@@ -36,12 +36,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					aluMPI zukünftig regelmäßig ein Absolvententreffen.
 					<br>
 					<br>
-					Am<br>
-                    <span class="highlight-indent">
-                        Freitag, den 7. Juli 2017 ab 15 Uhr<br>
-                        im H33 und im Foyer des AI, Uni Bayreuth<br>
-                    </span>
-                    fand das erste Ehemaligentreffen der Fakultät 1 statt.
+					Am Freitag, den 7. Juli 2017 fand das erste Ehemaligentreffen der Fakultät 1 statt.
                 </p>
 				
 				<p>

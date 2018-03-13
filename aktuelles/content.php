@@ -20,11 +20,39 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<br>
 				
+				<article class="news">
+
+					<h2>Jahreshauptversammlung 2018</h2>
+					
+					<p>
+					Der Absolventen- und Förderverein MPI traf sich auch dieses Jahr wieder zur Mitgliederversammlung in der „Quetschn“. Am 28.01.2018 wurde nicht nur der Vorstand gewählt und über das vergangene Jahr berichtet, es wurde auch über Vorträge und Exkursionen für das kommende Jahr beraten.
+					Und die Absolventenfeier steht auch noch an... 
+					<br><br>
+					Unsere bisherige zweite Vorsitzende Bianca Bauer trat für das kommende Jahr nicht mehr zur Wahl an. Für ihre Arbeit und ihr Engagement bedanken wir uns recht herzlich und freuen uns sehr, dass sie den neuen Vorstand nun durch ihre Tätigkeit im Kuratorium unterstützt. Als neuer zweiter Vorsitzender wurde Markus Klar (Masterstudent Mathematik) von der Mitgliederversammlung gewählt. Der bisherige erste Vorsitzende Armin Kögel (Doktorand der Ingenieurswissenschaften) und der Schatzmeister Dorian Rohner (Doktorand der Informatik) wurden für das kommende Jahr wiedergewählt. Somit sind wieder alle drei Fachrichtungen im Vorstand vertreten. 
+					<br><br>
+					Wie im letzten Jahr sind wieder Veranstaltungen für die Studenten der Fakultät geplant. Zum einen wird es wieder Vorträge und/oder Workshops von Unternehmen geben, die speziell für unsere Absolventen interessant sind. Diese sollen einen Einblick in die Arbeit und die Berufsaussichten eines Absolventen unserer Fakultät ermöglichen, daher achten wir besonders darauf, dass die Referenden auch „vom Fach“ sind. Zum anderen werden dieses Jahr Exkursionen stattfinden: Angedacht sind Betriebsbesichtigungen von Unternehmen in der Region, die ihren Schwerpunkt auf Technik und Technologie setzen. Dies ist vor allem (aber nicht nur) für Physikstudenten interessant, da die Veranstaltungen im letzten Jahr hauptsächlich auf Informatiker und Mathematiker abzielten. 
+					<br><br>
+					Der Höhepunkt des Jahres wird auch dieses Mal wieder die Absolventenfeier sein. Diese wird voraussichtlich am 30. Juni stattfinden, Ausweichtermin ist der 23. Juni. Wie immer gibt es einen kleinen Festakt mit Festvortrag. Nach dem letzten Vortrag über Visualisierung von 3D-Objekten von Professor Michael Guthe wird der Festredner in diesem Jahr aus dem Bereich der Physik kommen. Auf das Thema sind wir schon gespannt. Im Anschluss heißt es wieder „Das Buffet ist eröffnet!“ und der gemütliche Teil der Veranstaltung beginnt. Eingeladen sind neben den Absolventen mit ihren Eltern und Freunden alle Mitglieder und Freunde des Vereins.
+					</p>
+				</article>
 				
 				<article class="news">
+					<h2>Was tun nach dem Studium?</h2>
+					<h3>REHAU und Bearing Point geben Einblick in die Arbeitswelt von Mathematikern, Physikern und Infomatikern</h3>
+					<p>
+					Am 15. November fand im NW II eine Vortragsveranstaltung zur Berufsinformation nach dem Studium, maßgeschneidert für Studenten der Fakultät 1 statt. Mit bewusst gewählter anderer Herangehensweise wurde die Veranstaltung zeitgleich zum an der ganzen Universität stattfindenden KarriereForum 2017 durchgeführt. Ziel war es mit bestehenden Konzepten zu brechen und durch eine „Hands-On“-Erfahrung die Studenten unserer Fakultät für verschiedene Bereiche zu begeistern. 
+					<br><br>
+					Am Mittwoch durften wir dann die Unternehmen Bearing Point, eine Technologie- und Managementberatung mit ihren Mitarbeitern aus Frankfurt, und REHAU, ein Technologieunternehmen aus unserer fränkischen Region mit 3,4 Mrd. Umsatz, begrüßen. Eingeteilt in 2 Zeitslots, Vor- und Nachmittag, begannen die 2 Mitarbeiter von BearingPoint begeisterten Studenten einen Einblick in möglichen Jobchance und damit verbundenen Aufgaben als Mathematiker oder Absolventen in ähnlichen Bereichen zu geben und über ihren Berufsalltag in aktuellen Projekten (z.B. Bankenregulierung) zu berichteten. Besonders erfreut waren wir, dass einer der Referenten als Absolvent der Universität Bayreuth auch mit dabei war. Der Nachmittagsslot wurde dann mit einer unterhaltsamen und informativen Präsentation „zum Anfassen“ der REHAU-AG gefüllt. Dort präsentierte sich die Abteilung Kommunikation mit ihren Mitarbeitern, welche selbst über ihre bisherigen Aufgaben und Arbeitsbereiche im Unternehmen referieren. Im Anschluss konnte jeder Teilnehmer dann die Zukunft selbst in die Hand nehmen und ein Development Kit der Microsoft HoloLens ausprobieren. Dazu berichteten Mitarbeiter über mögliche zukünftige Einsatzszenarien solcher neuartigen Technologien.
+					<br><br>
+					Im Anschluss an beide Gespräche gab es für alle Teilnehmer die Möglichkeiten bei Kaffee und einem reichhaltigen Kuchenbuffet sich mit den extra angereisten Unternehmensvertretern auszutauschen.
+					<br><br>
+					Wir als Absolventenverein freuen uns über die zahlreichen Teilnahmen, die positive Annahme dieses neuen Konzepts, die wirklich interessanten und aufschlussreichen Gespräche am Ende jeder Vorträge und auf eine Neuauflage im Frühjahr/Sommer 2018!
+					</p>
+				</article>
+			
 				
-				
-				
+				<article class="news">
+
 					<h2>Berufsorientierung und Ehemaligentreffen 2017</h2>
 					
 					<p>
@@ -74,6 +102,31 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<br>
 					<br>
 					Der Verein bedankt sich bei allen anwesenden Gästen für die angenehme Stimmung und freut sich auf ein baldiges Wiedersehen.
+					</p>
+				</article>
+				
+				<article class="news">
+					<h2>Hinter dicken Mauern und Stacheldraht</h2>
+					<h3>Besichtigung des Rechenzentrums der Unternehmensberatung Accenture</h3>
+					<p>
+					Am 22. Juni ergab sich in Zusammenarbeit mit der Stabsabteilung KarriereService und Unternehmenskontakte der Universität Bayreuth die Möglichkeit, das Rechenzentrum des global agierenden Unternehmens „accenture PLC“ in Hof zu besichtigen. Accenture ist einer der größten Managementberatungs-, Technologie- und Outsourcing-Dienstleister mit etwa 400.000 Mitarbeitern weltweit.
+					<br><br>
+					Über die üblichen Kanäle in Form von Facebook, Aushängen und Mundpropaganda erfreute sich die Veranstaltung großer Beliebtheit und Anmeldezahlen. Alle Teilnehmer erhielten nach einer entspannten Busfahrt und einer Ausweiskontrolle exklusiven Einblick in einen sonst für Besucher unzugänglichen Bereich, geschützt durch Kameras, Stacheldraht und dicken Mauern. Nach einer kurzen Vorstellung des Unternehmens sowie den möglichen Chancen für Studierende oder baldige Absolventen vor allem an diesem Standort, konnten die Studenten in einer Führung mehr über die Struktur und den Aufbau des Arbeitsplatzes in Hof lernen. Währenddessen erhielten sie aufschlussreiche Informationen über die Notstromanlage, die hohen Sicherheitsstandards, Brandschutz und die Serverkapazitäten und -technik am Standort Hof - auch über die besondere Geschichte des Gebäudes. Dieses gehört als einziges weltweit der „accenture PLC“ und stellt somit ein absolutes Unikat dar, wie im Vortrag erklärt wurde. Am Ende ließ man die Exkursion bei entspannter Atmosphäre mit Pizza, Getränken und Gesprächen ausklingen und der Bus brachte alle Teilnehmer wieder nach Bayreuth. Aufgrund des Feedbacks aller Teilnehmer werden wir versuchen auch weiterhin solche Veranstaltungen anzubieten.
+					</p>
+				</article>
+	
+				
+				<article class="news">
+					<h2>Absolventenfeier 2017</h2>
+					
+					<p>
+					Am 17. Juni war es wieder soweit: Wie schon seit inzwischen fast 10 Jahren fanden sich die Absolventen der Fakultät 1 zusammen 
+					um in gebührendem Rahmen ihren Abschluss zu feiern. Insgesamt 8 Bachelor und 14 Master, sowie 4 frisch gebackene Doktoranden nahmen 
+					mit Familie und Freunden an der Feier teil. Neben einer Urkunde, überreicht von Dekan Prof. Westfechtel, bekam jeder ein kleines 
+					Geschenk als Erinnerung an seine Studienzeit. Als Festredner durften wir Professor Michael Guthe begrüßen, der den Gästen einen 
+					interessanten Einblick in die Visualisierung von 3D-Objekten gab. Für die musikalische Untermalung und stimmungsvolles Ambiente beim 
+					anschließenden Buffet sorgte eine Combo der Bigband der Universität. Wer dann mit dem Schießen von Erinnerungsfotos fertig war, 
+					konnte den Abend mit einem feinen Cocktail der Physikerbar ausklingen lassen. 
 					</p>
 				</article>
 				

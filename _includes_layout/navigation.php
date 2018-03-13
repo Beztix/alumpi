@@ -66,23 +66,30 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 			<div class="sidebar-informationen">
 				<h3>Termine</h3>
-				
+				<!--
 				<div class="sidebar-termin">
-					<h4>Mittwoch, 15. November</h4>
-					Side-Event zum Karriereforum, Berufsinformation mit Bearing Point und Rehau AG<br>
-					Ab 10:00 Uhr im S81, NWII
+					<h4>Sonntag, 28. Januar 2018</h4>
+					Jahreshauptversammlung<br>
+					19:00 Uhr in der &#8222;Quetsch'n&#8220;
+				</div>
+				-->
+				<div class="sidebar-termin">
+					Werden bekanntgegeben
 				</div>
 				
-				
 				<h3>Sitzungen</h3>
-				Unsere Sitzungen finden ca. alle zwei Wochen dienstags um 17:30 Uhr im Fachschafts-zimmer im NW2 statt.
+				<!--
+				Unsere Sitzungen finden ca. alle zwei Wochen dienstags um 17:30 Uhr im S 78 im NW2 statt.
 				Wir freuen uns über eine rege Beteiligung!
 				<br>
 				<br>
-				Sitzungstermine im WS 2017:<br>
-				21. November<br>
-				12. Dezember<br>
-				<br>
+				-->
+				Nächste Sitzungstermine:<br><br>
+				Do. 08.03, 17:00 Uhr, S 78<br>
+				Do. 22.03, 17:00 Uhr, S 78<br>
+				Do. 05.04, 17:00 Uhr, S 78
+				
+				<br><br>
 				Weitere Termine werden bekanntgegeben.
 
 				<h3>Kontakt</h3>

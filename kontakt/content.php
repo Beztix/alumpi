@@ -6,7 +6,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<section id="content">
 		
 			<section class="top_image">
-				<img src="../_images_content/banner_vorstand_17.jpg" alt="Vorstand AluMPI">
+				<img src="../_images_content/banner_vorstand_18.jpg" alt="Vorstand AluMPI">
 			</section>
 		
             <section class="text">
@@ -34,16 +34,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</colgroup>
 					<tr>
 						<td>1. Vorsitzender</td>
-						<td width="214">Armin Kögel B.Sc.</td>
-						<td width="348">armin (at) fsmpi.uni-bayreuth.de</td>
+						<td width="214">Armin Kögel M.Sc.</td>
+						<td width="348">Armin.Koegel (at) uni-bayreuth.de</td>
 					</tr>
 					<tr>
-						<td>2. Vorsitzende</td>
-						<td width="214">Bianca Bauer B.Sc.</td>
-						<td width="348">bianca (at) fsmpi.uni-bayreuth.de</td>
+						<td>2. Vorsitzender</td>
+						<td width="214">Markus Klar B.Sc.</td>
+						<td width="348">Markus.Klar (at) uni-bayreuth.de</td>
 					</tr>
 					<tr>
-						<td>Kassierer</td>
+						<td>Schatzmeister</td>
 						<td width="214">Dorian Rohner M.Sc.</td>
 						<td width="348">dorian.rohner (at) uni-bayreuth.de</td>
 					</tr>
