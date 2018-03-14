@@ -50,7 +50,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/deko_absolventenfeier.jpg" class="portrait placeholder"/>
+				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Dorian Rohner</div>
 					<div class="portrait-job">Schatzmeister</div>
@@ -71,7 +71,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/deko_absolventenfeier.jpg" class="portrait placeholder"/>
+				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Sebastian Lützow</div>
 					<div class="portrait-job">Beauftragter IT</div>
@@ -117,7 +117,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/deko_absolventenfeier.jpg" class="portrait placeholder"/>
+				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Ingo Schelter</div>
 				</div>

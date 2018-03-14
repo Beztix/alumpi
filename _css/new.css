@@ -444,10 +444,13 @@ footer a {
     display: inline-block;
     margin-bottom: 10px;
     white-space: normal;
+    background-color: white;
 }
 
 .portrait.placeholder {
-    margin-bottom: 29px;
+    width: 100%;
+    padding: 43px 15px;
+    box-sizing: border-box;
 }
 
 .portrait-text {
