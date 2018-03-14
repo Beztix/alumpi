@@ -32,7 +32,7 @@ if (!defined('AccessConstant'))
 
 		<div class="portrait-list">
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Armin.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Armin_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Armin Kögel</div>
 					<div class="portrait-job">1. Vorsitzender</div>
@@ -41,7 +41,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Markus.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Markus_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Markus Klar</div>
 					<div class="portrait-job">2. Vorsitzender</div>
@@ -63,7 +63,7 @@ if (!defined('AccessConstant'))
 
 		<div class="portrait-list">
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Philip.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Philip_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Philip Krinninger</div>
 					<div class="portrait-job">Sprecher des Kuratoriums</div>
@@ -80,7 +80,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Maria.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Maria_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Maria Treimer</div>
 					<div class="portrait-job">Schriftführerin</div>
@@ -88,7 +88,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Benno.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Benno_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Benno Hoch</div>
 					<div class="portrait-job">Beauftragter Social Media</div>
@@ -96,21 +96,21 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Bianca.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Bianca_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Bianca Bauer</div>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Adal.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Adal_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Adal Sabri</div>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Silvan.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Silvan_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Silvan Schmutzler</div>
 				</div>
@@ -124,14 +124,14 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Ulla.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Ulla_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Ulla Kaltenhauser</div>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Manu.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Manu_s.JPG" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Manuel Eisentraut</div>
 				</div>
