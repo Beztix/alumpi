@@ -1,343 +1,321 @@
 
 html {
-	overflow-y: scroll; 
+    overflow-y: scroll;
 }
 
 body {
-	width: 1100px;
-	color: #444;
-	font-family: sans-serif;
-	font-size: 1em;
-	line-height: 1.4;
-	margin: 0 auto;
+    width: 1100px;
+    color: #444;
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 0 auto;
 }
 
 header, footer, #main {
-	float: left;
-	width: 1100px;
+    float: left;
+    width: 1100px;
 }
 
-
-
-
-
 header {
-	margin-top: 33px;
+    margin-top: 33px;
 }
 
 #logo_left {
-	float: left;
-	height: 68px;
+    float: left;
+    height: 68px;
 }
 
 #logo_right {
-	float: right;
-	height: 75px;
-	margin-top: -3px;
-	margin-bottom: -20px;
+    float: right;
+    height: 75px;
+    margin-top: -3px;
+    margin-bottom: -20px;
 }
 
 #logo_right img {
-	height: 100%;
+    height: 100%;
 }
 
 header h2 {
-	width: 1055px;
-	float: left;
-	font-size: 18px;
-	color: #fff;
-	background-color: #00A7E3;
-	padding: 7px 15px 7px 30px;
-	margin-top: 1.5em;
-	margin-bottom: 2em;
-	font-weight: normal;
+    width: 1055px;
+    float: left;
+    font-size: 18px;
+    color: #fff;
+    background-color: #00A7E3;
+    padding: 7px 15px 7px 30px;
+    margin-top: 1.5em;
+    margin-bottom: 2em;
+    font-weight: normal;
 }
-
-
-
-
 
 #main {
 }
 
-
-
 #navigation {
-	float: left;
-	width: 200px;
-	padding-bottom: 20px;
+    float: left;
+    width: 200px;
+    padding-bottom: 20px;
 }
 
 #navigation ul {
-	border-bottom: 1px solid #999;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    border-bottom: 1px solid #999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 #navigation ul li {
-	border-top: 1px solid #999;
+    border-top: 1px solid #999;
 }
 
 #navigation ul ul {
-	border: none;
+    border: none;
 }
 
 #navigation ul ul li {
-	padding: 0 0 0 15px;
+    padding: 0 0 0 15px;
 }
 
 #navigation a {
-	display: block;
-	text-decoration: none;
-	font-size: 14px;
-	font-weight: 500;
-	color: #555;
-	padding: .4em 0;
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    padding: .4em 0;
 }
 
 #navigation a:hover {
-	color: #999;
+    color: #999;
 }
 
 #navigation .currentpage {
-	color: #009260;
+    color: #009260;
 }
-
 
 #content {
-	float: right;
-	width: 880px;
-	min-height: 600px;
+    float: right;
+    width: 880px;
+    min-height: 600px;
 }
 
-
-
 #content table {
-	border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 #content table, th, td {
-	border: 1px solid #bbb;
+    border: 1px solid #bbb;
 }
 
 #content th, td {
-	padding: 6px;
-	text-align: left;
+    padding: 6px;
+    text-align: left;
 }
 
 #content .striped tr:nth-child(even) {
-	background-color: #f7f7f7
+    background-color: #f7f7f7
 }
 
 #content .outlined {
-	border: 2px solid #666;
+    border: 2px solid #666;
 }
 
 .top_image {
-	width: 880px;
-	height: 250px;
-	margin: 0 0 20px 0;
+    width: 880px;
+    height: 250px;
+    margin: 0 0 20px 0;
 }
 
 .top_image img {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .left_content {
-	float: left;
-	width: 590px;
+    float: left;
+    width: 590px;
 }
 
 .text {
-	padding-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .text h1 {
-	font-size: 30px;
-	font-weight: 500;
-	margin-top: 0;
-	margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .text h2 {
-	font-size: 23px;
-	font-weight: 500;
-	margin-top: 0;
-	color: #009260;
-	margin-bottom: 20px;
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: 0;
+    color: #009260;
+    margin-bottom: 20px;
 }
 
 .text h3 {
-	font-size: 19px;
-	font-weight: 500;
-	margin-top: 0;
-	margin-bottom: 14px;
+    font-size: 19px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 14px;
 }
 
 .text h4 {
-	font-size: 17px;
-	font-weight: 500;
-	margin-top: 0;
-	margin-bottom: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 0;
+    margin-bottom: 10px;
 }
 
-
 .text p {
-	font-size: 16px;
-	font-weight: 300;
-	line-height: 1.3em;
-	margin: 10px 0 25px 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.3em;
+    margin: 10px 0 25px 0;
 }
 
 .text p strong {
-	font-weight: 600;
+    font-weight: 600;
 }
 
 .text a {
-	color: #444;
+    color: #444;
 }
 
 .green {
-	color: #009260;
+    color: #009260;
 }
 
 .error {
-	color: #ee0000;
+    color: #ee0000;
 }
 
 #content button {
-	border: none;
-	background-color: #ddd;
-	padding: 7px 20px;
-	text-align: center;
+    border: none;
+    background-color: #ddd;
+    padding: 7px 20px;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-	font-size: 16px;
+    font-size: 16px;
 }
-	
 
 #submenu_in_content ul {
-	list-style: none;
+    list-style: none;
 }
 
 #submenu_in_content ul li {
-	padding: 3px;
+    padding: 3px;
 }
-
 
 .left_img_container {
-	float:left;
-	margin-top: 10px;
-	margin-right: 25px;
-	margin-bottom: 10px;
+    float: left;
+    margin-top: 10px;
+    margin-right: 25px;
+    margin-bottom: 10px;
 }
-
 
 .right_img_container {
-	float:right;
-	margin-top: 10px;
-	margin-left: 25px;
-	margin-bottom: 10px;
+    float: right;
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-bottom: 10px;
 }
 
-
 .absolventengalerie {
-	margin: 50px auto 50px auto;
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 20px;
+    margin: 50px auto 50px auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
 }
 
 .absolventengalerie .absolventenbild {
-	width: 800px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    width: 800px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .absolventengalerie .absolventenbild_links {
-	width: 420px;
-	float: left;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    width: 420px;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .absolventengalerie .absolventenbild_rechts {
-	width: 420px;
-	float: right;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    width: 420px;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-	
+
 .absolventengalerie h3 {
-	font-size: 23px;
-	font-weight: bold;
+    font-size: 23px;
+    font-weight: bold;
 }
-
-
 
 .bildergalerie {
-	width: 600px;
-	margin: 50px auto 50px auto;
-	background-color: #eaeaea;
-	text-align: center;
-	padding-top: 30px;
-	padding-bottom: 30px;
+    width: 600px;
+    margin: 50px auto 50px auto;
+    background-color: #eaeaea;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .bildergalerie .absolventenbild {
-	width: 400px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .bildergalerie .absolventenbild_links {
-	width: 230px;
-	float: left;
-	margin-left: 50px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    width: 230px;
+    float: left;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .bildergalerie .absolventenbild_rechts {
-	width: 230px;
-	float: right;
-	margin-right: 50px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+    width: 230px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
-	
+
 .bildergalerie h3 {
-	font-size: 23px;
-	font-weight: bold;
+    font-size: 23px;
+    font-weight: bold;
 }
-
-
 
 .news {
-	width: 700px;
-	margin: 50px auto 50px auto;
-	border-left: 5px solid #d6d6d6;
-	padding: 20px 20px 20px 30px;
-	background-color: #eaeaea;
+    width: 700px;
+    margin: 50px auto 50px auto;
+    border-left: 5px solid #d6d6d6;
+    padding: 20px 20px 20px 30px;
+    background-color: #eaeaea;
 }
 
 .sidebar-informationen {
-	font-size: 14px;
-	font-weight: 500;
-	color: #555;
-	padding: .4em 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    padding: .4em 0;
 }
 
 .sidebar-informationen hr.trenner {
-	border: none;
-	border-top: 1px solid #999;
+    border: none;
+    border-top: 1px solid #999;
 }
 
 #navigation .sidebar-informationen a.kontakt-link {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .sidebar-informationen .sidebar-termin {
@@ -345,104 +323,151 @@ header h2 {
 }
 
 .sidebar-informationen .sidebar-termin > h4 {
-	margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 .sidebar-informationen .sidebar-termin:not(:first-of-type) {
-	border-top: 1px solid #999;
-	margin-top:10px;
+    border-top: 1px solid #999;
+    margin-top: 10px;
 }
 
 .news-boxen-container {
-	width: 100%;
-	padding: 0;
-	box-sizing: border-box;
-	margin: 0 0 15px;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 0 15px;
 }
 
 .news-box {
-	box-sizing: border-box;
-	width: calc(50% - 10px);
-	/*margin: 50px auto 50px auto;*/
-	border-left: 5px solid #d6d6d6;
-	padding: 20px 10px 10px 20px;
-	background-color: #eaeaea;
-	float: left;
-	margin-bottom: 10px;
-	margin-left: 5px;
-	margin-right: 5px;
+    box-sizing: border-box;
+    width: calc(50% - 10px);
+    /*margin: 50px auto 50px auto;*/
+    border-left: 5px solid #d6d6d6;
+    padding: 20px 10px 10px 20px;
+    background-color: #eaeaea;
+    float: left;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .news-box:nth-child(2n +1) {
-	clear: left;
+    clear: left;
 }
 
 .news-boxen-container::after {
-	content:"";
-	display:block;
-	clear:both;
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .news-important {
-	display: block;
-	font-weight: bold;
-	color: red;
+    display: block;
+    font-weight: bold;
+    color: red;
 }
 
 .absolventenbrief {
-	width: 400px;
-	float: right;
-	padding-left: 40px;
+    width: 400px;
+    float: right;
+    padding-left: 40px;
 }
 
-
 .highlight-indent {
-	font-weight: bold;
-	margin: 10px 20px;
-	display: block;
+    font-weight: bold;
+    margin: 10px 20px;
+    display: block;
 }
 
 /**
 Image that will fit into the content container on pages
  */
 .content-image {
-	width: 400px;
+    width: 400px;
 }
-
 
 .sidebar {
-	width: 250px;
-	float: right;
-	margin: 0 0 10px 0;
+    width: 250px;
+    float: right;
+    margin: 0 0 10px 0;
 }
-
 
 .sidebar-img {
-	width: 100%;
+    width: 100%;
 }
 
-
-
 footer {
-	margin-top: 15px;
-	margin-bottom: 15px;
-	border-top: 1px solid #B4B4B4;
-	padding: .4em 0 0 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-top: 1px solid #B4B4B4;
+    padding: .4em 0 0 0;
 }
 
 footer ul {
-	float: right;
-	margin-top: 8px;
-	margin-bottom: 8px;
+    float: right;
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
 
 footer li {
-	display: inline-block;
-	margin-left: 15px;
+    display: inline-block;
+    margin-left: 15px;
 }
 
 footer a {
-	color: #444;
-	font-size: 12px;
-	text-decoration: none;
+    color: #444;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.portrait-container {
+    display: inline-block;
+    border-left: 5px solid #d6d6d6;
+    padding: 20px;
+    background-color: #eaeaea;
+    white-space: pre-line;
+    margin: 10px;
+    width: calc(33% - 21px);
+    box-sizing: border-box;
+    min-width: 230px;
+    vertical-align: top;
+    min-height: 316px;
+}
+
+.portrait-container:last-of-type {
+    margin-bottom: 50px;
+}
+
+.portrait {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+.portrait.placeholder {
+    margin-bottom: 29px;
+}
+
+.portrait-text {
+    text-align: left;
+    clear: right;
+    display: inline-block;
+    white-space: normal;
+}
+
+.portrait-name {
+    font-size: 1.1em;
+    color: #009260;
+}
+
+.portrait-job {
+    font-size: 1em;
+    color: #444444;
+}
+
+.portrait-mail {
+    font-size: 1em;
+    /*color: #444444;*/
 }
