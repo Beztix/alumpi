@@ -36,7 +36,7 @@ if (!defined('AccessConstant'))
 				<div class="portrait-text">
 					<div class="portrait-name">Armin Kögel</div>
 					<div class="portrait-job">1. Vorsitzender</div>
-					<a class="portrait-mail" href="mailto:armin.koegel@alumpi.de">armin.koegel@alumpi.de</a>
+					<a class="portrait-mail" href="mailto:armin.koegel@uni-bayreuth.de">Armin.Koegel@uni-bayreuth.de</a>
 				</div>
 			</div>
 
@@ -45,16 +45,16 @@ if (!defined('AccessConstant'))
 				<div class="portrait-text">
 					<div class="portrait-name">Markus Klar</div>
 					<div class="portrait-job">2. Vorsitzender</div>
-					<a class="portrait-mail" href="mailto:markus.klar@alumpi.de">markus.klar@alumpi.de</a>
+					<a class="portrait-mail" href="mailto:markus.klar@uni-bayreuth.de">Markus.Klar@uni-bayreuth.de</a>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<img src="../_images_content/portraits_members/Dorian_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Dorian Rohner</div>
 					<div class="portrait-job">Schatzmeister</div>
-					<a class="portrait-mail" href="mailto:dorian.rohner@alumpi.de">dorian.rohner@alumpi.de</a>
+					<a class="portrait-mail" href="mailto:dorian.rohner@uni-bayreuth.de">Dorian.Rohner@uni-bayreuth.de</a>
 				</div>
 			</div>
 		</div>
@@ -75,12 +75,12 @@ if (!defined('AccessConstant'))
 				<div class="portrait-text">
 					<div class="portrait-name">Sebastian Lützow</div>
 					<div class="portrait-job">Beauftragter IT</div>
-					<a class="portrait-mail" href="mailto:sebastian.luetzow@alumpi.de">sebastian.luetzow@alumpi.de</a>
+					<a class="portrait-mail" href="mailto:sebastian.luetzow@gmail.com">sebastian.luetzow@gmail.com</a>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Maria_s.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Maria_neu_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Maria Treimer</div>
 					<div class="portrait-job">Schriftführerin</div>
@@ -117,7 +117,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<img src="../_images_content/portraits_members/Ingo_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Ingo Schelter</div>
 				</div>
