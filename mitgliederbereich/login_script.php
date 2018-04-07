@@ -93,7 +93,10 @@ if(!empty($_POST)) {
 							);
 							
 							//Seite neu laden (nun eingelogged)
-							header('Location: ./index.php');
+							echo '<script type="text/javascript">';
+							echo 'window.location.href = \'./index.php\';';
+							echo '</script>';
+
 						}
 						
 						//Passwort falsch
