@@ -14,7 +14,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
             <section class="text">
 
-				<h1>Anmeldung zur Absolventenfeier</h1>
+				<h1>Anmeldeinformationen zur Absolventenfeier</h1>
 				
 				<?php
 				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {

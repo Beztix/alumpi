@@ -17,12 +17,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	<li>
 		<a <?php if ($thisPage=="absolventenfeier_anmeldeinformationen") {echo " class=\"currentpage\"";} ?> href="../absolventenfeier_anmeldeinformationen/index.php">Anmeldeinformationen</a>
 	</li>
-	<li>
-		<a <?php if ($thisPage=="absolventenfeier_anmeldung_absolvent") {echo " class=\"currentpage\"";} ?> href="../absolventenfeier_anmeldung_absolvent/index.php">Anmeldung als Absolvent</a>
-	</li>
-	<li>
-		<a <?php if ($thisPage=="absolventenfeier_anmeldung_gast") {echo " class=\"currentpage\"";} ?> href="../absolventenfeier_anmeldung_gast/index.php">Anmeldung als Gast</a>
-	</li>
+	<?php
+	//Unterseiten zur Anmeldung werden nur angezeigt wenn die Anmeldung aktiv ist
+	if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
+		include 'submenu_absolventenfeier_anmeldung.php';
+	}
+	?>
 	<li>
 		<a <?php if ($thisPage=="absolventengalerie") {echo " class=\"currentpage\"";} ?> href="../absolventengalerie/index.php">Absolventengalerie</a>
 	</li>
