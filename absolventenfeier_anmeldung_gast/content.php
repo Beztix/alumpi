@@ -18,21 +18,23 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<p>
 				Diese Seite ist nur zur Anmeldung zur Teilnahme an den Feierlichkeiten der Absolventenfeier als <strong>Fakultätsangehöriger</strong> oder <strong>eigenständiger Gast</strong> gedacht.<br>
-				Falls Sie aktueller Absolvent oder Gast eines aktuellen Absolventen sind, melden Sie sich bitte nicht mit diesem Formular an, 
-				sondern klicken Sie bitte <a href="../anmeldung_absolventenfeier/index.php#absolvent">hier</a>.<br>
+				Möchten Sie lediglich am offiziellen Festakt, aber nicht an den anschließenden Feierlichkeiten mit Buffet teilnehmen, so ist keine Anmeldung erforderlich.<br>
 				<br>
-				Möchten Sie lediglich am offiziellen Festakt, aber nicht an den anschließenden Feierlichkeiten mit Buffet teilnehmen, so ist keine Anmeldung erforderlich.
+				Falls Sie aktueller Absolvent oder Gast eines aktuellen Absolventen sind, 
+				melden Sie sich bitte nicht mit diesem Formular an, sondern klicken Sie bitte <a href="../absolventenfeier_anmeldeinformationen/index.php#absolvent">hier</a>.<br>
+				<br>
+				
 				</p>
 				<br>
 				
 				<?php				
 				//Anmeldung aktuell möglich
 				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
-					//Einbinden der PHP-Datei zur Formularauswertung
-					include './process_partyGuestRegistrationForm.php';
-					
 					//Zeige Anmeldeformular an
 					include './content_partyGuestRegistrationForm.php';
+					
+					//Einbinden der PHP-Datei zur Formularauswertung
+					include './process_partyGuestRegistrationForm.php';					
 				}
 				
 				

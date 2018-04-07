@@ -3,54 +3,72 @@
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 ?>
 
-
-				<br>
-				<p>
-				Sie sind bisher <strong>nicht</strong> für die diesjährige Absolventenfeier als Absolvent angemeldet. <br>
-				</p>
-				<br>
-				
 				<h2>Anmeldeformular</h2>
-				
-				
-
 
 				<form action="index.php" method="POST" enctype="multipart/form-data">
 				
-					<p>
-					Möchten Sie sich zur diesjährigen Absolventenfeier am <?php echo ABSOLVENTENFEIER_DATUM; ?> <strong>als aktueller Absolvent</strong> anmelden, 
-					so füllen Sie bitte dieses Formular aus.<br>
-					Falls Sie als Gast und nicht als aktueller Absolvent an der diesjährigen Absolventenfeier teilnehmen möchten, 
-					so melden Sie sich bitte nicht über dieses Formular an, siehe <a href="../anmeldung_absolventenfeier/index.php#gast">Anmeldung zur Absolventenfeier als Gast</a>.
-					<br>
-					Bitte überprüfen Sie vor der Anmeldung zur Feier mit diesem Formular ihre Mitgliedsdaten auf der Seite <a href="../datenabfrage/index.php">Datenabfrage</a> auf Korrektheit,
-					da diese Daten für die Anmeldung verwendet werden.
-					</p>
-
 					<table style="width:100%">
 						<colgroup>
-							<col style="width:65%;">
-							<col style="width:35%;">
+							<col style="width:30%;">
+							<col style="width:70%;">
 						</colgroup>
 						<tr>
 							<td>
-								Anzahl Gäste, die ich zur Feier mitbringe und hiermit mit anmelden möchte <br>
-								(kommen Sie alleine, so sind dies 0)
+								Titel
+							</td>
+							<td>
+								<select name="geschlecht">
+									<option value="Herr" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] === "Herr") echo "selected";}?>>Herr</option>
+									<option value="Frau" <?php if(isset($_POST['geschlecht'])) {if($_POST['geschlecht'] === "Frau") echo "selected";}?>>Frau</option>
+								</select>
+								<select name="titel">
+									<option value="" <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "") echo "selected";}?>></option>
+									<option value="B.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "B.Sc.") echo "selected";}?>>B.Sc.</option>
+									<option value="B.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "B.Ed.") echo "selected";}?>>B.Ed.</option>
+									<option value="M.Sc." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "M.Sc.") echo "selected";}?>>M.Sc.</option>
+									<option value="M.Ed." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "M.Ed.") echo "selected";}?>>M.Ed.</option>
+									<option value="Dr. rer. nat." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. rer. nat.") echo "selected";}?>>Dr. rer. nat.</option>
+									<option value="Dr.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr.-Ing.") echo "selected";}?>>Dr.-Ing.</option>
+									<option value="Dr. mult." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. mult.") echo "selected";}?>>Dr. mult.</option>
+									<option value="Dr. h. c." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. h. c.") echo "selected";}?>>Dr. h. c.</option>
+									<option value="Dr. habil." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dr. habil.") echo "selected";}?>>Dr. habil.</option>
+									<option value="Dipl.-Inf." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Inf.") echo "selected";}?>>Dipl.-Inf.</option>
+									<option value="Dipl.-Ing." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Ing.") echo "selected";}?>>Dipl.-Ing.</option>
+									<option value="Dipl.-Math." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Math.") echo "selected";}?>>Dipl.-Math.</option>
+									<option value="Dipl.-Phys." <?php if(isset($_POST['titel'])) {if($_POST['titel'] === "Dipl.-Phys.") echo "selected";}?>>Dipl.-Phys.</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Name
+							</td>
+							<td>
+								<input type="text" name="vorname" placeholder="Vorname" size="25" <?php if(isset($_POST['vorname'])) echo "value=\"" . htmlspecialchars($_POST['vorname'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="nachname" placeholder="Nachname" size="25" <?php if(isset($_POST['nachname'])) echo "value=\"" . htmlspecialchars($_POST['nachname'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Kontakt
+							</td>
+							<td>
+								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Anzahl mitgebrachter Gäste
 							</td>
 							<td>
 								<input type="text" name="anzahl_gaeste" placeholder="" size="3" <?php if(isset($_POST['anzahl_gaeste'])) echo "value=\"" . htmlspecialchars($_POST['anzahl_gaeste'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
-						<tr>
-							<td>
-								Mein Beitrag zum Nachspeisenbuffet <br>
-								(leer, falls keine Nachspeise mitgebracht werden kann)
-							</td>
-							<td>
-								<input type="text" name="mitbringsel" placeholder="" size="40" <?php if(isset($_POST['mitbringsel'])) echo "value=\"" . htmlspecialchars($_POST['mitbringsel'], ENT_QUOTES, 'UTF-8') . "\"";?>>
-							</td>
-						</tr>
 					</table>
+					<br>
+					Hinweis: Kommen Sie alleine, so ist die Anzahl mitgebrachter Gäste 0.
+					Falls sich die Gästezahl nachträglich ändert so können Sie uns dies bis spätestens eine Woche vor der Feier per E-Mail mitteilen.
+
 					
 					<br>
 					<br>
@@ -257,6 +275,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							<td>
 								<select name="studienbeginn" size="1" style="width:180px;">
 									<option>bitte auswählen</option>
+									<option value="2016, WS">2016/17 WS</option>
+									<option value="2016, SS">2016 SS</option>
 									<option value="2015, WS">2015/16 WS</option>
 									<option value="2015, SS">2015 SS</option>
 									<option value="2014, WS">2014/15 WS</option>
@@ -321,6 +341,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					BIC: BYLADEM1SBT<br>
 					Verwendungszweck: [Nachname],[Vorname]<br>
 					
+					<br>
 					<br>
 					Die entsprechenden Angaben finden Sie auch in der Bestätigungsmail zur Anmeldung.
 					</p>

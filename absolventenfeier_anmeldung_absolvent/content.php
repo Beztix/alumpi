@@ -12,10 +12,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		
 		
 	
-		
             <section class="text">
-	
-			
 			
 				<h1>Anmeldung zur Absolventenfeier als aktueller Absolvent</h1>
 				
@@ -23,40 +20,30 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Auf dieser Seite können Sie sich zur Absolventenfeier als <strong>aktueller Absolvent</strong> anmelden.<br>
 				Sie nehmen damit an der Feier teil und erhalten während des Festakts eine Abschlussurkunde der Fakultät. 
 				Außerdem haben Sie die Möglichkeit, Ihre mitgebrachten Gäste mit anzumelden.<br>
+				<br>
+				Falls Sie sich als eigenständiger Gast zu den Feierlichkeiten anmelden möchten (d.h. kein Absolvent sind und nicht von einem aktuellen Absolventen mit angemeldet werden), 
+				melden Sie sich bitte nicht mit diesem Formular an, sondern klicken Sie bitte <a href="../absolventenfeier_anmeldeinformationen/index.php#gast">hier</a>.<br>
+				<br>
 				</p>
-				
+				<br>
 				
 		
 				<?php
-				//Einbinden der PHP-Datei zur Formularauswertung
-				include './process_partyGraduateRegistrationForm.php';
-				
-				//Einbinden der PHP-Datei um die Anmeldedaten des Mitglieds abzurufen
-				include './get_partyRegistrationData_from_DB.php'; 
-
-				
-				//User ist bereits zur Feier angemeldet (durch die DB-Abfrage ermittelt)
-				if($userIsRegistered && ABSOLVENTENFEIER_ANMELDEDATEN_SICHTBAR) {
-					include './content_alreadyRegistered.php';
+				//Anmeldung aktuell möglich
+				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
+					//Zeige Anmeldeformular an
+					include './content_partyGraduateRegistrationForm.php';
+					
+					//Einbinden der PHP-Datei zur Formularauswertung
+					include './process_partyGraduateRegistrationForm.php';
 				}
 				
 				
-				//User ist nicht zur Feier angemeldet
+				//Anmeldung aktuell nicht möglich
 				else {
-
-					//Anmeldung aktuell möglich
-					if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
-						//Zeige Anmeldeformular an
-						include './content_partyGraduateRegistrationForm.php';
-					}
-					
-					
-					//Anmeldung aktuell nicht möglich
-					else {
-						echo "<p>\n";
-						echo "Aktuell ist keine Anmeldung zur Absolventenfeier möglich.\n";
-						echo "</p>\n";
-					}
+					echo "<p>\n";
+					echo "Aktuell ist keine Anmeldung zur Absolventenfeier möglich.\n";
+					echo "</p>\n";
 				}
 				?>
 				
