@@ -15,9 +15,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 <ul>
 	<li>
-		<a <?php if ($thisPage=="anmeldung_absolventenfeier" || $thisPage=="anmeldung_feier_gast") {echo " class=\"currentpage\"";} ?> href="../anmeldung_absolventenfeier/index.php">Anmeldung</a>
+		<a <?php if ($thisPage=="anmeldung_absolventenfeier") {echo " class=\"currentpage\"";} ?> href="../anmeldung_absolventenfeier/index.php">Anmeldeinformationen</a>
 	</li>
-		<li>
+	<li>
+		<a <?php if ($thisPage=="anmeldung_feier_absolvent") {echo " class=\"currentpage\"";} ?> href="../anmeldung_feier_absolvent/index.php">Anmeldung als Absolvent</a>
+	</li>
+	<li>
+		<a <?php if ($thisPage=="anmeldung_feier_gast") {echo " class=\"currentpage\"";} ?> href="../anmeldung_feier_gast/index.php">Anmeldung als Gast</a>
+	</li>
+	<li>
 		<a <?php if ($thisPage=="absolventengalerie") {echo " class=\"currentpage\"";} ?> href="../absolventengalerie/index.php">Absolventengalerie</a>
 	</li>
 </ul>

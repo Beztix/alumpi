@@ -34,6 +34,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					//Submenü wird nur angezeigt wenn sich der Nutzer auf dieser Seite oder einer Unterseite befindet
 					if($thisPage=="absolventenfeier" || 
 						$thisPage=="anmeldung_absolventenfeier" || 
+						$thisPage=="anmeldung_feier_absolvent" || 
 						$thisPage=="anmeldung_feier_gast" || 
 						$thisPage=="absolventengalerie") {
 						include 'submenu_absolventenfeier.php';

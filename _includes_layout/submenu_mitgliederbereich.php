@@ -17,9 +17,6 @@ include_once '../_includes_functionality/calculateAccessPermissions.php';
 
 <ul>
 	<li>
-		<a <?php if ($thisPage=="anmeldung_feier_absolvent") {echo " class=\"currentpage\"";} ?> href="../anmeldung_feier_absolvent/index.php">Anmeldung zur Absolventenfeier</a>
-	</li>
-	<li>
 		<a <?php if ($thisPage=="bildergalerie") {echo " class=\"currentpage\"";} ?> href="../bildergalerie/index.php">Bildergalerie</a>
 	</li>
 	<li>
@@ -30,7 +27,7 @@ include_once '../_includes_functionality/calculateAccessPermissions.php';
 	</li>
 	
 <?php
-//Menuepunkte nur anzeigen, wenn angemeldeter Nutzer passende Zugriffsrechte hat
+//Optionale Menuepunkte nur anzeigen, wenn angemeldeter Nutzer passende Zugriffsrechte hat
 
 
 //Wer Zugriff haben soll in den Argumenten: foerderer, mitglied, orga, kuratorium, finanzer, vorstand, admin
