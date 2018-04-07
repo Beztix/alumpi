@@ -9,7 +9,7 @@ session_start();
 require '../_includes_functionality/global_constants.php';
 
 
-$thisPage = 'anmeldung_absolventenfeier';
+$thisPage = 'absolventenfeier_anmeldeinformationen';
 $title = 'AluMPI | Anmeldung zur Absolventenfeier';
 $keywords = 'Absolventenfeier, Anmeldung, Abschluss, Party, Urkunde, Buffet, Teilnahme';
 $description = 'Informationen zur Anmeldung für die Absolventenfeier der Fakultät I der Uni Bayreuth';

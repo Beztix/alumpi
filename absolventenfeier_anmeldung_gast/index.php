@@ -9,7 +9,7 @@ session_start();
 require '../_includes_functionality/global_constants.php';
 
 
-$thisPage = 'anmeldung_feier_gast';
+$thisPage = 'absolventenfeier_anmeldung_gast';
 $title = 'AluMPI | Anmeldung als Gast zur Absolventenfeier';
 $keywords = 'Absolventenfeier, Anmeldung, Abschluss, Party, Urkunde, Buffet, Teilnahme, Gast, Fakultätsangehöriger';
 $description = 'Anmeldung zur Absolventenfeier der Fakultät I der Uni Bayreuth als Gast';
