@@ -28,7 +28,7 @@ function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_de
 Hallo " . $titleAndName . ",
 
 vielen Dank für ihre Anmeldung zur Absolventenfeier am " . $datum_der_feier . " als aktueller Absolvent. 
-Diese E-Mail dient lediglich der Bestätigung der Anmeldung, sie können die von Ihnen angegeben Informationen auf der Webseite unter http://alumpi.de/anmeldung_feier_absolvent/index.php einsehen.
+Diese E-Mail dient lediglich der Bestätigung der Anmeldung.
 
 Sie haben zusätzlich " . $anzahl_gaeste . " Gäste mit angemeldet. 
 Bitte überweisen Sie den Betrag von insgesamt " . $gesamtpreis . " € bis spätestens 7 Tage vor der Feier auf das Konto des Absolventenvereins.

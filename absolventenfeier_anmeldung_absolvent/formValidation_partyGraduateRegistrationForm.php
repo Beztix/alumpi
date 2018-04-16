@@ -20,6 +20,16 @@ function check_requiredFields_partyRegistrationAsGraduate($data_form) {
 	
 	$error = "";
 	
+	if(empty($data_form['vorname'])) {
+		$error = $error . "Es wurde kein Vorname eingegeben.<br>\n";
+	}
+	if(empty($data_form['nachname'])) {
+		$error = $error . "Es wurde kein Nachname eingegeben.<br>\n";
+	}
+	if(empty($data_form['email'])) {
+		$error = $error . "Es wurde keine Email-Adresse eingegeben.<br>\n";
+	}
+	
 	if(empty($data_form['anzahl_gaeste']) && !($data_form['anzahl_gaeste'] == '0')) {
 		$error = $error . "Die Anzahl der Gäste wurde nicht eingegeben.<br>\n";
 	}
@@ -59,6 +69,18 @@ function check_fieldsFormatting_partyRegistrationAsGraduate($data_form) {
 
 	$error ="";
 	
+	// Überprüfe ob die Namensfelder nur Buchstaben enthalten
+	if (!preg_match("/^[a-zäöüß-]+$/iu",$data_form['vorname'])) {
+		$error = $error . "Als Vorname sind nur Buchstaben erlaubt.<br>\n";
+	}
+	if (!preg_match("/^[a-zäöüß-]+$/iu",$data_form['nachname'])) {
+		$error = $error . "Als Nachname sind nur Buchstaben erlaubt.<br>\n";
+	}
+	
+	// Überprüfe die Email-Adresse auf korrektes Format
+	if (!filter_var($data_form['email'], FILTER_VALIDATE_EMAIL)) {
+		$error = $error . "Die eingegebene Email-Adresse ist ungültig.<br>\n";
+	}
 	
 	// Überprüfe, ob die Anzahl Gäste nur aus einer Zahl besteht
 	if (!preg_match("/^[0-9]+$/iu",$data_form['anzahl_gaeste'])) {

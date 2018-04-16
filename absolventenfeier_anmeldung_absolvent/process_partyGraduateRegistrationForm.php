@@ -24,11 +24,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				//Formulardaten angekommen
 				if(!empty($_POST)) {
 					
-					
-					//Einbinden der PHP-Datei um die Mitgliedsdaten abzurufen (werden zur Anmeldung benötigt)
-					include '../_includes_functionality/get_memberdata_from_db.php'; 
-					
-					
 					//Nicht alle Felder ausgefüllt
 					$error = check_requiredFields_partyRegistrationAsGraduate($_POST);
 					if(!empty($error)) {
@@ -52,15 +47,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					
 						//Alle Felder korrekt formatiert
 						else {
-						
-							/*
-							echo "test - formular korrekt ausgefüllt abgeschickt <br>";
-							echo "<br>";
-							echo "Eingegebener Vorname: " . $_POST['vorname'] . "<br>";
-							echo "Eingegebener Nachname: " . $_POST['nachname'] . "<br>";
-							echo "<br>";
-							*/
-							
+					
 							//Zur Datenbank verbinden
 							$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 							$mysqli->set_charset("utf8");
@@ -80,18 +67,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							else {
 								
 								
-								//Überprüften Formularinput sowie Mitgliedsdaten in PHP-Variablen umspeichern und ggf. anpassen
+								//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
 				
 								date_default_timezone_set("Europe/Berlin");
 								$datum_der_feier = date('Y-m-d', strtotime(ABSOLVENTENFEIER_DATUM));
-								$mid = $_SESSION['userMID'];
-								$geschlecht = $data_db['geschlecht'];
-								$titel = $data_db['titel'];
-								$nachname = $data_db['nachname'];
-								$vorname =$data_db['vorname'];
-								$email = $data_db['email'];								
+								$geschlecht = $_POST['geschlecht'];
+								$titel = $_POST['titel'];
+								$nachname = $_POST['nachname'];
+								$vorname = $_POST['vorname'];
+								$email = $_POST['email'];						
 								$anzahl_gaeste = $_POST['anzahl_gaeste'];
-								$mitbringsel = $_POST['mitbringsel'];
 								$selbstfeier = 'j';
 								$abschlussarbeitsthema = $_POST['abschlussarbeitsthema'];
 								$lehrstuhl = $_POST['lehrstuhl'];
@@ -113,9 +98,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								//Anmeldedaten zur Feier in die Datenbank einfügen
 								//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 								$stmt = $mysqli->prepare("INSERT INTO absolventenfeier   
-								(datum_der_feier, mid, geschlecht, titel, nachname, vorname, email, anzahl_gaeste, mitbringsel, selbstfeier, abschlussarbeitsthema, lehrstuhl, studiengang, neuer_titel, studienbeginn, studienabschluss, gesamtpreis) 
-								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-								$stmt->bind_param("sisssssissssssssd", $datum_der_feier, $mid, $geschlecht, $titel, $nachname, $vorname, $email, $anzahl_gaeste, $mitbringsel, $selbstfeier, $abschlussarbeitsthema, $lehrstuhl, $studiengang, $neuer_titel, $studienbeginn, $studienabschluss, $gesamtpreis);
+								(datum_der_feier, geschlecht, titel, nachname, vorname, email, anzahl_gaeste, selbstfeier, abschlussarbeitsthema, lehrstuhl, studiengang, neuer_titel, studienbeginn, studienabschluss, gesamtpreis) 
+								VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+								$stmt->bind_param("ssssssisssssssd", $datum_der_feier, $geschlecht, $titel, $nachname, $vorname, $email, $anzahl_gaeste, $selbstfeier, $abschlussarbeitsthema, $lehrstuhl, $studiengang, $neuer_titel, $studienbeginn, $studienabschluss, $gesamtpreis);
 							
 							
 							
@@ -162,7 +147,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									if ($mysqli->errno === 1062) {
 										echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 										echo "<p class=\"error\">\n";
-										echo "Für Ihre Mitglieds-ID oder Email-Adresse wurde bereits eine Anmeldung zur diesjährigen Absolventenfeier vorgenommen.<br>\n";
+										echo "Für Ihre Email-Adresse wurde bereits eine Anmeldung zur diesjährigen Absolventenfeier vorgenommen.<br>\n";
 										echo "<br>\n";
 										echo "Falls die vorherige Anmeldung nicht durch Sie vorgenommen wurde (oder Sie sich versehentlich zuvor als Gast anstatt als aktueller Absolvent angemeldet haben)\n"; 
 										echo "wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>\n";

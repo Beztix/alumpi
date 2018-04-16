@@ -68,7 +68,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<br>
 					Hinweis: Kommen Sie alleine, so ist die Anzahl mitgebrachter Gäste 0.
 					Falls sich die Gästezahl nachträglich ändert so können Sie uns dies bis spätestens eine Woche vor der Feier per E-Mail mitteilen.
-
+					<br>
 					
 					<br>
 					<br>
@@ -97,47 +97,86 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							<td>
 								An welchem Lehrstuhl haben Sie die Abschlussarbeit geschrieben?
 							</td>
-							<td>
+							<td>	
 								<select name="lehrstuhl" size="1" style="width:450px;">
-									<option value="" selected="selected">bitte auswählen</option>
+									<option value="">bitte auswählen</option>
 									<optgroup label="Mathematik">
-										<option value="Mathematik I - Komplexe Analysis">Mathematik I - Komplexe Analysis</option>
-										<option value="Mathematik II - Computeralgebra">Mathematik II - Computeralgebra</option>
-										<option value="Mathematik III - Angewandte und Numerische Analysis">Mathematik III - Angewandte und Numerische Analysis</option>
-										<option value="Mathematik IV - Zahlentheorie">Mathematik IV - Zahlentheorie</option>
-										<option value="Mathematik V - Angewandte Mathematik">Mathematik V - Angewandte Mathematik</option>
-										<option value="Mathematik VI - Nichtlineare Analysis und Mathematische Physik">Mathematik VI - Nichtlineare Analysis und Mathematische Physik</option>
-										<option value="Mathematik VII - Stochastik">Mathematik VII - Stochastik</option>
-										<option value="Mathematik VIII - Algebraische Geometrie">Mathematik VIII - Algebraische Geometrie</option>
-										<option value="Ingenieurmathematik">Ingenieurmathematik</option>
-										<option value="Wirtschaftsmathematik">Wirtschaftsmathematik</option>
-										<option value="Mathematik und ihre Didaktik">Mathematik und ihre Didaktik</option>
+										<?php
+										$lehrstuhl_mathe = array(
+											"Mathematik I - Komplexe Analysis",
+											"Mathematik II - Computeralgebra",
+											"Mathematik III - Angewandte und Numerische Analysis",
+											"Mathematik IV - Zahlentheorie",
+											"Mathematik V - Angewandte Mathematik",
+											"Mathematik VI - Nichtlineare Analysis und Mathematische Physik",
+											"Mathematik VII - Stochastik",
+											"Mathematik VIII - Algebraische Geometrie",
+											"Ingenieurmathematik",
+											"Wirtschaftsmathematik",
+											"Mathematik und ihre Didaktik"
+											);
+							
+										foreach($lehrstuhl_mathe as $val) {
+											if(isset($_POST['lehrstuhl']) && $_POST['lehrstuhl'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Physik">
-										<option value="Experimentalphysik I">Experimentalphysik I</option>
-										<option value="Experimentalphysik II">Experimentalphysik II</option>
-										<option value="Experimentalphysik III">Experimentalphysik III</option>
-										<option value="Experimentalphysik IV">Experimentalphysik IV</option>
-										<option value="Experimentalphysik V">Experimentalphysik V</option>
-										<option value="Theoretische Physik I">Theoretische Physik I</option>
-										<option value="Theoretische Physik II">Theoretische Physik II</option>
-										<option value="Theoretische Physik III">Theoretische Physik III</option>
-										<option value="Theoretische Physik IV">Theoretische Physik IV</option>
-										<option value="Theoretische Physik V">Theoretische Physik V</option>
-										<option value="Didaktik der Physik">Didaktik der Physik</option>
-										<option value="Kristallographie">Kristallographie</option>
-										<option value="Bayreuther Institut für Makromolekülforschung">Bayreuther Institut für Makromolekülforschung</option>
+										<?php
+										$lehrstuhl_physik = array(
+											"Experimentalphysik I",
+											"Experimentalphysik II",
+											"Experimentalphysik III",
+											"Experimentalphysik IV",
+											"Experimentalphysik V",
+											"Theoretische Physik I",
+											"Theoretische Physik II",
+											"Theoretische Physik III",
+											"Theoretische Physik IV",
+											"Theoretische Physik V",
+											"Didaktik der Physik",
+											"Kristallographie",
+											"Bayreuther Institut für Makromolekülforschung"
+											);
+							
+										foreach($lehrstuhl_physik as $val) {
+											if(isset($_POST['lehrstuhl']) && $_POST['lehrstuhl'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Informatik">
-										<option value="Angewandte Informatik I - Softwaretechnik">Angewandte Informatik I - Softwaretechnik</option>
-										<option value="Angewandte Informatik II - Parallele und verteilte Systeme">Angewandte Informatik II - Parallele und verteilte Systeme</option>
-										<option value="Angewandte Informatik III - Robotik und Eingebettete Systeme">Angewandte Informatik III - Robotik und Eingebettete Systeme</option>
-										<option value="Angewandte Informatik IV - Datenbanken und Informationssysteme">Angewandte Informatik IV - Datenbanken und Informationssysteme</option>
-										<option value="Angewandte Informatik V - Graphische Datenverarbeitung">Angewandte Informatik V - Graphische Datenverarbeitung</option>
-										<option value="Angewandte Informatik VI - Algorithmen und Datenstrukturen">Angewandte Informatik VI - Algorithmen und Datenstrukturen</option>
-										<option value="Angewandte Informatik VII - Theoretische Informatik">Angewandte Informatik VII - Theoretische Informatik</option>
-										<option value="Wirtschaftsinformatik">Wirtschaftsinformatik</option>
-										<option value="Bioinformatik">Bioinformatik</option>
+										<?php
+										$lehrstuhl_info = array(
+											"Angewandte Informatik I - Softwaretechnik",
+											"Angewandte Informatik II - Parallele und verteilte Systeme",
+											"Angewandte Informatik III - Robotik und Eingebettete Systeme",
+											"Angewandte Informatik IV - Datenbanken und Informationssysteme",
+											"Angewandte Informatik V - Graphische Datenverarbeitung",
+											"Angewandte Informatik VI - Algorithmen und Datenstrukturen",
+											"Angewandte Informatik VII - Theoretische Informatik",
+											"Wirtschaftsinformatik",
+											"Bioinformatik"
+											);
+							
+										foreach($lehrstuhl_info as $val) {
+											if(isset($_POST['lehrstuhl']) && $_POST['lehrstuhl'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 								</select>
 							</td>
@@ -146,105 +185,235 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							<td>Studiengang:</td>
 							<td>
 								<select name="studiengang" size="1" style="width:450px;">
-									<option value="" selected="selected">bitte auswählen</option>
+									<option value="">bitte auswählen</option>
 									
 									<optgroup label="Promotion">
-										<option value="Promotion, Informatik"> - Informatik</option>
-										<option value="Promotion, Mathematik"> - Mathematik</option>
-										<option value="Promotion, Physik"> - Physik</option>
+										<?php
+										$studiengang_promotion = array(
+											"Promotion, Informatik",
+											"Promotion, Mathematik",
+											"Promotion, Physik"
+											);
+							
+										foreach($studiengang_promotion as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Diplom">
-										<option value="Diplom, Mathematik"> - Mathematik</option>
-										<option value="Diplom, Technomathematik"> - Technomathematik</option>
-										<option value="Diplom, Wirtschaftsmathematik"> - Wirtschaftsmathematik</option>
-										<option value="Diplom, Physik"> - Physik</option>
-										<option value="Diplom, technische Physik"> - Technische Physik</option>
+										<?php
+										$studiengang_diplom = array(
+											"Diplom, Mathematik",
+											"Diplom, Technomathematik",
+											"Diplom, Wirtschaftsmathematik",
+											"Diplom, Physik",
+											"Diplom, technische Physik"
+											);
+							
+										foreach($studiengang_diplom as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Bachelor of Science (kein Lehramt)">
-										<option value="Bachelor of Science, Mathematik"> - Mathematik</option>
-										<option value="Bachelor of Science, Technomathematik"> - Technomathematik</option>
-										<option value="Bachelor of Science, Wirtschaftsmathematik"> - Wirtschaftsmathematik</option>
-										<option value="Bachelor of Science, Physik"> - Physik</option>
-										<option value="Bachelor of Science, Informatik"> - Informatik</option>
-										<option value="Bachelor of Science, Angewandte Informatik"> - Angewandte Informatik</option>
+										<?php
+										$studiengang_bsc = array(
+											"Bachelor of Science, Mathematik",
+											"Bachelor of Science, Technomathematik",
+											"Bachelor of Science, Wirtschaftsmathematik",
+											"Bachelor of Science, Physik",
+											"Bachelor of Science, Informatik",
+											"Bachelor of Science, Angewandte Informatik"
+											);
+							
+										foreach($studiengang_bsc as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Master of Science (kein Lehramt)">
-										<option value="Master of Science, Mathematik"> - Mathematik</option>
-										<option value="Master of Science, Technomathematik"> - Technomathematik</option>
-										<option value="Master of Science, Wirtschaftsmathematik"> - Wirtschaftsmathematik</option>
-										<option value="Master of Science, Physik"> - Physik</option>
-										<option value="Master of Science, Computer Science"> - Computer Science</option>
-										<option value="Master of Science, Angewandte Informatik"> - Angewandte Informatik</option>
+										<?php
+										$studiengang_msc = array(
+											"Master of Science, Mathematik",
+											"Master of Science, Technomathematik",
+											"Master of Science, Wirtschaftsmathematik",
+											"Master of Science, Physik",
+											"Master of Science, Computer Science",
+											"Master of Science, Angewandte Informatik"
+											);
+							
+										foreach($studiengang_msc as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Abschlüsse für Lehramt an Berufsschulen">
-										<option value="Bachelor of Education für Berufliche Bildung, Fachrichtung Metalltechnik"> - Bachelor of Education in Metalltechnik</option>
-										<option value="Bachelor of Science für Berufliche Bildung, Fachrichtung Metalltechnik"> - Bachelor of Science in Metalltechnik</option>
-										<option value="Master of Education in Science für Berufliche Bildung, Fachrichtung Metalltechnik"> - Master of Education in Science, Metalltechnik</option>
-										<option value="1. Staatsexamen für Berufliche Bildung, Fachrichtung Metalltechnik"> - 1. Staatsexamen in Metalltechnik</option>
+										<?php
+										$studiengang_berufsschule = array(
+											"Bachelor of Education für Berufliche Bildung, Fachrichtung Metalltechnik",
+											"Bachelor of Science für Berufliche Bildung, Fachrichtung Metalltechnik",
+											"Master of Education in Science für Berufliche Bildung, Fachrichtung Metalltechnik",
+											"1. Staatsexamen für Berufliche Bildung, Fachrichtung Metalltechnik"
+											);
+							
+										foreach($studiengang_berufsschule as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="1. Staatsexamen für Lehramt an Realschulen">
-										<option value="1. Staatsexamen für Lehramt Informatik/Englisch an Realschulen"> - Informatik/Englisch</option>
-										<option value="1. Staatsexamen für Lehramt Informatik/Mathematik an Realschulen"> - Informatik/Mathematik</option>
-										<option value="1. Staatsexamen für Lehramt Informatik/Physik an Realschulen"> - Informatik/Physik</option>
-										<option value="1. Staatsexamen für Lehramt Informatik/Wirtschaftswissenschaften an Realschulen"> - Informatik/Wirtschaftswissenschaften</option>
-										<option value="1. Staatsexamen für Lehramt Mathematik/Chemie an Realschulen"> - Mathematik/Chemie</option>
-										<option value="1. Staatsexamen für Lehramt Mathematik/Deutsch an Realschulen"> - Mathematik/Deutsch</option>
-										<option value="1. Staatsexamen für Lehramt Mathematik/Englisch an Realschulen"> - Mathematik/Englisch</option>
-										<option value="1. Staatsexamen für Lehramt Mathematik/Physik an Realschulen"> - Mathematik/Physik</option>
-										<option value="1. Staatsexamen für Lehramt Mathematik/Sport an Realschulen"> - Mathematik/Sport</option>
-										<option value="1. Staatsexamen für Lehramt Mathematik/Wirtschaftswissenschaften an Realschulen">  - Mathematik/Wirtschaftswissenschaften</option>
+										<?php
+										$studiengang_stax_real = array(
+											"1. Staatsexamen für Lehramt Informatik/Englisch an Realschulen",
+											"1. Staatsexamen für Lehramt Informatik/Mathematik an Realschulen",
+											"1. Staatsexamen für Lehramt Informatik/Physik an Realschulen",
+											"1. Staatsexamen für Lehramt Informatik/Wirtschaftswissenschaften an Realschulen",
+											"1. Staatsexamen für Lehramt Mathematik/Chemie an Realschulen",
+											"1. Staatsexamen für Lehramt Mathematik/Deutsch an Realschulen",
+											"1. Staatsexamen für Lehramt Mathematik/Englisch an Realschulen",
+											"1. Staatsexamen für Lehramt Mathematik/Physik an Realschulen",
+											"1. Staatsexamen für Lehramt Mathematik/Sport an Realschulen",
+											"1. Staatsexamen für Lehramt Mathematik/Wirtschaftswissenschaften an Realschulen"
+											);
+							
+										foreach($studiengang_stax_real as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="1. Staatsexamen für Lehramt an Gymnasien">
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Informatik/Englisch "> - Informatik/Englisch</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Informatik/Mathematik"> - Informatik/Mathematik</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Informatik/Physik"> - Informatik/Physik</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften"> - Informatik/Wirtschaftswissenschaften</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Chemie"> - Mathematik/Chemie</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Deutsch"> - Mathematik/Deutsch</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Englisch"> - Mathematik/Englisch</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Physik"> - Mathematik/Physik</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Sport"> - Mathematik/Sport</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften"> - Mathematik/Wirtschaftswissenschaften</option>
-										<option value="1. Staatsexamen für Lehramt an Gymnasien, Physik/Geographie"> - Physik/Geographie</option>
+										<?php
+										$studiengang_stax_gym = array(
+											"1. Staatsexamen für Lehramt an Gymnasien, Informatik/Englisch",
+											"1. Staatsexamen für Lehramt an Gymnasien, Informatik/Mathematik",
+											"1. Staatsexamen für Lehramt an Gymnasien, Informatik/Physik",
+											"1. Staatsexamen für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften",
+											"1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Chemie",
+											"1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Deutsch",
+											"1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Englisch",
+											"1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Physik",
+											"1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Sport",
+											"1. Staatsexamen für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften",
+											"1. Staatsexamen für Lehramt an Gymnasien, Physik/Geographie"
+											);
+							
+										foreach($studiengang_stax_gym as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Master of Education in Science für Lehramt an Gymnasien">
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Informatik/Englisch "> - Informatik/Englisch</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Informatik/Mathematik"> - Informatik/Mathematik</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Informatik/Physik"> - Informatik/Physik</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften"> - Informatik/Wirtschaftswissenschaften</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Mathematik/Chemie"> - Mathematik/Chemie</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Mathematik/Deutsch"> - Mathematik/Deutsch</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Mathematik/Englisch"> - Mathematik/Englisch</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Mathematik/Physik"> - Mathematik/Physik</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Mathematik/Sport"> - Mathematik/Sport</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften"> - Mathematik/Wirtschaftswissenschaften</option>
-										<option value="Master of Education in Science für Lehramt an Gymnasien, Physik/Geographie"> - Physik/Geographie</option>
+										<?php
+										$studiengang_med_gym = array(
+											"Master of Education in Science für Lehramt an Gymnasien, Informatik/Englisch",
+											"Master of Education in Science für Lehramt an Gymnasien, Informatik/Mathematik",
+											"Master of Education in Science für Lehramt an Gymnasien, Informatik/Physik",
+											"Master of Education in Science für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften",
+											"Master of Education in Science für Lehramt an Gymnasien, Mathematik/Chemie",
+											"Master of Education in Science für Lehramt an Gymnasien, Mathematik/Deutsch",
+											"Master of Education in Science für Lehramt an Gymnasien, Mathematik/Englisch",
+											"Master of Education in Science für Lehramt an Gymnasien, Mathematik/Physik",
+											"Master of Education in Science für Lehramt an Gymnasien, Mathematik/Sport",
+											"Master of Education in Science für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften",
+											"Master of Education in Science für Lehramt an Gymnasien, Physik/Geographie"
+											);
+							
+										foreach($studiengang_med_gym as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Bachelor of Science für Lehramt an Gymnasien">
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Informatik/Englisch "> - Informatik/Englisch</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Informatik/Mathematik"> - Informatik/Mathematik</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Informatik/Physik"> - Informatik/Physik</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften"> - Informatik/Wirtschaftswissenschaften</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Mathematik/Chemie"> - Mathematik/Chemie</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Mathematik/Deutsch"> - Mathematik/Deutsch</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Mathematik/Englisch"> - Mathematik/Englisch</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Mathematik/Physik"> - Mathematik/Physik</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Mathematik/Sport"> - Mathematik/Sport</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften"> - Mathematik/Wirtschaftswissenschaften</option>
-										<option value="Bachelor of Science für Lehramt an Gymnasien, Physik/Geographie"> - Physik/Geographie</option>
+										<?php
+										$studiengang_bsc_gym = array(
+											"Bachelor of Science für Lehramt an Gymnasien, Informatik/Englisch",
+											"Bachelor of Science für Lehramt an Gymnasien, Informatik/Mathematik",
+											"Bachelor of Science für Lehramt an Gymnasien, Informatik/Physik",
+											"Bachelor of Science für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften",
+											"Bachelor of Science für Lehramt an Gymnasien, Mathematik/Chemie",
+											"Bachelor of Science für Lehramt an Gymnasien, Mathematik/Deutsch",
+											"Bachelor of Science für Lehramt an Gymnasien, Mathematik/Englisch",
+											"Bachelor of Science für Lehramt an Gymnasien, Mathematik/Physik",
+											"Bachelor of Science für Lehramt an Gymnasien, Mathematik/Sport",
+											"Bachelor of Science für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften",
+											"Bachelor of Science für Lehramt an Gymnasien, Physik/Geographie"
+											);
+							
+										foreach($studiengang_bsc_gym as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 									<optgroup label="Bachelor of Education für Lehramt an Gymnasien">
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Informatik/Englisch "> - Informatik/Englisch</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Informatik/Mathematik"> - Informatik/Mathematik</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Informatik/Physik"> - Informatik/Physik</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften"> - Informatik/Wirtschaftswissenschaften</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Mathematik/Chemie"> - Mathematik/Chemie</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Mathematik/Deutsch"> - Mathematik/Deutsch</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Mathematik/Englisch"> - Mathematik/Englisch</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Mathematik/Physik"> - Mathematik/Physik</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Mathematik/Sport"> - Mathematik/Sport</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften"> - Mathematik/Wirtschaftswissenschaften</option>
-										<option value="Bachelor of Education für Lehramt an Gymnasien, Physik/Geographie"> - Physik/Geographie</option>
+										<?php
+										$studiengang_bed_gym = array(
+											"Bachelor of Education für Lehramt an Gymnasien, Informatik/Englisch",
+											"Bachelor of Education für Lehramt an Gymnasien, Informatik/Mathematik",
+											"Bachelor of Education für Lehramt an Gymnasien, Informatik/Physik",
+											"Bachelor of Education für Lehramt an Gymnasien, Informatik/Wirtschaftswissenschaften",
+											"Bachelor of Education für Lehramt an Gymnasien, Mathematik/Chemie",
+											"Bachelor of Education für Lehramt an Gymnasien, Mathematik/Deutsch",
+											"Bachelor of Education für Lehramt an Gymnasien, Mathematik/Englisch",
+											"Bachelor of Education für Lehramt an Gymnasien, Mathematik/Physik",
+											"Bachelor of Education für Lehramt an Gymnasien, Mathematik/Sport",
+											"Bachelor of Education für Lehramt an Gymnasien, Mathematik/Wirtschaftswissenschaften",
+											"Bachelor of Education für Lehramt an Gymnasien, Physik/Geographie"
+											);
+							
+										foreach($studiengang_bed_gym as $val) {
+											if(isset($_POST['studiengang']) && $_POST['studiengang'] == $val) {
+												echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+											}
+											else {
+												echo '<option value="' . $val . '">' . $val . '</option>\n';
+											}
+										}
+										?>
 									</optgroup>
 								</select>
 							</td>
@@ -254,19 +423,32 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							<td>
 								<select name="neuer_titel" size="1" style="width:180px;">
 									<option value="">bitte auswählen</option>
-									<option value="B.Sc.">B.Sc.</option>
-									<option value="B.Ed.">B.Ed.</option>
-									<option value="M.Sc.">M.Sc.</option>
-									<option value="M.Ed.">M.Ed.</option>
-									<option value="Dr. rer. nat.">Dr. rer. nat.</option>
-									<option value="Dr.-Ing.">Dr.-Ing.</option>
-									<option value="Dr. mult.">Dr. mult.</option>
-									<option value="Dr. h. c.">Dr. h. c.</option>
-									<option value="Dr. habil.">Dr. habil.</option>
-									<option value="Dipl.-Inf.">Dipl.-Inf.</option>
-									<option value="Dipl.-Ing.">Dipl.-Ing.</option>
-									<option value="Dipl.-Math.">Dipl.-Math.</option>
-									<option value="Dipl.-Phys.">Dipl.-Phys.</option>
+									<?php
+									$neuer_titel = array(
+										"B.Sc.",
+										"B.Ed.",
+										"M.Sc.",
+										"M.Ed.",
+										"Dr. rer. nat.",
+										"Dr.-Ing.",
+										"Dr. mult.",
+										"Dr. h. c.",
+										"Dr. habil.",
+										"Dipl.-Inf.",
+										"Dipl.-Ing.",
+										"Dipl.-Math.",
+										"Dipl.-Phys."
+										);
+						
+									foreach($neuer_titel as $val) {
+										if(isset($_POST['neuer_titel']) && $_POST['neuer_titel'] == $val) {
+											echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+										}
+										else {
+											echo '<option value="' . $val . '">' . $val . '</option>\n';
+										}
+									}
+									?>
 								</select>
 							</td>
 						</tr>
@@ -274,30 +456,43 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							<td>Beginn dieses Studiengangs</td>
 							<td>
 								<select name="studienbeginn" size="1" style="width:180px;">
-									<option>bitte auswählen</option>
-									<option value="2016, WS">2016/17 WS</option>
-									<option value="2016, SS">2016 SS</option>
-									<option value="2015, WS">2015/16 WS</option>
-									<option value="2015, SS">2015 SS</option>
-									<option value="2014, WS">2014/15 WS</option>
-									<option value="2014, SS">2014 SS</option>
-									<option value="2013, WS">2013/14 WS</option>				
-									<option value="2013, SS">2013 SS</option>
-									<option value="2012, WS">2012/13 WS</option>
-									<option value="2012, SS">2012 SS</option>
-									<option value="2011, WS">2011/12 WS</option>									
-									<option value="2011, SS">2011 SS</option>
-									<option value="2010, WS">2010/11 WS</option>
-									<option value="2010, SS">2010 SS</option>
-									<option value="2009, WS">2009/10 WS</option>									
-									<option value="2009, SS">2009 SS</option>
-									<option value="2008, WS">2008/09 WS</option>
-									<option value="2008, SS">2008 SS</option>
-									<option value="2007, WS">2007/08 WS</option>
-									<option value="2007, SS">2007 SS</option>
-									<option value="2006, WS">2006/07 WS</option>
-									<option value="2006, SS">2006 SS</option>
-									<option value="2005, WS">2005/06 WS</option>
+									<option value="">bitte auswählen</option>
+									<?php
+									$studienbeginn = array(
+										"2016, WS",
+										"2016, SS",
+										"2015, WS",
+										"2015, SS",
+										"2014, WS",
+										"2014, SS",
+										"2013, WS",
+										"2013, SS",
+										"2012, WS",
+										"2012, SS",
+										"2011, WS",						
+										"2011, SS",
+										"2010, WS",
+										"2010, SS",
+										"2009, WS",							
+										"2009, SS",
+										"2008, WS",
+										"2008, SS",
+										"2007, WS",
+										"2007, SS",
+										"2006, WS",
+										"2006, SS",
+										"2005, WS"
+										);
+						
+									foreach($studienbeginn as $val) {
+										if(isset($_POST['studienbeginn']) && $_POST['studienbeginn'] == $val) {
+											echo '<option value="' . $val . '" selected>' . $val . '</option>\n';
+										}
+										else {
+											echo '<option value="' . $val . '">' . $val . '</option>\n';
+										}
+									}
+									?>
 								</select>
 							</td>
 						</tr>
@@ -306,7 +501,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Abschlussdatum
 							</td>
 							<td>
-								<input type="text" name="studienabschluss" placeholder="TT.MM.JJJJ" size="10"  <?php if(isset($_POST['studienabschlus'])) echo "value=\"" . htmlspecialchars($_POST['studienabschluss'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="studienabschluss" placeholder="TT.MM.JJJJ" size="10"  <?php if(isset($_POST['studienabschluss'])) echo "value=\"" . htmlspecialchars($_POST['studienabschluss'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 					</table>
