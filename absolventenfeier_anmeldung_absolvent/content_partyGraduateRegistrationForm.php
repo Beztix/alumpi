@@ -552,7 +552,141 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					Bei Fragen, Anmerkungen und Anregungen können Sie uns jederzeit über <a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a> kontaktieren. 
 					</p>
 
+					
+					<br>
+					<br>
+					<h2>Anmeldung zum Absolventenverein</h2>
+					
+					<p>
+					Wir würden uns sehr freuen, wenn Sie sich zusätzlich zur Anmeldung zur Absolventenfeier als Mitglied zum Absolventenverein anmelden würden.	
+					<br>
+					</p>
 
+					<h3>Vorteile der Vereinsmitgliedschaft</h3>
+					<p>
+					Mit dem Beitritt zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. bleiben Sie der Fakultät, an der Sie Ihre Ausbildung erhalten und einige wichtige Jahre 
+					Ihres Lebens verbracht haben, ein Stück weit verbunden.<br>
+					Sie haben damit die Möglichkeit, in unregelmäßigen Abständen Informationen über Neuigkeiten an der Universität, die Absolventen der Fakultät 1 betreffen, 
+					sowie über die Aktivitäten des Absolventenvereins selbst zu erhalten.
+					Der Verein möchte dabei als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren, und in Zukunft auch weitere Homecoming-Veranstaltungen, 
+					Absolventenforen und ähnliche Veranstaltungen organisieren, bei denen die Absolventen untereinander in Kontakt bleiben oder auch den aktuellen Studenten
+					ihre Erfahrungen weitergeben können.<br>
+					Der geringe Jahresbeitrag von lediglich 10 Euro kommt direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> zugute, d.h. vor allem 
+					den Ihnen nachfolgenden Studenten der Fakultät 1 durch eine stetig wachsende Vereinsarbeit, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 	
+					<br>
+					</p>
+					
+					<p>
+					<input id="mitgliedsantragCheckbox" type="checkbox" name="mitgliedsantrag" onclick="toggleMitgliedsantragDisplay()" checked>
+					Ja, ich möchte mich gemeinsam mit dieser Anmeldung zur Absolventenfeier als Mitglied zum Absolventenverein anmelden. 
+					</p>
+					
+					<div id="mitgliedsantragDisplay">
+					
+						<h3>Zusätzliche Daten</h3>
+						<p>
+						Die folgenden Informationen werden zusätzlich zu den bereits oben genannten Daten benötigt, um gemeinsam mit der Anmeldung zur Absolventenfeier auch eine Anmeldung zum Absolventenverein vorzunehmen.
+						<br>
+						</p>
+						
+						<table style="width:100%">
+							<colgroup>
+								<col style="width:30%;">
+								<col style="width:70%;">
+							</colgroup>
+							<tr>
+								<td>
+									Kontakt
+								</td>
+								<td>
+									<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25" <?php if(isset($_POST['telefon'])) echo "value=\"" . htmlspecialchars($_POST['telefon'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								</td>
+							</tr>
+						</table>
+						
+						<p>
+						Ich werde hiermit Mitglied und ermächtige hiermit den Absolventen- und Förderverein MPI Uni Bayreuth e.V. jederzeit widerruflich, den
+						Mitgliedsbeitrag in Höhe von 10 Euro / Jahr von unten angegebenem Konto abzubuchen.
+						Dies beinhaltet, dass ich die Satzung und Beitragsordnung in der derzeit gültigen Form anerkenne. <br>
+						Ich bin außerdem damit einverstanden, dass meine Daten an die Universität Bayreuth zum Zwecke der Ehemaligenbetreuung weiter gegeben werden dürfen.<br>
+						<br>
+						</p>
+						
+						<table style="width:100%">
+							<colgroup>
+								<col style="width:30%;">
+								<col style="width:70%;">
+							</colgroup>
+							<tr>
+								<td>
+									Kontoinhaber
+								</td>
+								<td>
+									<input type="text" name="kontoinhaber" placeholder="Vorname Nachname" size="40" <?php if(isset($_POST['kontoinhaber'])) echo "value=\"" . htmlspecialchars($_POST['kontoinhaber'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Kontodaten
+								</td>
+								<td>
+									<input type="text" name="iban" placeholder="IBAN" size="34" <?php if(isset($_POST['iban'])) echo "value=\"" . htmlspecialchars($_POST['iban'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+									<input type="text" name="bic" placeholder="BIC" size="15" <?php if(isset($_POST['bic'])) echo "value=\"" . htmlspecialchars($_POST['bic'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								</td>
+							</tr>
+						</table>
+						
+						<p>
+						<input type="checkbox" name="iststudent" <?php if(isset($_POST['iststudent'])) echo "checked";?>>
+						Ich bin Student oder aktueller Absolvent. Diese sind vom Beitrag befreit, die Kontodaten sind jedoch in jedem Fall anzugeben. 
+						Für die Befreiung ist zusätzlich ein Studiennachweis eines Semesters des zu befreienden Jahres bereitzustellen. 
+						Die Kontaktdaten finden Sie im Menu links unter dem Punkt Kontakt.<br>
+						<br>
+						</p>
+						
+						
+						
+						<p>
+						<input type="checkbox" name="newsletter" <?php if(isset($_POST['newsletter'])) echo "checked";?>>
+						Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth <strong>nicht</strong> beziehen. 
+						Der Newsletter wird per Post versendet, falls er gewünscht wird, müssen Angaben zur Anschrift erfolgen.
+						</p>
+
+						<table style="width:100%">
+							<colgroup>
+								<col style="width:30%;">
+								<col style="width:70%;">
+							</colgroup>
+							<tr>
+								<td>
+									Straße, Hausnummer
+								</td>
+								<td>
+									<input type="text" name="strasse" placeholder="Straße Hausnummer" size="30" <?php if(isset($_POST['strasse'])) echo "value=\"" . htmlspecialchars($_POST['strasse'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Postleitzahl, Ort
+								</td>
+								<td>
+									<input type="text" name="plz" placeholder="PLZ" size="10" <?php if(isset($_POST['plz'])) echo "value=\"" . htmlspecialchars($_POST['plz'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+									<input type="text" name="ort" placeholder="Ort" size="25" <?php if(isset($_POST['ort'])) echo "value=\"" . htmlspecialchars($_POST['ort'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									Land
+								</td>
+								<td>
+									<input type="text" name="land" placeholder="Land" size="25" <?php if(isset($_POST['land'])) echo "value=\"" . htmlspecialchars($_POST['land'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								</td>
+							</tr>
+						</table>
+						
+					</div>
+
+					<br>
 					<button class="absenden" type="submit">Anmeldung Absenden</button>
 
 				</form>
