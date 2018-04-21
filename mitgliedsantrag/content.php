@@ -24,16 +24,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<p>
 				Mit dem Beitritt zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. bleiben Sie der Fakultät, an der Sie Ihre Ausbildung erhalten und einige wichtige Jahre 
 				Ihres Lebens verbracht haben, ein Stück weit verbunden.<br>
-				Nur als Vereinsmitglied ist es möglich, als aktueller Absolvent an der jährlich organisierten Absolventenfeier teilzunehmen, wobei die Mitgliedschaft in diesem 
-				ersten Jahr kostenlos ist.
-				<br>
-				Sie haben außerdem die Möglichkeit, in unregelmäßigen Abständen Informationen über Neuigkeiten an der Universität, die Absolventen der Fakultät 1 betreffen, 
+				Sie haben damit die Möglichkeit, in unregelmäßigen Abständen Informationen über Neuigkeiten an der Universität, die Absolventen der Fakultät 1 betreffen, 
 				sowie über die Aktivitäten des Absolventenvereins selbst zu erhalten.
-				Der Verein möchte dabei als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren, und in Zukunft auch Homecoming-Veranstaltungen, 
+				Der Verein möchte dabei als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren, und in Zukunft auch weitere Homecoming-Veranstaltungen, 
 				Absolventenforen und ähnliche Veranstaltungen organisieren, bei denen die Absolventen untereinander in Kontakt bleiben oder auch den aktuellen Studenten
 				ihre Erfahrungen weitergeben können.<br>
-				Zu guter Letzt kommt ihr Jahresbeitrag direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> zugute, d.h. vor allem den Ihnen 
-				nachfolgenden Studenten der Fakultät 1, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 	
+				Der geringe Jahresbeitrag von lediglich 10 Euro kommt direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> zugute, d.h. vor allem 
+				den Ihnen nachfolgenden Studenten der Fakultät 1 durch eine stetig wachsende Vereinsarbeit, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 	
 				<br>
 				Die Möglichkeit als Vereinsmitglied weiterhin am umfangreichen Hochschulsport-Angebot der Universität Bayreuth teilzunehmen wird aktuell von Seiten der Universität 
 				Bayreuth leider nicht mehr ermöglicht, wir befinden uns in Gesprächen mit der Hochschulleitung um eine Lösung hierfür zu finden.
