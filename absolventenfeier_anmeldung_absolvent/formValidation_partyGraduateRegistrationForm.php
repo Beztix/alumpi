@@ -96,4 +96,87 @@ function check_fieldsFormatting_partyRegistrationAsGraduate($data_form) {
 }
 
 
+function check_required_fields_additional_register($data_form) {
+	$error = "";
+	
+	// überprüfe alle zwingend notwendigen Textfelder
+	
+	if(empty($data_form['kontoinhaber'])) {
+		$error = $error . "Es wurde kein Kontoinhaber eingegeben.<br>\n";
+	}
+	if(empty($data_form['iban'])) {
+		$error = $error . "Es wurde keine IBAN eingegeben.<br>\n";
+	}
+	if(empty($data_form['bic'])) {
+		$error = $error . "Es wurde keine BIC eingegeben.<br>\n";
+	}
+	
+	
+	// falls die Checkbox "newsletter" nicht(!) ausgewählt wurde, muss eine Adresse eingegeben werden
+	if(!isset($data_form['newsletter'])) {
+		
+		if(empty($data_form['strasse'])) {
+			$error = $error . "Es wurde keine Straße eingegeben.<br>\n";
+		}
+		if(empty($data_form['plz'])) {
+			$error = $error . "Es wurde keine PLZ eingegeben.<br>\n";
+		}	
+		if(empty($data_form['ort'])) {
+			$error = $error . "Es wurde kein Ort eingegeben.<br>\n";
+		}
+		if(empty($data_form['land'])) {
+			$error = $error . "Es wurde kein Land eingegeben.<br>\n";
+		}		
+	}
+
+	// Gib die Fehlermeldungen zurück, leer falls alles ok.
+	return $error;
+}
+
+
+function check_fields_format_additional_register($data_form) {
+	$error = "";
+	
+	// Überprüfe die IBAN
+	if (!checkIBAN($data_form['iban'])) {
+		$error = $error . "Die eingegebene IBAN ist ungültig.<br>\n";
+	}
+	
+	// Überprüfe die BIC
+	if (!checkBIC($data_form['bic'])) {
+		$error = $error . "Die eingegebene BIC ist ungültig.<br>\n";
+	}
+	
+	
+	// falls die Checkbox "newsletter" nicht(!) ausgewählt wurde, muss eine Adresse eingegeben werden
+	if(!isset($data_form['newsletter'])) {
+		
+		//Straße und Hausnummer überprüfen macht keinen Sinn (Zu viele Ausnahmefälle)
+		
+		if (!preg_match("/^[0-9]+$/",$data_form['plz'])) {
+			$error = $error . "Als PLZ sind nur Ziffern erlaubt.<br>\n";
+		}
+		if($data_form['land'] === 'Deutschland') {
+			if (!preg_match("/^[0-9]{5}$/",$data_form['plz'])) {
+				$error = $error . "Keine korrekte deutsche PLZ.<br>\n";
+			}
+		}
+		
+		if($data_form['land'] === 'Deutschland') {
+			if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['ort'])) {
+				$error = $error . "Als Ort sind nur Buchstaben erlaubt.<br>\n";
+			}
+		}
+		if (!preg_match("/^[a-zäöüß]+$/iu",$data_form['land'])) {
+			$error = $error . "Als Land sind nur Buchstaben erlaubt.<br>\n";
+		}	
+	}
+
+	// Gib die Fehlermeldungen zurück, leer falls alles ok.
+	return $error;
+}
+
+
+
+
 ?>
