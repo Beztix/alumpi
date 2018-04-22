@@ -145,6 +145,64 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								}
 								
 								
+								
+								
+								
+								//==== Speicherung der Kontaktdaten ====
+								
+								if(isset($data_form['datenspeicherung'])) {
+																		
+									//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
+
+									date_default_timezone_set("Europe/Berlin");									
+									$geschlecht = $_POST['geschlecht'];
+									$titel = $_POST['titel'];
+									$nachname = $_POST['nachname'];
+									$vorname = $_POST['vorname'];
+									$email = $_POST['email'];
+								
+									
+									//Daten in die Datenbank einfügen
+									//Verwendung von prepared statements zur Vermeidung von SQL-Injection
+									$stmt = $mysqli->prepare("INSERT INTO adressliste   
+																			(geschlecht, 	titel, 	nachname, 	vorname, 	email) 
+									VALUES 									(?, 			?, 		?, 			?, 			?)");
+									$types = 								"s				s		s			s			s";
+									$types_collapsed = preg_replace('/\s+/', '', $types);  //whitespace zur übergabe an bind_param entfernen
+									$stmt->bind_param($types_collapsed, 	$geschlecht, 	$titel, $nachname, 	$vorname, 	$email);
+								
+								
+									//DB-Abfrage erfolgreich
+									if($stmt->execute()) {
+										
+										
+										
+									}								
+																		
+									
+									//Fehler bei der DB-Abfrage
+									else {
+										
+										if ($mysqli->errno === 1062) {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Speicherung der E-Mail-Adresse:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Es existiert bereits ein Eintrag mit der eingegebenen Email-Adresse.<br>";
+											echo "Falls die vorherige Registrierung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>";
+											echo "</p>";
+										}
+										else {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Speicherung der E-Mail-Adresse:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
+											echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+											echo "</p>";
+										}
+										
+									}
+									
+								}
+								
+								
 							}// eof DB-Verbindung erfolgreich
 							
 						} //eof Alle Felder korrekt formatiert
