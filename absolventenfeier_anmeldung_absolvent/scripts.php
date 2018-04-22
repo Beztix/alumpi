@@ -7,17 +7,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 <script type="text/javascript">
 function toggleMitgliedsantragDisplay() {
-  // Get the checkbox
   var checkBox = document.getElementById("mitgliedsantragCheckbox");
   
-  // Get the output text
-  var text = document.getElementById("mitgliedsantragDisplay");
-
-  // If the checkbox is checked, display the output text
-  if (checkBox.checked == true){
-    text.style.display = "block";
+    if (checkBox.checked == true){
+    document.getElementById("mitgliedsantragDisplay").style.display = "block";
+	document.getElementById("datenspeicherungDisplay").style.display = "none";
   } else {
-    text.style.display = "none";
+    document.getElementById("mitgliedsantragDisplay").style.display = "none";
+	document.getElementById("datenspeicherungDisplay").style.display = "block";
   }
 } 
 </script>

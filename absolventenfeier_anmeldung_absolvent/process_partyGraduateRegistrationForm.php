@@ -130,133 +130,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 										echo "<p class=\"green\">";
 										echo "Sie erhalten in Kürze eine Email, die Ihre Anmeldung zur diesjährigen Absolventenfeier bestätigt.<br>";
 										echo "</p>";
-										
-										
-										//Gleichzeitige Anmeldung zum Verein
-										if(isset($data_form['mitgliedsantrag'])) {
-											
-											//==== Anmeldung zum Absolventenverein ====
-											
-											//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
-
-											date_default_timezone_set("Europe/Berlin");
-											$eintrittsdatum = date("Y-m-d");		//aktuelles Datum
-											$geschlecht = $_POST['geschlecht'];
-											$titel = $_POST['titel'];
-											$nachname = $_POST['nachname'];
-											$vorname = $_POST['vorname'];
-											$email = $_POST['email'];
-											$strasse = $_POST['strasse'];
-											$plz = $_POST['plz'];
-											$ort = $_POST['ort'];
-											$land = $_POST['land'];
-											$geburtstag = date('Y-m-d', strtotime($_POST['geburtstag'])); 				//Datum in Format YYYY-MM-DD für DB
-											$kontoinhaber = $_POST['kontoinhaber'];
-											$iban = strtoupper(str_replace(' ','',$_POST['iban']));
-											$bic = strtoupper($_POST['bic']);
-											$bezahlt = "n";							//immer n bei Registrierung
-											$newsletter = "j"; if(isset($_POST['newsletter'])) { $newsletter = "n";}	//n falls newsletter angewählt, j sonst
-											$pw = password_hash($_POST['geburtstag'], PASSWORD_DEFAULT);				//Standardpasswort ist der Geburtstag, speichere gehasht in DB
-											$usergruppe = null;						//????
-											$telefon = $_POST['telefon'];
-											$studentennachweis_vorhanden = "n";		//immer n bei Registrierung
-											$iststudent = "n"; if(isset($_POST['iststudent'])) { $iststudent = "j";}		//j falls student angewählt, n sonst
-											$code = md5($email . $eintrittsdatum);	//Bestätigungscode zum Überprüfen der Email-Adresse
-											$bestaetigt = "n";						//immer n bei Registrierung
-											$beitrag = 10;							//??? ggf. Fördermitglied ???
-											$mitglied = 1;							//User als Mitglied eintragen
-											
-											
-											
-										
-											
-											//Mitgliederdaten in die Datenbank einfügen
-											//Verwendung von prepared statements zur Vermeidung von SQL-Injection
-											$stmt = $mysqli->prepare("INSERT INTO vereinsmitglieder   
-																					(eintrittsdatum, 	geschlecht, 	titel, 	nachname, 	vorname, 	email, 	strasse, 	plz, 	ort, 	land, 	geburtstag, 	kontoinhaber, 	iban, 	bic, 	bezahlt, 	newsletter, 	pw, 	telefon, 	studentennachweis_vorhanden, 	iststudent, 	code, 	bestaetigt, 	beitrag, 	mitglied) 
-											VALUES 									(?, 				?, 				?, 		?, 			?, 			?, 		?, 			?, 		?, 		?, 		?, 				?, 				?, 		?, 		?, 			?, 				?, 		?, 			?, 								?, 				?, 		?, 				?, 			?)");
-											$types = 								"s					s				s		s			s			s		s			s		s		s		s				s				s		s		s			s				s		s			s								s				s		s				d			s";
-											$types_collapsed = preg_replace('/\s+/', '', $types);  //whitespace zur übergabe an bind_param entfernen
-											$stmt->bind_param($types_collapsed, 	$eintrittsdatum, 	$geschlecht, 	$titel, $nachname, 	$vorname, 	$email, $strasse, 	$plz, 	$ort, 	$land, 	$geburtstag, 	$kontoinhaber, 	$iban, 	$bic, 	$bezahlt, 	$newsletter, 	$pw, 	$telefon, 	$studentennachweis_vorhanden, 	$iststudent, 	$code, 	$bestaetigt, 	$beitrag, 	$mitglied);
-										
-										
-											//DB-Abfrage erfolgreich
-											if($stmt->execute()) {
-												
-												if($titel === 'B.Sc.' || $titel === 'M.Sc.' || $titel === 'B.Ed.' || $titel === 'M.Ed.') {
-													$titleAndName = $geschlecht . " " . $vorname . " " . $nachname;
-												}
-												else {
-													$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
-												}
-												
-												//Email an neues Mitglied schicken
-												if (send_verificationEmail_memberRegistration($email, $titleAndName, $code, $iststudent)) {
-													
-													//echo "test - Send Verification Email erfolgreich<br>";
-													
-													//Email an den Verein schicken
-													if(send_notificationEmail_memberRegistration($email, $titleAndName, $iststudent)) {
-														echo "<h3 class=\"green\">Anmeldung zum Absolventenverein erfolgreich!</h3>";
-														echo "<p class=\"green\">";
-														echo "Sie erhalten in Kürze eine Email, diese enthält einen Bestätigungslink. Sobald sie ihre Email-Adresse bestätigt haben, können Sie sich im Mitgliederbreich einloggen.";
-														echo "</p>";
-													}
-													
-													//Fehler beim Schicken der Email an den Verein
-													else {
-														echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
-														echo "<p class=\"error\">";
-														echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an den Verein aufgetreten.<br>";
-														echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-														echo "</p>";
-													}
-													
-												}
-												
-												//Fehler beim Schicken der Email an das neue Mitglied
-												else {
-													echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
-													echo "<p class=\"error\">";
-													echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an Sie aufgetreten.<br>";
-													echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-													echo "</p>";
-												}
-								
-												
-											}								
-																				
-											
-											//Fehler bei der DB-Abfrage
-											else {
-												
-												if ($mysqli->errno === 1062) {
-													echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
-													echo "<p class=\"error\">";
-													echo "Es existiert bereits ein Nutzer mit der eingegebenen Email-Adresse.<br>";
-													echo "Falls die vorherige Registrierung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>";
-													echo "</p>";
-												}
-												else {
-													echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
-													echo "<p class=\"error\">";
-													echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-													echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
-													echo "</p>";
-												}
-												
-											}
-											
-											
-										}
-										
-										
-										//Keine Anmeldung zum Verein
-										else {
-											echo "<p class=\"green\">";
-											echo "Sie haben keine Anmeldung zum Absolventenverein durchgeführt, Sie können dies zu einem späteren Zeitpunkt über die Unterseite \"Mitgliedsantrag\" der Homepage tun.<br>";
-											echo "</p>";
-										}
 									
 									}
 									
@@ -296,6 +169,190 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									
 								}
 								
+
+								
+								//==== Anmeldung zum Absolventenverein ====
+								
+								if(isset($data_form['mitgliedsantrag'])) {
+																		
+									//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
+
+									date_default_timezone_set("Europe/Berlin");
+									$eintrittsdatum = date("Y-m-d");		//aktuelles Datum
+									$geschlecht = $_POST['geschlecht'];
+									$titel = $_POST['titel'];
+									$nachname = $_POST['nachname'];
+									$vorname = $_POST['vorname'];
+									$email = $_POST['email'];
+									$strasse = $_POST['strasse'];
+									$plz = $_POST['plz'];
+									$ort = $_POST['ort'];
+									$land = $_POST['land'];
+									$geburtstag = date('Y-m-d', strtotime($_POST['geburtstag'])); 				//Datum in Format YYYY-MM-DD für DB
+									$kontoinhaber = $_POST['kontoinhaber'];
+									$iban = strtoupper(str_replace(' ','',$_POST['iban']));
+									$bic = strtoupper($_POST['bic']);
+									$bezahlt = "n";							//immer n bei Registrierung
+									$newsletter = "j"; if(isset($_POST['newsletter'])) { $newsletter = "n";}	//n falls newsletter angewählt, j sonst
+									$pw = password_hash($_POST['geburtstag'], PASSWORD_DEFAULT);				//Standardpasswort ist der Geburtstag, speichere gehasht in DB
+									$usergruppe = null;						//????
+									$telefon = $_POST['telefon'];
+									$studentennachweis_vorhanden = "n";		//immer n bei Registrierung
+									$iststudent = "n"; if(isset($_POST['iststudent'])) { $iststudent = "j";}		//j falls student angewählt, n sonst
+									$code = md5($email . $eintrittsdatum);	//Bestätigungscode zum Überprüfen der Email-Adresse
+									$bestaetigt = "n";						//immer n bei Registrierung
+									$beitrag = 10;							//??? ggf. Fördermitglied ???
+									$mitglied = 1;							//User als Mitglied eintragen
+									
+									
+									
+								
+									
+									//Mitgliederdaten in die Datenbank einfügen
+									//Verwendung von prepared statements zur Vermeidung von SQL-Injection
+									$stmt = $mysqli->prepare("INSERT INTO vereinsmitglieder   
+																			(eintrittsdatum, 	geschlecht, 	titel, 	nachname, 	vorname, 	email, 	strasse, 	plz, 	ort, 	land, 	geburtstag, 	kontoinhaber, 	iban, 	bic, 	bezahlt, 	newsletter, 	pw, 	telefon, 	studentennachweis_vorhanden, 	iststudent, 	code, 	bestaetigt, 	beitrag, 	mitglied) 
+									VALUES 									(?, 				?, 				?, 		?, 			?, 			?, 		?, 			?, 		?, 		?, 		?, 				?, 				?, 		?, 		?, 			?, 				?, 		?, 			?, 								?, 				?, 		?, 				?, 			?)");
+									$types = 								"s					s				s		s			s			s		s			s		s		s		s				s				s		s		s			s				s		s			s								s				s		s				d			s";
+									$types_collapsed = preg_replace('/\s+/', '', $types);  //whitespace zur übergabe an bind_param entfernen
+									$stmt->bind_param($types_collapsed, 	$eintrittsdatum, 	$geschlecht, 	$titel, $nachname, 	$vorname, 	$email, $strasse, 	$plz, 	$ort, 	$land, 	$geburtstag, 	$kontoinhaber, 	$iban, 	$bic, 	$bezahlt, 	$newsletter, 	$pw, 	$telefon, 	$studentennachweis_vorhanden, 	$iststudent, 	$code, 	$bestaetigt, 	$beitrag, 	$mitglied);
+								
+								
+									//DB-Abfrage erfolgreich
+									if($stmt->execute()) {
+										
+										if($titel === 'B.Sc.' || $titel === 'M.Sc.' || $titel === 'B.Ed.' || $titel === 'M.Ed.') {
+											$titleAndName = $geschlecht . " " . $vorname . " " . $nachname;
+										}
+										else {
+											$titleAndName = $geschlecht . " " . $titel . " " . $vorname . " " . $nachname;
+										}
+										
+										//Email an neues Mitglied schicken
+										if (send_verificationEmail_memberRegistration($email, $titleAndName, $code, $iststudent)) {
+											
+											//echo "test - Send Verification Email erfolgreich<br>";
+											
+											//Email an den Verein schicken
+											if(send_notificationEmail_memberRegistration($email, $titleAndName, $iststudent)) {
+												echo "<h3 class=\"green\">Anmeldung zum Absolventenverein erfolgreich!</h3>";
+												echo "<p class=\"green\">";
+												echo "Sie erhalten in Kürze eine Email, diese enthält einen Bestätigungslink. Sobald sie ihre Email-Adresse bestätigt haben, können Sie sich im Mitgliederbreich einloggen.";
+												echo "</p>";
+											}
+											
+											//Fehler beim Schicken der Email an den Verein
+											else {
+												echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
+												echo "<p class=\"error\">";
+												echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an den Verein aufgetreten.<br>";
+												echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+												echo "</p>";
+											}
+											
+										}
+										
+										//Fehler beim Schicken der Email an das neue Mitglied
+										else {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an Sie aufgetreten.<br>";
+											echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+											echo "</p>";
+										}
+						
+										
+									}								
+																		
+									
+									//Fehler bei der DB-Abfrage
+									else {
+										
+										if ($mysqli->errno === 1062) {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Es existiert bereits ein Nutzer mit der eingegebenen Email-Adresse.<br>";
+											echo "Falls die vorherige Registrierung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>";
+											echo "</p>";
+										}
+										else {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
+											echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+											echo "</p>";
+										}
+										
+									}
+									
+									
+								}
+								
+								
+								//Keine Anmeldung zum Verein
+								else {
+									echo "<p class=\"green\">";
+									echo "Sie haben keine Anmeldung zum Absolventenverein durchgeführt, Sie können dies zu einem späteren Zeitpunkt über die Unterseite \"Mitgliedsantrag\" der Homepage tun.<br>";
+									echo "</p>";
+								}
+								
+								
+								
+								
+								
+								//==== Speicherung der Kontaktdaten ====
+								
+								if(!isset($data_form['mitgliedsantrag']) && isset($data_form['datenspeicherung'])) {
+																		
+									//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
+
+									date_default_timezone_set("Europe/Berlin");									
+									$geschlecht = $_POST['geschlecht'];
+									$titel = $_POST['titel'];
+									$nachname = $_POST['nachname'];
+									$vorname = $_POST['vorname'];
+									$email = $_POST['email'];
+								
+									
+									//Daten in die Datenbank einfügen
+									//Verwendung von prepared statements zur Vermeidung von SQL-Injection
+									$stmt = $mysqli->prepare("INSERT INTO adressliste   
+																			(geschlecht, 	titel, 	nachname, 	vorname, 	email) 
+									VALUES 									(?, 			?, 		?, 			?, 			?)");
+									$types = 								"s				s		s			s			s";
+									$types_collapsed = preg_replace('/\s+/', '', $types);  //whitespace zur übergabe an bind_param entfernen
+									$stmt->bind_param($types_collapsed, 	$geschlecht, 	$titel, $nachname, 	$vorname, 	$email);
+								
+								
+									//DB-Abfrage erfolgreich
+									if($stmt->execute()) {
+										
+										
+										
+									}								
+																		
+									
+									//Fehler bei der DB-Abfrage
+									else {
+										
+										if ($mysqli->errno === 1062) {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Speicherung der E-Mail-Adresse:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Es existiert bereits ein Eintrag mit der eingegebenen Email-Adresse.<br>";
+											echo "Falls die vorherige Registrierung nicht durch Sie vorgenommen wurde wenden Sie sich bitte an den Absolventenverein unter alumpi@uni-bayreuth.de<br>";
+											echo "</p>";
+										}
+										else {
+											echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Speicherung der E-Mail-Adresse:</h3>\n";
+											echo "<p class=\"error\">";
+											echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
+											echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+											echo "</p>";
+										}
+										
+									}
+									
+								}
 								
 							}// eof DB-Verbindung erfolgreich
 							
