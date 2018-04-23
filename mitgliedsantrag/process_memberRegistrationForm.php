@@ -16,8 +16,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 include_once HOME_DIRECTORY . 'config-files/db_config.php';
 
 //Einbinden der PHP-Datei zum Verschicken der Bestätigungs-Emails
-include_once 'send_registrationVerificationEmail.php';
-include_once 'send_registrationNotificationEmail.php';
+include_once '../_includes_functionality/send_registrationVerificationEmail.php';
+include_once '../_includes_functionality/send_registrationNotificationEmail.php';
 
 
 //Einbinden der PHP-Datei zur Validierung der Eingaben
