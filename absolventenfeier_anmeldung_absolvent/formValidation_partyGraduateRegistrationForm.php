@@ -101,6 +101,9 @@ function check_required_fields_additional_register($data_form) {
 	
 	// überprüfe alle zwingend notwendigen Textfelder
 	
+	if(empty($data_form['geburtstag'])) {
+		$error = $error . "Es wurde kein Geburtsdatum eingegeben.<br>\n";
+	}
 	if(empty($data_form['kontoinhaber'])) {
 		$error = $error . "Es wurde kein Kontoinhaber eingegeben.<br>\n";
 	}
@@ -136,6 +139,11 @@ function check_required_fields_additional_register($data_form) {
 
 function check_fields_format_additional_register($data_form) {
 	$error = "";
+	
+	// Überprüfe das Geburtsdatum auf korrektes Format
+	if (!isValidDate($data_form['geburtstag'])) {
+		$error = $error . "Das eingegebene Geburtsdatum ist kein korrektes Datum. Die Eingabe muss die Form TT.MM.JJJJ haben.<br>\n";
+	}
 	
 	// Überprüfe die IBAN
 	if (!checkIBAN($data_form['iban'])) {

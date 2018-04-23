@@ -596,6 +596,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							</colgroup>
 							<tr>
 								<td>
+									Geburtsdatum
+								</td>
+								<td>
+									<input type="text" name="geburtstag" placeholder="TT.MM.JJJJ" size="10" <?php if(isset($_POST['geburtstag'])) echo "value=\"" . htmlspecialchars($_POST['geburtstag'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								</td>
+							</tr>
+							<tr>
+								<td>
 									Kontakt
 								</td>
 								<td>
