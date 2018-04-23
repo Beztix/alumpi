@@ -99,7 +99,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				<h3>Eintrittspreis</h3>
 				<p>
-				Der offizielle Teil ist für alle Gäste kostenlos.<br>
+				Der offizielle Festakt ist für alle Gäste kostenlos.<br>
 				<br >
 				<?php
 				if(ABSOLVENTENFEIER_INFO_AKTIV) {
@@ -125,7 +125,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<h3>Teilnahme am offiziellen Teil</h3>
 				<p>
 				Eine Anmeldung für den offiziellen Teil ist nur dann erforderlich, wenn man als aktueller Absolvent an der Zeremonie mit Urkundenverleih teilnehmen möchte.
-				Gäste, die nur am offiziellen Festakt teilnehmen möchten, müssen sich nicht anmelden. 
+				Gäste, die nur am offiziellen Festakt und nicht an den anschließenden Feierlichkeiten teilnehmen möchten, müssen sich nicht anmelden. 
 				Jeder ist herzlich eingeladen der Verabschiedung der Absolventen und dem Festvortrag beizuwohnen.
 				</p>
 				
@@ -133,9 +133,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				<h3>Vorraussetzungen für den Urkundenverleih</h3>
 				<p>
-				Jeder, der zum Zeitpunkt der Feier bereits sein Zeugnis erhalten hat, kann sich auch für die Zeremonie mit Urkundenverleih anmelden. 
+				Jeder, der zum Zeitpunkt der Feier bereits sein Zeugnis erhalten hat, kann sich auch für die Zeremonie mit Urkundenverleih anmelden.
+				Selbst wenn die erforderlichen Leistungen bereits erbracht wurden und das Prüfungsamt lediglich das Zeugnis noch nicht ausgestellt hat ist eine Teilnahme in Absprache mit dem Absolventenverein möglich.
+				Im Gegensatz zu den vorherigen Jahren ist in diesem Jahr auch keine Mitgliedschaft im Absolventenverein zur Teilnahme erforderlich.
+				<!--
 				Die einzige Vorraussetzung ist, dass man im Absolventen- und Förderverein Mitglied ist. Keine Sorge, diejenigen, die das nicht bleiben möchten, 
-				können sich im Anschluss an die Absolventenfeier ohne Kündigungsfrist wieder austragen. Auch vom Mitgliedsbeitrag ist man im ersten Jahr freigestellt.<br>
+				können sich im Anschluss an die Absolventenfeier ohne Kündigungsfrist wieder austragen. Auch vom Mitgliedsbeitrag ist man im ersten Jahr freigestellt.
+				-->
+				<br>
 				<?php
 				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
 					echo "<a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";
