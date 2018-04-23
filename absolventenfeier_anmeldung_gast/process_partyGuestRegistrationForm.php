@@ -150,7 +150,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								
 								//==== Speicherung der Kontaktdaten ====
 								
-								if(isset($data_form['datenspeicherung'])) {
+								if(isset($_POST['datenspeicherung'])) {
 																		
 									//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
 

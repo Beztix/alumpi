@@ -173,7 +173,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								
 								//==== Anmeldung zum Absolventenverein ====
 								
-								if(isset($data_form['mitgliedsantrag'])) {
+								if(isset($_POST['mitgliedsantrag'])) {
 																		
 									//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
 
@@ -302,7 +302,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								
 								//==== Speicherung der Kontaktdaten ====
 								
-								if(!isset($data_form['mitgliedsantrag']) && isset($data_form['datenspeicherung'])) {
+								if(!isset($_POST['mitgliedsantrag']) && isset($_POST['datenspeicherung'])) {
 																		
 									//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
 
@@ -327,7 +327,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									//DB-Abfrage erfolgreich
 									if($stmt->execute()) {
 										
-										
+										echo "<p class=\"green\">";
+										echo "Sie haben der Speicherung ihrer E-Mail-Adresse durch den Absolventenverein zugestimmt, vielen Dank!<br>";
+										echo "</p>";
 										
 									}								
 																		
