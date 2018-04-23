@@ -46,18 +46,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</p>
 
 				
-				<?php
-				//Einbinden der PHP-Datei zur Formularauswertung
-				include 'process_memberRegistrationForm.php'; 
-				?>	
-
 				<br>				
 
 				<h2>Beitrittserklärung</h2>
 
 				<h3>Personalien</h3>
 
-				<form action="index.php" method="POST" name="mitgliedsantrag">
+				<form action="index.php#result" method="POST" name="mitgliedsantrag">
 
 					<table style="width:100%">
 						<colgroup>
@@ -208,7 +203,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				</form>
 
+				<br>
+				<br>
 				
+				<?php
+				//Einbinden der PHP-Datei zur Formularauswertung
+				echo "<div id=\"result\"></div>\n";
+				include 'process_memberRegistrationForm.php'; 
+				?>	
 			
 			</section>
 			

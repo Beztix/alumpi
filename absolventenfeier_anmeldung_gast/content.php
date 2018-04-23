@@ -34,6 +34,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					include './content_partyGuestRegistrationForm.php';
 					
 					//Einbinden der PHP-Datei zur Formularauswertung
+					echo "<div id=\"result\"></div>\n";
 					include './process_partyGuestRegistrationForm.php';					
 				}
 				

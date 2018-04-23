@@ -53,10 +53,6 @@ if(!empty($_POST)) {
 	
 		//Alle Felder korrekt formatiert
 		else {
-		
-			
-			//echo "test - formular korrekt ausgefüllt abgeschickt <br>";
-			
 			
 			//Zur Datenbank verbinden
 			$mysqli = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -75,9 +71,6 @@ if(!empty($_POST)) {
 			
 			//DB-Verbindung erfolgreich
 			else {
-				
-				//echo "test - DB-Verbindung erfolgreich<br>";
-				
 				
 				//Überprüften Formularinput in PHP-Variablen umspeichern und ggf. anpassen
 
@@ -134,8 +127,6 @@ if(!empty($_POST)) {
 					
 					//Email an neues Mitglied schicken
 					if (send_verificationEmail_memberRegistration($email, $titleAndName, $code, $iststudent)) {
-						
-						//echo "test - Send Verification Email erfolgreich<br>";
 						
 						//Email an den Verein schicken
 						if(send_notificationEmail_memberRegistration($email, $titleAndName, $iststudent)) {
@@ -198,18 +189,6 @@ if(!empty($_POST)) {
 		
 	} //eof Alle Felder ausgefüllt
 
-}//eof Formulardaten angekommen
-
-
-
-//Formular (noch) nicht abgeschickt
-else {
-	/*
-	echo "test - formular noch nicht abgeschickt";
-	*/
-}
-				
-
-
+}//eof Formulardaten angekommen			
 
 ?>

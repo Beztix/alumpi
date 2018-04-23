@@ -5,7 +5,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 				<h2>Anmeldeformular</h2>
 		
-				<form action="index.php" method="POST" enctype="multipart/form-data">
+				<form action="index.php#result" method="POST" enctype="multipart/form-data">
 				
 					<table style="width:100%">
 						<colgroup>
