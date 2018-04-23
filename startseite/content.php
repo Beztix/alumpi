@@ -46,6 +46,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				-->
 
 				<h2>Unsere aktuellen Projekte:</h2>
+				
+				<a href="../_images_content/aushang_exkursion_selb_2018.png">
+					<img style="width:500px; margin:0px 0px 20px 40px; box-shadow: 5px 5px 3px grey;" src="../_images_content/aushang_exkursion_selb_2018.png" alt="Aushang Exkursion Selb 2018">
+				</a>
+				
 				<div class="news-boxen-container">
 					<div class="news-box">
 						<h3>Absolventenfeier</h3>
@@ -71,7 +76,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						<h3>Exkursionen</h3>
 						In Kooperation mit der Fachschaft Mathe/Physik/Informatik werden verschiedene Ausflüge für
 						Studierende der Fakultät zu Museen, Forschungseinrichtungen, Firmen etc. (Ideen sind erwünscht)
-						geplant bzw. gefördert.
+						geplant bzw. gefördert.<br>
+						<br>
+						<b>Aktuell:</b> <br>
+						<a href="../_images_content/aushang_exkursion_selb_2018.png">Eine Exkursion nach Selb zu den Firmen Rapa und Linseis</a>
+						
 					</div>
 				</div>
 				
@@ -85,6 +94,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			<aside class="sidebar">
 				
 				<img class="sidebar-img" src="../_images_content/rollup_ohne_druckraender_klein.jpg" alt="AluMPI Rollup Banner">
+				
 			</aside>
 			
 			
