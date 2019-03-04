@@ -20,7 +20,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<h1>Datenabfrage</h1>
 				
 				Hier können Sie ihre Mitgliedsdaten abfragen und ändern.<br>
-				Falls sie Daten ändern möchten, tragen Sie die neuen Daten in die Eingabefelder ein. Wenn sie Felder leer lassen, findet für diese Daten keine Änderung statt.<br>
+				Falls Sie Daten ändern möchten, tragen Sie die neuen Daten in die Eingabefelder ein. Wenn Sie Felder leer lassen, findet für diese Daten keine Änderung statt.<br>
 				
 				<br>
 				

@@ -19,13 +19,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					//<!-- thumbnail image wrapped in a link -->
 					echo "<a href=\"#absolventenfeier17plakat\">\n";
 					echo 	"<div class=\"right_img_container\">\n";
-					echo 		"<img src=\"../_images_content/absolventenfeier2017_plakat_klein.jpg\" alt=\"Plakat Absolventenfeier\" style=\"width:350px;\">\n";
+					echo 		"<img src=\"../_images_content/absolventenfeier2018_plakat_klein.jpg\" alt=\"Plakat Absolventenfeier\" style=\"width:350px;\">\n";
 					echo 	"</div>\n";
 					echo "</a>\n";
 					
 					//<!-- lightbox container hidden with CSS -->
 					echo "<a href=\"#_\" class=\"lightbox\" id=\"absolventenfeier17plakat\">\n";
-					echo 	"<img src=\"../_images_content/absolventenfeier2017_plakat_mittel.jpg\" alt=\"Plakat Absolventenfeier 2017\">\n";
+					echo 	"<img src=\"../_images_content/absolventenfeier2018_plakat_klein.jpg\" alt=\"Plakat Absolventenfeier 2017\">\n";
 					echo "</a>\n";
 					
 				}
@@ -102,7 +102,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					echo "Bitte haben Sie Verständnis, dass spätere Anmeldungen unter Umständen nicht mehr berücksichtigt werden können.<br>\n";
 					echo "Falls Sie als Gast lediglich am offiziellen Festakt teilnehmen möchten ist keine Anmeldung erforderlich.<br>\n";
 					echo "<br>\n";
-					echo "Alle weiteren Informationen zur Anmeldung finden sie hier: <a href=\"../anmeldung_absolventenfeier/index.php\">Anmeldung zur Absolventenfeier</a>.\n";
+					echo "Alle weiteren Informationen zur Anmeldung finden Sie hier: <a href=\"../absolventenfeier_anmeldeinformationen/index.php\">Anmeldeinformationen</a>.\n";
 					echo "</p>\n";
 				}
 				?>
@@ -154,7 +154,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<?php
 				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
-					echo "<a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";
+					echo "<a href=\"../absolventenfeier_anmeldeinformationen/index.php\">Anmeldeinformationen</a>\n";
 				}
 				?>
 				</p>
@@ -175,7 +175,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Dieser Teil der Absolventenfeier beginnt nach dem offiziellen Festakt und ist Open-End.<br>
 				<?php
 				if(ABSOLVENTENFEIER_ANMELDUNG_AKTIV) {
-					echo "Die Anmeldung kann online erfolgen, mehr Informationen dazu finden sie auf folgender Seite: <a href=\"../anmeldung_absolventenfeier/index.php\">Details zur Anmeldung</a>\n";
+					echo "Die Anmeldung kann online erfolgen, mehr Informationen dazu finden Sie auf folgender Seite: <a href=\"../absolventenfeier_anmeldeinformationen/index.php\">Anmeldeinformationen</a>\n";
 				}
 				else {
 					echo "Die Anmeldung kann online erfolgen, sie wird rechtzeitig vor der Feier freigeschaltet.\n";
@@ -195,15 +195,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Der Verein verfügt außerdem über die finanziellen Mittel, die Unkosten der Feier auszulegen.<br>
 				Für die Details sollten allerdings die Absolventen zuständig sein, um die Feierlichkeiten genau nach den Wünschen der aktuellen Absolventen zu gestalten.
 				Der Vorstand des Absolventenvereins ist darüber hinaus nicht mehr unbedingt in Bayreuth vor Ort. 
-				Ohne ein Organisationsteam von aus einigen aktuellen Absolventen ist es uns also nicht möglich, eine Absolventenfeier auf die Beine zu stellen.
+				Ohne ein Organisationsteam aus einigen aktuellen Absolventen ist es uns also nicht möglich, eine Absolventenfeier auf die Beine zu stellen.
 				</p>
 				<p>
 				Zu organisieren gilt es die Tischdeko, den Festredner, das Buffet, die Band, ggf. ein Abschiedsgeschenk, die Einladungen und beispielsweise auch Helfer aus den Reihen der Studenten, 
-				damit ihr an der Feier nicht selbst auf- und abbauen, oder Getränke ausschenken müsst. 
+				damit Ihr an der Feier nicht selbst auf- und abbauen, oder Getränke ausschenken müsst. 
 				Fast alles ist per Telefon machbar. 
-				Hast du also genauere Vorstellungen was beispielsweise das Essen betrifft, oder möchtest du mithelfen, dass die Feier in einem erträglichen finanziellen Rahmen bleibt? 
-				Oder bist du noch Student und möchtest mithelfen, so dass deine Mitstudenten eine schöne Feier erleben? 
-				Dann hilf mit und melde dich bei uns unter alumpi@uni-bayreuth.de
+				Hast Du also genauere Vorstellungen was beispielsweise das Essen betrifft, oder möchtest Du mithelfen, dass die Feier in einem erträglichen finanziellen Rahmen bleibt? 
+				Oder bist Du noch Student und möchtest mithelfen, so dass Deine Mitstudenten eine schöne Feier erleben? 
+				Dann hilf mit und melde dich bei uns unter alumpi@uni-bayreuth.de .
 				</p>
 				<br>
 			
