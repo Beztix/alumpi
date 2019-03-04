@@ -31,6 +31,17 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				}
 				?>
 		
+				<div class="alert-box">
+					<h1>Wichtiger Hinweis</h1>
+					<div>
+					Die Absolventenfeier findet dieses Jahr in besonderem Rahmen statt. <br>
+					Alumpi feiert 10-jähriges Bestehen und lädt daher alle diesjährigen Absolventen zur Jubiläumsfeier ein.
+					Auf dieser wird es einen erweiterten Festakt geben, bei der diese geehrt werden. <br>
+					Weitere Informationen dazu und zur Jubiläumsfeier allgemein finden Sie unter dem Menüpunkt 
+					<a href="../jubilaeumsfeier/index.php">Jubiläumsfeier</a>
+					</div>
+				</div>
+
 				<h1>Absolventenfeier</h1>
 
 
