@@ -47,8 +47,8 @@ function check_required_fields_register($data_form) {
 	}
 	
 	
-	// falls die Checkbox "newsletter" nicht(!) ausgewählt wurde, muss eine Adresse eingegeben werden
-	if(!isset($data_form['newsletter'])) {
+	// falls die Checkbox "newsletter" nicht ausgewählt wurde, muss eine Adresse eingegeben werden
+	if(isset($data_form['newsletter'])) {
 		
 		if(empty($data_form['strasse'])) {
 			$error = $error . "Es wurde keine Straße eingegeben.<br>\n";
@@ -107,8 +107,8 @@ function check_fields_format_register($data_form) {
 	}
 	
 	
-	// falls die Checkbox "newsletter" nicht(!) ausgewählt wurde, muss eine Adresse eingegeben werden
-	if(!isset($data_form['newsletter'])) {
+	// falls die Checkbox "newsletter" nicht ausgewählt wurde, muss eine Adresse eingegeben werden
+	if(isset($data_form['newsletter'])) {
 		
 		//Straße und Hausnummer überprüfen macht keinen Sinn (Zu viele Ausnahmefälle)
 		

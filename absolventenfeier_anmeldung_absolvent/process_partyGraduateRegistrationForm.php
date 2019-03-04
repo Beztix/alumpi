@@ -69,7 +69,7 @@ if(!empty($_POST)) {
 				echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 				echo "<p class=\"error\">";
 				echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
-				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+				echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 				echo "<br>";
 				echo "Failed to connect to MySQL<br>";
 				echo "</p>";
@@ -142,7 +142,7 @@ if(!empty($_POST)) {
 						echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 						echo "<p class=\"error\">";
 						echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an Sie aufgetreten.<br>";
-						echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+						echo "Bitte kontaktieren Sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 						echo "</p>";
 					}
 					
@@ -167,7 +167,7 @@ if(!empty($_POST)) {
 						echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 						echo "<p class=\"error\">";
 						echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-						echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+						echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 						echo "</p>";
 					}
 					
@@ -197,7 +197,7 @@ if(!empty($_POST)) {
 					$iban = strtoupper(str_replace(' ','',$_POST['iban']));
 					$bic = strtoupper($_POST['bic']);
 					$bezahlt = "n";							//immer n bei Registrierung
-					$newsletter = "j"; if(isset($_POST['newsletter'])) { $newsletter = "n";}	//n falls newsletter angewählt, j sonst
+					$newsletter = "n"; if(isset($_POST['newsletter'])) { $newsletter = "j";}	//j falls newsletter angewählt, n sonst
 					$pw = password_hash($_POST['geburtstag'], PASSWORD_DEFAULT);				//Standardpasswort ist der Geburtstag, speichere gehasht in DB
 					$usergruppe = null;						//????
 					$telefon = $_POST['telefon'];
@@ -241,7 +241,7 @@ if(!empty($_POST)) {
 							if(send_notificationEmail_memberRegistration($email, $titleAndName, $iststudent)) {
 								echo "<h3 class=\"green\">Anmeldung zum Absolventenverein erfolgreich!</h3>";
 								echo "<p class=\"green\">";
-								echo "Sie erhalten in Kürze eine Email, diese enthält einen Bestätigungslink. Sobald sie ihre Email-Adresse bestätigt haben, können Sie sich im Mitgliederbreich einloggen.";
+								echo "Sie erhalten in Kürze eine Email, diese enthält einen Bestätigungslink. Sobald Sie ihre Email-Adresse bestätigt haben, können Sie sich im Mitgliederbreich einloggen.";
 								echo "</p>";
 							}
 							
@@ -250,7 +250,7 @@ if(!empty($_POST)) {
 								echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
 								echo "<p class=\"error\">";
 								echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an den Verein aufgetreten.<br>";
-								echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+								echo "Bitte kontaktieren Sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 								echo "</p>";
 							}
 							
@@ -261,7 +261,7 @@ if(!empty($_POST)) {
 							echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
 							echo "<p class=\"error\">";
 							echo "Leider ist ein Fehler beim Versand der Bestätigungsemail an Sie aufgetreten.<br>";
-							echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+							echo "Bitte kontaktieren Sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 							echo "</p>";
 						}
 		
@@ -283,7 +283,7 @@ if(!empty($_POST)) {
 							echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Anmeldung zum Absolventenverein:</h3>\n";
 							echo "<p class=\"error\">";
 							echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-							echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+							echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 							echo "</p>";
 						}
 						
@@ -352,7 +352,7 @@ if(!empty($_POST)) {
 							echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars zur Speicherung der E-Mail-Adresse:</h3>\n";
 							echo "<p class=\"error\">";
 							echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-							echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+							echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 							echo "</p>";
 						}
 						

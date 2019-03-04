@@ -30,7 +30,7 @@ $mysqli->set_charset("utf8");
 if ($mysqli->connect_errno) {
 	echo "<p class=\"error\">\n";
 	echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>\n";
-	echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
+	echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
 	echo "<br>\n";
 	echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error . "<br>\n";
 	echo "</p>\n";
@@ -90,7 +90,7 @@ else {
 		else {
 			echo "<p class=\"error\">\n";
 			echo "Die Mitglieds-ID wurde nicht in der Datenbank gefunden!<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 			echo "</p>\n";
 		}
 	}
@@ -99,7 +99,7 @@ else {
 	else {
 		echo "<p class=\"error\">\n";
 		echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
-		echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+		echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 		echo "<br>";
 		echo $mysqli->error;
 		echo "</p>\n";

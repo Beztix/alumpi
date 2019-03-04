@@ -31,7 +31,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							// Änderung erfolgreich
 							echo "<h3 class=\"green\">Passwortänderung erfolgreich!</h3>\n";
 							echo "<p class=\"green\">\n";
-							echo "Ihr neues Passwort wurde erfolgreich in die Datenbank eingetragen, sie können sich ab sofort damit im Mitgliederbereich anmelden.<br>\n";
+							echo "Ihr neues Passwort wurde erfolgreich in die Datenbank eingetragen, Sie können sich ab sofort damit im Mitgliederbereich anmelden.<br>\n";
 							echo "</p>\n";
 						}
 				}

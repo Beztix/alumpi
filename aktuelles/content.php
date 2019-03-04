@@ -22,6 +22,66 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<article class="news">
 
+					<h2>Jahreshauptversammlung 2019</h2>
+					
+					<p>
+					Der Absolventen- und Förderverein MPI traf sich dieses Jahr wieder zur Mitgliederversammlung im Manns-Bräu. Am 18.01.2019 wurde nicht nur der Vorstand gewählt und über das vergangene Jahr berichtet, es wurde auch über Vorträge und Exkursionen für das kommende Jahr beraten.
+					Und dieses Jahr steht auch noch das 10-jährige Vereinsjubiläum an... 
+					<br><br>
+					Unser bisheriger Schatzmeister Dorian Rohner trat für das kommende Jahr nicht mehr zur Wahl an. Für seine Arbeit und sein Engagement bedanken wir uns recht herzlich. Er bleibt dem Verein in seiner neuen Funktion als Kassenprüfer erhalten. Als neue Schatzmeisterin wurde Maike Schelhorn (Lehramtsstudtentin Mathematik/Physik für Gymnsasien) von der Mitgliederversammlung gewählt. Der bisherige erste Vorsitzende Armin Kögel (Doktorand der Ingenieurswissenschaften) und der zweite Vorsitzende Markus Klar (Doktorand der Informatik) wurden für das kommende Jahr wiedergewählt.
+					<br><br>		
+					Wie im letzten Jahr sind wieder Veranstaltungen für die Studenten der Fakultät geplant. Zum einen wird es wieder Vorträge und/oder Workshops von Unternehmen geben, die speziell für unsere Absolventen interessant sind. Diese sollen einen Einblick in die Arbeit und die Berufsaussichten eines Absolventen unserer Fakultät ermöglichen, daher achten wir besonders darauf, dass die Referenden auch „vom Fach“ sind. Zum anderen werden dieses Jahr Exkursionen stattfinden: Angedacht sind Betriebsbesichtigungen von Unternehmen in der Region, die ihren Schwerpunkt auf Technik und Technologie setzen. 
+					<br><br>
+					Höhepunkt des Jahres wird unser 10-jähriges Vereinsjubiläum sein. Dieses werden wir im Rahmen eines Balls am Samstag, den 2. November 2019 gebührend feiern. Eingeladen werden alle Vereinsmitglieder, aber auch alle aktuellen und ehemaligen Angehörigen unserer Fakultät. Außerdem werden wir die diesjährige Absolventenfeier mit dem Jubiläumsball zusammenlegen, die Urkundenverleihung wird Teil des Festakts sein. Die Planungen zum Fest sind bereits in vollem Gange, sämtliche Informationen werden auf unserer Homepage zu finden sein.
+					<br><br>
+					Wir haben vor, den Austausch von Studenten und Absolventen der Fakultät zu verstärken. Wir wollen die Möglichkeit schaffen, dass Studenten bei konkreten Fragen zu einem bestimmten Berufsfeld sich direkt an einen entsprechenden Absolventen wenden können. Dazu werden wir unsere Mitgliederdatenbank um den Beruf bzw. den Werdegang der Mitglieder erweitern. Unsere Mitglieder werden anschließend gebeten, ihre Daten - sofern sie das möchten - an den Verein weiterzugeben. Wir möchten diese Daten dann in anonymisierter Form den Studenten zur Verfügung stellen. Das wird auf unserer Homepage und/oder in Form eines Plakates realisiert werden. Weiterhin können die Studenten über uns dann mit den Absolventen in Verbindung treten.
+					</p>
+				</article>
+				
+				<article class="news">
+					<h2>Firmenexkursion nach Selb</h2>
+					<h3>Besichtigung des Automobilzulieferers RAPA und des Messgeräteherstellers LINSEIS</h3>
+					<p>
+					Am 22. Mai 2018 organisierten wir in Zusammenarbeit mit der Stabsstelle für KarriereService und Unternehmenskontakte eine Exkursion zu zwei mittelständischen Betrieben in Selb. Die 16 Teilnehmer besuchten dabei zwei Unternehmen, wie sie verschiedener kaum sein könnten:<br>
+					<!-- thumbnail image wrapped in a link -->
+					<a href="#ehemaligentreffen2017">
+						<div class="left_img_container">
+							<img src="../_images_content/selb2018.jpg" alt="Exkursion Selb 2018" style="width:350px;">
+						</div>
+					</a>
+					<!-- lightbox container hidden with CSS -->
+					<a href="#_" class="lightbox" id="ehemaligentreffen2017">
+						<img src="../_images_content/selb2018.jpg" alt="Exkursion Selb 2018">
+					</a>
+					Am Vormittag waren wir zu Gast bei der Rausch und Pausch GmbH (RAPA), unter anderem Hersteller von Ventilen für die Automobilindustrie. Nach einem kurzen Überblick über die Firmenhistorie wurde uns ein neues Bauteil vorgestellt, das in Kürze in die Serienproduktion gehen soll. Neben den technischen Grundlagen wurden uns vor allem die neu gebaute Anlage für die Produktion vorgestellt und die einzelnen Bearbeitungsschritte erklärt. Schwerpunkt war die Konzeption der Fertigungsanlage, aber auch deren Programmierung und Optimierung. Es folgte eine kurze Besichtigung der laufenden Produktion in einer benachbarten Fertigungshalle und ein abschließendes Mittagessen, bei dem noch Zeit für weitere Fragen blieb.<br>
+					<br>
+					Am Nachmittag ging es über die Straße zum benachbarten Unternehmen LINSEIS Thermal Analysis. Hier wird eine Veilzahl von Thermoanalysegeräten (Messung von Wärmeausdehnung, Wärmekapazität, Wärmeleitung, …) für einen großen Temperaturbereich gebaut. Dabei hat sich LINSEIS auf die Herstellung von Sonderanfertigungen spezialisiert, das heißt, es wird nur eine geringe Stückzahl mit viel Handarbeit hergestellt. Bei der Führung durch das Unternehmen wurden uns einige Geräte vorgestellt und deren Funktionsweise erklärt und anschließend die  Werkstätten gezeigt. Im Gegensatz zu RAPA, die fast alle Einzelteile von Zulieferern herstellen lassen, bleibt hier praktisch die gesamte Wertschöpfung im Haus. Von CNC-gefrästen Bauteilen bis zur Steuerungsplatine wird fast alles selbst gefertigt und auch die Software selbst geschrieben. Abschließende Fragen konnten bei Kaffee und Kuchen noch ausgiebig besprochen werden. <br>
+					<br>
+					Wir bedanken uns bei den Mitarbeitern von RAPA und LINSEIS für die interessanten Einblicke in ihre Unternehmen und bei der Stabsstelle für KarriereService und Unternehmenskontakte für die Unterstützung bei der Veranstaltung. 
+
+					</p>
+				</article>
+
+				
+				<article class="news">
+					<h2>NWalumni Absolventenbrief 2018/1</h2>
+					
+					<a href="../_pdfs/NW-Alumni_Newsletter_2018-01__WEB.pdf">
+						<img class="absolventenbrief" src="../_images_content/nwalumni_18_1_klein.jpg" alt="NWalumni Absolventenbrief 2018/1">
+					</a>
+					
+					<p>
+					Der gemeinsame Absolventenbrief von AluMPI, BCG Alumni und CSG.<br>
+					Dieses Mal u.a. mit Neuigkeiten rund um die Jahreshauptversammlung des Vereins inkl. Neuwahl des Vorstands, 
+					sowie Artikeln über die letzte Absolventenfeier, das Ehemaligentreffen und Berufsinformationsveranstaltungen.<br>
+					<br>
+					<a href="../_pdfs/NW-Alumni_Newsletter_2018-01__WEB.pdf">Absolventenbrief 2018/1</a>
+					</p>
+					<br style="clear:both">
+				</article>
+				
+				<article class="news">
+
 					<h2>Jahreshauptversammlung 2018</h2>
 					
 					<p>

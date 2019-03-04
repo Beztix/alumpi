@@ -35,7 +35,7 @@ if(isset($_POST['mitglied_suchen'])) {
 	//Fehler bei der DB-Verbindung		
 	if ($mysqli->connect_errno) {
 		echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
-		echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+		echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 		echo "<br>";
 		echo "Failed to connect to MySQL<br>";
 	}
@@ -262,7 +262,7 @@ if(isset($_POST['mitglied_suchen'])) {
 		else {
 			echo "<p class=\"error\">\n";
 			echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 			echo "<br>";
 			echo $mysqli->error;
 			echo "</p>\n";

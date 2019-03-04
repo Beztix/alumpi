@@ -27,7 +27,7 @@ $mysqli->set_charset("utf8");
 //Fehler bei der DB-Verbindung		
 if ($mysqli->connect_errno) {
 	echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
-	echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+	echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 	echo "<br>";
 	echo "Failed to connect to MySQL<br>";
 }
@@ -88,7 +88,7 @@ else {
 				
 					echo "<p class=\"error\">";
 					echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-					echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+					echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 					echo "<br>";
 					echo $mysqli->error;
 					echo "</p>";
@@ -101,7 +101,7 @@ else {
 			else {
 				echo "<p class=\"error\">\n";
 				echo "Der Verifikationscode ist nicht korrekt!<br>";
-				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+				echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 				echo "</p>\n";
 			}
 			
@@ -113,7 +113,7 @@ else {
 		else {
 			echo "<p class=\"error\">\n";
 			echo "Die E-Mail-Adresse wurde nicht in der Datenbank gefunden!<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 			echo "</p>\n";
 		}
 	}
@@ -122,7 +122,7 @@ else {
 	else {
 		echo "<p class=\"error\">\n";
 		echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
-		echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+		echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 		echo "</p>\n";
 	}
 	

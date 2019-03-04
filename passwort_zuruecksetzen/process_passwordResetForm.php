@@ -57,7 +57,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 								echo "<p class=\"error\">";
 								echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
-								echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+								echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 								echo "<br>";
 								echo "Failed to connect to MySQL<br>";
 								echo "</p>";
@@ -102,7 +102,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 											else {
 												echo "<p class=\"error\">";
 												echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-												echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+												echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 												echo "</p>";
 											}
 										
@@ -112,7 +112,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 										else {
 											echo "<p class=\"error\">";
 											echo "Der verwendete Link zum Rücksetzen des Passworts ist nicht korrekt! Bitte verwenden Sie den Link aus der E-Mail um dass Passwort zurückzusetzen.<br>";
-											echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+											echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 											echo "</p>";
 										}
 									}
@@ -121,7 +121,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									else {
 										echo "<p class=\"error\">";
 										echo "Der verwendete Link zum Rücksetzen des Passworts ist nicht korrekt! Bitte verwenden Sie den Link aus der E-Mail um dass Passwort zurückzusetzen.<br>";
-										echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+										echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 										echo "</p>";
 									}
 									
@@ -131,7 +131,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								else {
 									echo "<p class=\"error\">";
 									echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-									echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+									echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 									echo "</p>";
 								}
 							

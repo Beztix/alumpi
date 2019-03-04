@@ -43,7 +43,7 @@ if(!empty($_POST)) {
 		if ($mysqli->connect_errno) {
 			echo "<p class=\"error\">\n";
 			echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>\n";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
 			echo "<br>\n";
 			echo "Failed to connect to MySQL<br>";
 			echo "</p>\n";
@@ -93,7 +93,7 @@ if(!empty($_POST)) {
 							echo "<h3 class=\"error\">Fehler bei der Verarbeitung des Formulars:</h3>\n";
 							echo "<p class=\"error\">";
 							echo "Leider ist ein Fehler beim Versand der E-Mail aufgetreten.<br>";
-							echo "Bitte kontaktieren sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+							echo "Bitte kontaktieren Sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 							echo "</p>";
 						}
 						
@@ -104,7 +104,7 @@ if(!empty($_POST)) {
 					else {
 						echo "<p class=\"error\">";
 						echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-						echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+						echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 						echo "</p>";
 					} 
 
@@ -128,7 +128,7 @@ if(!empty($_POST)) {
 				
 				echo "<p class=\"error\">";
 				echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden!<br>";
-				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+				echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte an den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 				echo "</p>";
 			
 			}//eof Fehler bei der DB-Abfrage 1

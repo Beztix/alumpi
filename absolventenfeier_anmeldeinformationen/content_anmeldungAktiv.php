@@ -71,6 +71,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Die Teilnahme an der Feier incl. Buffet kostet pro Person <?php echo ABSOLVENTENFEIER_PREIS; ?> €, mit diesem Beitrag helfen Sie uns dabei neben den Kosten für das Buffet auch die sonstigen Kosten der Veranstaltung decken zu können.<br>
 				<br>
 				Wenn Sie Gast eines der feiernden Absolventen sind, so lassen Sie sich bitte von diesem mit anmelden, dann ist keine separate Anmeldung ihrerseits nötig.
-				Andernfalls füllen sie bitte das entsprechende Anmeldeformular aus, um am Buffet teilzunehmen:<br>
+				Andernfalls füllen Sie bitte das entsprechende Anmeldeformular aus, um am Buffet teilzunehmen:<br>
 				<a href="../anmeldung_feier_gast/index.php">Zum Anmeldeformular für die Feierlichkeiten als separater Gast</a>
 				</p>

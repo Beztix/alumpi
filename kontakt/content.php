@@ -20,9 +20,12 @@ if (!defined('AccessConstant'))
 		<br>
 		<p>
 			Absolventen- und Förderverein MPI Uni Bayreuth e.V.<br>
+			<br>
+			Universität Bayreuth<br>
 			Postfach aluMPI<br>
 			Gebäude NWII<br>
 			95440 Bayreuth<br>
+			<br>
 			<a href="mailto:alumpi@uni-bayreuth.de">alumpi@uni-bayreuth.de</a>
 		</p>
 		<br>
@@ -32,7 +35,7 @@ if (!defined('AccessConstant'))
 
 		<div class="portrait-list">
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Armin_s.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Armin_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Armin Kögel</div>
 					<div class="portrait-job">1. Vorsitzender</div>
@@ -41,7 +44,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Markus_s.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Markus_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Markus Klar</div>
 					<div class="portrait-job">2. Vorsitzender</div>
@@ -50,11 +53,10 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Dorian_s.jpg" class="portrait"/>
+				<img src="../_images_content/portraits_members/Maike_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Dorian Rohner</div>
-					<div class="portrait-job">Schatzmeister</div>
-					<a class="portrait-mail" href="mailto:dorian.rohner@uni-bayreuth.de">Dorian.Rohner@uni-bayreuth.de</a>
+					<div class="portrait-name">Maike Schelhorn</div>
+					<div class="portrait-job">Schatzmeisterin</div>
 				</div>
 			</div>
 		</div>
@@ -62,80 +64,70 @@ if (!defined('AccessConstant'))
 		<h2>Kuratorium:</h2>
 
 		<div class="portrait-list">
+		
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Philip_s.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Adal_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Philip Krinninger</div>
+					<div class="portrait-name">Adal Sabri</div>
 					<div class="portrait-job">Sprecher des Kuratoriums</div>
+				</div>
+			</div>
+			
+			<div class="portrait-container">
+				<img src="../_images_content/portraits_members/Manu_s.jpg" class="portrait"/>
+				<div class="portrait-text">
+					<div class="portrait-name">Manuel Eisentraut</div>
+					<div class="portrait-job">Schriftführer</div>
+				</div>
+			</div>
+			
+			<div class="portrait-container">
+				<img src="../_images_content/portraits_members/Maria_s.jpg" class="portrait"/>
+				<div class="portrait-text">
+					<div class="portrait-name">Maria Treimer</div>
+					<div class="portrait-job">Schriftführerin</div>
+				</div>
+			</div>
+			
+			<div class="portrait-container">
+				<img src="../_images_content/portraits_members/Julian_s.jpg" class="portrait"/>
+				<div class="portrait-text">
+					<div class="portrait-name">Julian Neuberger</div>
+					<div class="portrait-job">Beauftragter IT</div>
+				</div>
+			</div>
+
+			<div class="portrait-container">
+				<img src="../_images_content/portraits_members/Nicolas_s.jpg" class="portrait"/>
+				<div class="portrait-text">
+					<div class="portrait-name">Nicolas Hilberg</div>
+					<div class="portrait-job">Beauftragter IT</div>
 				</div>
 			</div>
 
 			<div class="portrait-container">
 				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Sebastian Lützow</div>
-					<div class="portrait-job">Beauftragter IT</div>
-					<a class="portrait-mail" href="mailto:sebastian.luetzow@gmail.com">sebastian.luetzow@gmail.com</a>
-				</div>
-			</div>
-
-			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Maria_neu_s.jpg" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Maria Treimer</div>
-					<div class="portrait-job">Schriftführerin</div>
-				</div>
-			</div>
-
-			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Benno_s.JPG" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Benno Hoch</div>
+					<div class="portrait-name">Manuel Urban</div>
 					<div class="portrait-job">Beauftragter Social Media</div>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Bianca_s.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Lou_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Bianca Bauer</div>
+					<div class="portrait-name">Louise Schaub</div>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Adal_s.JPG" class="portrait"/>
+				<img src="../_images_content/portraits_members/Nikolai_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Adal Sabri</div>
+					<div class="portrait-name">Nikolai Jahreis</div>
 				</div>
 			</div>
+			
 
-			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Silvan_s.JPG" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Silvan Schmutzler</div>
-				</div>
-			</div>
-
-			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Ingo_s.jpg" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Ingo Schelter</div>
-				</div>
-			</div>
-
-			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Ulla_s.JPG" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Ulla Kaltenhauser</div>
-				</div>
-			</div>
-
-			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Manu_s.JPG" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Manuel Eisentraut</div>
-				</div>
-			</div>
 		</div>
 
 		<br>
