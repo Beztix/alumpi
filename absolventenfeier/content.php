@@ -31,7 +31,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				}
 				?>
 		
-				<div class="alert-box">
+				<div class="news-box news-important news-full-width">
 					<h1>Wichtiger Hinweis</h1>
 					<div>
 					Die Absolventenfeier findet dieses Jahr in besonderem Rahmen statt. <br>
