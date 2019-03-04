@@ -86,17 +86,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				
 				Nächste Sitzungstermine:<br><br>
-				Di. 17.04, 18:15<br>
-				Do. 03.05, 18:15<br>
-				Di. 15.05, 18:15<br>
-				Di. 29.05, 18:15<br>
-				Di. 12.06, 18:15<br>
-				Di. 19.06, 18:15<br>
-				Di. 26.06, 18:15<br>
-				Di. 10.07, 18:15<br>
-				
-				
-				<br><br>
+
+				Mi. 13.03, 17:00, S 748<br>
+				Mi. 27.03, 17:00, S 748<br>
+				Mi. 10.04, 17:00, S 748<br>
+
+
+				<br>
 				Weitere Termine werden bekanntgegeben.
 
 				<h3>Kontakt</h3>
