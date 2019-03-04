@@ -11,7 +11,7 @@ require '../_includes_functionality/global_constants.php';
 
 $thisPage = 'jubilaeumsfeier';
 $title = 'AluMPI | Jubiläumsfeier';
-$keywords = 'Jubiläumsfeier, Feier, Party, Abschluss, Urkunde, Buffet', 'Jubiläum', '10 Jahre AluMPI';
+$keywords = 'Jubiläumsfeier, Feier, Party, Abschluss, Urkunde, Buffet, Jubiläum, 10 Jahre AluMPI';
 $description = 'Die Jumbiläumsfeier zum 10-jährigem Bestehen des Absolventenvereins der Fakultät I an der Uni Bayreuth';
 ?>
 
