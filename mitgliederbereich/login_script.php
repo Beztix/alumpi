@@ -37,7 +37,7 @@ if(!empty($_POST)) {
 		if ($mysqli->connect_errno) {
 			echo "<p class=\"error\">\n";
 			echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>\n";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>\n";
 			echo "<br>\n";
 			echo "Failed to connect to MySQL<br>";
 			echo "</p>\n";
@@ -111,7 +111,7 @@ if(!empty($_POST)) {
 						echo "<p class=\"error\">\n";
 						echo "Die eingegebene E-Mail-Adresse wurde noch nicht bestätigt. ";
 						echo "Verwenden Sie dazu bitte den Verifikationslink aus der Bestätigungsmail der Anmeldung als Mitglied.<br>";
-						echo "Bei Problemen kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+						echo "Bei Problemen kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 						echo "</p>\n";
 					}
 				}
@@ -128,7 +128,7 @@ if(!empty($_POST)) {
 			else {
 				echo "<p class=\"error\">\n";
 				echo "Leider kann aktuell keine Abfrage auf der AluMPI-Datenbank ausgeführt werden.<br>";
-				echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+				echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 				echo "</p>\n";
 			}
 			

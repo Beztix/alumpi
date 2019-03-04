@@ -13,7 +13,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 	//Diese Variable definiert das Home-Verzeichnis, das außerhalb des öffentlich zugänglichen Webspaces liegen soll!
-	//In diesem müssen sich die Ordner 'generated_files' und 'config-files' mit den zugehörigen Dateien befinden.
+	//In diesem müssen sich die Ordner 'generated_files', 'config-files' und 'alumpiHP_libraries' mit den zugehörigen Dateien befinden.
 	const HOME_DIRECTORY = '/home/alumpi/';
 
 
@@ -27,8 +27,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	const ABSOLVENTENFEIER_INFO_AKTIV = False;
 	
 	const ABSOLVENTENFEIER_ORT = 'Foyer des NWII-Gebäudes';
-	const ABSOLVENTENFEIER_DATUM = '17.06.2017';
-	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '10.06.2017';
+	const ABSOLVENTENFEIER_DATUM = '23.06.2018';
+	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '09.06.2018';
 	const ABSOLVENTENFEIER_UHRZEIT = '15:00';
 	const ABSOLVENTENFEIER_PREIS = '25';
 	

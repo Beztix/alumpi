@@ -31,7 +31,7 @@ if(isset($_POST['feier_bezahlt_setzen'])) {
 	//Fehler bei der DB-Verbindung		
 	if ($mysqli->connect_errno) {
 		echo "Leider ist aktuell keine Verbindung zur AluMPI-Datenbank möglich!<br>";
-		echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+		echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 		echo "<br>";
 		echo "Failed to connect to MySQL<br>";
 	}
@@ -60,7 +60,7 @@ if(isset($_POST['feier_bezahlt_setzen'])) {
 		else if($affected_rows === 0) {
 			echo "<p class=\"error\">\n";
 			echo "Bei der Datenbank-Abfrage ist ein Fehler aufgetreten, es wurden kein Status geändert, überprüfen Sie bitte die eingegebene MID.<br>";
-			echo "Falls dieses Problem weiterhin auftritt kontaktieren sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
+			echo "Falls dieses Problem weiterhin auftritt kontaktieren Sie bitte den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 			echo "</p>\n";
 		}
 		else {

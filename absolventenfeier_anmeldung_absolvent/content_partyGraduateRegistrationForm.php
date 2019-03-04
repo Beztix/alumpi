@@ -425,6 +425,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 									<option value="">bitte auswählen</option>
 									<?php
 									$neuer_titel = array(
+										"-",
 										"B.Sc.",
 										"B.Ed.",
 										"M.Sc.",
@@ -573,7 +574,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					ihre Erfahrungen weitergeben können.<br>
 					Der geringe Jahresbeitrag von lediglich 10 Euro kommt direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> zugute, d.h. vor allem 
 					den Ihnen nachfolgenden Studenten der Fakultät 1 durch eine stetig wachsende Vereinsarbeit, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 	
+					Für unsere Neumitglieder wird der Beitrag im ersten Jahr nicht erhoben und ist erst im kommenden Frühjahr fällig. 
+					Zusätzlich können sich Studenten der Universität Bayreuth jährlich vom Mitgliedsbeitrag befreien lassen.
 					<br>
+					Die Möglichkeit als Vereinsmitglied weiterhin am umfangreichen Hochschulsport-Angebot der Universität Bayreuth teilzunehmen wird aktuell von Seiten der Universität 
+					Bayreuth leider nicht mehr ermöglicht, wir befinden uns in Gesprächen mit der Hochschulleitung um eine Lösung hierfür zu finden.
 					</p>
 					
 					<p>
@@ -645,18 +650,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						</table>
 						
 						<p>
-						<input type="checkbox" name="iststudent" <?php if(isset($_POST['iststudent'])) echo "checked";?>>
-						Ich bin Student oder aktueller Absolvent. Diese sind vom Beitrag befreit, die Kontodaten sind jedoch in jedem Fall anzugeben. 
-						Für die Befreiung ist zusätzlich ein Studiennachweis eines Semesters des zu befreienden Jahres bereitzustellen. 
-						Die Kontaktdaten finden Sie im Menu links unter dem Punkt Kontakt.<br>
-						<br>
+						Hinweis:
+						Die Kontodaten werden zur Buchung der Mitgliedsbeiträge verwendet, bitte überweisen Sie den Beitrag zur Absolventenfeier unabhängig davon selbst.
 						</p>
 						
 						
 						
 						<p>
-						<input type="checkbox" name="newsletter" <?php if(isset($_POST['newsletter'])) echo "checked";?>>
-						Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth <strong>nicht</strong> beziehen. 
+						<input type="checkbox" name="newsletter" checked>
+						Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth beziehen. 
 						Der Newsletter wird per Post versendet, falls er gewünscht wird, müssen Angaben zur Anschrift erfolgen.
 						</p>
 
@@ -701,7 +703,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						<br>
 						<h2>Verwendung der Kontaktdaten</h2>
 						<p>
-						Unabhängig von der Anmeldung als Vereinsmitglied können sie unsere Vereinsarbeit unterstützen, indem Sie uns erlauben Ihre E-Mail-Adresse zu speichern.
+						Unabhängig von der Anmeldung als Vereinsmitglied können Sie unsere Vereinsarbeit unterstützen, indem Sie uns erlauben Ihre E-Mail-Adresse zu speichern.
 						Wir verwenden diese, um Sie im Sinne unserer Vereinsarbeit (d.h. beispielsweise über das nächste Homecoming-Event) zu informieren.
 						Diese Adressliste wird von uns nicht weitergegeben und Sie erhalten maximal einige wenige Mails pro Jahr von uns.
 						<br>

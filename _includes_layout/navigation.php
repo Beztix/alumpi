@@ -68,37 +68,29 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						<div class="sidebar-informationen">
 				<h3>Termine</h3>
 				
-				<div class="sidebar-termin">
-					<h4>Samstag, 23. Juni 2018</h4>
-					Absolventenfeier<br>
-				</div>
 				<!--
 				<div class="sidebar-termin">
-					Werden bekanntgegeben
+				Jahreshauptversammlung 2019<br>
+				18.01.19, 19:00 Uhr <br>
+				im Manns-Bräu
 				</div>
 				-->
+				
 				<h3>Sitzungen</h3>
 				
-				Unsere Sitzungen finden in der Regel alle zwei Wochen dienstags um 18:15 Uhr im S&nbsp;78 im NW2 statt.
-				<br>
-				Wir freuen uns über eine rege Beteiligung!
+				Zu unseren öffentlichen Sitzungen laden wir alle Interessierten herzlich ein. 
 				<br>
 				<br>
 				
 				Nächste Sitzungstermine:<br><br>
-				Di. 17.04, 18:15<br>
-				Do. 03.05, 18:15<br>
-				Di. 15.05, 18:15<br>
-				Di. 29.05, 18:15<br>
-				Di. 12.06, 18:15<br>
-				Di. 19.06, 18:15<br>
-				Di. 26.06, 18:15<br>
-				Di. 10.07, 18:15<br>
-				
-				
-				<br><br>
+
+				Mi. 27.02, 17:00, S 748<br>
+
+
+				<br>
 				Weitere Termine werden bekanntgegeben.
 
+				<br><br>
 				<h3>Kontakt</h3>
 				Universität Bayreuth<br>
 				Postfach aluMPI<br>
