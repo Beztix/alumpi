@@ -29,8 +29,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				Der Verein möchte dabei als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren, und in Zukunft auch weitere Homecoming-Veranstaltungen, 
 				Absolventenforen und ähnliche Veranstaltungen organisieren, bei denen die Absolventen untereinander in Kontakt bleiben oder auch den aktuellen Studenten
 				ihre Erfahrungen weitergeben können.<br>
+				<br>
 				Der geringe Jahresbeitrag von lediglich 10 Euro kommt direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> zugute, d.h. vor allem 
 				den Ihnen nachfolgenden Studenten der Fakultät 1 durch eine stetig wachsende Vereinsarbeit, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 	
+				Für unsere Neumitglieder wird der Beitrag im ersten Jahr nicht erhoben und ist erst im kommenden Frühjahr fällig. 
+				Zusätzlich können sich Studenten der Universität Bayreuth jährlich vom Mitgliedsbeitrag befreien lassen. <br>
+				Auf Wunsch können Sie sich gerne Fördermitglied in unserem Verein werden. Der Jahresbeitrag kann dabei selbst gewählt werden, beträgt aber mindestens 50 Euro. Wenn Sie Interesse an einer Fördermitgliedschaft haben, wenden Sie sich bitte an uns. 
 				<br>
 				Die Möglichkeit als Vereinsmitglied weiterhin am umfangreichen Hochschulsport-Angebot der Universität Bayreuth teilzunehmen wird aktuell von Seiten der Universität 
 				Bayreuth leider nicht mehr ermöglicht, wir befinden uns in Gesprächen mit der Hochschulleitung um eine Lösung hierfür zu finden.
@@ -151,10 +155,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
 					<p>
-					<input type="checkbox" name="iststudent" <?php if(isset($_POST['iststudent'])) echo "checked";?>>
-					Ich bin Student oder aktueller Absolvent. Diese sind vom Beitrag befreit, die Kontodaten sind jedoch in jedem Fall anzugeben. 
-					Für die Befreiung ist zusätzlich ein Studiennachweis eines Semesters des zu befreienden Jahres bereitzustellen. 
-					Die Kontaktdaten finden Sie im Menu links unter dem Punkt Kontakt.<br>
+
 					<br>
 					</p>
 
@@ -162,8 +163,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<h3>Postalische Adresse</h3>
 
 					<p>
-					<input type="checkbox" name="newsletter" <?php if(isset($_POST['newsletter'])) echo "checked";?>>
-					Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth <strong>nicht</strong> beziehen. 
+					<input type="checkbox" name="newsletter" checked>
+					Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth beziehen. 
 					Der Newsletter wird per Post versendet, falls er gewünscht wird, müssen Angaben zur Anschrift erfolgen.
 					</p>
 
