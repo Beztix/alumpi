@@ -1,6 +1,8 @@
 <?php
 //Abfrage der in den index.php definierten Konstante, um direkten Zugriff auf diese PHP-Datei zu verhindern
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
+
+include 'prepare_memberRegistrationForm.php';
 ?>
 
 		<section id="content">
@@ -160,13 +162,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</p>
 
 
-					<h3>Postalische Adresse</h3>
-
-					<p>
-					<input type="checkbox" name="newsletter" checked>
-					Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth beziehen. 
-					Der Newsletter wird per Post versendet, falls er gewünscht wird, müssen Angaben zur Anschrift erfolgen.
-					</p>
+					<h3>Informationen zum Beruf</h3>
 
 					<table style="width:100%">
 						<colgroup>
@@ -193,12 +189,23 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Berufsbezeichnung
 							</td>
 							<td>
-								<input type="text" name="beruf" placeholder="Berufsbezeichnung" size="10" <?php if(isset($_POST['beruf'])) echo "value=\"" . htmlspecialchars($_POST['beruf'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<input type="text" name="beruf" placeholder="Berufsbezeichnung" size="40" <?php if(isset($_POST['beruf'])) echo "value=\"" . htmlspecialchars($_POST['beruf'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 					</table>
 
-					<h3>Beruf</h3>
+					<p>
+					<br>
+					</p>
+
+					<h3>Postalische Adresse</h3>
+
+					<p>
+					<input type="checkbox" name="newsletter" checked>
+					Ich möchte den regelmäßigen Absolventen-Newsletter der Universität Bayreuth beziehen. 
+					Der Newsletter wird per Post versendet, falls er gewünscht wird, müssen Angaben zur Anschrift erfolgen.
+					</p>
+
 					<table style="width:100%">
 						<colgroup>
 							<col style="width:30%;">

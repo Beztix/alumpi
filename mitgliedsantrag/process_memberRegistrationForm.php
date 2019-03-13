@@ -100,26 +100,23 @@ if(!empty($_POST)) {
 				$bestaetigt = "n";						//immer n bei Registrierung
 				$beitrag = 10;							//??? ggf. Fördermitglied ???
 				$mitglied = 1;							//User als Mitglied eintragen
-				$branche = $_POST['branche'];
+				$branche = (int)$_POST['branche'];
 				$beruf = $_POST['beruf'];
 				
-				
-				
-			
 				
 				//Mitgliederdaten in die Datenbank einfügen
 				//Verwendung von prepared statements zur Vermeidung von SQL-Injection
 				$stmt = $mysqli->prepare("INSERT INTO vereinsmitglieder   
-														(eintrittsdatum, 	geschlecht, 	titel, 	nachname, 	vorname, 	email, 	strasse, 	plz, 	ort, 	land, 	geburtstag, 	kontoinhaber, 	iban, 	bic, 	bezahlt, 	newsletter, 	pw, 	telefon, 	studentennachweis_vorhanden, 	iststudent, 	code, 	bestaetigt, 	beitrag, 	mitglied,	branche, 	beruf) 
+														(eintrittsdatum, 	geschlecht, 	titel, 	nachname, 	vorname, 	email, 	strasse, 	plz, 	ort, 	land, 	geburtstag, 	kontoinhaber, 	iban, 	bic, 	bezahlt, 	newsletter, 	pw, 	telefon, 	studentennachweis_vorhanden, 	iststudent, 	code, 	bestaetigt, 	beitrag, 	mitglied, 	branche_id,	beruf) 
 				VALUES 									(?, 				?, 				?, 		?, 			?, 			?, 		?, 			?, 		?, 		?, 		?, 				?, 				?, 		?, 		?, 			?, 				?, 		?, 			?, 								?, 				?, 		?, 				?, 			?,			?,			?)");
-				$types = 								"s					s				s		s			s			s		s			s		s		s		s				s				s		s		s			s				s		s			s								s				s		s				d			s,			d,			s";
+				$types = 								"s					s				s		s			s			s		s			s		s		s		s				s				s		s		s			s				s		s			s								s				s		s				d			s			d			s";
 				$types_collapsed = preg_replace('/\s+/', '', $types);  //whitespace zur übergabe an bind_param entfernen
+				
 				$stmt->bind_param($types_collapsed, 	$eintrittsdatum, 	$geschlecht, 	$titel, $nachname, 	$vorname, 	$email, $strasse, 	$plz, 	$ort, 	$land, 	$geburtstag, 	$kontoinhaber, 	$iban, 	$bic, 	$bezahlt, 	$newsletter, 	$pw, 	$telefon, 	$studentennachweis_vorhanden, 	$iststudent, 	$code, 	$bestaetigt, 	$beitrag, 	$mitglied,	$branche, 	$beruf);
 			
 			
 				//DB-Abfrage erfolgreich
 				if($stmt->execute()) {
-					
 					if($titel === 'B.Sc.' || $titel === 'M.Sc.' || $titel === 'B.Ed.' || $titel === 'M.Ed.') {
 						$titleAndName = $geschlecht . " " . $vorname . " " . $nachname;
 					}
@@ -157,14 +154,11 @@ if(!empty($_POST)) {
 						echo "Bitte kontaktieren Sie den Homepage-Verantwortlichen, siehe \"Kontakt\"<br>";
 						echo "</p>";
 					}
-	
-					
 				}								
 													
 				
 				//Fehler bei der DB-Abfrage
 				else {
-					
 					//echo "test - Fehler bei DB-Abfrage<br>";
 					
 					if ($mysqli->errno === 1062) {

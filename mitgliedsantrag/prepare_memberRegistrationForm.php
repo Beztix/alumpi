@@ -23,7 +23,7 @@ if ($mysqli->connect_errno) {
 }
 
 $sql = "SELECT id, `name` FROM branche";
-$result = $conn->query($sql);
+$result = $mysqli->query($sql);
 $branchen = array();
 
 while($row = $result->fetch_assoc()) {
