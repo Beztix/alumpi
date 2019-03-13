@@ -175,6 +175,37 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						</colgroup>
 						<tr>
 							<td>
+								Branche
+							</td>
+							<td>
+								<select name="branche">
+								<?php foreach($branchen as $branche) { ?>
+									<option value="<?php echo $branche["id"]; ?>" 
+											<?php if(isset($_POST['branche']) && $_POST['branche'] == $branche["id"]) {echo "selected";}?>>
+										<?php echo $branche["name"]; ?>
+									</option>
+								<?php } ?>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Berufsbezeichnung
+							</td>
+							<td>
+								<input type="text" name="beruf" placeholder="Berufsbezeichnung" size="10" <?php if(isset($_POST['beruf'])) echo "value=\"" . htmlspecialchars($_POST['beruf'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+							</td>
+						</tr>
+					</table>
+
+					<h3>Beruf</h3>
+					<table style="width:100%">
+						<colgroup>
+							<col style="width:30%;">
+							<col style="width:70%;">
+						</colgroup>
+						<tr>
+							<td>
 								Straße, Hausnummer
 							</td>
 							<td>
@@ -199,9 +230,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 							</td>
 						</tr>
 					</table>
+
 					<br>
 					<button class="absenden" type="submit">Absenden</button>
-
 				</form>
 
 				<br>

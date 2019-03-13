@@ -45,9 +45,14 @@ function check_required_fields_register($data_form) {
 	if(empty($data_form['bic'])) {
 		$error = $error . "Es wurde keine BIC eingegeben.<br>\n";
 	}
+	if(empty($data_form['branche'])) {
+		$error = $error . "Es wurde keine Branche gewählt.<br>\n";
+	}
+	if(empty($data_form['beruf'])) {
+		$error = $error . "Es wurde keine Berufsbezeichnung eingegeben.<br>\n";
+	}
 	
-	
-	// falls die Checkbox "newsletter" nicht ausgewählt wurde, muss eine Adresse eingegeben werden
+	// falls die Checkbox "newsletter" ausgewählt wurde, muss eine Adresse eingegeben werden
 	if(isset($data_form['newsletter'])) {
 		
 		if(empty($data_form['strasse'])) {
