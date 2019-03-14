@@ -36,7 +36,7 @@ include 'prepare_memberRegistrationForm.php';
 				den Ihnen nachfolgenden Studenten der Fakultät 1 durch eine stetig wachsende Vereinsarbeit, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 	
 				Für unsere Neumitglieder wird der Beitrag im ersten Jahr nicht erhoben und ist erst im kommenden Frühjahr fällig. 
 				Zusätzlich können sich Studenten der Universität Bayreuth jährlich vom Mitgliedsbeitrag befreien lassen. <br>
-				Auf Wunsch können Sie sich gerne Fördermitglied in unserem Verein werden. Der Jahresbeitrag kann dabei selbst gewählt werden, beträgt aber mindestens 50 Euro. Wenn Sie Interesse an einer Fördermitgliedschaft haben, wenden Sie sich bitte an uns. 
+				Auf Wunsch können Sie gerne Fördermitglied in unserem Verein werden. Der Jahresbeitrag kann dabei selbst gewählt werden, beträgt aber mindestens 50 Euro. Wenn Sie Interesse an einer Fördermitgliedschaft haben, wenden Sie sich bitte an uns. 
 				<br>
 				Die Möglichkeit als Vereinsmitglied weiterhin am umfangreichen Hochschulsport-Angebot der Universität Bayreuth teilzunehmen wird aktuell von Seiten der Universität 
 				Bayreuth leider nicht mehr ermöglicht, wir befinden uns in Gesprächen mit der Hochschulleitung um eine Lösung hierfür zu finden.
