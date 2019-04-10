@@ -162,7 +162,7 @@ include 'prepare_memberRegistrationForm.php';
 					</p>
 
 
-					<h3>Informationen zum Beruf</h3>
+					<!-- <h3>Informationen zum Beruf</h3>
 
 					<table style="width:100%">
 						<colgroup>
@@ -192,7 +192,7 @@ include 'prepare_memberRegistrationForm.php';
 								<input type="text" name="beruf" placeholder="Berufsbezeichnung" size="40" <?php if(isset($_POST['beruf'])) echo "value=\"" . htmlspecialchars($_POST['beruf'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
-					</table>
+					</table> -->
 
 					<p>
 					<br>
