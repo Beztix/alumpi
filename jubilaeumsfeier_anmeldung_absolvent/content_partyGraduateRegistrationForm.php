@@ -546,7 +546,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<h3>Zahlung</h3>
 
 					<p>
-					Bitte überweisen Sie den Betrag von <?php echo ABSOLVENTENFEIER_PREIS; ?> € pro Person bis spätestens 7 Tage vor der Feier auf das Konto des Absolventenvereins.<br>
+					Bitte überweisen Sie den Betrag von <?php echo ABSOLVENTENFEIER_PREIS; ?> € pro Person bis spätestens 14 Tage nach Anmeldung auf das Konto des Absolventenvereins.<br>
 					<br>
 					<u>Kontodaten:</u><br>
 					Absolventen- und Förderverein MPI Uni Bayreuth e.V.<br>
