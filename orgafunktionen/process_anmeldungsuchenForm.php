@@ -156,7 +156,7 @@ if(isset($_POST['anmeldung_suchen'])) {
 					$data_output['studienbeginn'] = 				$data_db['studienbeginn'];
 					$data_output['studienabschluss'] = 				date("d.m.Y", strtotime($data_db['studienabschluss']));
 					$data_output['gesamtpreis'] = 					$data_db['gesamtpreis'];
-					$data_output['laufkarte'] = 					$data_db['laufkarte'];
+					$data_output['laufkarte'] = 					'Ja'; if($data_db['laufkarte'] == 0) {$data_output['laufkarte'] = 'Nein';}
 				
 					
 					

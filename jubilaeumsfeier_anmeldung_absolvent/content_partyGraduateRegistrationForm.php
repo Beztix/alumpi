@@ -72,6 +72,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					Hinweis: Kommen Sie alleine, so ist die Anzahl mitgebrachter Gäste 0.
 					Falls sich die Gästezahl nachträglich ändert so können Sie uns dies bis spätestens eine Woche vor der Feier per E-Mail mitteilen.
 					<br>
+					<br>
 
 					
 					<h3>Urkundenverleihung</h3>

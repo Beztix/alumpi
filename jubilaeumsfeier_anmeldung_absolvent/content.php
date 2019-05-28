@@ -21,6 +21,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
             Sollten Sie kein akuteller Absolvent sein, wählen Sie bitte die Option 
             „<a href="../jubilaeumsfeier_anmeldung_gast/index.php">Buchung von Festaktkarten</a>“
         </p>
+
+
+        <h3>Vorraussetzungen für den Urkundenverleih</h3>
+        <p>
+            Jeder, der zum Zeitpunkt der Feier bereits sein Zeugnis erhalten hat, kann sich auch für die Zeremonie mit Urkundenverleih anmelden.
+            Selbst wenn die erforderlichen Leistungen bereits erbracht wurden und das Prüfungsamt lediglich das Zeugnis noch nicht ausgestellt hat ist eine Teilnahme in Absprache mit dem Absolventenverein möglich.
+        </p>
+
         
         <?php 
         include_once '../_includes_functionality/calculateAccessPermissions.php';
