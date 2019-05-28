@@ -55,7 +55,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Kontakt
 							</td>
 							<td>
-								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<div id="email-validation-warning" class="validation-warning">Nach Exmatrikulation wird der Zugang zur Universitäts-Email gesperrt, bitte verwenden Sie wenn mögliche eine langfristig gültige Mail, da dies unsere einzige Möglichkeit ist, Sie zu kontaktieren.</div>
+								<input type="text" oninput="showMailWarning()" name="email" id="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>
 						<tr>
@@ -107,17 +108,17 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 										<optgroup label="Mathematik">
 											<?php
 											$lehrstuhl_mathe = array(
-												"Mathematik I - Komplexe Analysis",
-												"Mathematik II - Computeralgebra",
-												"Mathematik III - Angewandte und Numerische Analysis",
-												"Mathematik IV - Zahlentheorie",
-												"Mathematik V - Angewandte Mathematik",
-												"Mathematik VI - Nichtlineare Analysis und Mathematische Physik",
-												"Mathematik VII - Stochastik",
-												"Mathematik VIII - Algebraische Geometrie",
-												"Ingenieurmathematik",
-												"Wirtschaftsmathematik",
-												"Mathematik und ihre Didaktik"
+												"Lehrstuhl Mathematik I - Komplexe Analysis",
+												"Lehrstuhl Mathematik II - Computeralgebra",
+												"Lehrstuhl Mathematik III - Angewandte und Numerische Analysis",
+												"Lehrstuhl Mathematik IV - Zahlentheorie",
+												"Lehrstuhl Mathematik V - Angewandte Mathematik",
+												"Lehrstuhl Mathematik VI - Nichtlineare Analysis und Mathematische Physik",
+												"Lehrstuhl Mathematik VII - Stochastik",
+												"Lehrstuhl Mathematik VIII - Algebraische Geometrie",
+												"Lehrstuhl Mathematik und ihre Didaktik",
+												"Lehrstuhl Wirtschaftsmathematik",
+												"Lehrstuhl für Wissenschaftliches Rechnen"
 												);
 								
 											foreach($lehrstuhl_mathe as $val) {
@@ -133,19 +134,29 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 										<optgroup label="Physik">
 											<?php
 											$lehrstuhl_physik = array(
-												"Experimentalphysik I",
-												"Experimentalphysik II",
-												"Experimentalphysik III",
-												"Experimentalphysik IV",
+												"Experimentalphysik I - Physik lebender Materie",
+												"Experimentalphysik II - Optoelektronik weicher Materie",
+												"Experimentalphysik III - Nanooptik",
+												"Experimentalphysik IV - Dynamik und Transport in Weicher Materie",
 												"Experimentalphysik V",
-												"Theoretische Physik I",
+												"Experimentalphysik VI - Biologische Physik",
+												"Experimentalphysik VII ",
+												"Experimentalphysik VII - Dynamik und Strukturbildung",
+												"Experimentalphysik VIII - Ultraschnelle Dynamik",
+												"Experimentalphysik IX - Spektroskopie weicher Materie",
+												"Experimentalphysik X - Dynamik weicher Materie",
+												"Experimentalphysik XI - Funktionelle Nanostrukturen",
+												"Bayreuther Institut für Makromolekülforschung - Konfokale Mikroskopie und konfokale Mikro-Spektroskopie",
+												"Theoretische Physik I - Theorie Weicher Materie und Nichtlineare Dynamik",
 												"Theoretische Physik II",
-												"Theoretische Physik III",
-												"Theoretische Physik IV",
-												"Theoretische Physik V",
-												"Didaktik der Physik",
-												"Kristallographie",
-												"Bayreuther Institut für Makromolekülforschung"
+												"Theoretische Physik III - Quantentheorie der kondensierten Materie",
+												"Theoretische Physik IV - Elektronische Struktur und Dynamik",
+												"Theoretische Physik V - Theoretische Plasmaphysik",
+												"Theoretische Physik VI - Simulation und Modellierung von Biofluiden",
+												"ENB Internationale Nachwuchsgruppe (Dr. Linn Leppert) - Elektronische Anregungen in lichtumwandelnden Systemen",
+												"Lehrstuhl  für Kristallographie",
+												"Materialphysik und Technologie bei extremen Bedingungen",
+												"Didaktik der Physik"
 												);
 								
 											foreach($lehrstuhl_physik as $val) {
@@ -161,15 +172,16 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 										<optgroup label="Informatik">
 											<?php
 											$lehrstuhl_info = array(
-												"Angewandte Informatik I - Softwaretechnik",
+												"Angewandte Informatik I - Software-Technik",
 												"Angewandte Informatik II - Parallele und verteilte Systeme",
 												"Angewandte Informatik III - Robotik und Eingebettete Systeme",
 												"Angewandte Informatik IV - Datenbanken und Informationssysteme",
-												"Angewandte Informatik V - Graphische Datenverarbeitung",
+												"Angewandte Informatik V - Datenbanken und Informationssysteme",
 												"Angewandte Informatik VI - Algorithmen und Datenstrukturen",
 												"Angewandte Informatik VII - Theoretische Informatik",
-												"Wirtschaftsinformatik",
-												"Bioinformatik"
+												"Angewandte Informatik VIII - Serious Games)",
+												"Betriebswirtschaftslehre VII – Wirtschaftsinformatik",
+												"Bioinformatik/Strukturbiologie"
 												);
 								
 											foreach($lehrstuhl_info as $val) {

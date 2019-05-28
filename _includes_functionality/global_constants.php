@@ -26,9 +26,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	//True: Es werden die konkreten Infos aus den nachfolgenden Variablen auf der Homepage dargestellt
 	const ABSOLVENTENFEIER_INFO_AKTIV = False;
 	
-	const ABSOLVENTENFEIER_ORT = 'Foyer des NWII-Gebäudes';
-	const ABSOLVENTENFEIER_DATUM = '23.06.2019';
-	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '09.06.2018';
+	const ABSOLVENTENFEIER_ORT = 'Evangelische Gemeindehaus, Richard-Wagner-Str. 4, 95444 Bayreuth';
+	const ABSOLVENTENFEIER_DATUM = '08.11.2019';
+	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '01.11.2019';
 	const ABSOLVENTENFEIER_UHRZEIT = '15:00';
 	const ABSOLVENTENFEIER_PREIS = '32';
 	const ABSOLVENTENFEIER_PREIS_LAUFKARTE = '15';

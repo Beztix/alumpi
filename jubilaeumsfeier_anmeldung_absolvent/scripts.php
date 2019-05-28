@@ -24,4 +24,19 @@ function showForm($name) {
   document.getElementById("laufkarteForm").style.display = "none";
   document.getElementById($name).style.display = "block";
 }
+
+function showMailWarning() {
+  var mail = document.getElementById("email").value;
+  if(mail) {
+    var matches = mail.match(/^[^@]*@(?:uni-bayreuth\.de).*$/);
+    if(matches) {
+      var isUniversityMail = matches.length >= 0;
+      if(isUniversityMail) {
+        document.getElementById("email-validation-warning").style = "display:block;";
+        return;
+      }
+    }
+  }
+  document.getElementById("email-validation-warning").style = "display:none;";
+}
 </script>
