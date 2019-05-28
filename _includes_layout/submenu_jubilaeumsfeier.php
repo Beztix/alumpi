@@ -16,6 +16,9 @@ if(JUBILAEUMSFEIER_ANMELDUNG_AKTIV) {
 	?>
 	<ul>
 		<li>
+			<a <?php if ($thisPage=="jubilaeumsfeier_anmeldeinformationen") {echo " class=\"currentpage\"";} ?>  href="../jubilaeumsfeier_anmeldeinformationen/index.php">Anmeldung Jubiläumsball</a>
+		</li>
+		<li>
 			<a <?php if ($thisPage=="jubilaeumsfeier_anmeldung_absolvent") {echo " class=\"currentpage\"";} ?>  href="../jubilaeumsfeier_anmeldung_absolvent/index.php">Festaktkarten (Absolvent)</a>
 		</li>
 		<li>
