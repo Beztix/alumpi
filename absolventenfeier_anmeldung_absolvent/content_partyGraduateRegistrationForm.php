@@ -53,7 +53,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 								Kontakt
 							</td>
 							<td>
-								<div class="validation-warning">Nach Exmatrikulation wird der Zugang zur Universitäts-Email gesperrt, bitte verwenden Sie wenn mögliche eine langfristig gültige Mail, da dies unsere einzige Möglichkeit ist, Sie zu kontaktieren.</div>
+								<div style="display:none;" class="validation-warning">Nach Exmatrikulation wird der Zugang zur Universitäts-Email gesperrt, bitte verwenden Sie wenn mögliche eine langfristig gültige Mail, da dies unsere einzige Möglichkeit ist, Sie zu kontaktieren.</div>
 								<input oninput="showMailWarning()" type="text" name="email" id="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>

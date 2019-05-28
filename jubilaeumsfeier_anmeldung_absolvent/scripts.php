@@ -28,7 +28,7 @@ function showForm($name) {
 function showMailWarning() {
   var mail = document.getElementById("email").value;
   if(mail) {
-    var matches = mail.match(/^[^@]*@(?:uni-bayreuth\.de).*$/);
+    var matches = mail.match(/^[^@]*@(?:uni-bayreuth).*$/);
     if(matches) {
       var isUniversityMail = matches.length >= 0;
       if(isUniversityMail) {

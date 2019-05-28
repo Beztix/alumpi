@@ -383,6 +383,13 @@ header h2 {
     display: block;
 }
 
+.validation-warning {
+    border-left: solid 2px orange;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
 /**
 Image that will fit into the content container on pages
  */
