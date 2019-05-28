@@ -11,17 +11,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
     <section class="text">
-
-            //<!-- thumbnail image wrapped in a link -->
         <a href="#absolventenfeier17plakat">
             <div class="right_img_container">
-                <img src="../_images_content/JubilaeumsballGross.jpg" alt="Plakat Jubiläumsball" style="width:350px;">
+                <img src="../_images_content/JubilaeumsballKlein.jpg" alt="Plakat Jubiläumsball" style="width:350px;">
             </div>
         </a>
-            
-            //<!-- lightbox container hidden with CSS -->
+
         <a href="#_" class="lightbox" id="absolventenfeier17plakat">
-            <img src="../_images_content/JubilaeumsballKlein.jpg" alt="Plakat Jubiläumsball">
+            <img src="../_images_content/JubilaeumsballGross.jpg" alt="Plakat Jubiläumsball">
         </a>
 
 
@@ -42,21 +39,30 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
             <img src="../_images_content/deko_absolventenfeier.jpg" alt="Deko Absolventenfeier" style="width:400px;">
         </div>
         
-        <h2>Der Jubiläumsball<h2>
+        <h2>Der Jubiläumsball</h2>
         <p>				
-        Dieser wird im evangelischen Gemeindehaus in Bayreuth stattfinden, einer sehr schönen Location, die bereits z.B. durch die Abschlussbälle der Unitanzkurse universitätsweit bekannt ist. Auf über 300m² wird gejubelt, gegessen, gefeiert und getanzt. Ganz klassisch starten wir mit einem gemütlichen Sektempfang in den Abend. Beim Anschließenden Festakt haben 
-        <br>
-        Da die Ehrung der Absolventen schon immer ein wesentlicher Bestandteil der Vereinsarbeit war, wollen wir diese auch am Jubiläumsball nicht missen. Daher wird jeder anwesende Absolvent geehrt und erhält eine Urkunde sowie ein Präsent des Vereins. Das gemeinsame Gruppenfoto wird die Absolventenwand im NW 2 ergänzen. <br>
-        <br>
-        Beim anschließenden Buffet kann dann geschlemmt werden, während man sich in ungezwungener Atmosphäre mit den anderen Gästen unterhalten kann. Für die richtigen Getränke sorgt unter anderem die Physikerbar - Studierende unserer Fakultät, die für die Gäste verschiedene klassische Cocktails zaubern.<br>
-        <br>
-        Nach dem Buffet bringt die Band „Take Three“ aus Frammersbach, die bereits den Festakt begleiten wird, die Feier mit niveauvoller Livemusik richtig in Schwung. Den ganzen Abend lang kann dann getanzt und gefeiert werden. 
+            Dieser wird im evangelischen Gemeindehaus in Bayreuth stattfinden, einer sehr schönen Location, die bereits z.B. 
+            durch die Abschlussbälle der Unitanzkurse universitätsweit bekannt ist. Auf über 300m² wird gejubelt, gegessen, gefeiert und getanzt. 
+            Ganz klassisch starten wir mit einem gemütlichen Sektempfang in den Abend. Beim Anschließenden Festakt haben 
+            <br>
+            Da die Ehrung der Absolventen schon immer ein wesentlicher Bestandteil der Vereinsarbeit war, wollen wir diese auch am Jubiläumsball nicht missen. 
+            Daher wird jeder anwesende Absolvent geehrt und erhält eine Urkunde sowie ein Präsent des Vereins. 
+            Das gemeinsame Gruppenfoto wird die Absolventenwand im NW 2 ergänzen. 
+            <br>
+            <br>
+            Beim anschließenden Buffet kann dann geschlemmt werden, während man sich in ungezwungener Atmosphäre mit den anderen Gästen unterhalten kann. 
+            Für die richtigen Getränke sorgt unter anderem die Physikerbar - Studierende unserer Fakultät, die für die Gäste verschiedene klassische 
+            Cocktails zaubern.
+            <br>
+            <br>
+            Nach dem Buffet bringt die Band „Take Three“ aus Frammersbach, die bereits den Festakt begleiten wird, die Feier mit niveauvoller Livemusik 
+            richtig in Schwung. Den ganzen Abend lang kann dann getanzt und gefeiert werden. 
         </p>
 
 
         <h3>Anmeldung</h3>
         <p>
-        Für den Jubiläumsball können Sie sich hier (Link einfügen) anmelden.
+            Für den Jubiläumsball können Sie sich <a href="../jubilaeumsfeier_anmeldeinformationen/index.php">hier</a> anmelden.
         </p>
     </section>
 </section>

@@ -4,9 +4,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 ?>
 
 <section id="content">
-    <section class="top_image">
+    <!-- <section class="top_image">
         <img src="../_images_content/savethedate_jubilaeumsball.jpg" alt="Sektgläser">
-    </section>
+    </section> -->
 
     <section class="text">
         <p>Hier können Sie eine oder mehrere Festaktkarten buchen.</p>
