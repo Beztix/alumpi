@@ -43,7 +43,17 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</li>
 
 				<li>
-				<a <?php if ($thisPage=="jubilaeumsfeier") {echo " class=\"currentpage\"";} ?>  href="../jubilaeumsfeier/index.php">Jubiläumsfeier</a>
+					<a <?php if ($thisPage=="jubilaeumsfeier") {echo " class=\"currentpage\"";} ?>  href="../jubilaeumsfeier/index.php">Jubiläumsfeier</a>
+
+					<?php
+					//Submenü wird nur angezeigt wenn sich der Nutzer auf dieser Seite oder einer Unterseite befindet
+					if($thisPage=="jubilaeumsfeier" || 
+						$thisPage=="jubilaeumsfeier_anmeldung_absolvent" || 
+						$thisPage=="jubilaeumsfeier_anmeldung_gast" || 
+						$thisPage=="jubilaeumsfeier_anmeldung_laufkarte") {
+						include 'submenu_jubilaeumsfeier.php';
+					}
+					?>
 				</li>
 
                 <li>
