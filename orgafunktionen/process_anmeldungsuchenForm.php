@@ -156,6 +156,7 @@ if(isset($_POST['anmeldung_suchen'])) {
 					$data_output['studienbeginn'] = 				$data_db['studienbeginn'];
 					$data_output['studienabschluss'] = 				date("d.m.Y", strtotime($data_db['studienabschluss']));
 					$data_output['gesamtpreis'] = 					$data_db['gesamtpreis'];
+					$data_output['laufkarte'] = 					$data_db['laufkarte'];
 				
 					
 					
@@ -206,6 +207,10 @@ if(isset($_POST['anmeldung_suchen'])) {
 					echo '<tr><td>Studienbeginn, Studienabschluss</td><td>' . "\n";
 					echo htmlspecialchars($data_output['studienbeginn'], ENT_QUOTES, 'UTF-8') . ', ';
 					echo htmlspecialchars($data_output['studienabschluss'], ENT_QUOTES, 'UTF-8');
+					echo '</td></tr>' . "\n";
+
+					echo '<tr><td>Laufkarten gekauft</td><td>' . "\n";
+					echo htmlspecialchars($data_output['laufkarte'], ENT_QUOTES, 'UTF-8');
 					echo '</td></tr>' . "\n";
 
 					echo '<tr><td>Gesamtpreis</td><td>' . "\n";
