@@ -569,20 +569,23 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 					<h3>Vorteile der Vereinsmitgliedschaft</h3>
 					<p>
-					Mit dem Beitritt zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. bleiben Sie der Fakultät, an der Sie Ihre Ausbildung erhalten und einige wichtige Jahre 
-					Ihres Lebens verbracht haben, ein Stück weit verbunden.<br>
-					Sie haben damit die Möglichkeit, in unregelmäßigen Abständen Informationen über Neuigkeiten an der Universität, die Absolventen der Fakultät 1 betreffen, 
-					sowie über die Aktivitäten des Absolventenvereins selbst zu erhalten.
-					Der Verein möchte dabei als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren, und in Zukunft auch weitere Homecoming-Veranstaltungen, 
-					Absolventenforen und ähnliche Veranstaltungen organisieren, bei denen die Absolventen untereinander in Kontakt bleiben oder auch den aktuellen Studenten
-					ihre Erfahrungen weitergeben können.<br>
-					Der geringe Jahresbeitrag von lediglich 10 Euro kommt direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> zugute, d.h. vor allem 
-					den Ihnen nachfolgenden Studenten der Fakultät 1 durch eine stetig wachsende Vereinsarbeit, so dass Sie damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. 	
-					Für unsere Neumitglieder wird der Beitrag im ersten Jahr nicht erhoben und ist erst im kommenden Frühjahr fällig. 
-					Zusätzlich können sich Studenten der Universität Bayreuth jährlich vom Mitgliedsbeitrag befreien lassen.
-					<br>
-					Die Möglichkeit als Vereinsmitglied weiterhin am umfangreichen Hochschulsport-Angebot der Universität Bayreuth teilzunehmen wird aktuell von Seiten der Universität 
-					Bayreuth leider nicht mehr ermöglicht, wir befinden uns in Gesprächen mit der Hochschulleitung um eine Lösung hierfür zu finden.
+					Mit dem Beitritt zum Absolventen- und Förderverein MPI Uni Bayreuth e.V. bleiben Sie der Fakultät, an der Sie Ihre Ausbildung 
+					erhalten und einige wichtige Jahre Ihres Lebens verbracht haben, ein Stück weit verbunden.
+					Sie haben damit die Möglichkeit, in regelmäßigen Abständen Informationen über Neuigkeiten an der Universität, 
+					die Absolventen der Fakultät 1 betreffen, sowie über die Aktivitäten des Absolventenvereins selbst zu erhalten. 
+					Der Verein möchte dabei als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren, dazu veranstalten 
+					wir unter anderem Ehemaligentreffen, Absolventenforen oder Absolventenvorträge, bei denen die Absolventen untereinander 
+					in Kontakt bleiben oder auch den aktuellen Studenten ihre Erfahrungen weitergeben können.<br>
+
+					Als Vereinsmitglied haben Sie zudem die Möglichkeit, das Angebot des Hochschulsports als externer Teilnehmer nutzen.<br>
+
+					Der geringe Jahresbeitrag von lediglich 10 Euro kommt direkt dem gemeinnützigen Vereinszweck laut <a href="../_pdfs/Satzung.pdf">Satzung</a> 
+					zugute, d.h. vor allem den Ihnen nachfolgenden Studenten der Fakultät 1 durch eine stetig wachsende Vereinsarbeit, so dass Sie 
+					damit ein wenig an den Ort Ihrer Ausbildung zurückgeben können. Für die Studenten organisieren wir unter anderem Exkursionen, 
+					Workshops und Vorträge, um über die berufliche Zukunft zu informieren und Kontakt zu möglichen Arbeitgebern herzustellen. <br>
+
+					Für unsere Neumitglieder wird der Beitrag im ersten Jahr nicht erhoben und ist erst im kommenden Frühjahr fällig. Zusätzlich können sich 
+					eingeschriebene Studenten der Universität Bayreuth vom Mitgliedsbeitrag befreien lassen.<br>
 					</p>
 					
 					<p>

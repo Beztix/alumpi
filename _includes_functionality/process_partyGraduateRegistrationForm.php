@@ -158,6 +158,7 @@ if(!empty($_POST)) {
 						echo "<h3 class=\"green\">Anmeldung zur Absolventenfeier erfolgreich!</h3>";
 						echo "<p class=\"green\">";
 						echo "Sie erhalten in Kürze eine Email, die Ihre Anmeldung zur diesjährigen Absolventenfeier bestätigt.<br>";
+						echo "Prüfen Sie gegebenfalls auch Ihren Spam-Ordner!<br>";
 						echo "</p>";
 					
 					}
