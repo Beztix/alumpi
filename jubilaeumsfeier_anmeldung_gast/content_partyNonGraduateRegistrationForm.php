@@ -79,25 +79,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					Die entsprechenden Angaben finden Sie auch in der Bestätigungsmail zur Anmeldung.
 					</p>
 					
-					<div>
-						
-						<br>
-						<h2>Verwendung der Kontaktdaten</h2>
-						<p>
-						Sie können unsere Vereinsarbeit unterstützen, indem Sie uns erlauben Ihre E-Mail-Adresse zu speichern.
-						Wir verwenden diese, um Sie im Sinne unserer Vereinsarbeit (d.h. beispielsweise über das nächste Homecoming-Event) zu informieren.
-						Diese Adressliste wird von uns nicht weitergegeben und Sie erhalten maximal einige wenige Mails pro Jahr von uns.
-						<br>
-						</p>
-						
-						<p>
-						<input id="datenspeicherungCheckbox" type="checkbox" name="datenspeicherung" checked>
-						Ja, ich gestatte dem Absolventen- und Förderverein MPI Uni Bayreuth e.V. die Speicherung und Nutzung meiner Kontaktdaten im Sinne der Vereinsarbeit. 
-						</p>
-					
-					
-					</div>
-
 					<br>
 					<button class="absenden" type="submit">Anmeldung Absenden</button>
 
