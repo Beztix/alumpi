@@ -22,7 +22,7 @@ function send_partyGraduateRegistration_email($toEmail, $titleAndName, $gender, 
 	//Betreff der Email
 	$mail->Subject = 'Ihre Anmeldung zur Jubiläumsfeier';
 	
-	$ticket_type = $laufkarte ? "Laufkarte" : "Festaktkarte";
+	$ticket_type = $laufkarte == true ? "Laufkarte" : "Festaktkarte";
 	$ticket_name = $anzahl_gaeste > 0 ? $ticekt_type . "n" : $ticket_type;
 	$message_start = $gender == "Herr" ? "Sehr geehrter" : "Sehr geehrte";
 
