@@ -146,9 +146,9 @@ if(!empty($_POST)) {
 					
 					//Bestätigungs-Email senden	
 					if($laufkarte == true) {
-						$email_sent = send_partyGraduateRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $karten_typ);
-					} else {
 						$email_sent = send_partyLaufkartenRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $karten_typ);
+					} else {
+						$email_sent = send_partyGraduateRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $karten_typ);
 					}			
 					
 					
