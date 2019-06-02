@@ -180,7 +180,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 												"Angewandte Informatik V - Datenbanken und Informationssysteme",
 												"Angewandte Informatik VI - Algorithmen und Datenstrukturen",
 												"Angewandte Informatik VII - Theoretische Informatik",
-												"Angewandte Informatik VIII - Serious Games)",
+												"Angewandte Informatik VIII - Serious Games",
 												"Betriebswirtschaftslehre VII – Wirtschaftsinformatik",
 												"Bioinformatik/Strukturbiologie"
 												);
@@ -477,6 +477,11 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 										<option value="">bitte auswählen</option>
 										<?php
 										$studienbeginn = array(
+											"2019, SS",
+											"2018, WS",
+											"2018, SS",
+											"2017, WS",
+											"2017, SS",
 											"2016, WS",
 											"2016, SS",
 											"2015, WS",
