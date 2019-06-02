@@ -25,6 +25,7 @@ function send_partyLaufkartenRegistration_email($toEmail, $titleAndName, $gender
 	$ticket_type = $laufkarte == true ? "Laufkarte" : "Festaktkarte";
 	$ticket_name = $anzahl_gaeste > 0 ? $ticket_type . "n" : $ticket_type;
 	$message_start = $gender == "Herr" ? "Sehr geehrter" : "Sehr geehrte";
+	$total_number_tickets = $anzahl_gaeste + 1;
 
 	//Inhalt der Email
 	$message = $message_start . " " . $titleAndName . ",
@@ -33,7 +34,7 @@ vielen Dank für ihre Anmeldung zum Jubiläumsball am " . $datum_der_feier . ".
 
 Diese E-Mail dient lediglich der Bestätigung der Anmeldung.
 
-Sie haben " . $anzahl_gaeste + 1 . " " . $ticket_name . " erworben. 
+Sie haben " . $total_number_tickets . " " . $ticket_name . " erworben. 
 Bitte überweisen Sie den Betrag von insgesamt " . $gesamtpreis . " € in den kommenden zwei Wochen auf das Konto des Absolventenvereins.
 
 Kontodaten:
