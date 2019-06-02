@@ -320,8 +320,8 @@ if(!empty($_POST)) {
 				}
 				
 				
-				//Keine Anmeldung zum Verein
-				else if($laufkarte == false) {
+				//Keine Anmeldung zum Verein, aber Abschlussjahr gesetzt, daher potentielles Mitglied!
+				else if(isset($_POST['studienabschluss'])) {
 					echo "<p class=\"green\">";
 					echo "Sie haben keine Anmeldung zum Absolventenverein durchgeführt, Sie können dies zu einem späteren Zeitpunkt über die Unterseite \"Mitgliedsantrag\" der Homepage tun.<br>";
 					echo "</p>";
