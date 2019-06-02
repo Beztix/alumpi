@@ -7,7 +7,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 require_once 'phpmailer/PHPMailerAutoload.php';
 
 
-function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_der_feier, $anzahl_gaeste, $gesamtpreis) {
+function send_partyGraduateRegistration_email($toEmail, $titleAndName, $gender, $datum_der_feier, $anzahl_gaeste, $gesamtpreis, $laufkarte) {
 	
 	$mail = new PHPMailer;
 	$mail->CharSet = 'UTF-8';
@@ -20,18 +20,20 @@ function send_partyGraduateRegistration_email($toEmail, $titleAndName, $datum_de
 	$mail->addReplyTo('alumpi@uni-bayreuth.de', 'aluMPI');
 	
 	//Betreff der Email
-	$mail->Subject = 'Ihre Anmeldung zur Absoventenfeier';
+	$mail->Subject = 'Ihre Anmeldung zur Jubiläumsfeier';
 	
+	$ticket_type = $laufkarte ? "Laufkarte" : "Festaktkarte";
+	$ticket_name = $anzahl_gaeste > 0 ? $ticekt_type . "n" : $ticket_type;
+	$message_start = $gender == "m" ? "Sehr geehrter" : "Sehr geehrte";
 
 	//Inhalt der Email
-	$message =  "
-Sehr geehrter " . $titleAndName . ",
+	$message = $message_start . " " . $titleAndName . ",
 
 vielen Dank für ihre Anmeldung zum Jubiläumsball am " . $datum_der_feier . " als aktueller Absolvent. 
 
 Diese E-Mail dient lediglich der Bestätigung der Anmeldung.
 
-Sie haben zusätzlich " . $anzahl_gaeste . " Gäste mit angemeldet. 
+Sie haben " . $anzahl_gaeste + 1 . " " . $ticket_name . " erworben. 
 Bitte überweisen Sie den Betrag von insgesamt " . $gesamtpreis . " € in den kommenden zwei Wochen auf das Konto des Absolventenvereins.
 
 Kontodaten:
