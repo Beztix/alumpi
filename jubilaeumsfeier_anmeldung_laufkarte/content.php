@@ -4,9 +4,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 ?>
 
 <section id="content">
-    <!-- <section class="top_image">
-        <img src="../_images_content/savethedate_jubilaeumsball.jpg" alt="Sektgläser">
-    </section> -->
+    <section class="top_image">
+		<img src="../_images_content/banner_sektglaeser.jpg" alt="Sektgläser">
+	</section>
 
     <section class="text">
         <h1>Buchung von Laufkarten</h1>
@@ -16,15 +16,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
         <p>
             Die Laufkarten berechtigen Sie zur Teilnahme am Abendprogramm des Jubiläumsballs. 
             Einlass ist um 19:30 Uhr. 
-            Der Preis einer Laufkarte beträgt <?= ABSOLVENTENFEIER_PREIS_LAUFKARTE ?>€ und ist per Überweisung zu bezahlen. Sie erhalten Ihre Gästelistenplätze nach Eingang der Zahlung.
+            Der Preis einer Laufkarte beträgt <?= ABSOLVENTENFEIER_PREIS_LAUFKARTE ?> € und ist per Überweisung zu bezahlen. Sie erhalten Ihre Gästelistenplätze nach Eingang der Zahlung.
         </p>
         <p>
             Wenn Sie als Absolvent am Festakt teilnehmen möchten, wählen Sie bitte die Option 
-            <a href="../jubilaeumsfeier_anmeldung_absolvent/index.php">„Buchung von Festaktkarten (als aktueller Absolvent)“.</a>
+            <a href="../jubilaeumsfeier_anmeldung_absolvent/index.php">„Buchung von Festaktkarten (als aktueller Absolvent)“</a>.
         </p>
         <p>
             Wenn Sie als Gast am Festakt teilnehmen möchten, wählen Sie bitte die Option 
-            <a href="../jubilaeumsfeier_anmeldung_gast/index.php">„Buchung von Festaktkarten“.</a>
+            <a href="../jubilaeumsfeier_anmeldung_gast/index.php">„Buchung von Festaktkarten“</a>.
         </p>
 		<br>
         

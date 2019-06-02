@@ -3,7 +3,7 @@
 if(!defined('AccessConstant')) {die('Direct access not permitted');}
 ?>
 
-				<h2>Formulart zur Buchung von Laufkarten</h2>
+				<h2>Formular zur Buchung von Laufkarten</h2>
 
 				<form action="index.php#result" method="POST" enctype="multipart/form-data">
 					<input type="hidden" name="is_alumni" value="0" />

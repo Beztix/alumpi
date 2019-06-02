@@ -11,6 +11,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
 
     <section class="text">
+	
+		<h1>Jubiläumsball 2019</h1>
+		
         <a href="#absolventenfeier17plakat">
             <div class="right_img_container">
                 <img src="../_images_content/JubilaeumsballKlein.jpg" alt="Plakat Jubiläumsball" style="width:350px;">
@@ -21,9 +24,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
             <img src="../_images_content/JubilaeumsballGross.jpg" alt="Plakat Jubiläumsball">
         </a>
 
-
-
-        <h1>Jubiläumsball 2019</h1>
 
         <h2>Der Verein</h2>
         <p>
@@ -43,7 +43,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
         <p>				
             Dieser wird im evangelischen Gemeindehaus in Bayreuth stattfinden, einer sehr schönen Location, die bereits z.B. 
             durch die Abschlussbälle der Unitanzkurse universitätsweit bekannt ist. Auf über 300m² wird gejubelt, gegessen, gefeiert und getanzt. 
-            Ganz klassisch starten wir mit einem gemütlichen Sektempfang in den Abend. Beim Anschließenden Festakt haben 
+            Ganz klassisch starten wir mit einem gemütlichen Sektempfang in den Abend. Beim anschließenden Festakt gibt es einen kurzen Rückblick auf die vergangenen 10 Jahre im Verein und der Fakultät.
             <br>
             Da die Ehrung der Absolventen schon immer ein wesentlicher Bestandteil der Vereinsarbeit war, wollen wir diese auch am Jubiläumsball nicht missen. 
             Daher wird jeder anwesende Absolvent geehrt und erhält eine Urkunde sowie ein Präsent des Vereins. 

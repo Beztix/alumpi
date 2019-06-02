@@ -70,7 +70,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</table>
 					<br>
 					Hinweis: Kommen Sie alleine, so ist die Anzahl mitgebrachter Gäste 0.
-					Falls sich die Gästezahl nachträglich ändert so können Sie uns dies bis spätestens eine Woche vor der Feier per E-Mail mitteilen.
+					Falls sich die Gästezahl nachträglich ändert, teilen Sie und das bitte rechtzeitig per E-Mail mit.
 					<br>
 					<br>
 

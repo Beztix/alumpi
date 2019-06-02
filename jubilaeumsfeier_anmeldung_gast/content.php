@@ -4,9 +4,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 ?>
 
 <section id="content">
-    <!-- <section class="top_image">
-        <img src="../_images_content/savethedate_jubilaeumsball.jpg" alt="Sektgläser">
-    </section> -->
+    <section class="top_image">
+        <img src="../_images_content/banner_sektglaeser.jpg" alt="Sektgläser">
+    </section>
 
     <section class="text">
         <p>Hier können Sie eine oder mehrere Festaktkarten buchen.</p>
@@ -15,9 +15,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
             Einlass ist um 16:00 Uhr. 
         </p>
         <p>
-            Der Preis einer Festaktkarte beträgt <?= ABSOLVENTENFEIER_PREIS ?>€ und ist per Überweisung zu bezahlen. Sie erhalten Ihre Gästelistenplätze nach Eingang der Zahlung.
+            Der Preis einer Festaktkarte beträgt <?= ABSOLVENTENFEIER_PREIS ?> € und ist per Überweisung zu bezahlen. Sie erhalten Ihre Gästelistenplätze nach Eingang der Zahlung.
             Wenn Sie als Absolvent an der Absolventenehrung teilnehmen möchten, wählen Sie bitte die Option 
-            „<a href="../jubilaeumsfeier_anmeldung_absolvent/index.php">Buchung von Festaktkarten (als aktueller Absolvent)</a>“
+            „<a href="../jubilaeumsfeier_anmeldung_absolvent/index.php">Buchung von Festaktkarten (als aktueller Absolvent)</a>“.
         </p>
 
         <?php 
