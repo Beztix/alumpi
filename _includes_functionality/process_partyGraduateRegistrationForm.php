@@ -112,7 +112,7 @@ if(!empty($_POST)) {
 					$laufkarte = filter_var($_POST['laufkarte'], FILTER_VALIDATE_BOOLEAN);
 				}
 				
-				
+				$karten_typ = "Festaktkarte";
 				//gesamt angemeldete gaeste als integer ausrechnen
 				$int_gaeste = intval($anzahl_gaeste);
 				$gesamtgaeste = $int_gaeste + 1;
@@ -120,6 +120,7 @@ if(!empty($_POST)) {
 				$einzelpreis = ABSOLVENTENFEIER_PREIS;
 				if($laufkarte == true) {
 					$einzelpreis = ABSOLVENTENFEIER_PREIS_LAUFKARTE;
+					$karten_typ = "Laufkarte";
 				}
 				$einzelpreis = str_replace(',', '.', $einzelpreis);
 				//gesamtpreis berechnen
@@ -145,9 +146,9 @@ if(!empty($_POST)) {
 					
 					//Bestätigungs-Email senden	
 					if($laufkarte == true) {
-						$email_sent = send_partyGraduateRegistration_email($email, $titleAndName, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis);
+						$email_sent = send_partyGraduateRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $karten_typ);
 					} else {
-						$email_sent = send_partyLaufkartenRegistration_email($email, $titleAndName, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis);
+						$email_sent = send_partyLaufkartenRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $karten_typ);
 					}			
 					
 					
