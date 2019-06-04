@@ -31,16 +31,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 
         
         <?php 
-        include_once '../_includes_functionality/calculateAccessPermissions.php';
-        $zugriff_erlauben = doesCurrentUserHaveAccess($foerderer_zugriff, $mitglied_zugriff, $orga_zugriff, $kuratorium_zugriff, $finanzer_zugriff, $vorstand_zugriff, $admin_zugriff);
-        if($zugriff_erlauben) {
-            include './content_partyGraduateRegistrationForm.php'; 
+        include './content_partyGraduateRegistrationForm.php'; 
 
-            echo "<div id=\"result\"></div>\n";
-            include '../_includes_functionality/process_partyGraduateRegistrationForm.php';
-        } else {
-            echo "Diese Seite wird ständig aktualisiert, schauen Sie also bald wieder vorbei!";
-        }
+        echo "<div id=\"result\"></div>\n";
+        include '../_includes_functionality/process_partyGraduateRegistrationForm.php';
         ?>
     </section>
 </section>
