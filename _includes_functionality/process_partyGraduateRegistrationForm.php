@@ -145,10 +145,11 @@ if(!empty($_POST)) {
 					}
 					
 					//Bestätigungs-Email senden	
-					if($laufkarte == true) {
-						$email_sent = send_partyLaufkartenRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $karten_typ);
+					if($laufkarte == true || !isset($_POST['studienabschluss'])) {
+						// Laufkarte oder Gastanmeldung
+						$email_sent = send_partyLaufkartenRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $laufkarte);
 					} else {
-						$email_sent = send_partyGraduateRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $karten_typ);
+						$email_sent = send_partyGraduateRegistration_email($email, $titleAndName, $geschlecht, ABSOLVENTENFEIER_DATUM, $anzahl_gaeste, $gesamtpreis, $laufkarte);
 					}			
 					
 					
