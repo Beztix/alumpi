@@ -27,7 +27,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	const ABSOLVENTENFEIER_INFO_AKTIV = False;
 	
 	const ABSOLVENTENFEIER_ORT = 'Evangelische Gemeindehaus, Richard-Wagner-Str. 4, 95444 Bayreuth';
-	const ABSOLVENTENFEIER_DATUM = '08.11.2019';
+	const ABSOLVENTENFEIER_DATUM = '02.11.2019';
 	const ABSOLVENTENFEIER_ANMELDESCHLUSS = '01.11.2019';
 	const ABSOLVENTENFEIER_UHRZEIT = '15:00';
 	const ABSOLVENTENFEIER_PREIS = '32';
