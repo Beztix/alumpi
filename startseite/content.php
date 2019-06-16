@@ -45,8 +45,22 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				-->
 
-				<h2>Unsere aktuellen Projekte:</h2>
+				<h2>Aktuell:</h2>
+				<div class="news-boxen-container">
+					<div class="news-box news-full-width">
+						<h3>Jubiläumsball 2019</h3>
+						
+						<p>
+						Am Samstag, den 2. November 2019, findet anlässlich unseres 10-jährigen Bestehens der aluMPI-Jubiläumsball statt. Eingeladen sind alle Mitglieder des Vereins, der Fakultät, aber auch alle sonstigen Interessierten und Tanzfreunde. <br>
+						<br>
+						Im Rahmen dieser Veranstaltung findet auch die jährliche Absovlentenfeier statt. <br>
+						<br>
+						<a href="../jubilaeumsfeier/index.php">Infos und Anmeldung >></a>
+						</p>
+					</div>
+				</div>
 				
+				<h2>Unsere Projekte:</h2>
 				
 				<div class="news-boxen-container">
 					<div class="news-box">
@@ -54,7 +68,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						Bei der jährlich stattfindenden Veranstaltung geben wir den frisch gebackenen Absolventen
 						(Bachelor, Master, Staatsexamen, Promotion) die Möglichkeit,
 						den erreichten Abschluss in einem gebührenden Rahmen mit Eltern,
-						Kommilitonen und Freunden zu feiern.
+						Kommilitonen und Freunden zu feiern.<br>
+						<br>
 					</div>
 					<div class="news-box">
 						<h3>Berufsorientierung</h3>
@@ -74,8 +89,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						In Kooperation mit der Fachschaft Mathe/Physik/Informatik werden verschiedene Ausflüge für
 						Studierende der Fakultät zu Museen, Forschungseinrichtungen, Firmen etc. (Ideen sind erwünscht)
 						geplant bzw. gefördert.<br>
-						
-						
+						<br>
+						<br>
+						<br>
+						<br>						
 					</div>
 				</div>
 				

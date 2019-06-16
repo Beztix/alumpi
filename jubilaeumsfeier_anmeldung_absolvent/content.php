@@ -9,6 +9,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
     </section>
 
     <section class="text">
+		<h1>Buchung von Festaktkarten (als aktueller Absolvent)</h1>
         <p>
             Wenn Sie auf der Feier Ihren Abschluss feiern möchten, können Sie hier eine oder mehrere Festaktkarten für sich und Ihre Gäste buchen. 
         </p>

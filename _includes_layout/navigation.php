@@ -83,13 +83,12 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 						<div class="sidebar-informationen">
 				<h3>Termine</h3>
 				
-				<!--
+				
 				<div class="sidebar-termin">
-				Jahreshauptversammlung 2019<br>
-				18.01.19, 19:00 Uhr <br>
-				im Manns-Bräu
+				Jubiläumsball 2019<br>
+				02.11.2019
 				</div>
-				-->
+				
 				
 				<h3>Sitzungen</h3>
 				
@@ -99,9 +98,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				Nächste Sitzungstermine:<br><br>
 
-				Mi. 13.03, 17:00, S 748<br>
-				Mi. 27.03, 17:00, S 748<br>
-				Mi. 10.04, 17:00, S 748<br>
+				Do. 27.06, 18:00, S 748<br>
+				Do. 11.07, 18:00, S 748<br>
+				Do. 25.07, 18:00, S 748<br>
 
 
 				<br>

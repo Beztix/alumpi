@@ -9,6 +9,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
     </section>
 
     <section class="text">
+	<h1>Buchung von Festaktkarten</h1>
         <p>Hier können Sie eine oder mehrere Festaktkarten buchen.</p>
         <p>
             Die Festaktkarten berechtigen Sie zur Teilnahme an der kompletten Veranstaltung, d.h. am Sektempfang, dem Festakt, dem Buffet und den anschließenden Feierlichkeiten. 
