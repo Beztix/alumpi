@@ -25,5 +25,5 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<h2>
 			Absolventen- und Förderverein MPI Uni Bayreuth e.V.
 		</h2>
-	
+
 	</header>
