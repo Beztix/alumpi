@@ -36,17 +36,28 @@ if(isset($_POST['anmeldungen_abrufen'])) {
 		
 		$datum_der_feier = date('Y-m-d', strtotime(ABSOLVENTENFEIER_DATUM));
 	
+		$header_stmt = $mysqli->prepare("SELECT `COLUMN_NAME` FROM `INFORMATION_SCHEMA`.`COLUMNS` WHERE `TABLE_SCHEMA`='alumpi' AND `TABLE_NAME`='absolventenfeier';");
+		$header_stmt->execute();
+		$header_result = $header_stmt->get_result();
+
 		$stmt = $mysqli->prepare('SELECT * FROM absolventenfeier WHERE datum_der_feier = ?');
 		$stmt->bind_param('s', $datum_der_feier);
 		$stmt->execute();
 		$result = $stmt->get_result();
 		
 		//DB-Abfrage erfolgreich
-		if($result) {
+		if($result && $header_result) {
 			
 			//Zu generierende Datei (ausserhalb des öffentlichen www-verzeichnis!!)
 			$file = HOME_DIRECTORY . 'generated_files/anmeldungen_absolventenfeier.csv';
 			$output = fopen($file, 'w');
+
+			// Headerzeilen erst in array, dann in CSV schreiben
+			$headers = array();
+			while($row = $header_result->fetch_row()) {
+				array_push($headers, $row[0]);	
+			}
+			fputcsv($output, $headers);
 
 			//Zeilen der Datenbankabfrage in CSV-Datei schreiben
 			while($recordObj = $result->fetch_assoc()) {
