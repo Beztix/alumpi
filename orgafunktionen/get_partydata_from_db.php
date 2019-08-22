@@ -50,26 +50,29 @@ else {
 		$anzahl_absolventen = 0;
 		$anzahl_mitgebrachter_gaeste = 0;
 		$anzahl_separater_gaeste = 0;
+
+		$anzahl_laufkarten = 0;
 		
 		
 		//Für jeden Eintrag
 		while ($recordObj = $result->fetch_assoc()) {
-			
-			
-			if($recordObj['selbstfeier'] === 'j') {
-				$anzahl_absolventen++;
-				$anzahl_mitgebrachter_gaeste += $recordObj['anzahl_gaeste'];
-			}
-			
-			if($recordObj['selbstfeier'] === 'n') {
-				$anzahl_separater_gaeste++;
+			if($recordObj['laufkarte']) {
+				$anzahl_laufkarten += 1 + $recordObj['anzahl_gaeste'];
+			} else {
+				if($recordObj['abschlussarbeitsthema'] == NULL) {
+					$anzahl_separater_gaeste += 1 + $recordObj['anzahl_gaeste'];
+				} else {
+					$anzahl_absolventen += 1;
+					$anzahl_mitgebrachter_gaeste += $recordObj['anzahl_gaeste'];
+				}
 			}
 		}
 		
 		$data_output['anzahl_absolventen'] = $anzahl_absolventen;
 		$data_output['anzahl_mitgebrachter_gaeste'] = $anzahl_mitgebrachter_gaeste;
 		$data_output['anzahl_separater_gaeste'] = $anzahl_separater_gaeste;
-		$data_output['anzahl_anmeldungen_gesamt'] = $anzahl_absolventen + $anzahl_mitgebrachter_gaeste + $anzahl_separater_gaeste;
+		$data_output['anzahl_laufkarten'] = $anzahl_laufkarten;
+		$data_output['anzahl_anmeldungen_gesamt'] = $anzahl_absolventen + $anzahl_mitgebrachter_gaeste + $anzahl_separater_gaeste + $anzahl_laufkarten;
 	}
 	
 	//Fehler bei der DB-Abfrage

@@ -95,6 +95,14 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</tr>
 					<tr>
 						<td>
+							Angemeldete Laufgäste
+						</td>
+						<td>
+							<?php echo htmlspecialchars($data_output['anzahl_laufkarten'], ENT_QUOTES, 'UTF-8'); ?>
+						</td>
+					</tr>
+					<tr>
+						<td>
 							Gesamtzahl Anmeldungen
 						</td>
 						<td>
