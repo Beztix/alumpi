@@ -52,7 +52,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			<br>
 			Doch das war den Gründern nicht genug: Sie wollten dafür sorgen, dass sich Absolventen auch nach dem Abschluss an ihre Uni erinnern und einen Bezug erhalten können. Daher entschlossen sie sich, den Absolventen- und Förderverein MPI Uni Bayreuth zu gründen. Dieser hat nicht nur die Organisation der Absolventenfeier zur Aufgabe, sondern soll auch dafür sorgen, eine Vernetzung zwischen Absolventen und Studierenden der Fakultät zu erreichen. Und diese Aufgabe erfüllt der Verein nun schon seit 10 Jahren. 
         </p>
-
+        <h3>Anfahrt und Parkhäuser</h3>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1oh0HFEvfHv0ho_Yq3tOC5x1IXW3yBVCe" width="880" height="550"></iframe>
 
 
     </section>
