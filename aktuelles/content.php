@@ -37,6 +37,31 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					Wir haben vor, den Austausch von Studenten und Absolventen der Fakultät zu verstärken. Wir wollen die Möglichkeit schaffen, dass Studenten bei konkreten Fragen zu einem bestimmten Berufsfeld sich direkt an einen entsprechenden Absolventen wenden können. Dazu werden wir unsere Mitgliederdatenbank um den Beruf bzw. den Werdegang der Mitglieder erweitern. Unsere Mitglieder werden anschließend gebeten, ihre Daten - sofern sie das möchten - an den Verein weiterzugeben. Wir möchten diese Daten dann in anonymisierter Form den Studenten zur Verfügung stellen. Das wird auf unserer Homepage und/oder in Form eines Plakates realisiert werden. Weiterhin können die Studenten über uns dann mit den Absolventen in Verbindung treten.
 					</p>
 				</article>
+
+				<article class="news">
+					<h2>Firmenexkursion Witron</h2>
+					<h3>Besuch bei der Witron Logistik + Informatik GmbH</h3>
+					<!-- thumbnail image wrapped in a link -->
+					<a href="#ehemaligentreffen2017">
+						<div class="left_img_container">
+							<img src="../_images_content/witron2019.JPG" alt="Exkursion Witron 2018" style="width:350px;">
+						</div>
+					</a>
+					<!-- lightbox container hidden with CSS -->
+					<a href="#_" class="lightbox" id="ehemaligentreffen2017">
+						<img src="../_images_content/witron2019.JPG" alt="Exkursion Witron 2018">
+					</a>
+					<p>					
+					Am 11. Juni 2019 haben wir zusammen mit der Stabsabteilung KarriereService und Unternehmenskontakte eine Exkursion zu WITRON – Logistik + Informatik nach Parkstein organisiert. WITRON entwickelt hochdynamische Logistik- und Kommissoniersysteme für Handel und Industrie und konnte sich als einer der Marktführer in Planung und Realisierung etablieren. 
+					<br>
+					Dabei wurden wir von den MitarbeiterInnen von WITRON herzlich in Empfang genommen. Nach ein paar einleitenden Worten zur Unternehmensgeschichte und Firmenstruktur, wurde uns ein Einblick in die Arbeitsweise und in die Abläufe gewährt. Aber auch die Probleme, die mit der Lagerlogistik einhergehen, wurden uns anschaulich dargestellt. Wie kann man möglichst effizient eine Palette mit Lebensmitteln packen, ohne dass die Fracht instabil ist, Güter beschädigt werden, oder die Palette einfach zu wenig beladen ist. 
+					<br>
+					Im Anschluss durften wir den weitläufigen Produktionsstandort und die einzigartigen Firmengebäude erkunden. Bestaunt wurde dabei unter anderem die firmeneigene Seilbahn, die zwei Produktionshallen miteinander verbindet. 
+					Beim gemeinsamen Mittagessen konnten sich TeilnehmerInnen und MitarbeiterInnen nochmals austauschen, bevor es zu einer abschließenden Feedbackrunde kam. 
+					<br>
+					Wir bedanken uns ganz herzlich bei den MitarbeiterInnen von WITRON, die uns interessante Einblicke und das freundliche Klima. Auch bei der Stabsabteilung für KarriereService und Unternehmenskontakte für die ausgiebige Unterstützung bei der Organisation und Durchführung. 
+					</p>
+				</article>
 				
 				<article class="news">
 					<h2>Firmenexkursion nach Selb</h2>
