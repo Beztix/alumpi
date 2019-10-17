@@ -19,24 +19,6 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<br>
 				<br>
-				
-				<article class="news">
-
-					<h2>Jahreshauptversammlung 2019</h2>
-					
-					<p>
-					Der Absolventen- und Förderverein MPI traf sich dieses Jahr wieder zur Mitgliederversammlung im Manns-Bräu. Am 18.01.2019 wurde nicht nur der Vorstand gewählt und über das vergangene Jahr berichtet, es wurde auch über Vorträge und Exkursionen für das kommende Jahr beraten.
-					Und dieses Jahr steht auch noch das 10-jährige Vereinsjubiläum an... 
-					<br><br>
-					Unser bisheriger Schatzmeister Dorian Rohner trat für das kommende Jahr nicht mehr zur Wahl an. Für seine Arbeit und sein Engagement bedanken wir uns recht herzlich. Er bleibt dem Verein in seiner neuen Funktion als Kassenprüfer erhalten. Als neue Schatzmeisterin wurde Maike Schelhorn (Lehramtsstudtentin Mathematik/Physik für Gymnsasien) von der Mitgliederversammlung gewählt. Der bisherige erste Vorsitzende Armin Kögel (Doktorand der Ingenieurswissenschaften) und der zweite Vorsitzende Markus Klar (Doktorand der Informatik) wurden für das kommende Jahr wiedergewählt.
-					<br><br>		
-					Wie im letzten Jahr sind wieder Veranstaltungen für die Studenten der Fakultät geplant. Zum einen wird es wieder Vorträge und/oder Workshops von Unternehmen geben, die speziell für unsere Absolventen interessant sind. Diese sollen einen Einblick in die Arbeit und die Berufsaussichten eines Absolventen unserer Fakultät ermöglichen, daher achten wir besonders darauf, dass die Referenden auch „vom Fach“ sind. Zum anderen werden dieses Jahr Exkursionen stattfinden: Angedacht sind Betriebsbesichtigungen von Unternehmen in der Region, die ihren Schwerpunkt auf Technik und Technologie setzen. 
-					<br><br>
-					Höhepunkt des Jahres wird unser 10-jähriges Vereinsjubiläum sein. Dieses werden wir im Rahmen eines Balls am Samstag, den 2. November 2019 gebührend feiern. Eingeladen werden alle Vereinsmitglieder, aber auch alle aktuellen und ehemaligen Angehörigen unserer Fakultät. Außerdem werden wir die diesjährige Absolventenfeier mit dem Jubiläumsball zusammenlegen, die Urkundenverleihung wird Teil des Festakts sein. Die Planungen zum Fest sind bereits in vollem Gange, sämtliche Informationen werden auf unserer Homepage zu finden sein.
-					<br><br>
-					Wir haben vor, den Austausch von Studenten und Absolventen der Fakultät zu verstärken. Wir wollen die Möglichkeit schaffen, dass Studenten bei konkreten Fragen zu einem bestimmten Berufsfeld sich direkt an einen entsprechenden Absolventen wenden können. Dazu werden wir unsere Mitgliederdatenbank um den Beruf bzw. den Werdegang der Mitglieder erweitern. Unsere Mitglieder werden anschließend gebeten, ihre Daten - sofern sie das möchten - an den Verein weiterzugeben. Wir möchten diese Daten dann in anonymisierter Form den Studenten zur Verfügung stellen. Das wird auf unserer Homepage und/oder in Form eines Plakates realisiert werden. Weiterhin können die Studenten über uns dann mit den Absolventen in Verbindung treten.
-					</p>
-				</article>
 
 				<article class="news">
 					<h2>Firmenexkursion Witron</h2>
@@ -63,6 +45,26 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</p>
 				</article>
 				
+				
+				<article class="news">
+
+					<h2>Jahreshauptversammlung 2019</h2>
+					
+					<p>
+					Der Absolventen- und Förderverein MPI traf sich dieses Jahr wieder zur Mitgliederversammlung im Manns-Bräu. Am 18.01.2019 wurde nicht nur der Vorstand gewählt und über das vergangene Jahr berichtet, es wurde auch über Vorträge und Exkursionen für das kommende Jahr beraten.
+					Und dieses Jahr steht auch noch das 10-jährige Vereinsjubiläum an... 
+					<br><br>
+					Unser bisheriger Schatzmeister Dorian Rohner trat für das kommende Jahr nicht mehr zur Wahl an. Für seine Arbeit und sein Engagement bedanken wir uns recht herzlich. Er bleibt dem Verein in seiner neuen Funktion als Kassenprüfer erhalten. Als neue Schatzmeisterin wurde Maike Schelhorn (Lehramtsstudtentin Mathematik/Physik für Gymnsasien) von der Mitgliederversammlung gewählt. Der bisherige erste Vorsitzende Armin Kögel (Doktorand der Ingenieurswissenschaften) und der zweite Vorsitzende Markus Klar (Doktorand der Informatik) wurden für das kommende Jahr wiedergewählt.
+					<br><br>		
+					Wie im letzten Jahr sind wieder Veranstaltungen für die Studenten der Fakultät geplant. Zum einen wird es wieder Vorträge und/oder Workshops von Unternehmen geben, die speziell für unsere Absolventen interessant sind. Diese sollen einen Einblick in die Arbeit und die Berufsaussichten eines Absolventen unserer Fakultät ermöglichen, daher achten wir besonders darauf, dass die Referenden auch „vom Fach“ sind. Zum anderen werden dieses Jahr Exkursionen stattfinden: Angedacht sind Betriebsbesichtigungen von Unternehmen in der Region, die ihren Schwerpunkt auf Technik und Technologie setzen. 
+					<br><br>
+					Höhepunkt des Jahres wird unser 10-jähriges Vereinsjubiläum sein. Dieses werden wir im Rahmen eines Balls am Samstag, den 2. November 2019 gebührend feiern. Eingeladen werden alle Vereinsmitglieder, aber auch alle aktuellen und ehemaligen Angehörigen unserer Fakultät. Außerdem werden wir die diesjährige Absolventenfeier mit dem Jubiläumsball zusammenlegen, die Urkundenverleihung wird Teil des Festakts sein. Die Planungen zum Fest sind bereits in vollem Gange, sämtliche Informationen werden auf unserer Homepage zu finden sein.
+					<br><br>
+					Wir haben vor, den Austausch von Studenten und Absolventen der Fakultät zu verstärken. Wir wollen die Möglichkeit schaffen, dass Studenten bei konkreten Fragen zu einem bestimmten Berufsfeld sich direkt an einen entsprechenden Absolventen wenden können. Dazu werden wir unsere Mitgliederdatenbank um den Beruf bzw. den Werdegang der Mitglieder erweitern. Unsere Mitglieder werden anschließend gebeten, ihre Daten - sofern sie das möchten - an den Verein weiterzugeben. Wir möchten diese Daten dann in anonymisierter Form den Studenten zur Verfügung stellen. Das wird auf unserer Homepage und/oder in Form eines Plakates realisiert werden. Weiterhin können die Studenten über uns dann mit den Absolventen in Verbindung treten.
+					</p>
+				</article>
+
+
 				<article class="news">
 					<h2>Firmenexkursion nach Selb</h2>
 					<h3>Besichtigung des Automobilzulieferers RAPA und des Messgeräteherstellers LINSEIS</h3>
