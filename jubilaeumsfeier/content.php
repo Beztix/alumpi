@@ -34,11 +34,21 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			Nach dem Buffet bringt die Band „Take Three“ aus Frammersbach, die bereits den Festakt begleiten wird, die Feier mit niveauvoller Livemusik 
 			richtig in Schwung. Den ganzen Abend lang kann dann getanzt und gefeiert werden. 
         </p>
-		
+
 		<h3>Anmeldung</h3>
-        <p>
-            Für den Jubiläumsball können Sie sich <a href="../jubilaeumsfeier_anmeldeinformationen/index.php">hier</a> anmelden.
-        </p>
+		<?php
+            if(JUBILAEUMSFEIER_ANMELDUNG_AKTIV) {
+                echo "<p>\n";
+                echo "Für den Jubiläumsball können Sie sich <a href=\"../jubilaeumsfeier_anmeldeinformationen/index.php\">hier</a> anmelden.";
+                echo "</p>";
+            } else {
+                echo "<p>\n";
+                echo "Aktuell ist keine Anmeldung zum Jubiläumsball möglich.\n";
+                echo "</p>\n";
+            }
+            ?>
+
+
 		
 		<div class="left_img_container">
             <img src="../_images_content/deko_absolventenfeier.jpg" alt="Deko Absolventenfeier" style="width:400px;">

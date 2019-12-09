@@ -22,10 +22,22 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
         </p>
 
         <?php 
-        include './content_partyNonGraduateRegistrationForm.php';
+        if(JUBILAEUMSFEIER_ANMELDUNG_AKTIV) {
+            if(JUBILAEUMSFEIER_FESTAKT_KARTEN_AKTIV) {
+                include './content_partyNonGraduateRegistrationForm.php';
 
-        echo "<div id=\"result\"></div>\n";
-        include '../_includes_functionality/process_partyGraduateRegistrationForm.php';
+                echo "<div id=\"result\"></div>\n";
+                include '../_includes_functionality/process_partyGraduateRegistrationForm.php';
+            } else {
+                echo "<p>\n";
+                echo "Leider sind alle Festaktkarten ausverkauft.\n";
+                echo "</p>\n";    
+            }
+        } else {
+            echo "<p>\n";
+            echo "Aktuell ist keine Anmeldung zum Jubiläumsball mehr möglich.\n";
+            echo "</p>\n";
+        }
         ?>
     </section>
 </section>
