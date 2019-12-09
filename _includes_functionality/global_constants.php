@@ -38,7 +38,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 	const ABSOLVENTENFEIER_ANMELDUNG_AKTIV = False;
 
 	//Diese Variable definiert, ob die Anmeldung zur Jubilaeumsfeier aktuell freigeschaltet ist
-	const JUBILAEUMSFEIER_ANMELDUNG_AKTIV = True;
+	const JUBILAEUMSFEIER_ANMELDUNG_AKTIV = False;
+	const JUBILAEUMSFEIER_FESTAKT_KARTEN_AKTIV = False;
+	CONST JUBILAEUMSFEIER_LAUF_KARTEN_AKTIV = False;
 	
 	//Diese Variable definiert, ob Mitglieder ihre Anmeldedaten noch einsehen können, oder der Text "keine Anmeldung möglich" angezeigt wird
 	//(Relevant für die Zeit nach Anmeldeschluss aber vor der Feier)

@@ -6,7 +6,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 		<section id="content">
 		
 			<section class="top_image">
-				<img src="../_images_content/banner_campus_scene_fahrrad.jpg" alt="Campus Scene Fahrrad">
+				<?php
+				//<img src="../_images_content/banner_campus_scene_fahrrad.jpg" alt="Campus Scene Fahrrad">
+ 				?>
+				<a href="../jubilaeumsfeier/index.php"><img src="../_images_content/startseite_banner_jubilaeumsball.jpg" title="Jubiläumsball" /></a> 				
 			</section>
 		
 		

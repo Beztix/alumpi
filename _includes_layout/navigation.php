@@ -98,9 +98,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				Nächste Sitzungstermine:<br><br>
 
-				Do. 08.08, 18:00, S 748<br>
-				Do. 22.08, 18:00, S 748<br>
-				Do. 05.09, 18:00, S 748<br>
+				Do. 12.12. 18:00, S 748<br>
 
 
 				<br>
