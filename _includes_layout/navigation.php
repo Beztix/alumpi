@@ -25,7 +25,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</li>
 				
 				<li>
-					<a <?php if ($thisPage=="aktuelles") {echo " class=\"currentpage\"";} ?>  href="../aktuelles/index.php">Aktuelles</a>
+					<a <?php if ($thisPage=="aktuelles") {echo " class=\"currentpage\"";} ?>  href="../aktuelles/index.php">Berichte</a>
 				</li>
 				
 				<li>
@@ -42,20 +42,20 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					?>
 				</li>
 
-				<li>
-					<a <?php if ($thisPage=="jubilaeumsfeier") {echo " class=\"currentpage\"";} ?>  href="../jubilaeumsfeier/index.php">Jubiläumsball</a>
+				<!-- <li>
+					<a <?php //if ($thisPage=="jubilaeumsfeier") {echo " class=\"currentpage\"";} ?>  href="../jubilaeumsfeier/index.php">Jubiläumsball</a>
 
 					<?php
 					//Submenü wird nur angezeigt wenn sich der Nutzer auf dieser Seite oder einer Unterseite befindet
-					if($thisPage=="jubilaeumsfeier" || 
-						$thisPage=="jubilaeumsfeier_anmeldeinformationen" || 
-						$thisPage=="jubilaeumsfeier_anmeldung_absolvent" || 
-						$thisPage=="jubilaeumsfeier_anmeldung_gast" || 
-						$thisPage=="jubilaeumsfeier_anmeldung_laufkarte") {
-						include 'submenu_jubilaeumsfeier.php';
-					}
+					// if($thisPage=="jubilaeumsfeier" || 
+					// 	$thisPage=="jubilaeumsfeier_anmeldeinformationen" || 
+					// 	$thisPage=="jubilaeumsfeier_anmeldung_absolvent" || 
+					// 	$thisPage=="jubilaeumsfeier_anmeldung_gast" || 
+					// 	$thisPage=="jubilaeumsfeier_anmeldung_laufkarte") {
+					// 	include 'submenu_jubilaeumsfeier.php';
+					// }
 					?>
-				</li>
+				</li> -->
 
                 <li>
                     <a <?php if ($thisPage=="ehemaligen_treffen") {echo " class=\"currentpage\"";} ?>  href="../ehemaligen_treffen/index.php">Ehemaligentreffen</a>
@@ -85,8 +85,15 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				
 				<div class="sidebar-termin">
-				Jubiläumsball 2019<br>
-				02.11.2019
+				aluMPI-Stammtisch<br>
+				Di. 03.03.2020 19:30<br>
+				im Manns-Bräu
+				</div>
+				
+				<div class="sidebar-termin">
+				aluMPI-Stammtisch<br>
+				Di. 07.04.2020 19:30<br>
+				im Manns-Bräu
 				</div>
 				
 				
@@ -98,7 +105,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				Nächste Sitzungstermine:<br><br>
 
-				Do. 12.12. 18:00, S 748<br>
+				Di. 03.03. 18:00, S 748<br>
+				Di. 17.03. 18:00, S 748<br>
+				Di. 31.03. 18:00, S 748<br>
 
 
 				<br>
@@ -112,7 +121,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				95440 Bayreuth<br>
 
 				<a href="mailto:alumpi@uni-bayreuth.de" class="kontakt-link">alumpi@uni-bayreuth.de</a>
-				<a href="https://facebook.com/aluMPI" class="kontakt-link" target="_blank">Facebook-Seite</a>
+				<a href="https://facebook.com/aluMPI" class="kontakt-link" target="_blank">Facebook</a>
+				<a href="https://instagram.com/alumpi_bayreuth" class="kontakt-link" target="_blank">Instagram</a>
 			</div>
 		</div>
 		

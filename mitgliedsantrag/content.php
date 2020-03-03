@@ -38,8 +38,7 @@ include 'prepare_memberRegistrationForm.php';
 				Zusätzlich können sich Studenten der Universität Bayreuth jährlich vom Mitgliedsbeitrag befreien lassen. <br>
 				Auf Wunsch können Sie gerne Fördermitglied in unserem Verein werden. Der Jahresbeitrag kann dabei selbst gewählt werden, beträgt aber mindestens 50 Euro. Wenn Sie Interesse an einer Fördermitgliedschaft haben, wenden Sie sich bitte an uns. 
 				<br>
-				Die Möglichkeit als Vereinsmitglied weiterhin am umfangreichen Hochschulsport-Angebot der Universität Bayreuth teilzunehmen wird aktuell von Seiten der Universität 
-				Bayreuth leider nicht mehr ermöglicht, wir befinden uns in Gesprächen mit der Hochschulleitung um eine Lösung hierfür zu finden.
+				Als Vereinsmitglied haben Sie überdies die Möglichkeit, auch als Nicht-Universitätsangehöriger am umfangreichen Hochschulsport-Angebot der Universität teilzunehmen. 
 				</p>
 
 				<br>
@@ -114,7 +113,8 @@ include 'prepare_memberRegistrationForm.php';
 								Kontakt
 							</td>
 							<td>
-								<input type="text" name="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') . "\"";?>>
+								<div style="display:none;" id="email-validation-warning" class="validation-warning">Nach Exmatrikulation wird der Zugang zur Universitäts-Email gesperrt, bitte verwenden Sie wenn möglich eine langfristig gültige Mail, da dies unsere einzige Möglichkeit ist, Sie zu kontaktieren.</div>
+								<input oninput="showMailWarning()" id="email" type="text" name="email" placeholder="E-Mail-Adresse" size="35" <?php if(isset($_POST['email'])) echo "value=\"" . htmlspecialchars($_POST['email'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 								<input type="text" name="telefon" placeholder="Telefonnummer (optional)" size="25" <?php if(isset($_POST['telefon'])) echo "value=\"" . htmlspecialchars($_POST['telefon'], ENT_QUOTES, 'UTF-8') . "\"";?>>
 							</td>
 						</tr>

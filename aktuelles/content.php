@@ -13,9 +13,9 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 			
 			<section class="text">
 			
-				<h1>Aktuelles</h1>
+				<h1>Berichte</h1>
 				
-				Auf dieser Seite finden Sie aktuelle Informationen rund um den Absolventen- und Förderverein MPI Uni Bayreuth e.V.<br>
+				Auf dieser Seite finden Sie Berichte über Veranstaltungen des Absolventen- und Förderverein MPI Uni Bayreuth e.V.<br>
 				
 				<br>
 				<br>

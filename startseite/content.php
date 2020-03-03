@@ -19,9 +19,10 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<p>
 				Der Absolventen- und Förderverein MPI Uni Bayreuth e.V. versteht sich als Einrichtung für aktive Studierende und Absolventen sowie für Förderer und Freunde der Fakultät I der Universität Bayreuth.<br>
 				In diesem Sinne ist es das Ziel des Vereins, den Austausch zwischen Studierenden und Absolventen zu fördern und so den Berufseinstieg zu erleichtern. 
-				Zudem organisiert der Verein jährlich eine Absolventenfeier, damit der erreichte Abschluss in einem gebührenden Rahmen gefeiert werden kann. 
-				Zusätzlich will der Verein als Bindeglied zwischen den Absolventen und ihrer alten Hochschule fungieren.<br>
-				Darüber hinaus bekommen Sie auf Wunsch den regelmäßig erscheinenden Newsletter der Universität Bayreuth und darin Informationen zu Alumniveranstaltungen.<br>
+				Durch die Veranstaltung von Ehemaligentreffen fungiert der Verein als Bindeglied zwischen den Absolventen und ihrer alten Hochschule. 
+				Der Verein veranstaltet jährlich eine Absolventenfeier, damit der erreichte Abschluss in einem gebührenden Rahmen gefeiert werden kann.<br>
+				Mitglieder erhalten auf Wunsch den regelmäßig erscheinenden Newsletter und Informationen zu Alumniveranstaltungen und sonstigen Vereinsaktivitäten. 
+				Zudem können Mitglieder am Hochschulsport der Universität teilnehmen.
 				</p>
 				
 				<!--
@@ -44,21 +45,17 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 				<br>
 				-->
-
+				
 				<h2>Aktuell:</h2>
 				<div class="news-boxen-container">
 					<div class="news-box news-full-width">
-						<h3>Jubiläumsball 2019</h3>
-						
+						<h3>aluMPI-Stammtisch</h3>
 						<p>
-						Am Samstag, den 2. November 2019, findet anlässlich unseres 10-jährigen Bestehens der aluMPI-Jubiläumsball statt. Eingeladen sind alle Mitglieder des Vereins, der Fakultät, aber auch alle sonstigen Interessierten und Tanzfreunde. <br>
-						<br>
-						Im Rahmen dieser Veranstaltung findet auch die jährliche Absovlentenfeier statt. <br>
-						<br>
-						<a href="../jubilaeumsfeier/index.php">Infos und Anmeldung >></a>
+						Jeden ersten Dienstag im Monat findet der aluMPI-Stammtisch statt, zu dem wir alle Mitglieder und Interessierte herzlich einladen. Unsere gesellige Runde trifft sich immer ab 19:30 im Manns-Bräu (Friedrichstraße 23, 95444 Bayreuth). Einfach mal vorbeikommmen! 
 						</p>
 					</div>
 				</div>
+				
 				
 				<h2>Unsere Projekte:</h2>
 				
@@ -86,7 +83,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					</div>
 					<div class="news-box">
 						<h3>Exkursionen</h3>
-						In Kooperation mit der Fachschaft Mathe/Physik/Informatik werden verschiedene Ausflüge für
+						In Kooperation mit der Stabsstelle KuK werden verschiedene Ausflüge für
 						Studierende der Fakultät zu Museen, Forschungseinrichtungen, Firmen etc. (Ideen sind erwünscht)
 						geplant bzw. gefördert.<br>
 						<br>

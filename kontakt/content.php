@@ -35,49 +35,50 @@ if (!defined('AccessConstant'))
 
 		<div class="portrait-list">
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Armin_s.jpg" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Armin Kögel</div>
-					<div class="portrait-job">1. Vorsitzender</div>
-					<a class="portrait-mail" href="mailto:armin.koegel@uni-bayreuth.de">Armin.Koegel@uni-bayreuth.de</a>
-				</div>
-			</div>
-
-			<div class="portrait-container">
 				<img src="../_images_content/portraits_members/Markus_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Markus Klar</div>
-					<div class="portrait-job">2. Vorsitzender</div>
+					<div class="portrait-job">1. Vorsitzender</div>
 					<a class="portrait-mail" href="mailto:markus.klar@uni-bayreuth.de">Markus.Klar@uni-bayreuth.de</a>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Maike_s.jpg" class="portrait"/>
+				<img src="../_images_content/portraits_members/Nikolai_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Maike Schelhorn</div>
-					<div class="portrait-job">Schatzmeisterin</div>
+					<div class="portrait-name">Nikolai Jahreis</div>
+					<div class="portrait-job">2. Vorsitzender</div>
+					<a class="portrait-mail" href="mailto:nikolai.jahreis@uni-bayreuth.de">Nikolai.Jahreis@uni-bayreuth.de</a>
+				</div>
+			</div>
+
+			<div class="portrait-container">
+				<img src="../_images_content/portraits_members/Manu_s.jpg" class="portrait"/>
+				<div class="portrait-text">
+					<div class="portrait-name">Manuel Eisentraut</div>
+					<div class="portrait-job">Schatzmeister</div>
 				</div>
 			</div>
 		</div>
 
 		<h2>Kuratorium:</h2>
 
-		<div class="portrait-list">
 		
+
+		<div class="portrait-list">
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Adal_s.jpg" class="portrait"/>
+				<img src="../_images_content/portraits_members/Armin_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Adal Sabri</div>
-					<div class="portrait-job">Sprecher des Kuratoriums</div>
+					<div class="portrait-name">Armin Kögel</div>
+					<div class="portrait-job">Archivar</div>
 				</div>
 			</div>
-			
+
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Manu_s.jpg" class="portrait"/>
+				<img src="../_images_content/portraits_members/Lou_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Manuel Eisentraut</div>
-					<div class="portrait-job">Schriftführer</div>
+					<div class="portrait-name">Louise Schaub</div>
+					<div class="portrait-job">Redaktion</div>
 				</div>
 			</div>
 			
@@ -88,20 +89,12 @@ if (!defined('AccessConstant'))
 					<div class="portrait-job">Schriftführerin</div>
 				</div>
 			</div>
-			
-			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Julian_s.jpg" class="portrait"/>
-				<div class="portrait-text">
-					<div class="portrait-name">Julian Neuberger</div>
-					<div class="portrait-job">Beauftragter IT</div>
-				</div>
-			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Nicolas_s.jpg" class="portrait"/>
+				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Nicolas Hilberg</div>
-					<div class="portrait-job">Beauftragter IT</div>
+					<div class="portrait-name">Marius Radtke</div>
+					<div class="portrait-job">Exkursionsplanung</div>
 				</div>
 			</div>
 
@@ -114,20 +107,36 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Lou_s.jpg" class="portrait"/>
+				<img src="../_images_content/portraits_members/Julian_s.jpg" class="portrait"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Louise Schaub</div>
+					<div class="portrait-name">Julian Neuberger</div>
+					<div class="portrait-job">Beauftragter IT</div>
 				</div>
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_content/portraits_members/Nikolai_s.jpg" class="portrait"/>
+				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
 				<div class="portrait-text">
-					<div class="portrait-name">Nikolai Jahreis</div>
+					<div class="portrait-name">Sebastian Lützow</div>
+					<div class="portrait-job">Beauftragter IT</div>
 				</div>
 			</div>
-			
 
+			<div class="portrait-container">
+				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<div class="portrait-text">
+					<div class="portrait-name">Simon Wieland</div>
+					<div class="portrait-job">Veranstaltungsplanung</div>
+				</div>
+			</div>
+
+			<div class="portrait-container">
+				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<div class="portrait-text">
+					<div class="portrait-name">Sina Ritter</div>
+					<div class="portrait-job">Exkursionsplanung</div>
+				</div>
+			</div>
 		</div>
 
 		<br>

@@ -31,8 +31,8 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				
 				<h3>Vertreten durch:</h3>
 				
-				Armin Kögel<br>
-				armin.koegel (at) uni-bayreuth.de<br>
+				Markus Klar<br>
+				markus.klar (at) uni-bayreuth.de<br>
 				<br>
 				<br>
 				
