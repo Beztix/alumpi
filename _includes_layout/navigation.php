@@ -25,7 +25,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				</li>
 				
 				<li>
-					<a <?php if ($thisPage=="aktuelles") {echo " class=\"currentpage\"";} ?>  href="../aktuelles/index.php">Berichte</a>
+					<a <?php if ($thisPage=="berichte") {echo " class=\"currentpage\"";} ?>  href="../berichte/index.php">Berichte</a>
 				</li>
 				
 				<li>
