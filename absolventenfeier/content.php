@@ -31,6 +31,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				}
 				?>
 		
+				<!--
 				<div class="news-box news-important news-full-width">
 					<h1>Wichtiger Hinweis</h1>
 					<div>
@@ -41,6 +42,7 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<a href="../jubilaeumsfeier/index.php">Jubiläumsfeier</a>
 					</div>
 				</div>
+				-->
 
 				<h1>Absolventenfeier</h1>
 
