@@ -21,17 +21,53 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 				<br>
 
 				<article class="news">
+					<h2>aluMPI-Stammtisch</h2>
+
+					<p>					
+					Neues Jahr, neue Traditionen. Erstmalig fand am 4. Februar 2020 unser aluMPI-Stammtisch statt. Hierbei waren alle Vereinsmitglieder und Interessierten herzlich eingeladen. Im Manns Bräu konnten sich alle Anwesenden in geselliger Runde austauschen und Kontakte knüpfen.
+					<br>
+					<br>
+					Auch in Zukunft wird an jedem ersten Dienstag im Monat der aluMPI-Stammtisch im Manns Bräu (Friedrichstraße 23, 95444 Bayreuth) stattfinden.
+					<br>
+					<br>
+					Alle Mitglieder und insbesondere die, die es werden wollen, sowie natürlich auch allgemein Interessierte, sind herzlich eingeladen!
+					</p>
+				</article>
+				
+				
+				<article class="news">
+					<h2>aluMPI-Ball zum zehnjährigen Jubiläum</h2>
+
+					<p>					
+					Am 02.11.2019 durften wir mit unseren Vereinsmitgliedern, Absolventen und Fakultätsangehörigen unser zehnjähriges Bestehen feiern. Unser „aluMPI-Ball“ fand im Evangelischen Gemeindehaus in Bayreuth statt und kombinierte die Absolventenfeier 2019 mit einem Homecoming-Ball der ehemaligen Absolventen. Das Konzept erfreute sich so großer Beliebtheit, dass die Veranstaltung schon von vornherein restlos ausverkauft war.
+					<br>					
+					Der einleitende Festakt wurde vom Vereinsvorsitzenden Armin Kögel eröffnet und nach einer kurzen Vereinsgeschichte sowie einer Ansprache des amtierenden Dekan Prof. Dr. Stephan Kümmel wurden die aktuellen Absolventen der Fakultät I geehrt.
+					<br>
+					Bei diesem gemeinsamen Abend wurde nicht nur für das leibliche Wohl der Anwesenden gesorgt, sondern unsere Gäste wurden auch mit Live-Musik der Band „Take Three“ verwöhnt. Mit köstlichen Cocktails versorgte die berühmte Physikerbar der Fakultät I alle Feiernden. Als schließlich auch noch die Tanzfläche mit großer Begeisterung eröffnet wurde, entwickelte sich der AluMPI-Ball zu einem vollen Erfolg.
+					<br>
+					<br>
+					Damit eine so schöne Feier kein einmaliges Privileg bleibt, gilt: save the date!
+					<br>
+					Am 05.12.2020 veranstalten wir die nächste Absolventenfeier wieder in Form eines Balls und hoffen den Abend wieder mit so vielen Gästen verbringen zu dürfen. 
+					<br>
+					<br>
+					Abschließend möchten wir uns noch bei unseren freiwilligen Helfern, der Physikerbar sowie unserem Dekan Prof. Dr. Stephan Kümmel für die große Unterstützung danken, ohne deren tatkräftige Hilfe diese Feier nicht umzusetzen gewesen wäre.
+					</p>
+				</article>
+				
+				
+				<article class="news">
 					<h2>Firmenexkursion Witron</h2>
 					<h3>Besuch bei der Witron Logistik + Informatik GmbH</h3>
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#ehemaligentreffen2017">
+					<a href="#witron2019">
 						<div class="left_img_container">
-							<img src="../_images_content/witron2019.JPG" alt="Exkursion Witron 2018" style="width:350px;">
+							<img src="../_images_content/witron2019.JPG" alt="Exkursion Witron 2019" style="width:350px;">
 						</div>
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="ehemaligentreffen2017">
-						<img src="../_images_content/witron2019.JPG" alt="Exkursion Witron 2018">
+					<a href="#_" class="lightbox" id="witron2019">
+						<img src="../_images_content/witron2019.JPG" alt="Exkursion Witron 2019">
 					</a>
 					<p>					
 					Am 11. Juni 2019 haben wir zusammen mit der Stabsabteilung KarriereService und Unternehmenskontakte eine Exkursion zu WITRON – Logistik + Informatik nach Parkstein organisiert. WITRON entwickelt hochdynamische Logistik- und Kommissoniersysteme für Handel und Industrie und konnte sich als einer der Marktführer in Planung und Realisierung etablieren. 
@@ -71,13 +107,13 @@ if(!defined('AccessConstant')) {die('Direct access not permitted');}
 					<p>
 					Am 22. Mai 2018 organisierten wir in Zusammenarbeit mit der Stabsstelle für KarriereService und Unternehmenskontakte eine Exkursion zu zwei mittelständischen Betrieben in Selb. Die 16 Teilnehmer besuchten dabei zwei Unternehmen, wie sie verschiedener kaum sein könnten:<br>
 					<!-- thumbnail image wrapped in a link -->
-					<a href="#ehemaligentreffen2017">
+					<a href="#selb2018">
 						<div class="left_img_container">
 							<img src="../_images_content/selb2018.jpg" alt="Exkursion Selb 2018" style="width:350px;">
 						</div>
 					</a>
 					<!-- lightbox container hidden with CSS -->
-					<a href="#_" class="lightbox" id="ehemaligentreffen2017">
+					<a href="#_" class="lightbox" id="selb2018">
 						<img src="../_images_content/selb2018.jpg" alt="Exkursion Selb 2018">
 					</a>
 					Am Vormittag waren wir zu Gast bei der Rausch und Pausch GmbH (RAPA), unter anderem Hersteller von Ventilen für die Automobilindustrie. Nach einem kurzen Überblick über die Firmenhistorie wurde uns ein neues Bauteil vorgestellt, das in Kürze in die Serienproduktion gehen soll. Neben den technischen Grundlagen wurden uns vor allem die neu gebaute Anlage für die Produktion vorgestellt und die einzelnen Bearbeitungsschritte erklärt. Schwerpunkt war die Konzeption der Fertigungsanlage, aber auch deren Programmierung und Optimierung. Es folgte eine kurze Besichtigung der laufenden Produktion in einer benachbarten Fertigungshalle und ein abschließendes Mittagessen, bei dem noch Zeit für weitere Fragen blieb.<br>
