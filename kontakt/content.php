@@ -91,7 +91,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<img src="../_images_content/portraits_members/Marius_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Marius Radtke</div>
 					<div class="portrait-job">Exkursionsplanung</div>
@@ -99,7 +99,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<img src="../_images_content/portraits_members/Manuel_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Manuel Urban</div>
 					<div class="portrait-job">Beauftragter Social Media</div>
@@ -115,7 +115,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<img src="../_images_content/portraits_members/Sebastian_s_blinzelnd.gif" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Sebastian Lützow</div>
 					<div class="portrait-job">Beauftragter IT</div>
@@ -123,7 +123,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<img src="../_images_content/portraits_members/Simon_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Simon Wieland</div>
 					<div class="portrait-job">Veranstaltungsplanung</div>
@@ -131,7 +131,7 @@ if (!defined('AccessConstant'))
 			</div>
 
 			<div class="portrait-container">
-				<img src="../_images_layout/logo_neu_klein.png" class="portrait placeholder"/>
+				<img src="../_images_content/portraits_members/Sina_s.jpg" class="portrait"/>
 				<div class="portrait-text">
 					<div class="portrait-name">Sina Ritter</div>
 					<div class="portrait-job">Exkursionsplanung</div>
